@@ -147,6 +147,36 @@ a{color:inherit;text-decoration:none}
   .main{padding:1.5rem 1rem}
   .gh-grid{grid-template-columns:1fr}
 }
+
+/* INSIGHTS */
+.insight-section{margin-top:2rem}
+.insight-section-title{font-family:'Instrument Serif',serif;font-size:1.15rem;color:var(--gold);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid rgba(200,169,110,.15)}
+.insight-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.25rem;margin-bottom:10px;display:flex;flex-direction:column;gap:8px}
+.insight-card:hover{border-color:var(--border-h)}
+.insight-title{font-size:14.5px;font-weight:500;color:var(--text);margin-bottom:2px}
+.insight-row{display:flex;gap:10px;align-items:flex-start}
+.insight-label{flex-shrink:0;font-size:11px;font-weight:500;padding:2px 7px;border-radius:4px;margin-top:2px;white-space:nowrap}
+.insight-label.signal{background:rgba(29,155,240,.1);color:#60b4f8;border:1px solid rgba(29,155,240,.2)}
+.insight-label.trend{background:rgba(200,169,110,.1);color:var(--gold);border:1px solid rgba(200,169,110,.2)}
+.insight-label.action{background:rgba(16,185,129,.1);color:#34d399;border:1px solid rgba(16,185,129,.2)}
+.insight-body{font-size:13px;color:var(--muted);line-height:1.6}
+.insight-body a{color:var(--gold);text-decoration:underline;text-decoration-color:rgba(200,169,110,.3)}
+.insight-body strong{color:var(--text);font-weight:500}
+
+/* OUTLOOK */
+.outlook-section{margin-top:1.5rem;display:flex;flex-direction:column;gap:1rem}
+.outlook-block{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.25rem}
+.outlook-label{font-size:11px;font-weight:500;color:var(--hint);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem}
+.outlook-summary{font-family:'Instrument Serif',serif;font-size:1.1rem;color:var(--text);line-height:1.7;font-style:italic}
+.narrative-item{margin-bottom:.9rem;padding-bottom:.9rem;border-bottom:1px solid var(--hint)}
+.narrative-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.narrative-title{font-size:13.5px;font-weight:500;color:var(--text);margin-bottom:4px}
+.narrative-body{font-size:13px;color:var(--muted);line-height:1.65}
+.pred-item{margin-bottom:.85rem;padding-bottom:.85rem;border-bottom:1px solid var(--hint)}
+.pred-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.pred-tag{font-size:12px;font-weight:500;color:var(--gold);margin-right:4px}
+.pred-content{font-size:13.5px;font-weight:500;color:var(--text)}
+.pred-evidence{font-size:12px;color:var(--hint);margin-top:4px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -190,7 +220,7 @@ a{color:inherit;text-decoration:none}
 
 <nav class="source-tabs">
   <div class="tab active" data-sec="digest" style="--tab-color:var(--gold)">导读</div>
-  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">1</span></div>
+  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">22</span></div>
   <div class="tab" data-sec="gh" style="--tab-color:var(--gh)">✦ GitHub <span class="cnt">10</span></div>
   <div class="tab" data-sec="tw" style="--tab-color:var(--tw)">𝕏 Twitter <span class="cnt">18</span></div>
   <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">71</span></div>
@@ -206,18 +236,129 @@ a{color:inherit;text-decoration:none}
   <div class="digest-headline">今日速览</div>
   <ul class="digest-list"><li><strong>Product Hunt #1</strong> · <a href="https://www.producthunt.com/products/influcio-2" target="_blank" class="digest-link">Influcio</a> — AI marketing Agent for result-driven influencer campaign</li>
 <li><strong>GitHub Trending</strong> · 今日 10 个项目上榜，<a href="https://github.com/siddharthvaddem/openscreen" target="_blank" class="digest-link">siddharthvaddem/openscreen</a> 领跑 +2,692 星</li>
-<li><strong>X / Twitter</strong> · 共 18 条 AI 精选推文，来自 ai-sweep 热帖与 Zara Builder 精选，karpathy 高赞：Wow, this tweet went very viral!
+<li><strong>X / Twitter</strong> · 共 18 条精选，来自 ai-sweep 与 Zara Builder 精选；karpathy：Wow, this tweet went very viral!
 
-I wanted share a…</li>
+I want…</li>
 <li><strong>Hacker News</strong> · 今日 71 条技术讨论</li>
-<li><strong>OpenRouter 周排名 #1</strong> · MiMo-V2-Pro (xiaomi) 3.73T tokens</li></ul>
+<li><strong>OpenRouter 周冠军</strong> · MiMo-V2-Pro（xiaomi）3.73T tokens，0%</li></ul>
+</div>
+
+<div class="insight-section">
+  <div class="insight-section-title">今日洞察</div>
+  
+<div class="insight-card">
+  <div class="insight-title">AI Coding Agent 进入工具链爆发期</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body">GitHub Trending 出现 <a href='https://github.com/block/goose' target='_blank' class='digest-link'>block/goose</a>（+866）；PH 上线 Handle Extension（Agent 与浏览器 UI 联动）；HN 热帖「Components of a Coding Agent」引发深度讨论</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">结构性加速趋势，处于<strong>工具链分化期</strong>：从「AI 写代码」演进到「Agent 操控整个开发环境」，下一步是 Agent 之间的协作编排</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">PM 现在应重点关注：① 你的产品有没有暴露足够的 API/MCP 接口供 Agent 调用？② 用户的「任务上下文」能否被 Agent 无缝继承？优先做 Agent 入口而非 AI 功能集成</span>
+  </div>
+</div>
+<div class="insight-card">
+  <div class="insight-title">端侧 AI 从 Demo 走向实用，Google AI Edge 是关键信号</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body"><a href='https://github.com/google-ai-edge/gallery' target='_blank' class='digest-link'>google-ai-edge/gallery</a> 今日 +495 星冲榜；<a href='https://github.com/Blaizzy/mlx-vlm' target='_blank' class='digest-link'>mlx-vlm</a> +408；PH 出现 Tiny Aya（本地多语言模型）</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">加速中的结构性趋势，处于<strong>工具成熟期前夜</strong>：硬件（Apple Silicon、高通）已就绪，框架层（MLX、LiteRT）正密集补全，面向普通用户的端侧 App 将在未来 3-6 个月爆发</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">立即评估你的产品哪些场景可以「离线优先」——隐私敏感（医疗/财务/笔记）+ 低延迟需求（实时翻译/相机识别）是最佳切入口，先做 API 降级到本地的兼容层</span>
+  </div>
+</div>
+<div class="insight-card">
+  <div class="insight-title">中国模型在 OpenRouter 使用量全面超越西方，免费策略奏效</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body">OpenRouter 本周 Top3 全为中国模型：MiMo-V2-Pro（xiaomi）、Qwen3.6 Plus (free)（qwen）、Qwen3.6 Plus Preview (free)（qwen）；Qwen3.6 Plus 和 Step 3.5 Flash 标注 free，小米 MiMo-V2-Pro 以 3.73T tokens 占据第一</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">加速中的趋势，处于<strong>份额重分配阶段</strong>：「免费+高质量」组合正在快速抢占开发者心智，一旦建立习惯将产生路径依赖</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">如果你的产品依赖 OpenAI/Anthropic API，现在是建立<strong>模型路由层</strong>的最佳时机——按任务类型（创意/代码/摘要）分配最优价格比的模型，而非绑定单一供应商</span>
+  </div>
+</div>
+<div class="insight-card">
+  <div class="insight-title">「开源替代」叙事从工具蔓延到内容平台，Onyx 代表新一波</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body"><a href='https://github.com/onyx-dot-app/onyx' target='_blank' class='digest-link'>onyx-dot-app/onyx</a> 今日 +960 星；openscreen 作为「Screen Studio 开源平替」+2,692 星；freeCodeCamp +292 星</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">持续积累的结构性趋势，处于<strong>品类扩张期</strong>：继开源模型之后，开源 AI 应用（知识库、录屏、学习平台）正在覆盖更多垂直场景</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">对于 ToB SaaS 产品：开源核心功能、商业化数据/企业功能/托管服务的「开放核心」模式将成为新标配；对于 ToC 产品：用户开始更关注数据主权，隐私声明和本地部署选项需要提前布局</span>
+  </div>
+</div>
+</div>
+<div class="outlook-section">
+  <div class="outlook-block">
+    <div class="outlook-label">今日一句话</div>
+    <div class="outlook-summary">端侧跑模型、Agent 控工具链、中国免费模型横扫排行榜——AI 的重力中心正从「会不会」转向「谁的成本最低、离用户最近」。</div>
+  </div>
+  <div class="outlook-block">
+    <div class="outlook-label">行业主线脉络</div>
+    
+<div class="narrative-item">
+  <div class="narrative-title">主线 1：Agent 工具链的基础设施化</div>
+  <div class="narrative-body">起点：ChatGPT 插件（2023）→ 当前：MCP 协议普及 + Coding Agent 工具爆发（Goose、Handle、oh-my-codex 等）→ 下一步：Agent 编排框架成为新的「操作系统」争夺点，各大平台将争相成为 Agent 的默认宿主</div>
+</div>
+<div class="narrative-item">
+  <div class="narrative-title">主线 2：端侧 AI 的「iPhone 时刻」临近</div>
+  <div class="narrative-body">起点：Apple Silicon 支持神经网络加速（2020）→ 当前：MLX、LiteRT、Google AI Edge Gallery 工具链成熟，Tiny Aya 等本地模型出现在 PH → 下一步：2026 下半年将出现第一批「离线原生」AI App 爆款，隐私与低延迟是核心卖点</div>
+</div>
+<div class="narrative-item">
+  <div class="narrative-title">主线 3：中国模型的免费化攻势</div>
+  <div class="narrative-body">起点：DeepSeek R1 开源震惊硅谷（2025 初）→ 当前：OpenRouter Top10 中中国模型占 6 席，且主力均标注 free → 下一步：免费策略将倒逼 OpenAI/Anthropic 调整定价，中小团队的模型选择逻辑将从「最强」变为「够用且免费」</div>
+</div>
+  </div>
+  <div class="outlook-block">
+    <div class="outlook-label">产品与商业预判</div>
+    
+<div class="pred-item">
+  <span class="pred-tag">【预判1】</span>
+  <span class="pred-content">Cursor 将在 1 个月内推出 Agent 并行协作功能</span>
+  <div class="pred-evidence">依据：PH 出现 Cursor 3（「并行本地/云端 Agent 工作空间」）；oh-my-codex GitHub Trending 第一；Coding Agent 工具链密集上线</div>
+</div>
+<div class="pred-item">
+  <span class="pred-tag">【预判2】</span>
+  <span class="pred-content">Google 将在 I/O 2026 宣布 Gemini Nano 全系 Pixel 原生集成，并开放 API</span>
+  <div class="pred-evidence">依据：google-ai-edge/gallery 和 LiteRT-LM 同日冲上 GitHub Trending，Google 端侧布局节奏明显加速</div>
+</div>
+<div class="pred-item">
+  <span class="pred-tag">【预判3】</span>
+  <span class="pred-content">OpenRouter 免费模型将催生一批「AI 功能免费、增值服务收费」的 2B SaaS 产品</span>
+  <div class="pred-evidence">依据：OpenRouter Top3 均为中国免费模型；Qwen/Step/MiniMax 可为开发者提供近乎零成本的后端；商业模式空间从模型层转移到应用层</div>
+</div>
+<div class="pred-item">
+  <span class="pred-tag">【预判4】</span>
+  <span class="pred-content">「AI 可观测性」（AI Observability）将在 6 个月内成为独立赛道</span>
+  <div class="pred-evidence">依据：Straude（Claude Code 使用量排行）出现在 PH；Panorama（AI 发现工作流）上线；随着 Agent 进入生产，监控 AI 行为将成为刚需</div>
+</div>
+  </div>
 </div>
   </section>
 
   <section class="section" id="sec-ph">
     <div class="section-header">
       <span class="section-label">Product Hunt</span>
-      <span class="section-sub">今日热榜 1 款</span>
+      <span class="section-sub">今日热榜 22 款</span>
     </div>
     <div class="ph-list">
     <a class="ph-row" href="https://www.producthunt.com/products/influcio-2" target="_blank" rel="noopener">
@@ -225,6 +366,174 @@ I wanted share a…</li>
       <div class="ph-info">
         <span class="ph-name">Influcio</span>
         <span class="ph-tagline">AI marketing Agent for result-driven influencer campaign</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/tonkotsu" target="_blank" rel="noopener">
+      <span class="ph-rank">🥈</span>
+      <div class="ph-info">
+        <span class="ph-name">Handle Extension</span>
+        <span class="ph-tagline">Refine UI in the browser, feed changes to your coding agent</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/ember-104" target="_blank" rel="noopener">
+      <span class="ph-rank">🥉</span>
+      <div class="ph-info">
+        <span class="ph-name">Ember</span>
+        <span class="ph-tagline">Meal scan, macros &amp; AI coach</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/cohere-2" target="_blank" rel="noopener">
+      <span class="ph-rank">#4</span>
+      <div class="ph-info">
+        <span class="ph-name">Tiny Aya</span>
+        <span class="ph-tagline">Local, open-weight AI designed for real-world languages</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/catbar" target="_blank" rel="noopener">
+      <span class="ph-rank">#5</span>
+      <div class="ph-info">
+        <span class="ph-name">CatBar</span>
+        <span class="ph-tagline">RevenueCat stats in your macOS menu bar.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/panorama" target="_blank" rel="noopener">
+      <span class="ph-rank">#6</span>
+      <div class="ph-info">
+        <span class="ph-name">Panorama</span>
+        <span class="ph-tagline">AI that finds your team’s workflows and hidden structures</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/shotwell" target="_blank" rel="noopener">
+      <span class="ph-rank">#7</span>
+      <div class="ph-info">
+        <span class="ph-name">Shotwell</span>
+        <span class="ph-tagline">The screenshot editor for iPhone.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/fluently-accurate-youtube-subtitles" target="_blank" rel="noopener">
+      <span class="ph-rank">#8</span>
+      <div class="ph-info">
+        <span class="ph-name">Fluently</span>
+        <span class="ph-tagline">AI subtitles &amp; translations for YouTube. 20+ Languages.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/vista-4" target="_blank" rel="noopener">
+      <span class="ph-rank">#9</span>
+      <div class="ph-info">
+        <span class="ph-name">Vista</span>
+        <span class="ph-tagline">The image viewer macOS should have built.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/google" target="_blank" rel="noopener">
+      <span class="ph-rank">#10</span>
+      <div class="ph-info">
+        <span class="ph-name">Google Vids 2.0</span>
+        <span class="ph-tagline">Create, edit and share videos at no cost w/ new AI features</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/opengyver" target="_blank" rel="noopener">
+      <span class="ph-rank">#11</span>
+      <div class="ph-info">
+        <span class="ph-name">OpenGyver</span>
+        <span class="ph-tagline">Turn CLI / AI agents into McGyver</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/openrouter" target="_blank" rel="noopener">
+      <span class="ph-rank">#12</span>
+      <div class="ph-info">
+        <span class="ph-name">OpenRouter Model Fusion</span>
+        <span class="ph-tagline">Run many models side by side and fuse the best answer</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/klick-1-ai-camera-assistant" target="_blank" rel="noopener">
+      <span class="ph-rank">#13</span>
+      <div class="ph-info">
+        <span class="ph-name">Klick AI Camera Assistant</span>
+        <span class="ph-tagline">Real-time AI camera that teaches you composition live</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/sleek-analytics" target="_blank" rel="noopener">
+      <span class="ph-rank">#14</span>
+      <div class="ph-info">
+        <span class="ph-name">Sleek Analytics</span>
+        <span class="ph-tagline">See who's on your site. Right now.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/open-claude-in-chrome" target="_blank" rel="noopener">
+      <span class="ph-rank">#15</span>
+      <div class="ph-info">
+        <span class="ph-name">Open Claude in Chrome</span>
+        <span class="ph-tagline">Claude in Chrome, reverse-engineered, Jailbroken</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/flipboard-surf" target="_blank" rel="noopener">
+      <span class="ph-rank">#16</span>
+      <div class="ph-info">
+        <span class="ph-name">Surf Social Websites</span>
+        <span class="ph-tagline">Bring together people and content on the social web</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/mercury-412" target="_blank" rel="noopener">
+      <span class="ph-rank">#17</span>
+      <div class="ph-info">
+        <span class="ph-name">Mercury Edit 2</span>
+        <span class="ph-tagline">Ultra-fast next-edit prediction for coding</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/faahh-app-that-roasts-you-back-to-work" target="_blank" rel="noopener">
+      <span class="ph-rank">#18</span>
+      <div class="ph-info">
+        <span class="ph-name">Faahh</span>
+        <span class="ph-tagline">Slap your desk. Unplug distractions. Get back to focus.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/apimage" target="_blank" rel="noopener">
+      <span class="ph-rank">#19</span>
+      <div class="ph-info">
+        <span class="ph-name">APImage</span>
+        <span class="ph-tagline">Create Images that Amaze</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/donut-browser" target="_blank" rel="noopener">
+      <span class="ph-rank">#20</span>
+      <div class="ph-info">
+        <span class="ph-name">Donut Browser</span>
+        <span class="ph-tagline">Open Source Anti-Detect Browser with Unlimited Profiles</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/generateppt" target="_blank" rel="noopener">
+      <span class="ph-rank">#22</span>
+      <div class="ph-info">
+        <span class="ph-name">GeneratePPT</span>
+        <span class="ph-tagline">The Anti-Bloat Presentation Tool</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/slide2video-2" target="_blank" rel="noopener">
+      <span class="ph-rank">#30</span>
+      <div class="ph-info">
+        <span class="ph-name">Slide2Video</span>
+        <span class="ph-tagline">Turn slides into narrated videos</span>
       </div>
       <span class="ph-arrow">→</span>
     </a></div>
@@ -239,52 +548,52 @@ I wanted share a…</li>
     <a class="gh-card" href="https://github.com/siddharthvaddem/openscreen" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">siddharthvaddem/openscreen</span><span class="gh-lang">TypeScript</span></div>
       <p class="gh-desc">Create stunning demos for free. Open-source, no subscriptions, no watermarks, and free for commercial use. An alternative to Screen Studio.</p>
-      <div class="gh-stats"><span>⭐ 21,859</span><span class="gh-today">+2,692 today</span></div>
+      <div class="gh-stats"><span>⭐ 21,869</span><span class="gh-today">+2,692 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/onyx-dot-app/onyx" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">onyx-dot-app/onyx</span><span class="gh-lang">Python</span></div>
       <p class="gh-desc">Open Source AI Platform - AI Chat with advanced features that works with every LLM</p>
-      <div class="gh-stats"><span>⭐ 24,746</span><span class="gh-today">+960 today</span></div>
+      <div class="gh-stats"><span>⭐ 24,752</span><span class="gh-today">+960 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/block/goose" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">block/goose</span><span class="gh-lang">Rust</span></div>
       <p class="gh-desc">an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM</p>
-      <div class="gh-stats"><span>⭐ 36,401</span><span class="gh-today">+866 today</span></div>
+      <div class="gh-stats"><span>⭐ 36,418</span><span class="gh-today">+866 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/google-ai-edge/gallery" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">google-ai-edge/gallery</span><span class="gh-lang">Kotlin</span></div>
       <p class="gh-desc">A gallery that showcases on-device ML/GenAI use cases and allows people to try and use models locally.</p>
-      <div class="gh-stats"><span>⭐ 16,559</span><span class="gh-today">+495 today</span></div>
+      <div class="gh-stats"><span>⭐ 16,568</span><span class="gh-today">+495 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/Blaizzy/mlx-vlm" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">Blaizzy/mlx-vlm</span><span class="gh-lang">Python</span></div>
       <p class="gh-desc">MLX-VLM is a package for inference and fine-tuning of Vision Language Models (VLMs) on your Mac using MLX.</p>
-      <div class="gh-stats"><span>⭐ 3,810</span><span class="gh-today">+408 today</span></div>
+      <div class="gh-stats"><span>⭐ 3,813</span><span class="gh-today">+408 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/badlogic/pi-mono" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">badlogic/pi-mono</span><span class="gh-lang">TypeScript</span></div>
       <p class="gh-desc">AI agent toolkit: coding agent CLI, unified LLM API, TUI &amp; web UI libraries, Slack bot, vLLM pods</p>
-      <div class="gh-stats"><span>⭐ 31,731</span><span class="gh-today">+340 today</span></div>
+      <div class="gh-stats"><span>⭐ 31,738</span><span class="gh-today">+340 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/freeCodeCamp/freeCodeCamp" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">freeCodeCamp/freeCodeCamp</span><span class="gh-lang">TypeScript</span></div>
       <p class="gh-desc">freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.</p>
-      <div class="gh-stats"><span>⭐ 441,264</span><span class="gh-today">+292 today</span></div>
+      <div class="gh-stats"><span>⭐ 441,269</span><span class="gh-today">+292 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/telegramdesktop/tdesktop" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">telegramdesktop/tdesktop</span><span class="gh-lang">C++</span></div>
       <p class="gh-desc">Telegram Desktop messaging app</p>
-      <div class="gh-stats"><span>⭐ 30,978</span><span class="gh-today">+265 today</span></div>
+      <div class="gh-stats"><span>⭐ 30,981</span><span class="gh-today">+265 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/google-ai-edge/LiteRT-LM" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">google-ai-edge/LiteRT-LM</span><span class="gh-lang">C++</span></div>
       <p class="gh-desc"></p>
-      <div class="gh-stats"><span>⭐ 1,380</span><span class="gh-today">+113 today</span></div>
+      <div class="gh-stats"><span>⭐ 1,382</span><span class="gh-today">+113 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/dmtrKovalenko/fff.nvim" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">dmtrKovalenko/fff.nvim</span><span class="gh-lang">Rust</span></div>
       <p class="gh-desc">The fastest and the most accurate file search toolkit for AI agents, Neovim, Rust, C, and NodeJS</p>
-      <div class="gh-stats"><span>⭐ 3,556</span><span class="gh-today">+111 today</span></div>
+      <div class="gh-stats"><span>⭐ 3,557</span><span class="gh-today">+111 today</span></div>
     </a></div>
   </section>
 
