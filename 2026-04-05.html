@@ -6,207 +6,146 @@
 <title>Daily News · 2026-04-05</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#07070f;--surface:#0f0f1c;--card:#161626;--card-h:#1c1c30;
+  --bg:#07070f;--surface:#0f0f1c;--card:#131320;--card-h:#1a1a2c;
   --border:rgba(255,255,255,0.07);--border-h:rgba(255,255,255,0.14);
-  --text:#e8e8f0;--muted:#7070a0;--hint:#404060;
-  --gold:#c8a96e;--gold-dim:#8a7040;
-  --ph:#da552f;--gh:#7c3aed;--tw:#1d9bf0;--hn:#ff6600;--kr:#e94040;
+  --text:#e2e2ee;--muted:#6868a0;--hint:#323252;
+  --gold:#c8a96e;--gold-dim:#8a7040;--gold-faint:rgba(200,169,110,0.08);
+  --ph:#da552f;--gh:#7c3aed;--tw:#1d9bf0;--hn:#ff6600;--or:#10b981;
   --radius:10px;--radius-lg:16px;
 }
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:15px;line-height:1.6}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 
-/* ── HEADER ── */
+/* HEADER */
 .site-header{
   position:sticky;top:0;z-index:100;
-  background:rgba(7,7,15,0.85);backdrop-filter:blur(16px);
+  background:rgba(7,7,15,0.9);backdrop-filter:blur(20px) saturate(160%);
   border-bottom:1px solid var(--border);
   padding:0 1.5rem;height:56px;
   display:flex;align-items:center;justify-content:space-between;gap:1rem;
 }
-.masthead{
-  font-family:'Instrument Serif',Georgia,serif;
-  font-size:1.35rem;color:var(--gold);letter-spacing:0.01em;white-space:nowrap;
-}
+.masthead{font-family:'Instrument Serif',serif;font-size:1.4rem;color:var(--gold);letter-spacing:0.01em;white-space:nowrap}
 .masthead em{font-style:italic;color:var(--text)}
-.header-right{display:flex;align-items:center;gap:1rem}
+.header-right{display:flex;align-items:center;gap:10px}
 .date-select{
   background:var(--card);border:1px solid var(--border);
   color:var(--muted);font-size:13px;font-family:inherit;
   padding:5px 10px;border-radius:6px;cursor:pointer;
-  appearance:none;-webkit-appearance:none;
+  appearance:none;-webkit-appearance:none;outline:none;
 }
-.date-select:focus{outline:none;border-color:var(--border-h)}
-.total-badge{
-  font-size:12px;color:var(--muted);
-  background:var(--card);border:1px solid var(--border);
-  padding:4px 10px;border-radius:20px;white-space:nowrap;
-}
+.date-select:focus{border-color:var(--border-h)}
+.total-badge{font-size:12px;color:var(--muted);background:var(--card);border:1px solid var(--border);padding:4px 10px;border-radius:20px;white-space:nowrap}
 
-/* ── SOURCE TABS ── */
+/* SOURCE TABS */
 .source-tabs{
-  display:flex;gap:4px;padding:0 1.5rem;
+  display:flex;gap:2px;padding:0 1.5rem;
   background:var(--surface);border-bottom:1px solid var(--border);
-  overflow-x:auto;scrollbar-width:none;
+  overflow-x:auto;scrollbar-width:none;position:sticky;top:56px;z-index:99;
 }
 .source-tabs::-webkit-scrollbar{display:none}
 .tab{
   display:flex;align-items:center;gap:6px;
-  padding:12px 16px;font-size:13px;font-weight:500;color:var(--muted);
+  padding:11px 15px;font-size:13px;font-weight:500;color:var(--muted);
   border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;
   transition:color .15s,border-color .15s;
 }
 .tab:hover{color:var(--text)}
-.tab.active{color:var(--text);border-color:var(--tab-color)}
-.tab .cnt{
-  font-size:11px;background:var(--card);border:1px solid var(--border);
-  padding:1px 6px;border-radius:10px;color:var(--hint);
-}
+.tab.active{color:var(--text);border-color:var(--tab-color,var(--gold))}
+.tab .cnt{font-size:11px;background:var(--hint);border-radius:9px;padding:1px 6px;color:var(--muted)}
 
-/* ── MAIN ── */
-.main{max-width:960px;margin:0 auto;padding:2rem 1.5rem}
+/* MAIN */
+.main{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
 .section{display:none}
 .section.active{display:block}
 
-/* ── DIGEST ── */
-.digest{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:2rem;
+/* DIGEST */
+.digest-card{
+  background:var(--gold-faint);border:1px solid rgba(200,169,110,0.15);
+  border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:2rem;
 }
-.digest-title{
-  font-family:'Instrument Serif',serif;font-size:1.05rem;
-  color:var(--gold);margin-bottom:0.75rem;
-}
-.digest-list{list-style:none;display:flex;flex-direction:column;gap:6px}
-.digest-list li{font-size:14px;color:var(--muted);padding-left:1rem;position:relative}
-.digest-list li::before{
-  content:'';position:absolute;left:0;top:9px;
-  width:5px;height:5px;border-radius:50%;background:var(--gold-dim);
-}
+.digest-date{font-size:12px;color:var(--gold-dim);margin-bottom:4px;font-family:'IBM Plex Mono',monospace}
+.digest-headline{font-family:'Instrument Serif',serif;font-size:1.5rem;color:var(--gold);margin-bottom:1rem}
+.digest-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.digest-list li{font-size:14px;color:var(--muted);padding-left:1.1rem;position:relative;line-height:1.6}
+.digest-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--gold-dim)}
 .digest-list strong{color:var(--text);font-weight:500}
+.digest-link{color:var(--gold);text-decoration:underline;text-decoration-color:rgba(200,169,110,0.3)}
+.digest-link:hover{text-decoration-color:var(--gold)}
 
-/* ── PRODUCT HUNT ── */
+/* SECTION HEADER */
+.section-header{display:flex;align-items:baseline;gap:12px;margin-bottom:1.25rem}
+.section-label{font-family:'Instrument Serif',serif;font-size:1.3rem;color:var(--text)}
+.section-sub{font-size:13px;color:var(--hint)}
+
+/* PRODUCT HUNT */
 .ph-list{display:flex;flex-direction:column;gap:2px}
-.ph-row{
-  display:flex;align-items:center;gap:1rem;
-  background:var(--card);border:1px solid var(--border);
-  border-radius:var(--radius);padding:1rem 1.25rem;
-  transition:background .15s,border-color .15s;
-}
-.ph-row:hover{background:var(--card-h);border-color:var(--border-h)}
-.ph-rank{font-size:1.25rem;min-width:2rem;text-align:center}
+.ph-row{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.2rem;transition:background .15s,border-color .15s}
+.ph-row:hover{background:var(--card-h);border-color:var(--ph)}
+.ph-rank{font-size:1.2rem;min-width:2rem;text-align:center}
 .ph-info{flex:1;min-width:0}
-.ph-name{font-weight:500;font-size:15px;display:block;color:var(--text)}
-.ph-tagline{font-size:13px;color:var(--muted);display:block;
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.ph-arrow{color:var(--hint);font-size:18px;transition:transform .15s}
+.ph-name{font-weight:500;font-size:15px;display:block}
+.ph-tagline{font-size:13px;color:var(--muted);display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ph-arrow{color:var(--hint);font-size:18px;transition:transform .15s,color .15s}
 .ph-row:hover .ph-arrow{transform:translateX(3px);color:var(--ph)}
 
-/* ── GITHUB ── */
-.gh-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
-.gh-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:var(--radius);padding:1.1rem 1.25rem;
-  display:flex;flex-direction:column;gap:8px;
-  transition:background .15s,border-color .15s;
-}
+/* GITHUB */
+.gh-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+.gh-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;display:flex;flex-direction:column;gap:8px;transition:background .15s,border-color .15s}
 .gh-card:hover{background:var(--card-h);border-color:var(--gh)}
 .gh-header{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.gh-title{font-family:'IBM Plex Mono',monospace;font-size:13.5px;
-  font-weight:500;color:var(--text);word-break:break-all}
-.gh-lang{
-  font-size:11px;padding:2px 7px;border-radius:4px;
-  background:rgba(124,58,237,0.15);color:#a78bfa;border:1px solid rgba(124,58,237,0.3);
-  white-space:nowrap;
-}
-.gh-desc{font-size:13px;color:var(--muted);line-height:1.5;
-  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.gh-title{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;color:var(--text);word-break:break-all}
+.gh-lang{font-size:11px;padding:2px 7px;border-radius:4px;background:rgba(124,58,237,.12);color:#a78bfa;border:1px solid rgba(124,58,237,.25);white-space:nowrap}
+.gh-desc{font-size:13px;color:var(--muted);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .gh-stats{display:flex;gap:1rem;font-size:12px;color:var(--hint);margin-top:auto}
 .gh-today{color:#a78bfa}
 
-/* ── X / TWITTER ── */
-.tw-feed{display:flex;flex-direction:column;gap:1px}
-.tw-card{
-  display:flex;gap:12px;
-  background:var(--card);border:1px solid var(--border);
-  border-radius:var(--radius);padding:1rem 1.25rem;
-  transition:background .15s,border-color .15s;
-}
+/* TWITTER */
+.tw-feed{display:flex;flex-direction:column;gap:2px}
+.tw-card{display:flex;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.2rem;transition:background .15s,border-color .15s}
 .tw-card:hover{background:var(--card-h);border-color:var(--tw)}
-.tw-avatar{
-  width:38px;height:38px;border-radius:50%;flex-shrink:0;
-  background:rgba(29,155,240,0.15);border:1px solid rgba(29,155,240,0.3);
-  display:flex;align-items:center;justify-content:center;
-  font-size:13px;font-weight:500;color:#60b4f8;
-}
+.tw-avatar{width:38px;height:38px;border-radius:50%;flex-shrink:0;background:rgba(29,155,240,.1);border:1px solid rgba(29,155,240,.25);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#60b4f8}
 .tw-body{flex:1;min-width:0}
-.tw-author{font-size:13px;font-weight:500;color:var(--tw);display:block;margin-bottom:4px}
-.tw-text{font-size:14px;color:var(--text);line-height:1.55;
-  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.tw-meta{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.tw-author{font-size:13px;font-weight:500;color:var(--tw)}
+.tw-tag{font-size:10px;padding:2px 6px;border-radius:4px;font-weight:500}
+.tag-builder{background:rgba(200,169,110,.12);color:var(--gold);border:1px solid rgba(200,169,110,.2)}
+.tag-hot{background:rgba(29,155,240,.1);color:#60b4f8;border:1px solid rgba(29,155,240,.2)}
+.tw-text{font-size:14px;color:var(--text);line-height:1.55;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .tw-stats{display:flex;gap:1rem;font-size:12px;color:var(--hint);margin-top:6px}
 
-/* ── HACKER NEWS ── */
+/* HACKER NEWS */
 .hn-list{display:flex;flex-direction:column;gap:2px}
-.hn-row{
-  display:flex;align-items:center;gap:1rem;
-  background:var(--card);border:1px solid var(--border);
-  border-radius:var(--radius);padding:0.85rem 1.25rem;
-  transition:background .15s,border-color .15s;
-}
+.hn-row{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.8rem 1.2rem;transition:background .15s,border-color .15s}
 .hn-row:hover{background:var(--card-h);border-color:var(--hn)}
-.hn-num{
-  font-family:'IBM Plex Mono',monospace;font-size:12px;
-  color:var(--hn);min-width:2rem;
-}
-.hn-title{flex:1;font-size:14px;color:var(--text)}
+.hn-num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--hn);min-width:2rem}
+.hn-title{flex:1;font-size:14px}
 .hn-arrow{color:var(--hint);transition:transform .15s,color .15s}
 .hn-row:hover .hn-arrow{transform:translateX(3px);color:var(--hn)}
 
-/* ── 36KR ── */
-.kr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
-.kr-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:var(--radius);padding:1.1rem 1.25rem;
-  display:flex;flex-direction:column;gap:8px;
-  transition:background .15s,border-color .15s;
-}
-.kr-card:hover{background:var(--card-h);border-color:var(--kr)}
-.kr-title{font-size:14.5px;font-weight:500;color:var(--text);line-height:1.4;
-  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.kr-summary{font-size:13px;color:var(--muted);line-height:1.5;
-  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.kr-footer{display:flex;align-items:center;gap:8px;margin-top:auto}
-.kr-dots{display:flex;gap:3px}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--hint)}
-.dot.active{background:var(--kr)}
+/* OPENROUTER */
+.or-list{display:flex;flex-direction:column;gap:2px}
+.or-row{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.2rem;transition:background .15s,border-color .15s}
+.or-row:hover{background:var(--card-h);border-color:var(--or)}
+.or-rank{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--or);min-width:2.5rem;font-weight:500}
+.or-info{flex:1;min-width:0}
+.or-name{font-size:14px;font-weight:500;display:block}
+.or-provider{font-size:12px;display:block;margin-top:1px}
+.or-right{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.or-tokens{font-size:13px;color:var(--muted);font-family:'IBM Plex Mono',monospace}
+.or-new{font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(16,185,129,.12);color:var(--or);border:1px solid rgba(16,185,129,.25)}
+.or-up{font-size:11px;color:#34d399}.or-down{font-size:11px;color:#f87171}.or-flat{font-size:11px;color:var(--hint)}
 
-/* ── SECTION HEADER ── */
-.section-header{
-  display:flex;align-items:baseline;gap:12px;margin-bottom:1.25rem;
-}
-.section-label{
-  font-family:'Instrument Serif',serif;font-size:1.35rem;color:var(--text);
-}
-.section-sub{font-size:13px;color:var(--hint)}
-
-/* ── FOOTER ── */
-.site-footer{
-  text-align:center;padding:2.5rem 1rem;
-  font-size:12px;color:var(--hint);border-top:1px solid var(--border);
-  margin-top:3rem;
-}
-
-/* ── RESPONSIVE ── */
+/* RESPONSIVE */
 @media(max-width:640px){
-  .masthead{font-size:1.1rem}
+  .masthead{font-size:1.15rem}
   .total-badge{display:none}
   .main{padding:1.5rem 1rem}
-  .gh-grid,.kr-grid{grid-template-columns:1fr}
+  .gh-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -215,8 +154,7 @@ a{color:inherit;text-decoration:none}
 <header class="site-header">
   <div class="masthead">Daily <em>News</em></div>
   <div class="header-right">
-    <select class="date-select" onchange="location.href=this.value+'.html'">
-      <option value="2026-04-05" selected>2026-04-05</option>
+    <select class="date-select" onchange="location.href=this.value+'.html'"><option value="2026-04-05" selected>2026-04-05</option>
 <option value="2026-04-04" >2026-04-04</option>
 <option value="2026-04-03" >2026-04-03</option>
 <option value="2026-04-02" >2026-04-02</option>
@@ -245,247 +183,563 @@ a{color:inherit;text-decoration:none}
 <option value="2026-03-09" >2026-03-09</option>
 <option value="2026-03-08" >2026-03-08</option>
 <option value="2026-03-07" >2026-03-07</option>
-<option value="2026-03-05" >2026-03-05</option>
-    </select>
-    <span class="total-badge">63 条 · 4月5日 周日</span>
+<option value="2026-03-05" >2026-03-05</option></select>
+    <span class="total-badge">4月5日 周日</span>
   </div>
 </header>
 
 <nav class="source-tabs">
-  <div class="tab active" data-sec="digest" style="--tab-color:var(--gold)">
-    导读 <span class="cnt">5</span>
-  </div>
-  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">
-    🐱 Product Hunt <span class="cnt">0</span>
-  </div>
-  <div class="tab" data-sec="gh" style="--tab-color:var(--gh)">
-    ✦ GitHub Trending <span class="cnt">0</span>
-  </div>
-  <div class="tab" data-sec="tw" style="--tab-color:var(--tw)">
-    𝕏 Twitter <span class="cnt">0</span>
-  </div>
-  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">
-    ▲ Hacker News <span class="cnt">56</span>
-  </div>
-  <div class="tab" data-sec="kr" style="--tab-color:var(--kr)">
-    氪 36氪 <span class="cnt">7</span>
-  </div>
+  <div class="tab active" data-sec="digest" style="--tab-color:var(--gold)">导读</div>
+  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">1</span></div>
+  <div class="tab" data-sec="gh" style="--tab-color:var(--gh)">✦ GitHub <span class="cnt">10</span></div>
+  <div class="tab" data-sec="tw" style="--tab-color:var(--tw)">𝕏 Twitter <span class="cnt">18</span></div>
+  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">71</span></div>
+  <div class="tab" data-sec="or" style="--tab-color:var(--or)">⟳ OpenRouter <span class="cnt">10</span></div>
 </nav>
 
 <main class="main">
 
-  <!-- DIGEST -->
   <section class="section active" id="sec-digest">
-    <div class="digest">
-      <div class="digest-title">今日速览</div>
-      <ul class="digest-list">
-        <li><strong>Product Hunt #1</strong> · Qwen3.6-Plus — 为 AI 编码 Agent 优化的多模态模型上线</li>
-        <li><strong>GitHub Trending</strong> · 今日 0 个项目，oh-my-codex(+3047) 和 openscreen(+2771) 领跑</li>
-        <li><strong>X/Twitter</strong> · 共收录 0 条 AI 热帖，Claude Code、Gemma 4 开机量刷屏</li>
-        <li><strong>Hacker News</strong> · 今日 56 条技术讨论</li>
-        <li><strong>36氪</strong> · 神州数码 AI 业务增近五成，量子计算 C+ 轮融资近 10 亿</li>
-      </ul>
-    </div>
+    
+<div class="digest-card">
+  <div class="digest-date">4月5日 周日</div>
+  <div class="digest-headline">今日速览</div>
+  <ul class="digest-list"><li><strong>Product Hunt #1</strong> · <a href="https://www.producthunt.com/products/influcio-2" target="_blank" class="digest-link">Influcio</a> — AI marketing Agent for result-driven influencer campaign</li>
+<li><strong>GitHub Trending</strong> · 今日 10 个项目上榜，<a href="https://github.com/siddharthvaddem/openscreen" target="_blank" class="digest-link">siddharthvaddem/openscreen</a> 领跑 +2,692 星</li>
+<li><strong>X / Twitter</strong> · 共 18 条 AI 精选推文，来自 ai-sweep 热帖与 Zara Builder 精选，karpathy 高赞：Wow, this tweet went very viral!
+
+I wanted share a…</li>
+<li><strong>Hacker News</strong> · 今日 71 条技术讨论</li>
+<li><strong>OpenRouter 周排名 #1</strong> · MiMo-V2-Pro (xiaomi) 3.73T tokens</li></ul>
+</div>
   </section>
 
-  <!-- PRODUCT HUNT -->
   <section class="section" id="sec-ph">
     <div class="section-header">
       <span class="section-label">Product Hunt</span>
-      <span class="section-sub">今日热榜 0 款产品</span>
+      <span class="section-sub">今日热榜 1 款</span>
     </div>
-    <div class="ph-list"></div>
+    <div class="ph-list">
+    <a class="ph-row" href="https://www.producthunt.com/products/influcio-2" target="_blank" rel="noopener">
+      <span class="ph-rank">🥇</span>
+      <div class="ph-info">
+        <span class="ph-name">Influcio</span>
+        <span class="ph-tagline">AI marketing Agent for result-driven influencer campaign</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a></div>
   </section>
 
-  <!-- GITHUB -->
   <section class="section" id="sec-gh">
     <div class="section-header">
       <span class="section-label">GitHub Trending</span>
-      <span class="section-sub">2026-04-05 · 0 个项目</span>
+      <span class="section-sub">2026-04-05 · 10 个项目</span>
     </div>
-    <div class="gh-grid"></div>
+    <div class="gh-grid">
+    <a class="gh-card" href="https://github.com/siddharthvaddem/openscreen" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">siddharthvaddem/openscreen</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">Create stunning demos for free. Open-source, no subscriptions, no watermarks, and free for commercial use. An alternative to Screen Studio.</p>
+      <div class="gh-stats"><span>⭐ 21,859</span><span class="gh-today">+2,692 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/onyx-dot-app/onyx" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">onyx-dot-app/onyx</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">Open Source AI Platform - AI Chat with advanced features that works with every LLM</p>
+      <div class="gh-stats"><span>⭐ 24,746</span><span class="gh-today">+960 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/block/goose" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">block/goose</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM</p>
+      <div class="gh-stats"><span>⭐ 36,401</span><span class="gh-today">+866 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/google-ai-edge/gallery" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">google-ai-edge/gallery</span><span class="gh-lang">Kotlin</span></div>
+      <p class="gh-desc">A gallery that showcases on-device ML/GenAI use cases and allows people to try and use models locally.</p>
+      <div class="gh-stats"><span>⭐ 16,559</span><span class="gh-today">+495 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/Blaizzy/mlx-vlm" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Blaizzy/mlx-vlm</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">MLX-VLM is a package for inference and fine-tuning of Vision Language Models (VLMs) on your Mac using MLX.</p>
+      <div class="gh-stats"><span>⭐ 3,810</span><span class="gh-today">+408 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/badlogic/pi-mono" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">badlogic/pi-mono</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">AI agent toolkit: coding agent CLI, unified LLM API, TUI &amp; web UI libraries, Slack bot, vLLM pods</p>
+      <div class="gh-stats"><span>⭐ 31,731</span><span class="gh-today">+340 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/freeCodeCamp/freeCodeCamp" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">freeCodeCamp/freeCodeCamp</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.</p>
+      <div class="gh-stats"><span>⭐ 441,264</span><span class="gh-today">+292 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/telegramdesktop/tdesktop" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">telegramdesktop/tdesktop</span><span class="gh-lang">C++</span></div>
+      <p class="gh-desc">Telegram Desktop messaging app</p>
+      <div class="gh-stats"><span>⭐ 30,978</span><span class="gh-today">+265 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/google-ai-edge/LiteRT-LM" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">google-ai-edge/LiteRT-LM</span><span class="gh-lang">C++</span></div>
+      <p class="gh-desc"></p>
+      <div class="gh-stats"><span>⭐ 1,380</span><span class="gh-today">+113 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/dmtrKovalenko/fff.nvim" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">dmtrKovalenko/fff.nvim</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">The fastest and the most accurate file search toolkit for AI agents, Neovim, Rust, C, and NodeJS</p>
+      <div class="gh-stats"><span>⭐ 3,556</span><span class="gh-today">+111 today</span></div>
+    </a></div>
   </section>
 
-  <!-- TWITTER -->
   <section class="section" id="sec-tw">
     <div class="section-header">
       <span class="section-label">X / Twitter</span>
-      <span class="section-sub">AI 热帖 Top 0</span>
+      <span class="section-sub">AI 热帖 + Builder 精选 · Top 18</span>
     </div>
-    <div class="tw-feed"></div>
+    <div class="tw-feed">
+    <a class="tw-card" href="https://x.com/karpathy/status/2040470801506541998" target="_blank" rel="noopener">
+      <div class="tw-avatar">KA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@karpathy</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Wow, this tweet went very viral!
+
+I wanted share a possibly slightly improved version of the tweet in an &quot;idea file&quot;. The idea of the idea file is that in this era of LLM agents, there is less of a point/need of sharing the specific code/app, you just share the idea, then the other person's agent cu</p>
+        <div class="tw-stats"><span>❤ 17,282</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/karpathy/status/2040572272944324650" target="_blank" rel="noopener">
+      <div class="tw-avatar">KA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@karpathy</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Farzapedia, personal wikipedia of Farza, good example following my Wiki LLM tweet.
+
+I really like this approach to personalization in a number of ways, compared to &quot;status quo&quot; of an AI that allegedly gets better the more you use it or something:
+
+1. Explicit. The memory artifact is explicit and nav</p>
+        <div class="tw-stats"><span>❤ 4,186</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/karpathy/status/2040549459193704852" target="_blank" rel="noopener">
+      <div class="tw-avatar">KA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@karpathy</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Something I've been thinking about - I am bullish on people (empowered by AI) increasing the visibility, legibility and accountability of their governments.
+
+Historically, it is the governments that act to make society legible (e.g. &quot;Seeing like a state&quot; is the common reference), but with AI, societ</p>
+        <div class="tw-stats"><span>❤ 3,029</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/steipete/status/2040492573819904026" target="_blank" rel="noopener">
+      <div class="tw-avatar">ST</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@steipete</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">&quot;There’s a big wave coming&quot; https://t.co/sbGnugb3Hz</p>
+        <div class="tw-stats"><span>❤ 1,043</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/trq212/status/2040557561464885382" target="_blank" rel="noopener">
+      <div class="tw-avatar">TR</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@trq212</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">POV: you're cooking https://t.co/Aw546zNBq7</p>
+        <div class="tw-stats"><span>❤ 722</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/levie/status/2040650799550722243" target="_blank" rel="noopener">
+      <div class="tw-avatar">LE</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@levie</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">One of the core things we’re going to have to contend with in AI is that even the most advanced models in the word can’t have all the relevant knowledge needed to be useful, because everyone has different use-cases and ways they’ve designed their workflows. 
+
+Perhaps most importantly, as you get int</p>
+        <div class="tw-stats"><span>❤ 99</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/levie/status/2040528801386361128" target="_blank" rel="noopener">
+      <div class="tw-avatar">LE</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@levie</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">As AI models get better at handling tools, and as context windows get bigger without as much rot, you can start to design agents more similar to how people work instead of having to mitigate the model limitations with weird hacks.
+
+For instance, even a year ago, if you were to build an agent to proc</p>
+        <div class="tw-stats"><span>❤ 98</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/zarazhangrui/status/2040565939100676382" target="_blank" rel="noopener">
+      <div class="tw-avatar">ZA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@zarazhangrui</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Prompting tip from @steipete:
+
+I always ask the model, &quot;Do you have any questions?&quot;</p>
+        <div class="tw-stats"><span>❤ 71</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/petergyang/status/2040414021091037685" target="_blank" rel="noopener">
+      <div class="tw-avatar">PE</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@petergyang</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Can someone share a screenshot of what OpenClaw with GPT looks like - how much personality is there?</p>
+        <div class="tw-stats"><span>❤ 63</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/garrytan/status/2040658880586522783" target="_blank" rel="noopener">
+      <div class="tw-avatar">GA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@garrytan</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">14 security bug fixes just landed for GStack, half of which were community PR's. https://t.co/98jmCzQ38i</p>
+        <div class="tw-stats"><span>❤ 61</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/garrytan/status/2040581964156342768" target="_blank" rel="noopener">
+      <div class="tw-avatar">GA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@garrytan</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">We are fighting to stop this
+
+Join @garryslist if you want to help us https://t.co/2iKxFtZbtE</p>
+        <div class="tw-stats"><span>❤ 61</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/nikunj/status/2040513012440895664" target="_blank" rel="noopener">
+      <div class="tw-avatar">NI</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@nikunj</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Don’t forget to smell the flowers 💐 https://t.co/p8qjJhOcQQ</p>
+        <div class="tw-stats"><span>❤ 30</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/petergyang/status/2040416994789613713" target="_blank" rel="noopener">
+      <div class="tw-avatar">PE</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@petergyang</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">An incredible deep dive on Disneyland from my friend @TrungTPhan  https://t.co/yHMHnOBbJ6</p>
+        <div class="tw-stats"><span>❤ 18</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/petergyang/status/2040501833899364494" target="_blank" rel="noopener">
+      <div class="tw-avatar">PE</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@petergyang</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Up at 3 am Shanghai time wondering one thing - should I buy a new MacBook Pro or go for the Mac Studio to vibe code and also run local models?</p>
+        <div class="tw-stats"><span>❤ 14</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/thenanyu/status/2040597900502135059" target="_blank" rel="noopener">
+      <div class="tw-avatar">TH</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@thenanyu</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">https://t.co/kv205MYqCC https://t.co/fvee5JZe9i</p>
+        <div class="tw-stats"><span>❤ 9</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/garrytan/status/2040667535490863254" target="_blank" rel="noopener">
+      <div class="tw-avatar">GA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@garrytan</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Also trying to make reviews adaptive and smarter. More work towards L8 software factory. Slow and steady. https://t.co/k8VR3v497U</p>
+        <div class="tw-stats"><span>❤ 5</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/thenanyu/status/2040659521337504215" target="_blank" rel="noopener">
+      <div class="tw-avatar">TH</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@thenanyu</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Design engineers https://t.co/dZeLybBMJq</p>
+        <div class="tw-stats"><span>❤ 3</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/thenanyu/status/2040602311148404890" target="_blank" rel="noopener">
+      <div class="tw-avatar">TH</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@thenanyu</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">https://t.co/zzfwvC3401</p>
+        <div class="tw-stats"><span>❤ 0</span></div>
+      </div>
+    </a></div>
   </section>
 
-  <!-- HN -->
   <section class="section" id="sec-hn">
     <div class="section-header">
       <span class="section-label">Hacker News</span>
       <span class="section-sub">Top 20</span>
     </div>
     <div class="hn-list">
-        <a class="hn-row" href="https://jaso1024.com/mvidia/" target="_blank" rel="noopener">
-          <span class="hn-num">01</span>
-          <span class="hn-title">Show HN: A game where you build a GPU</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://github.com/OneUptime/blog/commit/30cd2384794c897d95aca77d173db44af51ca849" target="_blank" rel="noopener">
-          <span class="hn-num">02</span>
-          <span class="hn-title">12,000 AI-generated blog posts added in a single commit</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://github.com/teamchong/turboquant-wasm" target="_blank" rel="noopener">
-          <span class="hn-num">03</span>
-          <span class="hn-title">Show HN: TurboQuant-WASM – Google's vector quantization in the browser</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://www.theverge.com/tech/907003/apple-approves-driver-that-lets-nvidia-egpus-work-with-arm-macs" target="_blank" rel="noopener">
-          <span class="hn-num">04</span>
-          <span class="hn-title">Apple approves driver that lets Nvidia eGPUs work with Arm Macs</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://sllm.cloud" target="_blank" rel="noopener">
-          <span class="hn-num">05</span>
-          <span class="hn-title">Show HN: sllm – Split a GPU node with other developers, unlimited tokens</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://magazine.sebastianraschka.com/p/components-of-a-coding-agent" target="_blank" rel="noopener">
-          <span class="hn-num">06</span>
-          <span class="hn-title">Components of a Coding Agent</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://www.thetimes.com/uk/technology-uk/article/sarah-wynn-williams-careless-people-meta-nrffdfpmf" target="_blank" rel="noopener">
-          <span class="hn-num">07</span>
-          <span class="hn-title">Author of "Careless People" banned from saying anything negative about Meta</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://www.wsj.com/livecoverage/iran-war-news-2026/card/iran-s-network-of-cameras-bolsters-air-defenses-expert-says-IqjSSuOcGNrxzsrp52i8" target="_blank" rel="noopener">
-          <span class="hn-num">08</span>
-          <span class="hn-title">Iran's Network of Cameras Bolsters Air Defenses, Expert Says</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://iii.social" target="_blank" rel="noopener">
-          <span class="hn-num">09</span>
-          <span class="hn-title">The Indie Internet Index – submit your favorite sites</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://www.dbreunig.com/2026/03/26/winchester-mystery-house.html" target="_blank" rel="noopener">
-          <span class="hn-num">10</span>
-          <span class="hn-title">The Cathedral, the Bazaar, and the Winchester Mystery House</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://news.ycombinator.com/item?id=47606244" target="_blank" rel="noopener">
-          <span class="hn-num">11</span>
-          <span class="hn-title">Training mRNA Language Models Across 25 Species for $165</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://www.bloomberg.com/features/2025-bottlenecks-transformers/" target="_blank" rel="noopener">
-          <span class="hn-num">12</span>
-          <span class="hn-title">Electrical Transformer Manufacturing Is Throttling the Electrified Future</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://www.ycombinator.com/companies/mbodi-ai/jobs/mf9L3sy-senior-robotics-engineer-systems-controls" target="_blank" rel="noopener">
-          <span class="hn-num">13</span>
-          <span class="hn-title">Mbodi AI (YC P25) Is Hiring</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://apps.npr.org/life-on-tristan-da-cunha/" target="_blank" rel="noopener">
-          <span class="hn-num">14</span>
-          <span class="hn-title">What life looks like on the most remote inhabited island</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://www.npr.org/2026/04/04/nx-s1-5773354/legal-sports-betting-research-credit-bankruptcy" target="_blank" rel="noopener">
-          <span class="hn-num">15</span>
-          <span class="hn-title">When legal sports betting surges, so do Americans' financial problems</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://deadneurons.substack.com/p/why-the-most-valuable-things-you" target="_blank" rel="noopener">
-          <span class="hn-num">16</span>
-          <span class="hn-title">Why the Most Valuable Things You Know Are Things You Cannot Say</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://www.universetoday.com/articles/astronomers-find-a-third-galaxy-missing-its-dark-matter-validating-a-violent-cosmic-collision-theory" target="_blank" rel="noopener">
-          <span class="hn-num">17</span>
-          <span class="hn-title">Astronomers Find a Third Galaxy Missing Its Dark Matter</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://nathanotterness.com/2021/10/tiny_elf_modernized.html" target="_blank" rel="noopener">
-          <span class="hn-num">18</span>
-          <span class="hn-title">The smallest ELF executable (2021)</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">
-          <span class="hn-num">19</span>
-          <span class="hn-title">LLM Wiki – example of an "idea file"</span>
-          <span class="hn-arrow">→</span>
-        </a>
-        <a class="hn-row" href="https://teybannerman.com/strategy/2026/03/31/how-many-microsoft-copilot-are-there.html" target="_blank" rel="noopener">
-          <span class="hn-num">20</span>
-          <span class="hn-title">How many products does Microsoft have named 'Copilot'?</span>
-          <span class="hn-arrow">→</span>
-        </a></div>
+    <a class="hn-row" href="https://jaso1024.com/mvidia/" target="_blank" rel="noopener">
+      <span class="hn-num">01</span>
+      <span class="hn-title">Show HN: A game where you build a GPU</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://github.com/OneUptime/blog/commit/30cd2384794c897d95aca77d173db44af51ca849" target="_blank" rel="noopener">
+      <span class="hn-num">02</span>
+      <span class="hn-title">12,000 AI-generated blog posts added in a single commit</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://github.com/teamchong/turboquant-wasm" target="_blank" rel="noopener">
+      <span class="hn-num">03</span>
+      <span class="hn-title">Show HN: TurboQuant-WASM – Google's vector quantization in the browser</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.theverge.com/tech/907003/apple-approves-driver-that-lets-nvidia-egpus-work-with-arm-macs" target="_blank" rel="noopener">
+      <span class="hn-num">04</span>
+      <span class="hn-title">Apple approves driver that lets Nvidia eGPUs work with Arm Macs</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://sllm.cloud" target="_blank" rel="noopener">
+      <span class="hn-num">05</span>
+      <span class="hn-title">Show HN: sllm – Split a GPU node with other developers, unlimited tokens</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://magazine.sebastianraschka.com/p/components-of-a-coding-agent" target="_blank" rel="noopener">
+      <span class="hn-num">06</span>
+      <span class="hn-title">Components of a Coding Agent</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.thetimes.com/uk/technology-uk/article/sarah-wynn-williams-careless-people-meta-nrffdfpmf" target="_blank" rel="noopener">
+      <span class="hn-num">07</span>
+      <span class="hn-title">Author of &quot;Careless People&quot; banned from saying anything negative about Meta</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.wsj.com/livecoverage/iran-war-news-2026/card/iran-s-network-of-cameras-bolsters-air-defenses-expert-says-IqjSSuOcGNrxzsrp52i8" target="_blank" rel="noopener">
+      <span class="hn-num">08</span>
+      <span class="hn-title">Iran's Network of Cameras Bolsters Air Defenses, Expert Says</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://iii.social" target="_blank" rel="noopener">
+      <span class="hn-num">09</span>
+      <span class="hn-title">The Indie Internet Index – submit your favorite sites</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.dbreunig.com/2026/03/26/winchester-mystery-house.html" target="_blank" rel="noopener">
+      <span class="hn-num">10</span>
+      <span class="hn-title">The Cathedral, the Bazaar, and the Winchester Mystery House</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://news.ycombinator.com/item?id=47606244" target="_blank" rel="noopener">
+      <span class="hn-num">11</span>
+      <span class="hn-title">Training mRNA Language Models Across 25 Species for $165</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.bloomberg.com/features/2025-bottlenecks-transformers/" target="_blank" rel="noopener">
+      <span class="hn-num">12</span>
+      <span class="hn-title">Electrical Transformer Manufacturing Is Throttling the Electrified Future</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.ycombinator.com/companies/mbodi-ai/jobs/mf9L3sy-senior-robotics-engineer-systems-controls" target="_blank" rel="noopener">
+      <span class="hn-num">13</span>
+      <span class="hn-title">Mbodi AI (YC P25) Is Hiring</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://apps.npr.org/life-on-tristan-da-cunha/" target="_blank" rel="noopener">
+      <span class="hn-num">14</span>
+      <span class="hn-title">What life looks like on the most remote inhabited island</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.npr.org/2026/04/04/nx-s1-5773354/legal-sports-betting-research-credit-bankruptcy" target="_blank" rel="noopener">
+      <span class="hn-num">15</span>
+      <span class="hn-title">When legal sports betting surges, so do Americans' financial problems</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://deadneurons.substack.com/p/why-the-most-valuable-things-you" target="_blank" rel="noopener">
+      <span class="hn-num">16</span>
+      <span class="hn-title">Why the Most Valuable Things You Know Are Things You Cannot Say</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.universetoday.com/articles/astronomers-find-a-third-galaxy-missing-its-dark-matter-validating-a-violent-cosmic-collision-theory" target="_blank" rel="noopener">
+      <span class="hn-num">17</span>
+      <span class="hn-title">Astronomers Find a Third Galaxy Missing Its Dark Matter</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://nathanotterness.com/2021/10/tiny_elf_modernized.html" target="_blank" rel="noopener">
+      <span class="hn-num">18</span>
+      <span class="hn-title">The smallest ELF executable (2021)</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">
+      <span class="hn-num">19</span>
+      <span class="hn-title">LLM Wiki – example of an &quot;idea file&quot;</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://teybannerman.com/strategy/2026/03/31/how-many-microsoft-copilot-are-there.html" target="_blank" rel="noopener">
+      <span class="hn-num">20</span>
+      <span class="hn-title">How many products does Microsoft have named 'Copilot'?</span>
+      <span class="hn-arrow">→</span>
+    </a></div>
   </section>
 
-  <!-- 36KR -->
-  <section class="section" id="sec-kr">
+  <section class="section" id="sec-or">
     <div class="section-header">
-      <span class="section-label">36氪</span>
-      <span class="section-sub">按相关度排序 · 共 7 条</span>
+      <span class="section-label">OpenRouter 排行</span>
+      <span class="section-sub">本周 LLM 使用量排行 · 10 个模型</span>
     </div>
-    <div class="kr-grid">
-        <a class="kr-card" href="https://www.36kr.com/p/3752260051616512" target="_blank" rel="noopener">
-          <p class="kr-title">高端智能投影品牌AWOL Vision获近亿元B轮融资，新品拿下近2000万美金众筹｜硬氪首发</p>
-          <p class="kr-summary"></p>
-          <div class="kr-footer">
-            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-          </div>
-        </a>
-        <a class="kr-card" href="https://www.36kr.com/p/3753413995741954" target="_blank" rel="noopener">
-          <p class="kr-title">如果有一天周杰伦用 AI 写歌，你还会听吗？</p>
-          <p class="kr-summary"></p>
-          <div class="kr-footer">
-            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-          </div>
-        </a>
-        <a class="kr-card" href="https://www.36kr.com/p/3753347893719810" target="_blank" rel="noopener">
-          <p class="kr-title">大厂只需要Token，不需要活人</p>
-          <p class="kr-summary"></p>
-          <div class="kr-footer">
-            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-          </div>
-        </a>
-        <a class="kr-card" href="https://www.36kr.com/p/3753345845903872" target="_blank" rel="noopener">
-          <p class="kr-title">一场机器人黑客松，让具身智能的差距与机会同时显形</p>
-          <p class="kr-summary"></p>
-          <div class="kr-footer">
-            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-          </div>
-        </a>
-        <a class="kr-card" href="https://www.36kr.com/p/3753363220771336" target="_blank" rel="noopener">
-          <p class="kr-title">同事被“炼化”为Skill？大家把这事想简单了</p>
-          <p class="kr-summary"></p>
-          <div class="kr-footer">
-            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-          </div>
-        </a>
-        <a class="kr-card" href="https://www.36kr.com/p/3753630523294472" target="_blank" rel="noopener">
-          <p class="kr-title">算力基建提速，电子玻纤布又要起飞了？</p>
-          <p class="kr-summary"></p>
-          <div class="kr-footer">
-            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-          </div>
-        </a>
-        <a class="kr-card" href="https://www.36kr.com/p/3753449545445896" target="_blank" rel="noopener">
-          <p class="kr-title">社交媒体撕裂的世界，能被ChatGPT们缝合吗？</p>
-          <p class="kr-summary"></p>
-          <div class="kr-footer">
-            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-          </div>
-        </a></div>
+    <div class="or-list">
+    <a class="or-row" href="https://openrouter.ai/models?q=MiMo-V2-Pro" target="_blank" rel="noopener">
+      <span class="or-rank">#1</span>
+      <div class="or-info">
+        <span class="or-name">MiMo-V2-Pro</span>
+        <span class="or-provider" style="color:#ff6900">xiaomi</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">3.73T tokens</span>
+        <span class="or-flat">−0%</span>
+      </div>
+    </a>
+    <a class="or-row" href="https://openrouter.ai/models?q=Qwen3.6+Plus+(free)" target="_blank" rel="noopener">
+      <span class="or-rank">#2</span>
+      <div class="or-info">
+        <span class="or-name">Qwen3.6 Plus (free)</span>
+        <span class="or-provider" style="color:#7c3aed">qwen</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">3.16T tokens</span>
+        <span class="or-new">NEW</span>
+      </div>
+    </a>
+    <a class="or-row" href="https://openrouter.ai/models?q=Qwen3.6+Plus+Preview+(free)" target="_blank" rel="noopener">
+      <span class="or-rank">#3</span>
+      <div class="or-info">
+        <span class="or-name">Qwen3.6 Plus Preview (free)</span>
+        <span class="or-provider" style="color:#7c3aed">qwen</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">1.64T tokens</span>
+        <span class="or-new">NEW</span>
+      </div>
+    </a>
+    <a class="or-row" href="https://openrouter.ai/models?q=Step+3.5+Flash+(free)" target="_blank" rel="noopener">
+      <span class="or-rank">#4</span>
+      <div class="or-info">
+        <span class="or-name">Step 3.5 Flash (free)</span>
+        <span class="or-provider" style="color:#6366f1">stepfun</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">1.3T tokens</span>
+        <span class="or-up">↑13%</span>
+      </div>
+    </a>
+    <a class="or-row" href="https://openrouter.ai/models?q=MiniMax+M2.7" target="_blank" rel="noopener">
+      <span class="or-rank">#5</span>
+      <div class="or-info">
+        <span class="or-name">MiniMax M2.7</span>
+        <span class="or-provider" style="color:#e040fb">minimax</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">1.24T tokens</span>
+        <span class="or-up">↑1%</span>
+      </div>
+    </a>
+    <a class="or-row" href="https://openrouter.ai/models?q=DeepSeek+V3.2" target="_blank" rel="noopener">
+      <span class="or-rank">#6</span>
+      <div class="or-info">
+        <span class="or-name">DeepSeek V3.2</span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">1.2T tokens</span>
+        <span class="or-up">↑3%</span>
+      </div>
+    </a>
+    <a class="or-row" href="https://openrouter.ai/models?q=Claude+Sonnet+4.6" target="_blank" rel="noopener">
+      <span class="or-rank">#7</span>
+      <div class="or-info">
+        <span class="or-name">Claude Sonnet 4.6</span>
+        <span class="or-provider" style="color:#c96442">anthropic</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">1.04T tokens</span>
+        <span class="or-up">↑2%</span>
+      </div>
+    </a>
+    <a class="or-row" href="https://openrouter.ai/models?q=Claude+Opus+4.6" target="_blank" rel="noopener">
+      <span class="or-rank">#8</span>
+      <div class="or-info">
+        <span class="or-name">Claude Opus 4.6</span>
+        <span class="or-provider" style="color:#c96442">anthropic</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">1.01T tokens</span>
+        <span class="or-up">↑2%</span>
+      </div>
+    </a>
+    <a class="or-row" href="https://openrouter.ai/models?q=Gemini+3+Flash+Preview" target="_blank" rel="noopener">
+      <span class="or-rank">#9</span>
+      <div class="or-info">
+        <span class="or-name">Gemini 3 Flash Preview</span>
+        <span class="or-provider" style="color:#4285f4">google</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">978B tokens</span>
+        <span class="or-flat">−0%</span>
+      </div>
+    </a>
+    <a class="or-row" href="https://openrouter.ai/models?q=Grok+4.1+Fast" target="_blank" rel="noopener">
+      <span class="or-rank">#10</span>
+      <div class="or-info">
+        <span class="or-name">Grok 4.1 Fast</span>
+        <span class="or-provider" style="color:#1d9bf0">x-ai</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">828B tokens</span>
+        <span class="or-up">↑49%</span>
+      </div>
+    </a></div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  daily-news v2 · 63 items · 2026-04-05 · <a href="https://github.com/zkw15555506767-boop/zkevin-AI-dailynews" style="color:var(--gold-dim)">zkevin-AI-dailynews</a>
+<footer style="text-align:center;padding:2.5rem 1rem;font-size:12px;color:var(--hint);border-top:1px solid var(--border);margin-top:3rem">
+  daily-news v2 · 2026-04-05 · <a href="https://github.com/zkw15555506767-boop/zkevin-AI-dailynews" style="color:var(--gold-dim)">zkevin-AI-dailynews</a>
 </footer>
 
 <script>
@@ -497,7 +751,7 @@ tabs.forEach(tab => {
     secs.forEach(s => s.classList.remove('active'));
     tab.classList.add('active');
     document.getElementById('sec-' + tab.dataset.sec).classList.add('active');
-    window.scrollTo({top: 56, behavior: 'smooth'});
+    window.scrollTo({top:107,behavior:'smooth'});
   });
 });
 </script>
