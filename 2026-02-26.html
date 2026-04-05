@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News - 2026-02-26</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #f5f5f5;
+            --bg-card: #ffffff;
+            --bg-dark: #1a1a2e;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --text-muted: #999999;
+            --accent: #e94560;
+            --border: #eee;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 2rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #e94560;
+        }
+
+        .date-display {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Navigation */
+        .nav {
+            background: white;
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .date-link {
+            padding: 0.5rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            white-space: nowrap;
+            transition: all 0.2s;
+            background: var(--bg-primary);
+        }
+
+        .date-link:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .date-link.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Main */
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        /* Summary Cards */
+        .summary-section {
+            margin-bottom: 2rem;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.25rem;
+            border-radius: 12px;
+            margin-bottom: 0.75rem;
+        }
+
+        .summary-card:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .summary-card:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .summary-card:nth-child(4) {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .topic-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.2);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Feed Sections */
+        .feed-section {
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--accent-color, var(--accent));
+        }
+
+        .section-icon {
+            color: var(--accent-color, var(--accent));
+            font-size: 0.875rem;
+        }
+
+        .section-name {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .section-count {
+            margin-left: auto;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            background: var(--bg-primary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.25s ease;
+            border: 1px solid transparent;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: var(--accent-color, var(--accent));
+        }
+
+        .card.hot-card {
+            border-left: 4px solid var(--accent-color, var(--accent));
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 1.5rem 1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .main {
+                padding: 1rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Daily <span>News</span></div>
+            <div class="date-display">2026-02-26</div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="2026-04-04.html" class="date-link ">2026-04-04</a><a href="2026-03-07.html" class="date-link ">2026-03-07</a><a href="2026-03-06.html" class="date-link ">2026-03-06</a><a href="2026-03-05.html" class="date-link ">2026-03-05</a><a href="2026-02-26.html" class="date-link active">2026-02-26</a><a href="2026-02-25.html" class="date-link ">2026-02-25</a>
+        </div>
+    </nav>
+
+    <main class="main">
+        <section class="summary-section">
+            
+        <div class="summary-card">
+            <span class="topic-tag">Agent 框架爆发</span>
+            <p class="summary-text">GitHub Trending 被各类 Agent 框架占据，superpowers、deer-flow 等项目获得大量关注</p>
+        </div>
+        
+        <div class="summary-card">
+            <span class="topic-tag">数据库创新</span>
+            <p class="summary-text">SpacetimeDB 将数据库与服务器合二为一，成为本周最热门项目</p>
+        </div>
+        
+        <div class="summary-card">
+            <span class="topic-tag">多 Agent 系统</span>
+            <p class="summary-text">多个多 Agent 协作项目出现，显示该领域正在快速发展</p>
+        </div>
+        
+        <div class="summary-card">
+            <span class="topic-tag">工具类应用</span>
+            <p class="summary-text">多 AI 助手切换工具、Claude 编排平台等工具类项目热度上升</p>
+        </div>
+        
+        </section>
+
+        
+            <section class="feed-section">
+                <div class="section-header" style="--accent-color: #636e72">
+                    <span class="section-icon">◆</span>
+                    <span class="section-name">五星推荐</span>
+                    <span class="section-count">4</span>
+                </div>
+                <div class="card-grid">
+                    
+            <a href="https://github.com/clockworklabs/SpacetimeDB" class="card hot-card" target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">SpacetimeDB - Development at the speed of light</h3>
+                    <p class="card-desc">SpacetimeDB是一个将数据库和服务器合二为一的分布式数据库系统。开发者可以用Rust编写应用逻辑并直接部署到数据库中，客户端直接连接数据库执行逻辑，无需部署Web服务器。支持游戏、聊天等实时应用，目前已被用于MMORPG《BitCraft Online》的后端。拥有20.6k stars，本周 trending 第一。</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/obra/superpowers" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">superpowers - An agentic skills framework & software development methodology</h3>
+                    <p class="card-desc">superpowers 是 obra（GitHub Copilot 开源贡献者）推出的 Agentic Skills 框架和软件开发生 methodology。该项目提供了 Agent 技能系统，让 AI Agent 能够调用特定技能完成任务。获得 62.6k stars，本周 trending 第二。</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Agent-Skills-for-Context-Engineering</h3>
+                    <p class="card-desc">Agent-Skills-for-Context-Engineering 是上下文工程、多 Agent 架构和生产级 Agent 系统的技能集合，提供上下文管理、记忆、工具调用等能力。获得 11.3k stars。</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/bytedance/deer-flow" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">deer-flow - An open-source SuperAgent harness</h3>
+                    <p class="card-desc">deer-flow 是字节跳动推出的开源 SuperAgent 框架，支持研究、编码和创建任务。结合沙箱、记忆、工具、技能和子 Agent，能够处理从几分钟到数小时的不同级别任务。获得 20.8k stars。</p>
+                </div>
+            </a>
+            
+                </div>
+            </section>
+            
+            <section class="feed-section">
+                <div class="section-header" style="--accent-color: #636e72">
+                    <span class="section-icon">◆</span>
+                    <span class="section-name">四星推荐</span>
+                    <span class="section-count">1</span>
+                </div>
+                <div class="card-grid">
+                    
+            <a href="https://github.com/ruvnet/claude-flow" class="card hot-card" target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">claude-flow - Agent orchestration platform for Claude</h3>
+                    <p class="card-desc">claude-flow 是领先的 Claude Agent编排平台，支持部署智能多 Agent 群组，协调自主工作流和构建对话 AI 系统。提供企业级架构、分布式群组智能、RAG 集成。</p>
+                </div>
+            </a>
+            
+                </div>
+            </section>
+            
+            <section class="feed-section">
+                <div class="section-header" style="--accent-color: #636e72">
+                    <span class="section-icon">◆</span>
+                    <span class="section-name">值得一看</span>
+                    <span class="section-count">4</span>
+                </div>
+                <div class="card-grid">
+                    
+            <a href="https://github.com/farion1231/cc-switch" class="card hot-card" target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">cc-switch - Cross-platform desktop All-in-One assistant tool</h3>
+                    <p class="card-desc">cc-switch 是一个跨平台桌面 AI 助手工具，支持 Claude Code、Codex、OpenCode 和 Gemini CLI。用户可以通过一个应用切换使用不同的 AI 助手。</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/ruvnet/ruvector" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">RuVector - High Performance Vector Graph Neural Network</h3>
+                    <p class="card-desc">RuVector 是用 Rust 构建的高性能、实时，自学习的向量图神经网络和数据库。</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/D4Vinci/Scrapling" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Scrapling - Adaptive Web Scraping framework</h3>
+                    <p class="card-desc">Scrapling 是一个自适应的 Web 爬虫框架，从单个请求到全量爬取都能处理。提供简洁的 API 用于网页数据提取。</p>
+                </div>
+            </a>
+            
+            <a href="https://skills.sh/squirrelscan/skills/audit-website" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">audit-website</h3>
+                    <p class="card-desc">audit-website 是一个网站审计技能，可以对网站进行全面的技术和 SEO 审计。</p>
+                </div>
+            </a>
+            
+                </div>
+            </section>
+            
+            <section class="feed-section">
+                <div class="section-header" style="--accent-color: #636e72">
+                    <span class="section-icon">◆</span>
+                    <span class="section-name">其他</span>
+                    <span class="section-count">1</span>
+                </div>
+                <div class="card-grid">
+                    
+            <a href="https://www.heltweg.org/posts/you-want-to-visit-the-uk-you-better-have-a-google-play-or-app-store-account/" class="card hot-card" target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">You Want to Visit the UK? You Better Have a Google Play or App Store Account</h3>
+                    <p class="card-desc">2026年2月起，英国对85个国家（包括美国和欧洲国家）实施ETA电子旅行授权制度，游客必须提前申请。文章作者吐槽英国政府强制要求使用官方App申请ETA，即使能找到在线申请入口，也需要点击多个页面并被引导使用App。文章批评了这种数字主权问题和对移动设备的强制要求。</p>
+                </div>
+            </a>
+            
+                </div>
+            </section>
+            
+    </main>
+
+    <footer class="footer">
+        <p>Generated by Daily News</p>
+    </footer>
+</body>
+</html>

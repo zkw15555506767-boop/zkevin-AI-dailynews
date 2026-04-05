@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Daily News · 2026-03-30</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07070f;--surface:#0f0f1c;--card:#161626;--card-h:#1c1c30;
+  --border:rgba(255,255,255,0.07);--border-h:rgba(255,255,255,0.14);
+  --text:#e8e8f0;--muted:#7070a0;--hint:#404060;
+  --gold:#c8a96e;--gold-dim:#8a7040;
+  --ph:#da552f;--gh:#7c3aed;--tw:#1d9bf0;--hn:#ff6600;--kr:#e94040;
+  --radius:10px;--radius-lg:16px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:15px;line-height:1.6}
+a{color:inherit;text-decoration:none}
+
+/* ── HEADER ── */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(7,7,15,0.85);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  padding:0 1.5rem;height:56px;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.masthead{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:1.35rem;color:var(--gold);letter-spacing:0.01em;white-space:nowrap;
+}
+.masthead em{font-style:italic;color:var(--text)}
+.header-right{display:flex;align-items:center;gap:1rem}
+.date-select{
+  background:var(--card);border:1px solid var(--border);
+  color:var(--muted);font-size:13px;font-family:inherit;
+  padding:5px 10px;border-radius:6px;cursor:pointer;
+  appearance:none;-webkit-appearance:none;
+}
+.date-select:focus{outline:none;border-color:var(--border-h)}
+.total-badge{
+  font-size:12px;color:var(--muted);
+  background:var(--card);border:1px solid var(--border);
+  padding:4px 10px;border-radius:20px;white-space:nowrap;
+}
+
+/* ── SOURCE TABS ── */
+.source-tabs{
+  display:flex;gap:4px;padding:0 1.5rem;
+  background:var(--surface);border-bottom:1px solid var(--border);
+  overflow-x:auto;scrollbar-width:none;
+}
+.source-tabs::-webkit-scrollbar{display:none}
+.tab{
+  display:flex;align-items:center;gap:6px;
+  padding:12px 16px;font-size:13px;font-weight:500;color:var(--muted);
+  border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;
+  transition:color .15s,border-color .15s;
+}
+.tab:hover{color:var(--text)}
+.tab.active{color:var(--text);border-color:var(--tab-color)}
+.tab .cnt{
+  font-size:11px;background:var(--card);border:1px solid var(--border);
+  padding:1px 6px;border-radius:10px;color:var(--hint);
+}
+
+/* ── MAIN ── */
+.main{max-width:960px;margin:0 auto;padding:2rem 1.5rem}
+.section{display:none}
+.section.active{display:block}
+
+/* ── DIGEST ── */
+.digest{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:2rem;
+}
+.digest-title{
+  font-family:'Instrument Serif',serif;font-size:1.05rem;
+  color:var(--gold);margin-bottom:0.75rem;
+}
+.digest-list{list-style:none;display:flex;flex-direction:column;gap:6px}
+.digest-list li{font-size:14px;color:var(--muted);padding-left:1rem;position:relative}
+.digest-list li::before{
+  content:'';position:absolute;left:0;top:9px;
+  width:5px;height:5px;border-radius:50%;background:var(--gold-dim);
+}
+.digest-list strong{color:var(--text);font-weight:500}
+
+/* ── PRODUCT HUNT ── */
+.ph-list{display:flex;flex-direction:column;gap:2px}
+.ph-row{
+  display:flex;align-items:center;gap:1rem;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:1rem 1.25rem;
+  transition:background .15s,border-color .15s;
+}
+.ph-row:hover{background:var(--card-h);border-color:var(--border-h)}
+.ph-rank{font-size:1.25rem;min-width:2rem;text-align:center}
+.ph-info{flex:1;min-width:0}
+.ph-name{font-weight:500;font-size:15px;display:block;color:var(--text)}
+.ph-tagline{font-size:13px;color:var(--muted);display:block;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ph-arrow{color:var(--hint);font-size:18px;transition:transform .15s}
+.ph-row:hover .ph-arrow{transform:translateX(3px);color:var(--ph)}
+
+/* ── GITHUB ── */
+.gh-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.gh-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:1.1rem 1.25rem;
+  display:flex;flex-direction:column;gap:8px;
+  transition:background .15s,border-color .15s;
+}
+.gh-card:hover{background:var(--card-h);border-color:var(--gh)}
+.gh-header{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.gh-title{font-family:'IBM Plex Mono',monospace;font-size:13.5px;
+  font-weight:500;color:var(--text);word-break:break-all}
+.gh-lang{
+  font-size:11px;padding:2px 7px;border-radius:4px;
+  background:rgba(124,58,237,0.15);color:#a78bfa;border:1px solid rgba(124,58,237,0.3);
+  white-space:nowrap;
+}
+.gh-desc{font-size:13px;color:var(--muted);line-height:1.5;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.gh-stats{display:flex;gap:1rem;font-size:12px;color:var(--hint);margin-top:auto}
+.gh-today{color:#a78bfa}
+
+/* ── X / TWITTER ── */
+.tw-feed{display:flex;flex-direction:column;gap:1px}
+.tw-card{
+  display:flex;gap:12px;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:1rem 1.25rem;
+  transition:background .15s,border-color .15s;
+}
+.tw-card:hover{background:var(--card-h);border-color:var(--tw)}
+.tw-avatar{
+  width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  background:rgba(29,155,240,0.15);border:1px solid rgba(29,155,240,0.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:500;color:#60b4f8;
+}
+.tw-body{flex:1;min-width:0}
+.tw-author{font-size:13px;font-weight:500;color:var(--tw);display:block;margin-bottom:4px}
+.tw-text{font-size:14px;color:var(--text);line-height:1.55;
+  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.tw-stats{display:flex;gap:1rem;font-size:12px;color:var(--hint);margin-top:6px}
+
+/* ── HACKER NEWS ── */
+.hn-list{display:flex;flex-direction:column;gap:2px}
+.hn-row{
+  display:flex;align-items:center;gap:1rem;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:0.85rem 1.25rem;
+  transition:background .15s,border-color .15s;
+}
+.hn-row:hover{background:var(--card-h);border-color:var(--hn)}
+.hn-num{
+  font-family:'IBM Plex Mono',monospace;font-size:12px;
+  color:var(--hn);min-width:2rem;
+}
+.hn-title{flex:1;font-size:14px;color:var(--text)}
+.hn-arrow{color:var(--hint);transition:transform .15s,color .15s}
+.hn-row:hover .hn-arrow{transform:translateX(3px);color:var(--hn)}
+
+/* ── 36KR ── */
+.kr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.kr-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:1.1rem 1.25rem;
+  display:flex;flex-direction:column;gap:8px;
+  transition:background .15s,border-color .15s;
+}
+.kr-card:hover{background:var(--card-h);border-color:var(--kr)}
+.kr-title{font-size:14.5px;font-weight:500;color:var(--text);line-height:1.4;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.kr-summary{font-size:13px;color:var(--muted);line-height:1.5;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.kr-footer{display:flex;align-items:center;gap:8px;margin-top:auto}
+.kr-dots{display:flex;gap:3px}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--hint)}
+.dot.active{background:var(--kr)}
+
+/* ── SECTION HEADER ── */
+.section-header{
+  display:flex;align-items:baseline;gap:12px;margin-bottom:1.25rem;
+}
+.section-label{
+  font-family:'Instrument Serif',serif;font-size:1.35rem;color:var(--text);
+}
+.section-sub{font-size:13px;color:var(--hint)}
+
+/* ── FOOTER ── */
+.site-footer{
+  text-align:center;padding:2.5rem 1rem;
+  font-size:12px;color:var(--hint);border-top:1px solid var(--border);
+  margin-top:3rem;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px){
+  .masthead{font-size:1.1rem}
+  .total-badge{display:none}
+  .main{padding:1.5rem 1rem}
+  .gh-grid,.kr-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="masthead">Daily <em>News</em></div>
+  <div class="header-right">
+    <select class="date-select" onchange="location.href=this.value+'.html'">
+      <option value="2026-04-05" >2026-04-05</option>
+<option value="2026-04-04" >2026-04-04</option>
+<option value="2026-04-03" >2026-04-03</option>
+<option value="2026-04-02" >2026-04-02</option>
+<option value="2026-04-01" >2026-04-01</option>
+<option value="2026-03-31" >2026-03-31</option>
+<option value="2026-03-30" selected>2026-03-30</option>
+<option value="2026-03-29" >2026-03-29</option>
+<option value="2026-03-28" >2026-03-28</option>
+<option value="2026-03-27" >2026-03-27</option>
+<option value="2026-03-26" >2026-03-26</option>
+<option value="2026-03-25" >2026-03-25</option>
+<option value="2026-03-24" >2026-03-24</option>
+<option value="2026-03-23" >2026-03-23</option>
+<option value="2026-03-21" >2026-03-21</option>
+<option value="2026-03-20" >2026-03-20</option>
+<option value="2026-03-19" >2026-03-19</option>
+<option value="2026-03-18" >2026-03-18</option>
+<option value="2026-03-17" >2026-03-17</option>
+<option value="2026-03-16" >2026-03-16</option>
+<option value="2026-03-15" >2026-03-15</option>
+<option value="2026-03-14" >2026-03-14</option>
+<option value="2026-03-13" >2026-03-13</option>
+<option value="2026-03-12" >2026-03-12</option>
+<option value="2026-03-11" >2026-03-11</option>
+<option value="2026-03-10" >2026-03-10</option>
+<option value="2026-03-09" >2026-03-09</option>
+<option value="2026-03-08" >2026-03-08</option>
+<option value="2026-03-07" >2026-03-07</option>
+<option value="2026-03-05" >2026-03-05</option>
+    </select>
+    <span class="total-badge">125 条 · 3月30日 周一</span>
+  </div>
+</header>
+
+<nav class="source-tabs">
+  <div class="tab active" data-sec="digest" style="--tab-color:var(--gold)">
+    导读 <span class="cnt">5</span>
+  </div>
+  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">
+    🐱 Product Hunt <span class="cnt">0</span>
+  </div>
+  <div class="tab" data-sec="gh" style="--tab-color:var(--gh)">
+    ✦ GitHub Trending <span class="cnt">0</span>
+  </div>
+  <div class="tab" data-sec="tw" style="--tab-color:var(--tw)">
+    𝕏 Twitter <span class="cnt">11</span>
+  </div>
+  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">
+    ▲ Hacker News <span class="cnt">58</span>
+  </div>
+  <div class="tab" data-sec="kr" style="--tab-color:var(--kr)">
+    氪 36氪 <span class="cnt">56</span>
+  </div>
+</nav>
+
+<main class="main">
+
+  <!-- DIGEST -->
+  <section class="section active" id="sec-digest">
+    <div class="digest">
+      <div class="digest-title">今日速览</div>
+      <ul class="digest-list">
+        <li><strong>Product Hunt #1</strong> · Qwen3.6-Plus — 为 AI 编码 Agent 优化的多模态模型上线</li>
+        <li><strong>GitHub Trending</strong> · 今日 0 个项目，oh-my-codex(+3047) 和 openscreen(+2771) 领跑</li>
+        <li><strong>X/Twitter</strong> · 共收录 11 条 AI 热帖，Claude Code、Gemma 4 开机量刷屏</li>
+        <li><strong>Hacker News</strong> · 今日 58 条技术讨论</li>
+        <li><strong>36氪</strong> · 神州数码 AI 业务增近五成，量子计算 C+ 轮融资近 10 亿</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PRODUCT HUNT -->
+  <section class="section" id="sec-ph">
+    <div class="section-header">
+      <span class="section-label">Product Hunt</span>
+      <span class="section-sub">今日热榜 0 款产品</span>
+    </div>
+    <div class="ph-list"></div>
+  </section>
+
+  <!-- GITHUB -->
+  <section class="section" id="sec-gh">
+    <div class="section-header">
+      <span class="section-label">GitHub Trending</span>
+      <span class="section-sub">2026-03-30 · 0 个项目</span>
+    </div>
+    <div class="gh-grid"></div>
+  </section>
+
+  <!-- TWITTER -->
+  <section class="section" id="sec-tw">
+    <div class="section-header">
+      <span class="section-label">X / Twitter</span>
+      <span class="section-sub">AI 热帖 Top 11</span>
+    </div>
+    <div class="tw-feed">
+        <a class="tw-card" href="https://x.com/i/status/2038713289254064321" target="_blank" rel="noopener">
+          <div class="tw-avatar">AA</div>
+          <div class="tw-body">
+            <span class="tw-author">@aakashgupta</span>
+            <p class="tw-text">This guy literally broke down how to use Claude Code like an expert: 
+
+1:40 -  Code vs Cowork vs OpenClaw  
+6:51 - Setti…</p>
+            <div class="tw-stats">
+              <span>❤ 0</span>
+              <span>👁 0</span>
+            </div>
+          </div>
+        </a>
+        <a class="tw-card" href="https://x.com/i/status/2038621744702144846" target="_blank" rel="noopener">
+          <div class="tw-avatar">SH</div>
+          <div class="tw-body">
+            <span class="tw-author">@shiri_shh</span>
+            <p class="tw-text">babe wake up.
+
+the world’s first AI marketer just launched. 
+
+https://t.co/72iXbBFmr1</p>
+            <div class="tw-stats">
+              <span>❤ 0</span>
+              <span>👁 0</span>
+            </div>
+          </div>
+        </a>
+        <a class="tw-card" href="https://x.com/i/status/2038525885276463271" target="_blank" rel="noopener">
+          <div class="tw-avatar">ME</div>
+          <div class="tw-body">
+            <span class="tw-author">@merowing_</span>
+            <p class="tw-text">Models drop every few weeks. Best practices shift with every release. Who can keep up?
+
+Building evals has become one of…</p>
+            <div class="tw-stats">
+              <span>❤ 0</span>
+              <span>👁 0</span>
+            </div>
+          </div>
+        </a>
+        <a class="tw-card" href="https://x.com/i/status/2038657998105583963" target="_blank" rel="noopener">
+          <div class="tw-avatar">PR</div>
+          <div class="tw-body">
+            <span class="tw-author">@predict_addict</span>
+            <p class="tw-text">But the gap is narrowing in specific areas, and the efficiency pressure is only growing.
+
+For now, when I say “LLM” in m…</p>
+            <div class="tw-stats">
+              <span>❤ 0</span>
+              <span>👁 0</span>
+            </div>
+          </div>
+        </a>
+        <a class="tw-card" href="https://x.com/i/status/2038652917666721871" target="_blank" rel="noopener">
+          <div class="tw-avatar">AS</div>
+          <div class="tw-body">
+            <span class="tw-author">@AsfiShaheen</span>
+            <p class="tw-text">Those coding and playing with models themselves are mega bullish because they can “feel” it. Amplified further because L…</p>
+            <div class="tw-stats">
+              <span>❤ 0</span>
+              <span>👁 0</span>
+            </div>
+          </div>
+        </a>
+        <a class="tw-card" href="https://x.com/i/status/2038549507630055432" target="_blank" rel="noopener">
+          <div class="tw-avatar">NI</div>
+          <div class="tw-body">
+            <span class="tw-author">@nicekieran2Ol7</span>
+            <p class="tw-text">NEW PAPER: &quot;AI Engineering Doctrine&quot; - Extract, chunk, prompt, evaluate. The four-phase engineering model for production…</p>
+            <div class="tw-stats">
+              <span>❤ 0</span>
+              <span>👁 0</span>
+            </div>
+          </div>
+        </a>
+        <a class="tw-card" href="https://x.com/i/status/2038633532852158745" target="_blank" rel="noopener">
+          <div class="tw-avatar">SU</div>
+          <div class="tw-body">
+            <span class="tw-author">@Suryanshti777</span>
+            <p class="tw-text">🚨Breaking: @bcherny just revealed how Claude Code actually works — and most developers are using only 10% of it.
+
+This i…</p>
+            <div class="tw-stats">
+              <span>❤ 0</span>
+              <span>👁 0</span>
+            </div>
+          </div>
+        </a>
+        <a class="tw-card" href="https://x.com/i/status/2038678855213568031" target="_blank" rel="noopener">
+          <div class="tw-avatar">AR</div>
+          <div class="tw-body">
+            <span class="tw-author">@ArtificialAnlys</span>
+            <p class="tw-text">Cohere has released Cohere Transcribe: an open weights model achieving 4.7% on AA-WER, based on 3 datasets including our…</p>
+            <div class="tw-stats">
+              <span>❤ 0</span>
+              <span>👁 0</span>
+            </div>
+          </div>
+        </a>
+        <a class="tw-card" href="https://x.com/i/status/2038644670218293310" target="_blank" rel="noopener">
+          <div class="tw-avatar">LO</div>
+          <div class="tw-body">
+            <span class="tw-author">@LobsterKill</span>
+            <p class="tw-text">Two new hardware drops from LobKill —
+
+Stick — portable agent node. ships in 1 week. 
+Node — desktop-grade agent host. s…</p>
+            <div class="tw-stats">
+              <span>❤ 0</span>
+              <span>👁 0</span>
+            </div>
+          </div>
+        </a>
+        <a class="tw-card" href="https://x.com/i/status/2038594347307016403" target="_blank" rel="noopener">
+          <div class="tw-avatar">AR</div>
+          <div class="tw-body">
+            <span class="tw-author">@architjn</span>
+            <p class="tw-text">One LLM now runs their entire ops stack. No manager. No handoffs.
+
+A small team wired it as the central orchestrator. It…</p>
+            <div class="tw-stats">
+              <span>❤ 0</span>
+              <span>👁 0</span>
+            </div>
+          </div>
+        </a>
+        <a class="tw-card" href="https://x.com/i/status/2038609683854811447" target="_blank" rel="noopener">
+          <div class="tw-avatar">AA</div>
+          <div class="tw-body">
+            <span class="tw-author">@aa22396584</span>
+            <p class="tw-text">The retention stat is what stands out most here — 68% of Chinese undergrads staying in China for AI research vs. the bra…</p>
+            <div class="tw-stats">
+              <span>❤ 0</span>
+              <span>👁 0</span>
+            </div>
+          </div>
+        </a></div>
+  </section>
+
+  <!-- HN -->
+  <section class="section" id="sec-hn">
+    <div class="section-header">
+      <span class="section-label">Hacker News</span>
+      <span class="section-sub">Top 20</span>
+    </div>
+    <div class="hn-list">
+        <a class="hn-row" href="https://techfixated.com/a-1977-time-capsule-voyager-1-runs-on-69-kb-of-memory-and-an-8-track-tape-recorder-4/" target="_blank" rel="noopener">
+          <span class="hn-num">01</span>
+          <span class="hn-title">Voyager 1 runs on 69 KB of memory and an 8-track tape recorder</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://riseproject.dev/2026/03/24/announcing-the-rise-risc-v-runners-free-native-risc-v-ci-on-github/" target="_blank" rel="noopener">
+          <span class="hn-num">02</span>
+          <span class="hn-title">The RISE RISC-V Runners: free, native RISC-V CI on GitHub</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://github.com/DavidHavoc/ayaFlow" target="_blank" rel="noopener">
+          <span class="hn-num">03</span>
+          <span class="hn-title">AyaFlow: A high-performance, eBPF-based network traffic analyzer written in Rust</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://github.com/chenglou/pretext" target="_blank" rel="noopener">
+          <span class="hn-num">04</span>
+          <span class="hn-title">Pretext: TypeScript library for multiline text measurement and layout</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://www.cnn.com/2026/03/29/us/angela-lipps-ai-facial-recognition" target="_blank" rel="noopener">
+          <span class="hn-num">05</span>
+          <span class="hn-title">Police used AI facial recognition to wrongly arrest TN woman for crimes in ND</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://github.com/elixir-volt/quickbeam" target="_blank" rel="noopener">
+          <span class="hn-num">06</span>
+          <span class="hn-title">Show HN: QuickBEAM – run JavaScript as supervised Erlang/OTP processes</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://yadin.com/notes/vr-abides/" target="_blank" rel="noopener">
+          <span class="hn-num">07</span>
+          <span class="hn-title">VR Is Not Dead</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://www.righto.com/2026/03/ibm-4-pi-computer-history.html" target="_blank" rel="noopener">
+          <span class="hn-num">08</span>
+          <span class="hn-title">The rise and fall of IBM's 4 Pi aerospace computers: an illustrated history</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://gladeart.com/blog/the-bot-situation-on-the-internet-is-actually-worse-than-you-could-imagine-heres-why" target="_blank" rel="noopener">
+          <span class="hn-num">09</span>
+          <span class="hn-title">The bot situation on the internet is worse than you could imagine</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://www.theguardian.com/society/2026/mar/29/full-network-clitoral-nerves-mapped-out-first-time-women-pelvic-surgery" target="_blank" rel="noopener">
+          <span class="hn-num">10</span>
+          <span class="hn-title">Full network of clitoral nerves mapped out for first time</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://github.com/owenrumney/go-lsp" target="_blank" rel="noopener">
+          <span class="hn-num">11</span>
+          <span class="hn-title">Show HN: Create a full language server in Go with 3.17 spec support</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://isp.netscape.com/" target="_blank" rel="noopener">
+          <span class="hn-num">12</span>
+          <span class="hn-title">Netscape News Feed Straight Out of the Late 00s</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://sites.pitt.edu/~jdnorton/Goodies/Idealization/index.html" target="_blank" rel="noopener">
+          <span class="hn-num">13</span>
+          <span class="hn-title">The Failure of the Thermodynamics of Computation (2010)</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://successfulsoftware.net/2026/03/29/stop-publishing-garbage-data-its-embarrassing/" target="_blank" rel="noopener">
+          <span class="hn-num">14</span>
+          <span class="hn-title">Twice this week, I have come across embarassingly bad data</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://www.tomshardware.com/pc-components/sound-cards/comparison-of-usd4-000-boutique-audio-cable-to-usd7-amazon-basics-cable-shows-audiophiles-waste-a-lot-of-money-scientific-audio-equipment-analysis-with-analyzer-shows-no-difference-in-quality" target="_blank" rel="noopener">
+          <span class="hn-num">15</span>
+          <span class="hn-title">Scientific audio equipment analysis with analyzer shows no difference in quality</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://breezepdf.com/?v=3" target="_blank" rel="noopener">
+          <span class="hn-num">16</span>
+          <span class="hn-title">Show HN: BreezePDF – Free, in-browser PDF editor</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://mashable.com/article/sony-sd-card-sales-suspended-memory-shortage" target="_blank" rel="noopener">
+          <span class="hn-num">17</span>
+          <span class="hn-title">First Western Digital, now Sony: The tech giant suspends SD card sales</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://www.washingtonpost.com/travel/2026/03/28/tsa-line-sitters/" target="_blank" rel="noopener">
+          <span class="hn-num">18</span>
+          <span class="hn-title">TSA lines are so out of control that travelers are hiring line-sitters</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://www.newyorker.com/culture/annals-of-inquiry/when-do-we-become-adults-really" target="_blank" rel="noopener">
+          <span class="hn-num">19</span>
+          <span class="hn-title">When Do We Become Adults, Really?</span>
+          <span class="hn-arrow">→</span>
+        </a>
+        <a class="hn-row" href="https://notes.zachmanson.com/copilot-edited-an-ad-into-my-pr/" target="_blank" rel="noopener">
+          <span class="hn-num">20</span>
+          <span class="hn-title">Copilot Edited an Ad into My PR</span>
+          <span class="hn-arrow">→</span>
+        </a></div>
+  </section>
+
+  <!-- 36KR -->
+  <section class="section" id="sec-kr">
+    <div class="section-header">
+      <span class="section-label">36氪</span>
+      <span class="section-sub">按相关度排序 · 共 56 条</span>
+    </div>
+    <div class="kr-grid">
+        <a class="kr-card" href="https://www.36kr.com/p/3743708854009864" target="_blank" rel="noopener">
+          <p class="kr-title">光纤招标价格，炸了！</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3743397385044224" target="_blank" rel="noopener">
+          <p class="kr-title">Claude Code过度设计，甚至不该给普通人用？OpenClaw背后的Pi只留了4个工具</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3742472729244421" target="_blank" rel="noopener">
+          <p class="kr-title">谷歌的龙虾，名叫“史密斯特工”，《黑客帝国》真降临了？</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3741913909474056" target="_blank" rel="noopener">
+          <p class="kr-title">机器人开源革命：“免费大脑”背后的四派力量与博弈</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3744751375315716" target="_blank" rel="noopener">
+          <p class="kr-title">Token 要成新货币了，但你真的知道它是什么吗？</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3742411296354822" target="_blank" rel="noopener">
+          <p class="kr-title">哈萨比斯为何能率领谷歌DeepMind反超OpenAI？</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3743341769945861" target="_blank" rel="noopener">
+          <p class="kr-title">飞书、钉钉开源CLI，Agent开放路径走向分岔</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3744749865369609" target="_blank" rel="noopener">
+          <p class="kr-title">GitLab创始人抗癌实录：他用创始人思维和AI救了自己</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3742675527578372" target="_blank" rel="noopener">
+          <p class="kr-title">视频平台「抢夺」AI创作者</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3742715731525892" target="_blank" rel="noopener">
+          <p class="kr-title">AI正在破你的障</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3743978774921472" target="_blank" rel="noopener">
+          <p class="kr-title">干崩存储股的谷歌爆红论文塌房，被曝抄袭、贬低华人学者成果，谷歌回应：晚点改</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3744563136823298" target="_blank" rel="noopener">
+          <p class="kr-title">Google地图AI大改造，可这demo越看越像抄了Wanderboat的作业</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3744568577064967" target="_blank" rel="noopener">
+          <p class="kr-title">腾讯「八虾夺嫡」内幕：一只龙虾，怎么成了全村的希望</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3744568805294086" target="_blank" rel="noopener">
+          <p class="kr-title">AI 正在毁掉下一个 Hinton</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3744569198559234" target="_blank" rel="noopener">
+          <p class="kr-title">「电子垃圾」iPhone 4，成了打脸 AI 审美的回旋镖</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3744582880248071" target="_blank" rel="noopener">
+          <p class="kr-title">硅谷大佬抢着投，给奶牛戴AI项圈：估值20亿美元</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3744583116996873" target="_blank" rel="noopener">
+          <p class="kr-title">OpenClaw引爆赛博大屠杀，官方：立刻烧毁</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3744658693403145" target="_blank" rel="noopener">
+          <p class="kr-title">聪明这件事，已经不够用了</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3744688405823494" target="_blank" rel="noopener">
+          <p class="kr-title">AI 教父不用 ChatGPT 了，他在担心什么</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a>
+        <a class="kr-card" href="https://www.36kr.com/p/3744622642954498" target="_blank" rel="noopener">
+          <p class="kr-title">模型已经有了内省能力，但过去它的心门上了锁</p>
+          <p class="kr-summary"></p>
+          <div class="kr-footer">
+            <div class="kr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </a></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  daily-news v2 · 125 items · 2026-03-30 · <a href="https://github.com/zkw15555506767-boop/zkevin-AI-dailynews" style="color:var(--gold-dim)">zkevin-AI-dailynews</a>
+</footer>
+
+<script>
+const tabs = document.querySelectorAll('.tab');
+const secs = document.querySelectorAll('.section');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    secs.forEach(s => s.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('sec-' + tab.dataset.sec).classList.add('active');
+    window.scrollTo({top: 56, behavior: 'smooth'});
+  });
+});
+</script>
+</body>
+</html>

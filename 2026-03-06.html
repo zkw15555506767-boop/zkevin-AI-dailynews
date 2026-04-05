@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News - 2026-03-06</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #f5f5f5;
+            --bg-card: #ffffff;
+            --bg-dark: #1a1a2e;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --text-muted: #999999;
+            --accent: #e94560;
+            --border: #eee;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 2rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #e94560;
+        }
+
+        .date-display {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Navigation */
+        .nav {
+            background: white;
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .date-link {
+            padding: 0.5rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            white-space: nowrap;
+            transition: all 0.2s;
+            background: var(--bg-primary);
+        }
+
+        .date-link:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .date-link.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Main */
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        /* Summary Cards */
+        .summary-section {
+            margin-bottom: 2rem;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.25rem;
+            border-radius: 12px;
+            margin-bottom: 0.75rem;
+        }
+
+        .summary-card:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .summary-card:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .summary-card:nth-child(4) {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .topic-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.2);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Feed Sections */
+        .feed-section {
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--accent-color, var(--accent));
+        }
+
+        .section-icon {
+            color: var(--accent-color, var(--accent));
+            font-size: 0.875rem;
+        }
+
+        .section-name {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .section-count {
+            margin-left: auto;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            background: var(--bg-primary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.25s ease;
+            border: 1px solid transparent;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: var(--accent-color, var(--accent));
+        }
+
+        .card.hot-card {
+            border-left: 4px solid var(--accent-color, var(--accent));
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 1.5rem 1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .main {
+                padding: 1rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Daily <span>News</span></div>
+            <div class="date-display">2026-03-06</div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="2026-04-04.html" class="date-link ">2026-04-04</a><a href="2026-03-07.html" class="date-link ">2026-03-07</a><a href="2026-03-06.html" class="date-link active">2026-03-06</a><a href="2026-03-05.html" class="date-link ">2026-03-05</a><a href="2026-02-26.html" class="date-link ">2026-02-26</a><a href="2026-02-25.html" class="date-link ">2026-02-25</a>
+        </div>
+    </nav>
+
+    <main class="main">
+        <section class="summary-section">
+            
+        <div class="summary-card">
+            <span class="topic-tag">Product Hunt 热榜</span>
+            <p class="summary-text">Aident AI Beta 2 夺冠，MacBook Neo 第二，Heywa、Coursekit 等 AI 产品表现亮眼</p>
+        </div>
+        
+        <div class="summary-card">
+            <span class="topic-tag">AI Agent 生态</span>
+            <p class="summary-text">OpenClaw 生态持续增长，多种新技能涌现</p>
+        </div>
+        
+        <div class="summary-card">
+            <span class="topic-tag">编程工具革新</span>
+            <p class="summary-text">GitHub Trending 显示多个 Claude Code 相关项目</p>
+        </div>
+        
+        </section>
+
+        
+            <section class="feed-section">
+                <div class="section-header" style="--accent-color: #4ecdc4">
+                    <span class="section-icon">◆</span>
+                    <span class="section-name">Product Hunt Top 30（今日发布）</span>
+                    <span class="section-count">5</span>
+                </div>
+                <div class="card-grid">
+                    
+            <a href="https://www.producthunt.com/products/aident-ai" class="card hot-card" target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Aident AI Beta 2</h3>
+                    <p class="card-desc">用自然语言管理和创建自动化工作流</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/apple" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">MacBook Neo</h3>
+                    <p class="card-desc">惊喜价格的 Mac 产品</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/heywa" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Heywa</h3>
+                    <p class="card-desc">可点击的可视化故事界面</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/coursekit" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Coursekit</h3>
+                    <p class="card-desc">将课程转化为嵌入式 AI Agent 套件</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/golf" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Golf</h3>
+                    <p class="card-desc">企业级 MCP 控制面板</p>
+                </div>
+            </a>
+            
+                </div>
+            </section>
+            
+            <section class="feed-section">
+                <div class="section-header" style="--accent-color: #5f27cd">
+                    <span class="section-icon">◆</span>
+                    <span class="section-name">GitHub Trending</span>
+                    <span class="section-count">11</span>
+                </div>
+                <div class="card-grid">
+                    
+            <a href="https://github.com/aquasecurity/trivy" class="card hot-card" target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">trivy</h3>
+                    <p class="card-desc">开源安全漏洞扫描工具，检测容器、Kubernetes、云和代码仓库中的漏洞 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/KeygraphHQ/shannon" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">shannon</h3>
+                    <p class="card-desc">完全自主的 AI 网络安全测试工具，Web 应用和 API 渗透测试 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/moeru-ai/airi" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">airi</h3>
+                    <p class="card-desc">自托管的 Grok 伴侣应用，虚拟角色容器 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/microsoft/mcp-for-beginners" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">mcp-for-beginners</h3>
+                    <p class="card-desc">微软官方的 MCP 入门教程 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/FujiwaraChoki/MoneyPrinterV2" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">MoneyPrinterV2</h3>
+                    <p class="card-desc">自动化在线赚钱流程工具 ⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/msitarzewski/agency-agents" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">agency-agents</h3>
+                    <p class="card-desc">完整的 AI agency 解决方案 ⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/inclusionAI/AReaL" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">AReaL</h3>
+                    <p class="card-desc">闪电般快速的强化学习工具 ⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/CodebuffAI/codebuff" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">codebuff</h3>
+                    <p class="card-desc">终端代码生成工具 ⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/agentscope-ai/ReMe" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">ReMe</h3>
+                    <p class="card-desc">Agent 的记忆管理工具包 ⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/TheCraigHewitt/seomachine" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">seomachine</h3>
+                    <p class="card-desc">Claude Code 的 SEO 博客内容工作区 ⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/microsoft/hve-core" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">hve-core</h3>
+                    <p class="card-desc">微软高速工程组件集合 ⭐⭐⭐ *今日共收录 41 条内容*</p>
+                </div>
+            </a>
+            
+                </div>
+            </section>
+            
+    </main>
+
+    <footer class="footer">
+        <p>Generated by Daily News</p>
+    </footer>
+</body>
+</html>

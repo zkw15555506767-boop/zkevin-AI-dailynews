@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News - 2026-03-07</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #f5f5f5;
+            --bg-card: #ffffff;
+            --bg-dark: #1a1a2e;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --text-muted: #999999;
+            --accent: #e94560;
+            --border: #eee;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 2rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #e94560;
+        }
+
+        .date-display {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Navigation */
+        .nav {
+            background: white;
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .date-link {
+            padding: 0.5rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            white-space: nowrap;
+            transition: all 0.2s;
+            background: var(--bg-primary);
+        }
+
+        .date-link:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .date-link.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Main */
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        /* Summary Cards */
+        .summary-section {
+            margin-bottom: 2rem;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.25rem;
+            border-radius: 12px;
+            margin-bottom: 0.75rem;
+        }
+
+        .summary-card:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .summary-card:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .summary-card:nth-child(4) {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .topic-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.2);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Feed Sections */
+        .feed-section {
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--accent-color, var(--accent));
+        }
+
+        .section-icon {
+            color: var(--accent-color, var(--accent));
+            font-size: 0.875rem;
+        }
+
+        .section-name {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .section-count {
+            margin-left: auto;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            background: var(--bg-primary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.25s ease;
+            border: 1px solid transparent;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: var(--accent-color, var(--accent));
+        }
+
+        .card.hot-card {
+            border-left: 4px solid var(--accent-color, var(--accent));
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 1.5rem 1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .main {
+                padding: 1rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Daily <span>News</span></div>
+            <div class="date-display">2026-03-07</div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="2026-04-04.html" class="date-link ">2026-04-04</a><a href="2026-03-07.html" class="date-link active">2026-03-07</a><a href="2026-03-06.html" class="date-link ">2026-03-06</a><a href="2026-03-05.html" class="date-link ">2026-03-05</a><a href="2026-02-26.html" class="date-link ">2026-02-26</a><a href="2026-02-25.html" class="date-link ">2026-02-25</a>
+        </div>
+    </nav>
+
+    <main class="main">
+        <section class="summary-section">
+            
+        <div class="summary-card">
+            <span class="topic-tag">OpenClaw 持续刷屏</span>
+            <p class="summary-text">国产大模型厂商找到商业化路径，MiniMax M2 系列日均 Token 消耗增长 6 倍</p>
+        </div>
+        
+        <div class="summary-card">
+            <span class="topic-tag">AI 成本焦虑</span>
+            <p class="summary-text">有用户 6 小时烧掉 1172 元，极端案例首月账单高达 2 万多元</p>
+        </div>
+        
+        <div class="summary-card">
+            <span class="topic-tag">OpenAI 也要做广告</span>
+            <p class="summary-text">已与 Criteo 谈判，预计 2027 年全面铺开，目标收入 170 亿美元</p>
+        </div>
+        
+        <div class="summary-card">
+            <span class="topic-tag">Hacker News 热榜</span>
+            <p class="summary-text">AI 编程工具、Agent 框架、Qwen 模型成热点</p>
+        </div>
+        
+        <div class="summary-card">
+            <span class="topic-tag">Claude Code 生态繁荣</span>
+            <p class="summary-text">Awesome 列表持续更新，多种新技能涌现</p>
+        </div>
+        
+        </section>
+
+        
+            <section class="feed-section">
+                <div class="section-header" style="--accent-color: #4ecdc4">
+                    <span class="section-icon">◆</span>
+                    <span class="section-name">Product Hunt 热榜</span>
+                    <span class="section-count">15</span>
+                </div>
+                <div class="card-grid">
+                    
+            <a href="https://www.producthunt.com/products/gpt-5.4" class="card hot-card" target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">GPT-5.4</h3>
+                    <p class="card-desc">OpenAI 最强模型</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/cochat" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">CoChat</h3>
+                    <p class="card-desc">OpenClaw for Teams</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/superpowers-ai" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">SuperPowers AI</h3>
+                    <p class="card-desc">AI 超级应用平台</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/context-gateway" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Context Gateway</h3>
+                    <p class="card-desc">上下文管理平台</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/chatgpt-for-excel" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">ChatGPT for Excel</h3>
+                    <p class="card-desc">Excel AI 插件</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/saydi" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Saydi</h3>
+                    <p class="card-desc">AI 助手</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/zesty-by-doordash" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Zesty by DoorDash</h3>
+                    <p class="card-desc">DoorDash 推出的营销平台</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/cushion" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Cushion</h3>
+                    <p class="card-desc">融资规划工具</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/gemlet" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Gemlet</h3>
+                    <p class="card-desc">AI 头像生成器</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/pitwall-f1" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Pitwall F1</h3>
+                    <p class="card-desc">F1 赛事追踪应用</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/vet" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Vet</h3>
+                    <p class="card-desc">AI 兽医助手</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/volumeglass" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">VolumeGlass</h3>
+                    <p class="card-desc">Mac 音量控制增强</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/cockpit" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Cockpit</h3>
+                    <p class="card-desc">MCP 管理面板</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/imbue" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Imbue</h3>
+                    <p class="card-desc">AI 推理能力平台</p>
+                </div>
+            </a>
+            
+            <a href="https://www.producthunt.com/products/vera-platform" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Vera Platform</h3>
+                    <p class="card-desc">AI 投资分析平台</p>
+                </div>
+            </a>
+            
+                </div>
+            </section>
+            
+            <section class="feed-section">
+                <div class="section-header" style="--accent-color: #ff6b6b">
+                    <span class="section-icon">◆</span>
+                    <span class="section-name">36氪 (17条)</span>
+                    <span class="section-count">4</span>
+                </div>
+                <div class="card-grid">
+                    
+            <a href="https://www.36kr.com/p/3709890881975048" class="card hot-card" target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">OpenClaw登顶后，Agent悄悄杀死了应用</h3>
+                    <p class="card-desc">AI Agent 正在悄悄杀死传统应用 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://www.36kr.com/p/3712179954790788" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">月薪2万，我养不起自己的"AI员工"</h3>
+                    <p class="card-desc">AI智能体工具OpenClaw的高昂使用成本：每分钟可消耗几十万Token，极端案例首月账单高达2万多元 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://www.36kr.com/p/3711407234150789" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">一场"龙虾"AI盛宴，大厂吃撑了</h3>
+                    <p class="card-desc">OpenClaw帮助MiniMax、智谱等找到商业化路径，BAT推出部署服务变现 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://www.36kr.com/p/3711398183580032" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Open AI难逃广告命运，2026欲借顶级广告技术公司盈利千亿</h3>
+                    <p class="card-desc">目标收入170亿美元，ChatGPT市场份额从超80%降至约70% ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+                </div>
+            </section>
+            
+            <section class="feed-section">
+                <div class="section-header" style="--accent-color: #ff9ff3">
+                    <span class="section-icon">◆</span>
+                    <span class="section-name">OpenClaw Skills (10条)</span>
+                    <span class="section-count">6</span>
+                </div>
+                <div class="card-grid">
+                    
+            <a href="https://github.com/openclaw/skills/tree/main/skills/arminnaimi/agent-team-orchestration" class="card hot-card" target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">agent-team-orchestration</h3>
+                    <p class="card-desc">多 Agent 团队编排，支持定义角色、任务生命周期 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/openclaw/skills/tree/main/skills/wranaman/agentdo" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">agentdo</h3>
+                    <p class="card-desc">Agent 任务队列，允许 Agent 间任务分发 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/openclaw/skills/tree/main/skills/tkuehnl/agentic-devops" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">agentic-devops</h3>
+                    <p class="card-desc">生产级 Agent DevOps 工具包 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/openclaw/skills/tree/main/skills/rhanbourinajd/ai-video-gen" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">ai-video-gen</h3>
+                    <p class="card-desc">端到端 AI 视频生成 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/openclaw/skills/tree/main/skills/24601/agent-deep-research" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">agent-deep-research</h3>
+                    <p class="card-desc">Google Gemini 驱动的深度研究 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/openclaw/skills/tree/main/skills/lngdao/agenthire" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">agenthire</h3>
+                    <p class="card-desc">Agent 到 Agent 市场平台 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+                </div>
+            </section>
+            
+            <section class="feed-section">
+                <div class="section-header" style="--accent-color: #ff9f43">
+                    <span class="section-icon">◆</span>
+                    <span class="section-name">AI News / Hacker News (10条)</span>
+                    <span class="section-count">5</span>
+                </div>
+                <div class="card-grid">
+                    
+            <a href="https://news.ycombinator.com/item?id=47282500" class="card hot-card" target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Show HN: Agent Swarm</h3>
+                    <p class="card-desc">开源的多 Agent 自学习团队框架，支持构建自主协作的 AI Agent 群组</p>
+                </div>
+            </a>
+            
+            <a href="https://simonwillison.net/2026/Mar/5/qwen/" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Simon Willison: Qwen 动态</h3>
+                    <p class="card-desc">探讨阿里 Qwen 模型的最新进展</p>
+                </div>
+            </a>
+            
+            <a href="https://unsloth.ai/docs/models/qwen3.5/fine-tune" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Qwen3.5 Fine-Tuning Guide</h3>
+                    <p class="card-desc">Unsloth 发布的 Qwen3.5 微调指南</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/geskla/system-prompts-and-models" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">AI 编程工具系统提示词集合</h3>
+                    <p class="card-desc">Claude Code、Cursor、Devin、Windsurf 等主流 AI 编程工具的系统提示词</p>
+                </div>
+            </a>
+            
+            <a href="https://blog.ivan.digital/nvidia-personaplex-7b-on-apple-silicon" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Nvidia PersonaPlex 7B</h3>
+                    <p class="card-desc">Apple Silicon 上的全双工语音到语音</p>
+                </div>
+            </a>
+            
+                </div>
+            </section>
+            
+            <section class="feed-section">
+                <div class="section-header" style="--accent-color: #54a0ff">
+                    <span class="section-icon">◆</span>
+                    <span class="section-name">Claude Code / Awesome Skills (5条)</span>
+                    <span class="section-count">5</span>
+                </div>
+                <div class="card-grid">
+                    
+            <a href="https://github.com/K-Dense-AI/claude-scientific-skills" class="card hot-card" target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Claude Scientific Skills</h3>
+                    <p class="card-desc">研究、科学、工程、分析技能集 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/sudocode-ai/sudocode" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">sudocode</h3>
+                    <p class="card-desc">轻量级 Agent 编排开发工具 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/vaporif/parry" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">parry</h3>
+                    <p class="card-desc">Claude Code 提示注入扫描器</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/ldayton/Dippy" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Dippy</h3>
+                    <p class="card-desc">自动批准安全 bash 命令</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/nielsgroen/claude-tmux" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">claude-tmux</h3>
+                    <p class="card-desc">在 tmux 中管理 Claude Code</p>
+                </div>
+            </a>
+            
+                </div>
+            </section>
+            
+            <section class="feed-section">
+                <div class="section-header" style="--accent-color: #5f27cd">
+                    <span class="section-icon">◆</span>
+                    <span class="section-name">GitHub Trending (18条)</span>
+                    <span class="section-count">12</span>
+                </div>
+                <div class="card-grid">
+                    
+            <a href="https://github.com/moeru-ai/airi" class="card hot-card" target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">airi</h3>
+                    <p class="card-desc">自托管的 Grok 伴侣应用，虚拟角色容器 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/QwenLM/Qwen-Agent" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">Qwen-Agent</h3>
+                    <p class="card-desc">基于 Qwen>=3.0 的 Agent 框架，支持 Function Calling、MCP ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/virattt/ai-hedge-fund" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">ai-hedge-fund</h3>
+                    <p class="card-desc">AI Hedge Fund Team，46355★ 热榜第一 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/openai/skills" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">openai/skills</h3>
+                    <p class="card-desc">Skills Catalog for Codex ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/aidenybai/react-grab" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">react-grab</h3>
+                    <p class="card-desc">Select context for coding agents directly from your website ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/msitarzewski/agency-agents" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">agency-agents</h3>
+                    <p class="card-desc">完整的 AI agency 解决方案 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/TheCraigHewitt/seomachine" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">seomachine</h3>
+                    <p class="card-desc">Claude Code 的 SEO 博客内容工作区 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/KeygraphHQ/shannon" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">shannon</h3>
+                    <p class="card-desc">完全自主的 AI 网络安全测试工具 ⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/inclusionAI/AReaL" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">AReaL</h3>
+                    <p class="card-desc">闪电般快速的强化学习工具</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/microsoft/mcp-for-beginners" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">mcp-for-beginners</h3>
+                    <p class="card-desc">微软官方的 MCP 入门教程</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/cloudflare/agents" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">cloudflare/agents</h3>
+                    <p class="card-desc">Cloudflare AI Agents</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/connectai-ai/claude-flow" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">claude-flow</h3>
+                    <p class="card-desc">Claude Agent 编排平台</p>
+                </div>
+            </a>
+            
+                </div>
+            </section>
+            
+            <section class="feed-section">
+                <div class="section-header" style="--accent-color: #00d2d3">
+                    <span class="section-icon">◆</span>
+                    <span class="section-name">OpenRouter 排行 (16条)</span>
+                    <span class="section-count">4</span>
+                </div>
+                <div class="card-grid">
+                    
+            <a href="https://openrouter.ai/rankings" class="card hot-card" target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">热门模型 Top 20</h3>
+                    <p class="card-desc">1. MiniMax M2.5 - 1.64T tokens 2. Gemini 3 Flash - 818B 3. Kimi K2.5 - 599B 4. DeepSeek V3.2 - 582B 5. Claude Opus 4.6 - 776B</p>
+                </div>
+            </a>
+            
+            <a href="https://openrouter.ai/rankings?tab=market-share" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">市场占有率</h3>
+                    <p class="card-desc">1. Google: 2.54T tokens (25%) 2. Anthropic: 2.13T tokens (21%) 3. MiniMax: 1.76T tokens (17%) 4. OpenAI: 1.66T tokens (16%) 5. DeepSeek: 878B tokens (9%)</p>
+                </div>
+            </a>
+            
+            <a href="https://openrouter.ai/rankings?tab=categories" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">分类排行</h3>
+                    <p class="card-desc">- Overall: MiniMax M2.5 排名第1 - Intelligence: Gemini 3.1 Pro 领先 - Coding: GPT-5.4 排名第1 - Agentic: Claude Opus 4.6 排名第1 (67.6分) - Tools: MiniMax M2.5 工具调用第1 (4.4M次)</p>
+                </div>
+            </a>
+            
+            <a href="https://openrouter.ai/rankings?tab=categories" class="card " target="_blank" rel="noopener">
+                <div class="card-body">
+                    <h3 class="card-title">应用排行</h3>
+                    <p class="card-desc">- OpenClaw 登顶应用榜 (346B tokens) - Claude Code 排名第5 (46B tokens) *今日共收录 80+ 条内容*</p>
+                </div>
+            </a>
+            
+                </div>
+            </section>
+            
+    </main>
+
+    <footer class="footer">
+        <p>Generated by Daily News</p>
+    </footer>
+</body>
+</html>
