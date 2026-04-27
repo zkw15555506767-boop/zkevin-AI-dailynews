@@ -220,10 +220,10 @@ a{color:inherit;text-decoration:none}
 
 <nav class="source-tabs">
   <div class="tab active" data-sec="digest" style="--tab-color:var(--gold)">导读</div>
-  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">7</span></div>
+  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">18</span></div>
   <div class="tab" data-sec="gh" style="--tab-color:var(--gh)">✦ GitHub <span class="cnt">13</span></div>
   <div class="tab" data-sec="tw" style="--tab-color:var(--tw)">𝕏 Twitter <span class="cnt">30</span></div>
-  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">35</span></div>
+  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">52</span></div>
   <div class="tab" data-sec="or" style="--tab-color:var(--or)">⟳ OpenRouter <span class="cnt">10</span></div>
 </nav>
 
@@ -234,10 +234,10 @@ a{color:inherit;text-decoration:none}
 <div class="digest-card">
   <div class="digest-date">4月27日 周一</div>
   <div class="digest-headline">今日速览</div>
-  <ul class="digest-list"><li><strong>Product Hunt #1</strong> · <a href="https://www.producthunt.com/products/openai" target="_blank" class="digest-link">1. GPT-5.5 by OpenAI</a> — OpenAI's smartest and most intuitive to use model yet</li>
-<li><strong>GitHub Trending</strong> · 今日 13 个项目上榜，<a href="https://github.com/mattpocock/skills" target="_blank" class="digest-link">mattpocock/skills</a> 领跑 +2,519 星</li>
-<li><strong>X / Twitter</strong> · 共 63 条精选，来自 ai-sweep 与 Zara Builder 精选；karpathy：we still get looksmaxxed on frontend a l…</li>
-<li><strong>Hacker News</strong> · 今日 35 条技术讨论</li>
+  <ul class="digest-list"><li><strong>Product Hunt #1</strong> · <a href="https://www.producthunt.com/products/jet-admin" target="_blank" class="digest-link">1. Jet AI Agents</a> — Build business AI agents in minutes</li>
+<li><strong>GitHub Trending</strong> · 今日 13 个项目上榜，<a href="https://github.com/mattpocock/skills" target="_blank" class="digest-link">mattpocock/skills</a> 领跑 +5,551 星</li>
+<li><strong>X / Twitter</strong> · 共 92 条精选，来自 ai-sweep 与 Zara Builder 精选；karpathy：feels like a good time to seriously reth…</li>
+<li><strong>Hacker News</strong> · 今日 52 条技术讨论</li>
 <li><strong>OpenRouter 周冠军</strong> · Kimi K2.6（moonshotai）1.58T tokens，new</li></ul>
 </div>
 
@@ -245,18 +245,18 @@ a{color:inherit;text-decoration:none}
   <div class="insight-section-title">今日洞察</div>
   
 <div class="insight-card">
-  <div class="insight-title">端侧 AI 从 Demo 走向实用，Google AI Edge 是关键信号</div>
+  <div class="insight-title">AI Coding Agent 进入工具链爆发期</div>
   <div class="insight-row">
     <span class="insight-label signal">信号</span>
-    <span class="insight-body"><a href='https://github.com/google-ai-edge/gallery' target='_blank' class='digest-link'>google-ai-edge/gallery</a> 今日 +0 星冲榜；<a href='https://github.com/Blaizzy/mlx-vlm' target='_blank' class='digest-link'>mlx-vlm</a> +408；PH 出现 Tiny Aya（本地多语言模型）</span>
+    <span class="insight-body">GitHub Trending 出现 <a href='https://github.com/block/goose' target='_blank' class='digest-link'>block/goose</a>（+0）；PH 上线 Handle Extension（Agent 与浏览器 UI 联动）；HN 热帖「Components of a Coding Agent」引发深度讨论</span>
   </div>
   <div class="insight-row">
     <span class="insight-label trend">趋势</span>
-    <span class="insight-body">加速中的结构性趋势，处于<strong>工具成熟期前夜</strong>：硬件（Apple Silicon、高通）已就绪，框架层（MLX、LiteRT）正密集补全，面向普通用户的端侧 App 将在未来 3-6 个月爆发</span>
+    <span class="insight-body">结构性加速趋势，处于<strong>工具链分化期</strong>：从「AI 写代码」演进到「Agent 操控整个开发环境」，下一步是 Agent 之间的协作编排</span>
   </div>
   <div class="insight-row">
     <span class="insight-label action">PM 行动</span>
-    <span class="insight-body">立即评估你的产品哪些场景可以「离线优先」——隐私敏感（医疗/财务/笔记）+ 低延迟需求（实时翻译/相机识别）是最佳切入口，先做 API 降级到本地的兼容层</span>
+    <span class="insight-body">PM 现在应重点关注：① 你的产品有没有暴露足够的 API/MCP 接口供 Agent 调用？② 用户的「任务上下文」能否被 Agent 无缝继承？优先做 Agent 入口而非 AI 功能集成</span>
   </div>
 </div>
 <div class="insight-card">
@@ -341,62 +341,150 @@ a{color:inherit;text-decoration:none}
   <section class="section" id="sec-ph">
     <div class="section-header">
       <span class="section-label">Product Hunt</span>
-      <span class="section-sub">今日热榜 7 款</span>
+      <span class="section-sub">今日热榜 18 款</span>
     </div>
     <div class="ph-list">
-    <a class="ph-row" href="https://www.producthunt.com/products/openai" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/jet-admin" target="_blank" rel="noopener">
       <span class="ph-rank">🥇</span>
       <div class="ph-info">
-        <span class="ph-name">1. GPT-5.5 by OpenAI</span>
-        <span class="ph-tagline">OpenAI 迄今为止最智能、最直观的使用模型</span>
+        <span class="ph-name">1. Jet AI Agents</span>
+        <span class="ph-tagline">在几分钟内构建商业人工智能代理</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/claude-connectors" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/orange-slice" target="_blank" rel="noopener">
       <span class="ph-rank">🥈</span>
       <div class="ph-info">
-        <span class="ph-name">2. Claude Connectors</span>
-        <span class="ph-tagline">Claude 为日常生活设计的新型连接器</span>
+        <span class="ph-name">2. Orange Slice</span>
+        <span class="ph-tagline">利用人工智能自动化任何销售任务</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/quickcompare-by-trismik" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/logic-ship-an-agent" target="_blank" rel="noopener">
       <span class="ph-rank">🥉</span>
       <div class="ph-info">
-        <span class="ph-name">3. QuickCompare by Trismik</span>
-        <span class="ph-tagline">比较法学硕士的数据、衡量并选择最佳的。</span>
+        <span class="ph-name">3. Logic</span>
+        <span class="ph-tagline">建立和运营代理车队</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/pica" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/waitlister" target="_blank" rel="noopener">
       <span class="ph-rank">#4</span>
       <div class="ph-info">
-        <span class="ph-name">4. Pica</span>
-        <span class="ph-tagline">用于在 MacOS 上管理字体的完全本机应用程序</span>
+        <span class="ph-name">4. Waitlister</span>
+        <span class="ph-tagline">用于启动您的产品的候补名单软件</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/happenstance-2" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/video-ai-me" target="_blank" rel="noopener">
       <span class="ph-rank">#5</span>
       <div class="ph-info">
-        <span class="ph-name">5. Happenstance</span>
-        <span class="ph-tagline">使用 AI 搜索您的网络</span>
+        <span class="ph-name">5. VIDEO AI ME</span>
+        <span class="ph-tagline">与人工智能演员一起制作听起来和看起来都很真实的视频</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/edgee" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/atech" target="_blank" rel="noopener">
       <span class="ph-rank">#6</span>
       <div class="ph-info">
-        <span class="ph-name">6. Edgee Team</span>
-        <span class="ph-tagline">Strava 是您的编码助手</span>
+        <span class="ph-name">6. Atech</span>
+        <span class="ph-tagline">通过聊天构建的拼装电子产品</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/embedful" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/snewpapers" target="_blank" rel="noopener">
       <span class="ph-rank">#7</span>
       <div class="ph-info">
-        <span class="ph-name">7. Free chart generator by Embedful</span>
-        <span class="ph-tagline">在几秒钟内将 CSV 和 Excel 文件转换为图表</span>
+        <span class="ph-name">7. SNEWPapers</span>
+        <span class="ph-tagline">世界上第一个人工智能报纸档案馆</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/gitbar-3" target="_blank" rel="noopener">
+      <span class="ph-rank">#8</span>
+      <div class="ph-info">
+        <span class="ph-name">8. GitBar</span>
+        <span class="ph-tagline">每个拉取请求，一个菜单栏。 GitHub、GitLab 和 Azure</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/brew-finder" target="_blank" rel="noopener">
+      <span class="ph-rank">#9</span>
+      <div class="ph-info">
+        <span class="ph-name">9. Brew Finder</span>
+        <span class="ph-tagline">发现您周围最适合工作的咖啡店</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/framer" target="_blank" rel="noopener">
+      <span class="ph-rank">#10</span>
+      <div class="ph-info">
+        <span class="ph-name">Framer</span>
+        <span class="ph-tagline">以启动速度启动满足企业需求的网站。</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/odyssey-5" target="_blank" rel="noopener">
+      <span class="ph-rank">#11</span>
+      <div class="ph-info">
+        <span class="ph-name">10. Odyssey-2 Max</span>
+        <span class="ph-tagline">世界模型中的物理精度取得了飞跃</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/replylessai" target="_blank" rel="noopener">
+      <span class="ph-rank">#12</span>
+      <div class="ph-info">
+        <span class="ph-name">11. Replyless</span>
+        <span class="ph-tagline">AI 电子邮件应用程序可在 Telegram 上发送每日电子邮件摘要</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/epismo" target="_blank" rel="noopener">
+      <span class="ph-rank">#13</span>
+      <div class="ph-info">
+        <span class="ph-name">12. Epismo Agent Package</span>
+        <span class="ph-tagline">运行社区已经构建的代理工作流程</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/playjoob" target="_blank" rel="noopener">
+      <span class="ph-rank">#14</span>
+      <div class="ph-info">
+        <span class="ph-name">13. PlayJoob</span>
+        <span class="ph-tagline">将死任务板变成共享战略图</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/wafaa-io-beta" target="_blank" rel="noopener">
+      <span class="ph-rank">#15</span>
+      <div class="ph-info">
+        <span class="ph-name">14. Wafaa.io</span>
+        <span class="ph-tagline">在几分钟内创建安全的数字合同</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/wisprflow" target="_blank" rel="noopener">
+      <span class="ph-rank">#16</span>
+      <div class="ph-info">
+        <span class="ph-name">Wispr Flow: Dictation That Works Everywhere</span>
+        <span class="ph-tagline">停止打字。开始说话。速度提高 4 倍。</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/vouch-api" target="_blank" rel="noopener">
+      <span class="ph-rank">#17</span>
+      <div class="ph-info">
+        <span class="ph-name">15. Vouch API</span>
+        <span class="ph-tagline">人工智能股权研究证明它没有说谎</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/subgrapher" target="_blank" rel="noopener">
+      <span class="ph-rank">#18</span>
+      <div class="ph-info">
+        <span class="ph-name">16. Subgrapher</span>
+        <span class="ph-tagline">用于构建、浏览和共享知识的 P2P 桌面应用程序</span>
       </div>
       <span class="ph-arrow">→</span>
     </a></div>
@@ -411,67 +499,67 @@ a{color:inherit;text-decoration:none}
     <a class="gh-card" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">mattpocock/skills</span><span class="gh-lang">Shell</span></div>
       <p class="gh-desc">真正工程师的代理技能。直接来自我的 .claude 目录。</p>
-      <div class="gh-stats"><span>⭐ 25,078</span><span class="gh-today">+2,519 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/Z4nzu/hackingtool" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">Z4nzu/hackingtool</span><span class="gh-lang">Python</span></div>
-      <p class="gh-desc">黑客的多合一黑客工具</p>
-      <div class="gh-stats"><span>⭐ 65,913</span><span class="gh-today">+1,720 today</span></div>
+      <div class="gh-stats"><span>⭐ 27,088</span><span class="gh-today">+5,551 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/Alishahryar1/free-claude-code" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">Alishahryar1/free-claude-code</span><span class="gh-lang">Python</span></div>
       <p class="gh-desc">在终端、VSCode 扩展中或通过 openclaw 等 Discord 免费使用 claude-code</p>
-      <div class="gh-stats"><span>⭐ 14,341</span><span class="gh-today">+1,701 today</span></div>
+      <div class="gh-stats"><span>⭐ 15,281</span><span class="gh-today">+2,973 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">codecrafters-io/build-your-own-x</span><span class="gh-lang">Markdown</span></div>
-      <p class="gh-desc">通过从头开始重新创建您最喜欢的技术来掌握编程。</p>
-      <div class="gh-stats"><span>⭐ 497,016</span><span class="gh-today">+1,075 today</span></div>
+    <a class="gh-card" href="https://github.com/Z4nzu/hackingtool" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Z4nzu/hackingtool</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">黑客的多合一黑客工具</p>
+      <div class="gh-stats"><span>⭐ 66,479</span><span class="gh-today">+1,839 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/abhigyanpatwari/GitNexus" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">abhigyanpatwari/GitNexus</span><span class="gh-lang">TypeScript</span></div>
       <p class="gh-desc">GitNexus：零服务器代码智能引擎 - GitNexus 是一个完全在浏览器中运行的客户端知识图创建器。放入 GitHub 存储库或 ZIP 文件，即可获得带有内置 Graph RAG 代理的交互式知识图。非常适合代码探索</p>
-      <div class="gh-stats"><span>⭐ 30,421</span><span class="gh-today">+700 today</span></div>
+      <div class="gh-stats"><span>⭐ 30,809</span><span class="gh-today">+1,074 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">openclaw/openclaw</span><span class="gh-lang">TypeScript</span></div>
-      <p class="gh-desc">您自己的私人人工智能助理。任何操作系统。任何平台。龙虾方式。 🦞</p>
-      <div class="gh-stats"><span>⭐ 364,877</span><span class="gh-today">+627 today</span></div>
+    <a class="gh-card" href="https://github.com/microsoft/VibeVoice" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">microsoft/VibeVoice</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">开源前沿语音人工智能</p>
+      <div class="gh-stats"><span>⭐ 42,326</span><span class="gh-today">+771 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/ComposioHQ/awesome-codex-skills" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">ComposioHQ/awesome-codex-skills</span><span class="gh-lang">Python</span></div>
       <p class="gh-desc">用于跨 Codex CLI 和 API 实现工作流程自动化的实用 Codex 技能精选列表。</p>
-      <div class="gh-stats"><span>⭐ 2,179</span><span class="gh-today">+517 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/PostHog/posthog" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">PostHog/posthog</span><span class="gh-lang">Python</span></div>
-      <p class="gh-desc">🦔 PostHog 是一个用于构建成功产品的一体化开发者平台。我们提供产品分析、网络分析、会话重播、错误跟踪、功能标记、实验、调查、数据仓库、CDP 和 AI 产品助手，以帮助调试您的代码、更快地发布功能，并将您的所有使用情况和客户数据保存在一个堆栈中。</p>
-      <div class="gh-stats"><span>⭐ 33,949</span><span class="gh-today">+337 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/trycua/cua" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">trycua/cua</span><span class="gh-lang">HTML</span></div>
-      <p class="gh-desc">计算机使用代理的开源基础设施。用于训练和评估可控制完整桌面（macOS、Linux、Windows）的 AI 代理的沙箱、SDK 和基准测试。</p>
-      <div class="gh-stats"><span>⭐ 14,523</span><span class="gh-today">+182 today</span></div>
+      <div class="gh-stats"><span>⭐ 2,386</span><span class="gh-today">+637 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/gastownhall/beads" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">gastownhall/beads</span><span class="gh-lang">Go</span></div>
       <p class="gh-desc">Beads - 编码代理的内存升级</p>
-      <div class="gh-stats"><span>⭐ 21,808</span><span class="gh-today">+152 today</span></div>
+      <div class="gh-stats"><span>⭐ 21,962</span><span class="gh-today">+485 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/home-assistant/core" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">home-assistant/core</span><span class="gh-lang">Python</span></div>
-      <p class="gh-desc">🏡 开源家庭自动化，将本地控制和隐私放在首位。</p>
-      <div class="gh-stats"><span>⭐ 86,648</span><span class="gh-today">+73 today</span></div>
+    <a class="gh-card" href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">donnemartin/system-design-primer</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">了解如何设计大型系统。准备系统设计面试。包括 Anki 抽认卡。</p>
+      <div class="gh-stats"><span>⭐ 344,853</span><span class="gh-today">+366 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/curl/curl" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">curl/curl</span><span class="gh-lang">C</span></div>
-      <p class="gh-desc">用于使用 URL 语法传输数据的命令行工具和库，支持 DICT、FILE、FTP、FTPS、GOPHER、GOPHERS、HTTP、HTTPS、IMAP、IMAPS、LDAP、LDAPS、MQTT、MQTTS、POP3、POP3S、RTMP、RTMPS、RTSP、SCP、SFTP、SMB、SMBS、SMTP、SMTPS、TELNET、TFTP、WS 和 WSS。 libcurl 提供了无数强大的功能</p>
-      <div class="gh-stats"><span>⭐ 41,623</span><span class="gh-today">+30 today</span></div>
+    <a class="gh-card" href="https://github.com/davila7/claude-code-templates" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">davila7/claude-code-templates</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">用于配置和监控 Claude Code 的 CLI 工具</p>
+      <div class="gh-stats"><span>⭐ 25,646</span><span class="gh-today">+284 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/microsoft/typescript-go" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">microsoft/typescript-go</span><span class="gh-lang">Go</span></div>
-      <p class="gh-desc">用于开发 TypeScript 本机端口的临时存储库</p>
-      <div class="gh-stats"><span>⭐ 25,199</span><span class="gh-today">+23 today</span></div>
+    <a class="gh-card" href="https://github.com/penpot/penpot" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">penpot/penpot</span><span class="gh-lang">Clojure</span></div>
+      <p class="gh-desc">Penpot：用于设计和代码协作的开源设计工具</p>
+      <div class="gh-stats"><span>⭐ 46,326</span><span class="gh-today">+283 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/CJackHwang/ds2api" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">CJackHwang/ds2api</span><span class="gh-lang">Go</span></div>
+      <p class="gh-desc">Deepseek to API：一种轻量级、高性能的全栈中间件，可将客户端协议转换为通用 API。支持多账户轮换、编译二进制文件、Vercel Serverless 和 Docker。兼容 Google、Claude 和 OpenAI API 格式。</p>
+      <div class="gh-stats"><span>⭐ 1,712</span><span class="gh-today">+275 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/TauricResearch/TradingAgents" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">TauricResearch/TradingAgents</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">TradingAgents：多代理LLM金融交易框架</p>
+      <div class="gh-stats"><span>⭐ 53,349</span><span class="gh-today">+183 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/deepseek-ai/DeepSeek-V3" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">deepseek-ai/DeepSeek-V3</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc"></p>
+      <div class="gh-stats"><span>⭐ 102,974</span><span class="gh-today">+60 today</span></div>
     </a></div>
   </section>
 
@@ -481,316 +569,278 @@ a{color:inherit;text-decoration:none}
       <span class="section-sub">AI 热帖 + Builder 精选 · Top 30</span>
     </div>
     <div class="tw-feed">
-    <a class="tw-card" href="https://x.com/sama/status/2048160404376105179" target="_blank" rel="noopener">
+    <a class="tw-card" href="https://x.com/sama/status/2048428561481265539" target="_blank" rel="noopener">
       <div class="tw-avatar">SA</div>
       <div class="tw-body">
         <div class="tw-meta">
           <span class="tw-author">@sama</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">we still get looksmaxxed on frontend a little but we IQmog hard now</p>
-        <div class="tw-stats"><span>❤ 14,293</span></div>
+        <p class="tw-text">feels like a good time to seriously rethink how operating systems and user interfaces are designed
+
+(also the internet; there should be a protocol that is equally usable by people and agents)</p>
+        <div class="tw-stats"><span>❤ 10,506</span></div>
       </div>
     </a>
-    <a class="tw-card" href="https://x.com/sama/status/2048165186482389253" target="_blank" rel="noopener">
+    <a class="tw-card" href="https://x.com/sama/status/2048554097985593849" target="_blank" rel="noopener">
       <div class="tw-avatar">SA</div>
       <div class="tw-body">
         <div class="tw-meta">
           <span class="tw-author">@sama</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">how can they write code so fast?! https://t.co/xjZACrnogB</p>
-        <div class="tw-stats"><span>❤ 2,574</span></div>
+        <p class="tw-text">so fun to see the reception to 5.5!
+
+there is almost nothing that feels more gratifying to me than builders saying they find our tools useful.</p>
+        <div class="tw-stats"><span>❤ 3,906</span></div>
       </div>
     </a>
-    <a class="tw-card" href="https://x.com/sama/status/2048160448340767038" target="_blank" rel="noopener">
+    <a class="tw-card" href="https://x.com/swyx/status/2048466589847273697" target="_blank" rel="noopener">
+      <div class="tw-avatar">SW</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@swyx</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">https://t.co/GAdNmBrxdz https://t.co/q9oiahjUPd</p>
+        <div class="tw-stats"><span>❤ 2,718</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/sama/status/2048552677433643427" target="_blank" rel="noopener">
       <div class="tw-avatar">SA</div>
       <div class="tw-body">
         <div class="tw-meta">
           <span class="tw-author">@sama</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">(and we will fix the former)</p>
-        <div class="tw-stats"><span>❤ 2,312</span></div>
+        <p class="tw-text">Our Principles:
+
+Democratization, Empowerment, Universal Prosperity, Resilience, and Adaptability
+
+https://t.co/g58WGndARw</p>
+        <div class="tw-stats"><span>❤ 2,710</span></div>
       </div>
     </a>
-    <a class="tw-card" href="https://x.com/levie/status/2048223146063609965" target="_blank" rel="noopener">
+    <a class="tw-card" href="https://x.com/steipete/status/2048626844694421842" target="_blank" rel="noopener">
+      <div class="tw-avatar">ST</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@steipete</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Wanted a truly local storage for my tweets so built birdclaw. Imoorts your archive, backs it up on github, has jobs so you can import your x bookmarks daily (since they are not fully accessible via the api). 
+https://t.co/4Nd1Ad0ZeY</p>
+        <div class="tw-stats"><span>❤ 727</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/levie/status/2048576989930619185" target="_blank" rel="noopener">
       <div class="tw-avatar">LE</div>
       <div class="tw-body">
         <div class="tw-meta">
           <span class="tw-author">@levie</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">Great read. AI lets you get tremendous leverage that wasn’t available before in almost any domain. 
+        <p class="tw-text">Noticing an interesting version of gell-man amnesia where people use AI for their job and see all the various things they have to do in the “last mile”, but then look at someone else’s job and think that AI will eliminate it immediately.
 
-That means we’re at a unique moment in history where anyone with a high level of ambition and core skills in any area can overcome a lot of historical experience requirements for their role.
-
-This ca</p>
-        <div class="tw-stats"><span>❤ 396</span></div>
+We all have a much deeper appreciation for the nuances and co</p>
+        <div class="tw-stats"><span>❤ 713</span></div>
       </div>
     </a>
-    <a class="tw-card" href="https://x.com/steipete/status/2048185940267380815" target="_blank" rel="noopener">
+    <a class="tw-card" href="https://x.com/rauchg/status/2048523195305902341" target="_blank" rel="noopener">
+      <div class="tw-avatar">RA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@rauchg</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Coding agents will be the foundation of all superintelligence. 
+
+At a minimum, coding ability is indistinguishable from 'proficiency with computers'. Great coding agents like Claude Code master bash, filesystems, configuring and installing programs…
+
+But it's also about self-improvement. A coding ag</p>
+        <div class="tw-stats"><span>❤ 427</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/steipete/status/2048630704972443918" target="_blank" rel="noopener">
       <div class="tw-avatar">ST</div>
       <div class="tw-body">
         <div class="tw-meta">
           <span class="tw-author">@steipete</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">GitHub folks are amazing while we melt their servers. https://t.co/A4TFl16Jlr</p>
-        <div class="tw-stats"><span>❤ 381</span></div>
+        <p class="tw-text">Been so CPU-constrained on OpenClaw work. Switched local tests running to @useblacksmith and IT IS SO GOOD. codex can literally spin up to 32vCPU instances and rip through our test suite. https://t.co/cks45534su</p>
+        <div class="tw-stats"><span>❤ 332</span></div>
       </div>
     </a>
-    <a class="tw-card" href="https://x.com/amasad/status/2048265772775162078" target="_blank" rel="noopener">
-      <div class="tw-avatar">AM</div>
+    <a class="tw-card" href="https://x.com/levie/status/2048537503972684252" target="_blank" rel="noopener">
+      <div class="tw-avatar">LE</div>
       <div class="tw-body">
         <div class="tw-meta">
-          <span class="tw-author">@amasad</span>
+          <span class="tw-author">@levie</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">2000s: every company is an internet company
+        <p class="tw-text">There are at least 2 big but subtle factors contributing to the sense of overwork due to agents right now.
 
-2010s: every company is a software company
-
-2020s: every company is an AI company
-
-2025+: every company is a cybersecurity company</p>
-        <div class="tw-stats"><span>❤ 369</span></div>
+1. The leverage on incremental effort has gone up substantially due to AI, and anyone using these tools tend to feel it first. We’re so used to everything taking so long to get done, that spen</p>
+        <div class="tw-stats"><span>❤ 263</span></div>
       </div>
     </a>
-    <a class="tw-card" href="https://x.com/steipete/status/2048252455817785357" target="_blank" rel="noopener">
-      <div class="tw-avatar">ST</div>
+    <a class="tw-card" href="https://x.com/kevinweil/status/2048588283291312527" target="_blank" rel="noopener">
+      <div class="tw-avatar">KE</div>
       <div class="tw-body">
         <div class="tw-meta">
-          <span class="tw-author">@steipete</span>
+          <span class="tw-author">@kevinweil</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">CodexBar 🎚️ 0.23 is out:
-
-Mistral support, Claude Designs/Daily Routines usage, Cursor Extra usage, GPT-5.5 pricing, cleaner widgets/menus, and a bunch of reliability fixes. https://t.co/X4FXCEmAFG</p>
-        <div class="tw-stats"><span>❤ 214</span></div>
+        <p class="tw-text">💥🤘 https://t.co/i7mo9zONAk</p>
+        <div class="tw-stats"><span>❤ 117</span></div>
       </div>
     </a>
-    <a class="tw-card" href="https://x.com/steipete/status/2048275589224628677" target="_blank" rel="noopener">
-      <div class="tw-avatar">ST</div>
-      <div class="tw-body">
-        <div class="tw-meta">
-          <span class="tw-author">@steipete</span>
-          <span class="tw-tag tag-builder">Builder精选</span>
-        </div>
-        <p class="tw-text">Summarize 📝0.14.0 is out.
-
-GPT-5.5 Fast mode via `--fast`, Reddit thread extraction in the browser extension, local PDF `--extract`, and fixes for auto model config + Meta site compatibility. https://t.co/sbqbYupQ9Y</p>
-        <div class="tw-stats"><span>❤ 192</span></div>
-      </div>
-    </a>
-    <a class="tw-card" href="https://x.com/danshipper/status/2048026505461080076" target="_blank" rel="noopener">
+    <a class="tw-card" href="https://x.com/danshipper/status/2048379297727938991" target="_blank" rel="noopener">
       <div class="tw-avatar">DA</div>
       <div class="tw-body">
         <div class="tw-meta">
           <span class="tw-author">@danshipper</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">what we observe is never the model itself, only the model exposed to our method of questioning</p>
-        <div class="tw-stats"><span>❤ 131</span></div>
+        <p class="tw-text">my claw when i ask it a basic question  https://t.co/2ZTf19DFW1</p>
+        <div class="tw-stats"><span>❤ 94</span></div>
       </div>
     </a>
-    <a class="tw-card" href="https://x.com/garrytan/status/2048278995121094868" target="_blank" rel="noopener">
-      <div class="tw-avatar">GA</div>
-      <div class="tw-body">
-        <div class="tw-meta">
-          <span class="tw-author">@garrytan</span>
-          <span class="tw-tag tag-builder">Builder精选</span>
-        </div>
-        <p class="tw-text">Did you ever want to control your browser side-by-side with Claude Code? Now, with /open-gstack-browser skill and GStack Browser, you can https://t.co/dT0dUd3MhF</p>
-        <div class="tw-stats"><span>❤ 111</span></div>
-      </div>
-    </a>
-    <a class="tw-card" href="https://x.com/petergyang/status/2048136116474437869" target="_blank" rel="noopener">
-      <div class="tw-avatar">PE</div>
-      <div class="tw-body">
-        <div class="tw-meta">
-          <span class="tw-author">@petergyang</span>
-          <span class="tw-tag tag-builder">Builder精选</span>
-        </div>
-        <p class="tw-text">I often have to get Codex to fix my OpenClaw set up 🥲</p>
-        <div class="tw-stats"><span>❤ 96</span></div>
-      </div>
-    </a>
-    <a class="tw-card" href="https://x.com/petergyang/status/2048190683782201767" target="_blank" rel="noopener">
-      <div class="tw-avatar">PE</div>
-      <div class="tw-body">
-        <div class="tw-meta">
-          <span class="tw-author">@petergyang</span>
-          <span class="tw-tag tag-builder">Builder精选</span>
-        </div>
-        <p class="tw-text">Are there good human-curated skill repos for design, coding, product, etc that's not &quot;here's 100 skills you separate the slop yourself&quot;</p>
-        <div class="tw-stats"><span>❤ 84</span></div>
-      </div>
-    </a>
-    <a class="tw-card" href="https://x.com/nikunj/status/2048056524845482131" target="_blank" rel="noopener">
+    <a class="tw-card" href="https://x.com/nikunj/status/2048406229056446526" target="_blank" rel="noopener">
       <div class="tw-avatar">NI</div>
       <div class="tw-body">
         <div class="tw-meta">
           <span class="tw-author">@nikunj</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">Brevity and clarity is what’s missing in most writing..
-
-I’ll go weeks without writing something publicly because I feel like I’m putting the onus of my muddy thoughts on the reader. 
-
-The best writing is able to communicate cleanly the crux of the matter and share a thread that’s simmering but not </p>
-        <div class="tw-stats"><span>❤ 84</span></div>
+        <p class="tw-text">https://t.co/NRTQre60eW</p>
+        <div class="tw-stats"><span>❤ 89</span></div>
       </div>
     </a>
-    <a class="tw-card" href="https://x.com/AmandaAskell/status/2048294481955631163" target="_blank" rel="noopener">
-      <div class="tw-avatar">AM</div>
+    <a class="tw-card" href="https://x.com/steipete/status/2048660875007914176" target="_blank" rel="noopener">
+      <div class="tw-avatar">ST</div>
       <div class="tw-body">
         <div class="tw-meta">
-          <span class="tw-author">@AmandaAskell</span>
+          <span class="tw-author">@steipete</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">What I'm learning from flight simulators is that it would be a bit boring to be an amateur cessna pilot but a lot of fun to be an amateur fighter jet pilot.</p>
-        <div class="tw-stats"><span>❤ 76</span></div>
+        <p class="tw-text">Released wacrawl 0.2.0.
+
+New: encrypted Git backup/restore for WhatsApp Desktop archives. `wacrawl backup push` writes age-encrypted shards to GitHub; `backup pull` decrypts, verifies, and restores locally. https://t.co/gzCQO6eSAe</p>
+        <div class="tw-stats"><span>❤ 89</span></div>
       </div>
     </a>
-    <a class="tw-card" href="https://x.com/zarazhangrui/status/2048101948826751429" target="_blank" rel="noopener">
-      <div class="tw-avatar">ZA</div>
+    <a class="tw-card" href="https://x.com/garrytan/status/2048669695344046090" target="_blank" rel="noopener">
+      <div class="tw-avatar">GA</div>
       <div class="tw-body">
         <div class="tw-meta">
-          <span class="tw-author">@zarazhangrui</span>
+          <span class="tw-author">@garrytan</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">When I sit down at my computer and start typing, that's not the beginning of writing. It's the LAST step. 80% of the writing is already done. It just happened in my head.
+        <p class="tw-text">The secret to an articulate agent like mine isn't one file. It's three:
 
-- Writing ≠ generating text
-- Building product ≠ writing PRDs
-- Designing ≠ making mockups
-- Engineering ≠ writing code</p>
-        <div class="tw-stats"><span>❤ 75</span></div>
+SOUL.md — Who the agent IS. Voice, values, operating principles, what good output looks like, what bad output looks like. Not a system prompt, a constitution. Mine says things like &quot;brevity is mandatory,&quot; &quot;humor is mandatory,&quot; </p>
+        <div class="tw-stats"><span>❤ 62</span></div>
       </div>
     </a>
-    <a class="tw-card" href="https://x.com/petergyang/status/2048220045726322934" target="_blank" rel="noopener">
+    <a class="tw-card" href="https://x.com/thenanyu/status/2048372199375929435" target="_blank" rel="noopener">
+      <div class="tw-avatar">TH</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@thenanyu</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">I’ve never heard of this insane app but the FindMy team needs to take notes. https://t.co/gbc0vhufQG</p>
+        <div class="tw-stats"><span>❤ 51</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/adityaag/status/2048534774776746102" target="_blank" rel="noopener">
+      <div class="tw-avatar">AD</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@adityaag</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Human progress is not just Sawe breaking the 2-hour mark but that TWO people did something that no human had ever done.</p>
+        <div class="tw-stats"><span>❤ 40</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/garrytan/status/2048667055424249864" target="_blank" rel="noopener">
+      <div class="tw-avatar">GA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@garrytan</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Also a funny thing: my OpenClaw knowing my full schedule and also my health goals and refusing to respond to my queries after 12:30am. 
+
+Amazing @steipete</p>
+        <div class="tw-stats"><span>❤ 28</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/thenanyu/status/2048371760328815011" target="_blank" rel="noopener">
+      <div class="tw-avatar">TH</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@thenanyu</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">English, of course https://t.co/uoJbrrvhXI</p>
+        <div class="tw-stats"><span>❤ 24</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/petergyang/status/2048603978070712757" target="_blank" rel="noopener">
       <div class="tw-avatar">PE</div>
       <div class="tw-body">
         <div class="tw-meta">
           <span class="tw-author">@petergyang</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">If you want to know what the next generation expects from AI just use Codex with a 7 year old.
+        <p class="tw-text">I synced my iPhone photos to @googlephotos and there seems to be no way to just prompt Gemini to &quot;create a highlight reel of me with my daughter growing up&quot;
 
-&quot;What do you mean it can't build a pet dragon raising game instantly? I'm bored&quot; https://t.co/M9wWoIGUtA</p>
-        <div class="tw-stats"><span>❤ 65</span></div>
+Seems like a missed opportunity.</p>
+        <div class="tw-stats"><span>❤ 23</span></div>
       </div>
     </a>
-    <a class="tw-card" href="https://x.com/thenanyu/status/2048172709075402787" target="_blank" rel="noopener">
-      <div class="tw-avatar">TH</div>
-      <div class="tw-body">
-        <div class="tw-meta">
-          <span class="tw-author">@thenanyu</span>
-          <span class="tw-tag tag-builder">Builder精选</span>
-        </div>
-        <p class="tw-text">The problem with being on the very bleeding edge of adoption is you’re going to constantly be changing how you do things as the industry learns. 
-
-The sweet spot is just a couple steps behind. Whatever is relatively new, but survives all of the churn.</p>
-        <div class="tw-stats"><span>❤ 55</span></div>
-      </div>
-    </a>
-    <a class="tw-card" href="https://x.com/nikunj/status/2048107926012002461" target="_blank" rel="noopener">
-      <div class="tw-avatar">NI</div>
-      <div class="tw-body">
-        <div class="tw-meta">
-          <span class="tw-author">@nikunj</span>
-          <span class="tw-tag tag-builder">Builder精选</span>
-        </div>
-        <p class="tw-text">Every time I pass by my neighbors side door I get this visceral feeling this is a portal to another universe.. https://t.co/wmLKvqlRnw</p>
-        <div class="tw-stats"><span>❤ 52</span></div>
-      </div>
-    </a>
-    <a class="tw-card" href="https://x.com/swyx/status/2048126046487322835" target="_blank" rel="noopener">
-      <div class="tw-avatar">SW</div>
-      <div class="tw-body">
-        <div class="tw-meta">
-          <span class="tw-author">@swyx</span>
-          <span class="tw-tag tag-builder">Builder精选</span>
-        </div>
-        <p class="tw-text">btw we are cooking something with @hhua_ 
-
-(not final yet but keep calendar open after ICML in Seoul) https://t.co/uSUtTZeqmF https://t.co/3jNffEWsUG</p>
-        <div class="tw-stats"><span>❤ 48</span></div>
-      </div>
-    </a>
-    <a class="tw-card" href="https://x.com/swyx/status/2047948378659754373" target="_blank" rel="noopener">
-      <div class="tw-avatar">SW</div>
-      <div class="tw-body">
-        <div class="tw-meta">
-          <span class="tw-author">@swyx</span>
-          <span class="tw-tag tag-builder">Builder精选</span>
-        </div>
-        <p class="tw-text">fun to think about what the pm thinks vs what the engineer thinks in this scenario</p>
-        <div class="tw-stats"><span>❤ 44</span></div>
-      </div>
-    </a>
-    <a class="tw-card" href="https://x.com/garrytan/status/2048290087318773807" target="_blank" rel="noopener">
+    <a class="tw-card" href="https://x.com/garrytan/status/2048664680558932266" target="_blank" rel="noopener">
       <div class="tw-avatar">GA</div>
       <div class="tw-body">
         <div class="tw-meta">
           <span class="tw-author">@garrytan</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">Releaseing GBrain v0.22 - lots of fixes to search and retireval and a new eval system (gbrain-evals is now a separate repo to prevent checkout bloat) https://t.co/qVAQjQeReV</p>
-        <div class="tw-stats"><span>❤ 41</span></div>
+        <p class="tw-text">Honestly imagine actually talking to the book that knows you as a friend
+
+It’s a surreal experience</p>
+        <div class="tw-stats"><span>❤ 22</span></div>
       </div>
     </a>
-    <a class="tw-card" href="https://x.com/garrytan/status/2048279121034101147" target="_blank" rel="noopener">
-      <div class="tw-avatar">GA</div>
+    <a class="tw-card" href="https://x.com/petergyang/status/2048611053333041158" target="_blank" rel="noopener">
+      <div class="tw-avatar">PE</div>
       <div class="tw-body">
         <div class="tw-meta">
-          <span class="tw-author">@garrytan</span>
+          <span class="tw-author">@petergyang</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">To install for free, Go to Claude Code and type Install GStack and to run the browser, type /open-gstack-browser
+        <p class="tw-text">This weekend, I improved my mobile fitness app and built a mcp server for it so I can get my latest workout stats and update the app's workouts via Claude/Codex/etc.
 
-https://t.co/VPvWDzUxms</p>
-        <div class="tw-stats"><span>❤ 14</span></div>
+This shit is too fun. https://t.co/bSzpGbkvPP</p>
+        <div class="tw-stats"><span>❤ 17</span></div>
       </div>
     </a>
-    <a class="tw-card" href="https://x.com/thenanyu/status/2048210021553405955" target="_blank" rel="noopener">
-      <div class="tw-avatar">TH</div>
+    <a class="tw-card" href="https://x.com/petergyang/status/2048608945883992571" target="_blank" rel="noopener">
+      <div class="tw-avatar">PE</div>
       <div class="tw-body">
         <div class="tw-meta">
-          <span class="tw-author">@thenanyu</span>
+          <span class="tw-author">@petergyang</span>
           <span class="tw-tag tag-builder">Builder精选</span>
         </div>
-        <p class="tw-text">The entire West Coast of the United States from Santa Cruz on up. SF, Marin, Seattle, Portland…
+        <p class="tw-text">If you enjoyed this, sign up for free to my newsletter to get my best AI and product guides.
 
-If only we built housing so that people could actually live there https://t.co/k4eBM6IgcU</p>
-        <div class="tw-stats"><span>❤ 13</span></div>
-      </div>
-    </a>
-    <a class="tw-card" href="https://x.com/swyx/status/2048125100437000512" target="_blank" rel="noopener">
-      <div class="tw-avatar">SW</div>
-      <div class="tw-body">
-        <div class="tw-meta">
-          <span class="tw-author">@swyx</span>
-          <span class="tw-tag tag-builder">Builder精选</span>
-        </div>
-        <p class="tw-text">wow another engineer on the “code is not cheap” train
-
-https://t.co/yJDi7S1b0f</p>
-        <div class="tw-stats"><span>❤ 6</span></div>
-      </div>
-    </a>
-    <a class="tw-card" href="https://x.com/thenanyu/status/2048138965262201281" target="_blank" rel="noopener">
-      <div class="tw-avatar">TH</div>
-      <div class="tw-body">
-        <div class="tw-meta">
-          <span class="tw-author">@thenanyu</span>
-          <span class="tw-tag tag-builder">Builder精选</span>
-        </div>
-        <p class="tw-text">This is another way of saying the same thing, believe it or not 
-
-https://t.co/mhISOTPiX4</p>
-        <div class="tw-stats"><span>❤ 2</span></div>
+Join 110,000+ subscribers here:
+https://t.co/yz9xcsfrhF</p>
+        <div class="tw-stats"><span>❤ 1</span></div>
       </div>
     </a>
     <a class="tw-card" href="https://x.com/i/status/2048591112063856753" target="_blank" rel="noopener">
@@ -852,6 +902,47 @@ This is China’s newest open-source model (China…</p>
 刚刚刷到个超级硬核的模型聚合站—— ZenMux ，直接开放 DeepSeek V4 Pro 免费版，不用排队不用等额度，网页就能直接聊
 
 …</p>
+        <div class="tw-stats"><span>❤ 0</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/i/status/2048590707288617307" target="_blank" rel="noopener">
+      <div class="tw-avatar">HU</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@Huanusa</span>
+          <span class="tw-tag tag-hot">热帖</span>
+        </div>
+        <p class="tw-text">还在手动刷新闻、扒数据、写研报？
+有人已经把这整套流程，交给 AI 自动跑了。
+
+一套叫 Awesome Finance Skills 的 Agent 技能包，
+直接把金融分析流程拆成模块化能力：
+
+→ 多源信息抓取：新闻、市场、社媒一体聚…</p>
+        <div class="tw-stats"><span>❤ 0</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/i/status/2048597455076495848" target="_blank" rel="noopener">
+      <div class="tw-avatar">RD</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@rdd147</span>
+          <span class="tw-tag tag-hot">热帖</span>
+        </div>
+        <p class="tw-text">OpenAI set to release its first Ai phone to help $QCOM roundtrip revenue</p>
+        <div class="tw-stats"><span>❤ 0</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/i/status/2048590496881373414" target="_blank" rel="noopener">
+      <div class="tw-avatar">RA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@rahulluthra22</span>
+          <span class="tw-tag tag-hot">热帖</span>
+        </div>
+        <p class="tw-text">This is how research to design actually looks like on a billion dollar product.
+
+We were working on new e-mobility featu…</p>
         <div class="tw-stats"><span>❤ 0</span></div>
       </div>
     </a></div>
