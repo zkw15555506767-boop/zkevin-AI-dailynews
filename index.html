@@ -220,11 +220,11 @@ a{color:inherit;text-decoration:none}
 
 <nav class="source-tabs">
   <div class="tab active" data-sec="digest" style="--tab-color:var(--gold)">导读</div>
-  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">0</span></div>
-  <div class="tab" data-sec="gh" style="--tab-color:var(--gh)">✦ GitHub <span class="cnt">0</span></div>
-  <div class="tab" data-sec="tw" style="--tab-color:var(--tw)">𝕏 Twitter <span class="cnt">0</span></div>
-  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">0</span></div>
-  <div class="tab" data-sec="or" style="--tab-color:var(--or)">⟳ OpenRouter <span class="cnt">0</span></div>
+  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">5</span></div>
+  <div class="tab" data-sec="gh" style="--tab-color:var(--gh)">✦ GitHub <span class="cnt">20</span></div>
+  <div class="tab" data-sec="tw" style="--tab-color:var(--tw)">𝕏 Twitter <span class="cnt">16</span></div>
+  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">26</span></div>
+  <div class="tab" data-sec="or" style="--tab-color:var(--or)">⟳ OpenRouter <span class="cnt">10</span></div>
 </nav>
 
 <main class="main">
@@ -234,14 +234,31 @@ a{color:inherit;text-decoration:none}
 <div class="digest-card">
   <div class="digest-date">5月31日 周日</div>
   <div class="digest-headline">今日速览</div>
-  <ul class="digest-list"><li><strong>GitHub Trending</strong> · 今日 0 个项目上榜</li>
-<li><strong>X / Twitter</strong> · 共 0 条精选，来自 ai-sweep 与 Zara Builder 精选</li>
-<li><strong>Hacker News</strong> · 今日 0 条技术讨论</li></ul>
+  <ul class="digest-list"><li><strong>Product Hunt #1</strong> · <a href="https://www.producthunt.com/products/wandesk-ai" target="_blank" class="digest-link">1\. Wandesk</a> — Build Your Own AI Desktop</li>
+<li><strong>GitHub Trending</strong> · 今日 20 个项目上榜，<a href="https://github.com/bonus-2026/crypto-casino-bonus" target="_blank" class="digest-link">bonus-2026/crypto-casino-bonus</a> 领跑 +0 星</li>
+<li><strong>X / Twitter</strong> · 共 16 条精选，来自 ai-sweep 与 Zara Builder 精选；karpathy：Salesforce published a detailed writeup …</li>
+<li><strong>Hacker News</strong> · 今日 26 条技术讨论</li>
+<li><strong>OpenRouter 周冠军</strong> · （deepseek）3.31T tokens，3%</li></ul>
 </div>
 
 <div class="insight-section">
   <div class="insight-section-title">今日洞察</div>
   
+<div class="insight-card">
+  <div class="insight-title">中国模型在 OpenRouter 使用量全面超越西方，免费策略奏效</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body">OpenRouter 本周 Top3 全为中国模型：（deepseek）、（tencent）、（anthropic）；Qwen3.6 Plus 和 Step 3.5 Flash 标注 free，小米 MiMo-V2-Pro 以 3.73T tokens 占据第一</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">加速中的趋势，处于<strong>份额重分配阶段</strong>：「免费+高质量」组合正在快速抢占开发者心智，一旦建立习惯将产生路径依赖</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">如果你的产品依赖 OpenAI/Anthropic API，现在是建立<strong>模型路由层</strong>的最佳时机——按任务类型（创意/代码/摘要）分配最优价格比的模型，而非绑定单一供应商</span>
+  </div>
+</div>
 <div class="insight-card">
   <div class="insight-title">开发者工具与 AI 的融合正在加速，「可观测性」成为新刚需</div>
   <div class="insight-row">
@@ -309,41 +326,587 @@ a{color:inherit;text-decoration:none}
   <section class="section" id="sec-ph">
     <div class="section-header">
       <span class="section-label">Product Hunt</span>
-      <span class="section-sub">今日热榜 0 款</span>
+      <span class="section-sub">今日热榜 5 款</span>
     </div>
-    <div class="ph-list"></div>
+    <div class="ph-list">
+    <a class="ph-row" href="https://www.producthunt.com/products/wandesk-ai" target="_blank" rel="noopener">
+      <span class="ph-rank">🥇</span>
+      <div class="ph-info">
+        <span class="ph-name">1\. Wandesk</span>
+        <span class="ph-tagline">打造您自己的人工智能桌面</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/wingbits-ai" target="_blank" rel="noopener">
+      <span class="ph-rank">🥈</span>
+      <div class="ph-info">
+        <span class="ph-name">2\. Wingbits AI</span>
+        <span class="ph-tagline">用于实时飞机监控和警报的人工智能代理</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/exstats" target="_blank" rel="noopener">
+      <span class="ph-rank">🥉</span>
+      <div class="ph-info">
+        <span class="ph-name">3\. Exstats</span>
+        <span class="ph-tagline">在一处跟踪您的浏览器扩展程序和竞争对手</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/openstatus-2" target="_blank" rel="noopener">
+      <span class="ph-rank">#4</span>
+      <div class="ph-info">
+        <span class="ph-name">4\. Openstatus MCP Health Checker</span>
+        <span class="ph-tagline">像真正的 AI 客户端一样测试 MCP 服务器，而不仅仅是 ping</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/step-3-5-flash" target="_blank" rel="noopener">
+      <span class="ph-rank">#5</span>
+      <div class="ph-info">
+        <span class="ph-name">5\. Step 3.7 Flash</span>
+        <span class="ph-tagline">能够看到并采取行动的极速代理模型</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a></div>
   </section>
 
   <section class="section" id="sec-gh">
     <div class="section-header">
       <span class="section-label">GitHub Trending</span>
-      <span class="section-sub">2026-05-31 · 0 个项目</span>
+      <span class="section-sub">2026-05-31 · 20 个项目</span>
     </div>
-    <div class="gh-grid"></div>
+    <div class="gh-grid">
+    <a class="gh-card" href="https://github.com/bonus-2026/crypto-casino-bonus" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">bonus-2026/crypto-casino-bonus</span></div>
+      <p class="gh-desc">探索最好的加密货币赌场奖金 - 包括无存款欢迎奖金。了解比特币赌场奖励、免费旋转、现金返还优惠、加密货币支付、手机游戏和负责任的在线赌场促销活动。</p>
+      <div class="gh-stats"><span>⭐ 312</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/Allanlv5324F/Lossless-Scaling-Github" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Allanlv5324F/Lossless-Scaling-Github</span><span class="gh-lang">C#</span></div>
+      <p class="gh-desc">无损缩放 Steam github lsfg 帧生成</p>
+      <div class="gh-stats"><span>⭐ 250</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/rasoir0591/Crosshair-X" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">rasoir0591/Crosshair-X</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">十字准线 x steam 下载自定义十字准线 免费覆盖扩展 torrent valorant cs2 apex pro 设置 windows</p>
+      <div class="gh-stats"><span>⭐ 248</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/yuyefeiyu/yt-downloader" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">yuyefeiyu/yt-downloader</span><span class="gh-lang">C#</span></div>
+      <p class="gh-desc">youtube 下载器 yt 下载器 mp3 转换器 4k 视频下载 yt-dlp github 免费下载 windows 11 android apk</p>
+      <div class="gh-stats"><span>⭐ 242</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/polymaxi2/polymarket-arbitrage-trading-bot" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">polymaxi2/polymarket-arbitrage-trading-bot</span></div>
+      <p class="gh-desc">多市场交易机器人 多市场交易机器人 多市场交易机器人 多市场交易机器人 多市场交易机器人 多市场交易机器人 多市场交易机器人 多市场交易机器人 多市场交易机器人 多市场交易机器人 多市场机器人 多市场交易机器人 多市场交易机器人 多市场交易机器人 多市场交易机器人 多市场交易机器人</p>
+      <div class="gh-stats"><span>⭐ 203</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/fxyz666/LogicPipe" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">fxyz666/LogicPipe</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">LogicPipe 是一个面向边缘多设备协同 LLM 推理的开源软件项目，提供离线管线规划、分布式 stage 权重加载、依赖感知任务调度和上下文 KV cache 复用能力。</p>
+      <div class="gh-stats"><span>⭐ 195</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/Polymarket-DevRel/polymarket-devrel" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Polymarket-DevRel/polymarket-devrel</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc"></p>
+      <div class="gh-stats"><span>⭐ 151</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/TaiwanBoss/DualSenseX-Steam-PC-Controller" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">TaiwanBoss/DualSenseX-Steam-PC-Controller</span><span class="gh-lang">C#</span></div>
+      <p class="gh-desc">dsx steam Dualsensex 免费下载 PS5 Dualsens 控制器 PC 自适应触发器 触觉反馈 ds4windows 仿真 Windows 11 Fix 2026</p>
+      <div class="gh-stats"><span>⭐ 149</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/faldyrd/Auto-2026" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">faldyrd/Auto-2026</span><span class="gh-lang">C++</span></div>
+      <p class="gh-desc">autocad 2026 免费下载破解洪流 x-force 注册机产品密钥激活 Windows 11 设置指南修复最新版本</p>
+      <div class="gh-stats"><span>⭐ 149</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/yapeth/MaaNTE" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">yapeth/MaaNTE</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">maante neverness to everness nte automation assistant maa framework github download free bot auto fishing skip dialogue daily rewards windows 11 MaaNTE 异环小助手，由 MAAFramework 强力驱动！ QQ交流群: 713114598</p>
+      <div class="gh-stats"><span>⭐ 149</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/paralives-free/Paralives-Money-Cheats" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">paralives-free/Paralives-Money-Cheats</span><span class="gh-lang">C#</span></div>
+      <p class="gh-desc">paralives mod 作弊钱控制台命令钱黑客训练器 Steam 游戏下载免费 Steam 电脑 paramaker 无限金钱需要 mod</p>
+      <div class="gh-stats"><span>⭐ 144</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/steeliron550-ui/search-bibtex" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">steeliron550-ui/search-bibtex</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">[PolyCite] 基于多智能体协同、多源汇聚的论文引用元数据检索工具 A command-line tool for quickly scraping BibTeX information from computer science conferences and journals, optimized for LLM Multi-Agents.</p>
+      <div class="gh-stats"><span>⭐ 143</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/shipfastlabs/parsel" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">shipfastlabs/parsel</span><span class="gh-lang">PHP</span></div>
+      <p class="gh-desc">一个快速、有用且开源的 PHP 文档解析器</p>
+      <div class="gh-stats"><span>⭐ 131</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/DannyMac180/skills" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">DannyMac180/skills</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">我创建的 AI 代理技能：Dan McAteer</p>
+      <div class="gh-stats"><span>⭐ 121</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/risedownlabs/polymarket-weather-bot" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">risedownlabs/polymarket-weather-bot</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">Polymarket 天气交易机器人 Polymarket 天气投注机器人 Polymarket 天气交易机器人 Polymarket 天气投注机器人 Polymarket 天气投注机器人 Polymarket 天气投注机器人 Polymarket 天气交易机器人 Polymarket 天气投注机器人 Polymarket 天气投注机器人 Polymarket 天气投注机器人 Polymarket 天气投注机器人</p>
+      <div class="gh-stats"><span>⭐ 121</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/liyue-aigc/female-portrait-director" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">liyue-aigc/female-portrait-director</span></div>
+      <p class="gh-desc">模块化的 Codex Skill，用于指导和扩展详细的 AI 女性肖像提示。</p>
+      <div class="gh-stats"><span>⭐ 117</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/TYOPxyz/solana-pumpfun-bundler" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">TYOPxyz/solana-pumpfun-bundler</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">Solana Pumpfun 捆绑器 Solana Pump.fun 捆绑器 Solana Pumpfun 捆绑器 Solana Pump.fun 捆绑器 Solana Pumpfun 捆绑器 Solana Pump.fun 捆绑器 Solana Pumpfun 捆绑器 Solana Pump.fun 捆绑器 Solana Pumpfun 捆绑器 Solana Pumpfun 捆绑器 Solana Pumpfun 捆绑器 Solana Pumpfun 捆绑器 Solana Pumpfun 捆绑器 Solana Pumpfun 捆绑器 Solana Pumpfun 捆绑器</p>
+      <div class="gh-stats"><span>⭐ 116</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/WaveStoryCourtyard/DiscordFix" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">WaveStoryCourtyard/DiscordFix</span><span class="gh-lang">Batchfile</span></div>
+      <p class="gh-desc">工作不和谐修复 (05.29.2026)</p>
+      <div class="gh-stats"><span>⭐ 116</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/johnmiddleton12/my-whoop" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">johnmiddleton12/my-whoop</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc"></p>
+      <div class="gh-stats"><span>⭐ 112</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/defi-ape/polymarket-kalshi-arbitrage-bot" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">defi-ape/polymarket-kalshi-arbitrage-bot</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">15 分钟预测市场套利机器人：轮询 Kalshi Trade API 和 Polymarket CLOB，检测 YES/UP 价差和后期解决缺口，公开 Express /status，并通过 @polymarket/clob-client 进行 Polymarket 购买。</p>
+      <div class="gh-stats"><span>⭐ 111</span><span class="gh-today">+0 today</span></div>
+    </a></div>
   </section>
 
   <section class="section" id="sec-tw">
     <div class="section-header">
       <span class="section-label">X / Twitter</span>
-      <span class="section-sub">AI 热帖 + Builder 精选 · Top 0</span>
+      <span class="section-sub">AI 热帖 + Builder 精选 · Top 16</span>
     </div>
-    <div class="tw-feed"></div>
+    <div class="tw-feed">
+    <a class="tw-card" href="https://x.com/bcherny/status/2060390852619272526" target="_blank" rel="noopener">
+      <div class="tw-avatar">BC</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@bcherny</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Salesforce published a detailed writeup on going agentic with Claude Code. A couple things jumped out.
+
+A migration they'd scoped at 231 days shipped in 13. One PR delivered 21 endpoints at 100% test coverage.</p>
+        <div class="tw-stats"><span>❤ 2,789</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/steipete/status/2060294413377519808" target="_blank" rel="noopener">
+      <div class="tw-avatar">ST</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@steipete</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">I smell a takedown in 3...2...1 https://t.co/KfxM4Dp0Qh</p>
+        <div class="tw-stats"><span>❤ 2,774</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/thsottiaux/status/2060565265906290786" target="_blank" rel="noopener">
+      <div class="tw-avatar">TH</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@thsottiaux</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">I looked at a number today on a codex dashboard and it made me happy. More news about the number soon. 👀
+
+Thanks to everyone who keeps adopting codex. We are still early. So early.</p>
+        <div class="tw-stats"><span>❤ 1,690</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/steipete/status/2060306947035832628" target="_blank" rel="noopener">
+      <div class="tw-avatar">ST</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@steipete</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Couldn’t be more excited to have Vince on board. 🦞 
+
+Very few people understand the new ways, how software is built. He gets it. https://t.co/6MmfCVHGLW</p>
+        <div class="tw-stats"><span>❤ 1,295</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/thsottiaux/status/2060563528596287874" target="_blank" rel="noopener">
+      <div class="tw-avatar">TH</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@thsottiaux</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Do you still trust benchmarks or do you just listen to your friends? What makes you try a new model?</p>
+        <div class="tw-stats"><span>❤ 939</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/thsottiaux/status/2060529970523603099" target="_blank" rel="noopener">
+      <div class="tw-avatar">TH</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@thsottiaux</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">The world is more fun with codex glasses https://t.co/HYgxSCdaks</p>
+        <div class="tw-stats"><span>❤ 833</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/bcherny/status/2060390855383400729" target="_blank" rel="noopener">
+      <div class="tw-avatar">BC</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@bcherny</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">The teams seeing the biggest wins from AI are completely changing how they work, not speeding up what they already do. What steps can you delete, what handoffs go away, what can an agent just own end to end. Great to see Salesforce go this deep. Shoutout to Srini, @Benioff &amp; team.
+
+Full writeup: htt</p>
+        <div class="tw-stats"><span>❤ 450</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/bcherny/status/2060390853835726946" target="_blank" rel="noopener">
+      <div class="tw-avatar">BC</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@bcherny</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Quality went up alongside output. Even with more PRs shipping, total incidents dropped 5%. They built security guardrails and quality standards into the agentic workflow itself.
+
+Productivity vs quality is sometimes framed as a tradeoff. They're not seeing it.</p>
+        <div class="tw-stats"><span>❤ 411</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/levie/status/2060525104384418271" target="_blank" rel="noopener">
+      <div class="tw-avatar">LE</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@levie</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">The app layer couldn’t get a better advertisement than a company spending $500M to build their own version of it. Obviously lots of nuance here that can’t be captured in the headline, but this should make you very bullish on software. https://t.co/laysmOjyo7</p>
+        <div class="tw-stats"><span>❤ 348</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/garrytan/status/2060600088079356292" target="_blank" rel="noopener">
+      <div class="tw-avatar">GA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@garrytan</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">A founder kept saying &quot;if only we had money we'd do X.&quot;
+
+Money is not the fire. Money is gasoline you pour on a fire that already exists.
+
+You don't have a funding problem. You have a &quot;people don't want it yet&quot; problem. Go make the first fire.</p>
+        <div class="tw-stats"><span>❤ 346</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/danshipper/status/2060487621915152571" target="_blank" rel="noopener">
+      <div class="tw-avatar">DA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@danshipper</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">extremely sick https://t.co/aV3SISsMbv</p>
+        <div class="tw-stats"><span>❤ 229</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/garrytan/status/2060582680216084925" target="_blank" rel="noopener">
+      <div class="tw-avatar">GA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@garrytan</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Anti Asian racism alive and well in University of California admissions https://t.co/iZuW7HE9nl</p>
+        <div class="tw-stats"><span>❤ 159</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/joshwoodward/status/2060443093825094091" target="_blank" rel="noopener">
+      <div class="tw-avatar">JO</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@joshwoodward</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Multilingual is now &quot;ridiculously easy&quot;:
+https://t.co/UHrcm4Fxg6</p>
+        <div class="tw-stats"><span>❤ 70</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/garrytan/status/2060586945491931202" target="_blank" rel="noopener">
+      <div class="tw-avatar">GA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@garrytan</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Virtue signalers who don’t actually care about the outcomes for the students of the UC system really should have had no part in the UC Regents
+
+Unfortunately they have damaged beautiful institution and their names should be remembered for it https://t.co/F7XWMfYDiM</p>
+        <div class="tw-stats"><span>❤ 67</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/nikunj/status/2060580468781953169" target="_blank" rel="noopener">
+      <div class="tw-avatar">NI</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@nikunj</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Always fun to see what it's like for someone to go through the @ycombinator interview process.. 
+
+SO happy for this kid, and excited to meet the upcoming batch! https://t.co/bHQExvHD4Q</p>
+        <div class="tw-stats"><span>❤ 35</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/joshwoodward/status/2060443095527989413" target="_blank" rel="noopener">
+      <div class="tw-avatar">JO</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@joshwoodward</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Turn your car into a Lamborghini:
+https://t.co/P02mdWU4Km</p>
+        <div class="tw-stats"><span>❤ 25</span></div>
+      </div>
+    </a></div>
   </section>
 
   <section class="section" id="sec-hn">
     <div class="section-header">
       <span class="section-label">Hacker News</span>
-      <span class="section-sub">Top 0</span>
+      <span class="section-sub">Top 20</span>
     </div>
-    <div class="hn-list"></div>
+    <div class="hn-list">
+    <a class="hn-row" href="https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/" target="_blank" rel="noopener">
+      <span class="hn-num">01</span>
+      <span class="hn-title">Domain expertise has always been the real moat</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://cryptography101.ca/wp-content/uploads/lattice-based-cryptography.pdf" target="_blank" rel="noopener">
+      <span class="hn-num">02</span>
+      <span class="hn-title">A Gentle Introduction to Lattice-Based Cryptography [pdf]</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="http://oldvcr.blogspot.com/2026/05/ahoy-decmate-ii-little-pdp-8-that-could.html" target="_blank" rel="noopener">
+      <span class="hn-num">03</span>
+      <span class="hn-title">Ahoy, DECmate II the little PDP-8 that could</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://shantellsans.com/process" target="_blank" rel="noopener">
+      <span class="hn-num">04</span>
+      <span class="hn-title">Shantell Sans (2023)</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://blog.racket-lang.org/2026/05/racket-v9-2.html" target="_blank" rel="noopener">
+      <span class="hn-num">05</span>
+      <span class="hn-title">Racket v9.2 is now available</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://consumerrights.wiki/w/Microsoft_Office_2019_and_2021_for_Mac_view-only_conversion_(2026)" target="_blank" rel="noopener">
+      <span class="hn-num">06</span>
+      <span class="hn-title">Microsoft Office 2019 and 2021 for Mac view-only conversion</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://github.com/Hawzen/I-found-a-seashell-in-the-middle-of-the-desert" target="_blank" rel="noopener">
+      <span class="hn-num">07</span>
+      <span class="hn-title">I found a seashell in the middle of the desert</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://newsroom.accenture.com/news/2026/accenture-to-acquire-ookla-to-strengthen-network-intelligence-and-experience-with-data-and-ai-for-enterprises" target="_blank" rel="noopener">
+      <span class="hn-num">08</span>
+      <span class="hn-title">Accenture to acquire Ookla</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://av2.aomedia.org" target="_blank" rel="noopener">
+      <span class="hn-num">09</span>
+      <span class="hn-title">The AV2 Video Standard Has Released (Final v1.0 Specification)</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://labyrinthanalyticsconsulting.com/blog/building-first-langgraph-pipeline" target="_blank" rel="noopener">
+      <span class="hn-num">10</span>
+      <span class="hn-title">Building a LangGraph pipeline for production data engineering</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://s-macke.github.io/VoxelSpace/" target="_blank" rel="noopener">
+      <span class="hn-num">11</span>
+      <span class="hn-title">Voxel Space (2017)</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://lowendmac.com/2013/jef-raskin-the-visionary-behind-the-mac/" target="_blank" rel="noopener">
+      <span class="hn-num">12</span>
+      <span class="hn-title">Jef Raskin, the Visionary Behind the Mac (2013)</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://github.com/wolfSSL/wolfCOSE" target="_blank" rel="noopener">
+      <span class="hn-num">13</span>
+      <span class="hn-title">wolfSSL releases a new product; wolfCOSE a zero alloc C embbedded COSE stack</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://ziglang.org/devlog/2026/#2026-05-30" target="_blank" rel="noopener">
+      <span class="hn-num">14</span>
+      <span class="hn-title">Zig ELF Linker Improvements Devlog</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://brie.gay/cheese-paper/" target="_blank" rel="noopener">
+      <span class="hn-num">15</span>
+      <span class="hn-title">Cheese Paper: a text editor specifically designed for writing</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://remyhax.xyz/posts/reproducing-lawful-tls-wiretapping/" target="_blank" rel="noopener">
+      <span class="hn-num">16</span>
+      <span class="hn-title">Parallel Reconstruction of Lawful TLS Wiretapping</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://openrouter.ai/announcements/series-b" target="_blank" rel="noopener">
+      <span class="hn-num">17</span>
+      <span class="hn-title">OpenRouter raises $113M Series B</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://journals.biologists.com/jeb/article/229/10/jeb251935/371741/Associative-learning-switches-DEET-valence-from" target="_blank" rel="noopener">
+      <span class="hn-num">18</span>
+      <span class="hn-title">Associative learning turns DEET from aversive to appetitive in Aedes aegypti</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.theparisreview.org/blog/2018/01/31/the-drawings-of-klimt-and-schiele/" target="_blank" rel="noopener">
+      <span class="hn-num">19</span>
+      <span class="hn-title">Gustav Klimt and Egon Schiele in Conversation (2018)</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://ajin.im/is/building/omen.ops/" target="_blank" rel="noopener">
+      <span class="hn-num">20</span>
+      <span class="hn-title">Show HN: 500 years of Joseon court omens as an observability dashboard</span>
+      <span class="hn-arrow">→</span>
+    </a></div>
   </section>
 
   <section class="section" id="sec-or">
     <div class="section-header">
       <span class="section-label">OpenRouter 排行</span>
-      <span class="section-sub">本周 LLM 使用量排行 · 0 个模型</span>
+      <span class="section-sub">本周 LLM 使用量排行 · 10 个模型</span>
     </div>
-    <div class="or-list"></div>
+    <div class="or-list">
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#1</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">3.31T tokens</span>
+        <span class="or-up">↑3%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#2</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">tencent</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">3.07T tokens</span>
+        <span class="or-up">↑1%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#3</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#c96442">anthropic</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">2.34T tokens</span>
+        <span class="or-up">↑27%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#4</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#c96442">anthropic</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">1.93T tokens</span>
+        <span class="or-up">↑6%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#5</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">openrouter</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">1.58T tokens</span>
+        <span class="or-up">↑38%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#6</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">1.26T tokens</span>
+        <span class="or-up">↑22%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#7</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#ff6900">xiaomi</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">1.12T tokens</span>
+        <span class="or-up">↑950%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#8</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#ff6900">xiaomi</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">1.09T tokens</span>
+        <span class="or-up">↑355%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#9</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">994B tokens</span>
+        <span class="or-up">↑3%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#10</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#4285f4">google</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">965B tokens</span>
+        <span class="or-up">↑14%</span>
+      </div>
+    </a></div>
   </section>
 
 </main>
