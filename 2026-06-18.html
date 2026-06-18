@@ -220,11 +220,11 @@ a{color:inherit;text-decoration:none}
 
 <nav class="source-tabs">
   <div class="tab active" data-sec="digest" style="--tab-color:var(--gold)">导读</div>
-  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">0</span></div>
+  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">20</span></div>
   <div class="tab" data-sec="gh" style="--tab-color:var(--gh)">✦ GitHub <span class="cnt">20</span></div>
   <div class="tab" data-sec="tw" style="--tab-color:var(--tw)">𝕏 Twitter <span class="cnt">30</span></div>
-  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">0</span></div>
-  <div class="tab" data-sec="or" style="--tab-color:var(--or)">⟳ OpenRouter <span class="cnt">0</span></div>
+  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">26</span></div>
+  <div class="tab" data-sec="or" style="--tab-color:var(--or)">⟳ OpenRouter <span class="cnt">10</span></div>
 </nav>
 
 <main class="main">
@@ -234,9 +234,11 @@ a{color:inherit;text-decoration:none}
 <div class="digest-card">
   <div class="digest-date">6月18日 周四</div>
   <div class="digest-headline">今日速览</div>
-  <ul class="digest-list"><li><strong>GitHub Trending</strong> · 今日 20 个项目上榜，<a href="https://github.com/vercel/eve" target="_blank" class="digest-link">vercel/eve</a> 领跑 +0 星</li>
+  <ul class="digest-list"><li><strong>Product Hunt #1</strong> · <a href="https://www.producthunt.com/products/framer" target="_blank" class="digest-link">1\. Framer 3.0</a> — With Agents, Branching, Community, and an all-new design</li>
+<li><strong>GitHub Trending</strong> · 今日 20 个项目上榜，<a href="https://github.com/vercel/eve" target="_blank" class="digest-link">vercel/eve</a> 领跑 +0 星</li>
 <li><strong>X / Twitter</strong> · 共 34 条精选，来自 ai-sweep 与 Zara Builder 精选；karpathy：This was fixed. You know what's coming 👀…</li>
-<li><strong>Hacker News</strong> · 今日 0 条技术讨论</li></ul>
+<li><strong>Hacker News</strong> · 今日 26 条技术讨论</li>
+<li><strong>OpenRouter 周冠军</strong> · （minimax）4.63T tokens，37%</li></ul>
 </div>
 
 <div class="insight-section">
@@ -258,18 +260,48 @@ a{color:inherit;text-decoration:none}
   </div>
 </div>
 <div class="insight-card">
-  <div class="insight-title">开发者工具与 AI 的融合正在加速，「可观测性」成为新刚需</div>
+  <div class="insight-title">端侧 AI 从 Demo 走向实用，Google AI Edge 是关键信号</div>
   <div class="insight-row">
     <span class="insight-label signal">信号</span>
-    <span class="insight-body">PH 出现 Panorama（AI 发现团队工作流）、Straude（Claude Code 使用量排行）；HN 出现「Components of a Coding Agent」深度文章</span>
+    <span class="insight-body"><a href='https://github.com/google-ai-edge/gallery' target='_blank' class='digest-link'>google-ai-edge/gallery</a> 今日 +0 星冲榜；<a href='https://github.com/Blaizzy/mlx-vlm' target='_blank' class='digest-link'>mlx-vlm</a> +408；PH 出现 Tiny Aya（本地多语言模型）</span>
   </div>
   <div class="insight-row">
     <span class="insight-label trend">趋势</span>
-    <span class="insight-body">早期趋势，处于<strong>问题定义期</strong>：随着 AI Agent 在生产环境落地，「我的团队到底在用什么工具做什么」变成一个真实的管理痛点</span>
+    <span class="insight-body">加速中的结构性趋势，处于<strong>工具成熟期前夜</strong>：硬件（Apple Silicon、高通）已就绪，框架层（MLX、LiteRT）正密集补全，面向普通用户的端侧 App 将在未来 3-6 个月爆发</span>
   </div>
   <div class="insight-row">
     <span class="insight-label action">PM 行动</span>
-    <span class="insight-body">PM 应开始为 AI 使用行为建立度量体系：用了哪些 Agent、花了多少 token、哪些任务真正被 AI 加速——没有数据就没有迭代方向</span>
+    <span class="insight-body">立即评估你的产品哪些场景可以「离线优先」——隐私敏感（医疗/财务/笔记）+ 低延迟需求（实时翻译/相机识别）是最佳切入口，先做 API 降级到本地的兼容层</span>
+  </div>
+</div>
+<div class="insight-card">
+  <div class="insight-title">中国模型在 OpenRouter 使用量全面超越西方，免费策略奏效</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body">OpenRouter 本周 Top3 全为中国模型：（minimax）、（deepseek）、（tencent）；Qwen3.6 Plus 和 Step 3.5 Flash 标注 free，小米 MiMo-V2-Pro 以 3.73T tokens 占据第一</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">加速中的趋势，处于<strong>份额重分配阶段</strong>：「免费+高质量」组合正在快速抢占开发者心智，一旦建立习惯将产生路径依赖</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">如果你的产品依赖 OpenAI/Anthropic API，现在是建立<strong>模型路由层</strong>的最佳时机——按任务类型（创意/代码/摘要）分配最优价格比的模型，而非绑定单一供应商</span>
+  </div>
+</div>
+<div class="insight-card">
+  <div class="insight-title">「开源替代」叙事从工具蔓延到内容平台，Onyx 代表新一波</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body"><a href='https://github.com/onyx-dot-app/onyx' target='_blank' class='digest-link'>onyx-dot-app/onyx</a> 今日 +0 星；openscreen 作为「Screen Studio 开源平替」+0 星；freeCodeCamp +292 星</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">持续积累的结构性趋势，处于<strong>品类扩张期</strong>：继开源模型之后，开源 AI 应用（知识库、录屏、学习平台）正在覆盖更多垂直场景</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">对于 ToB SaaS 产品：开源核心功能、商业化数据/企业功能/托管服务的「开放核心」模式将成为新标配；对于 ToC 产品：用户开始更关注数据主权，隐私声明和本地部署选项需要提前布局</span>
   </div>
 </div>
 </div>
@@ -324,9 +356,169 @@ a{color:inherit;text-decoration:none}
   <section class="section" id="sec-ph">
     <div class="section-header">
       <span class="section-label">Product Hunt</span>
-      <span class="section-sub">今日热榜 0 款</span>
+      <span class="section-sub">今日热榜 20 款</span>
     </div>
-    <div class="ph-list"></div>
+    <div class="ph-list">
+    <a class="ph-row" href="https://www.producthunt.com/products/framer" target="_blank" rel="noopener">
+      <span class="ph-rank">🥇</span>
+      <div class="ph-info">
+        <span class="ph-name">1\. Framer 3.0</span>
+        <span class="ph-tagline">具有代理、分支、社区和全新设计</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/swytchcode" target="_blank" rel="noopener">
+      <span class="ph-rank">🥈</span>
+      <div class="ph-info">
+        <span class="ph-name">2\. Swytchcode CLI</span>
+        <span class="ph-tagline">让代理能够可靠地访问 2,000 多个具有持久状态的 API</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/daemons-by-charlie-labs" target="_blank" rel="noopener">
+      <span class="ph-rank">🥉</span>
+      <div class="ph-info">
+        <span class="ph-name">3\. Daemons by Charlie Labs</span>
+        <span class="ph-tagline">使用 AI 代理保持 PR、问题、CI 和文档的移动</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/quartz-3" target="_blank" rel="noopener">
+      <span class="ph-rank">#4</span>
+      <div class="ph-info">
+        <span class="ph-name">4\. Quartz</span>
+        <span class="ph-tagline">专为专注而打造的人工智能电子邮件客户端。在您的 Mac 上本地运行</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/android" target="_blank" rel="noopener">
+      <span class="ph-rank">#5</span>
+      <div class="ph-info">
+        <span class="ph-name">5\. Android 17</span>
+        <span class="ph-tagline">Android成为智能系统</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/dopami" target="_blank" rel="noopener">
+      <span class="ph-rank">#6</span>
+      <div class="ph-info">
+        <span class="ph-name">6\. Dopami</span>
+        <span class="ph-tagline">没有多动症精神负担的家务活</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/tapfree-for-android-2" target="_blank" rel="noopener">
+      <span class="ph-rank">#7</span>
+      <div class="ph-info">
+        <span class="ph-name">7\. Tapfree for Chrome</span>
+        <span class="ph-tagline">语音听写可适应屏幕上的内容</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/deep-work-plan" target="_blank" rel="noopener">
+      <span class="ph-rank">#8</span>
+      <div class="ph-info">
+        <span class="ph-name">8\. Deep Work Plan</span>
+        <span class="ph-tagline">模型很重要。背景更重要。给你的代理人一个计划。</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/dualora-dual-size-recorder" target="_blank" rel="noopener">
+      <span class="ph-rank">#9</span>
+      <div class="ph-info">
+        <span class="ph-name">9\. Dualora</span>
+        <span class="ph-tagline">同时录制 16:9 和 9:16</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/wisprflow" target="_blank" rel="noopener">
+      <span class="ph-rank">#10</span>
+      <div class="ph-info">
+        <span class="ph-name">Wispr Flow: Dictation That Works Everywhere</span>
+        <span class="ph-tagline">停止打字。开始说话。速度提高 4 倍。</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/memoire" target="_blank" rel="noopener">
+      <span class="ph-rank">#11</span>
+      <div class="ph-info">
+        <span class="ph-name">10\. memi</span>
+        <span class="ph-tagline">产品设计团队的人工智能代理工具</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/typerino" target="_blank" rel="noopener">
+      <span class="ph-rank">#12</span>
+      <div class="ph-info">
+        <span class="ph-name">11\. Typerino</span>
+        <span class="ph-tagline">电影、电视、舞台剧的编剧和剧本创作。</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/mirlo" target="_blank" rel="noopener">
+      <span class="ph-rank">#13</span>
+      <div class="ph-info">
+        <span class="ph-name">12\. Mirlo</span>
+        <span class="ph-tagline">社交媒体带来真正的联系。没有点赞，没有算法。</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/redactify" target="_blank" rel="noopener">
+      <span class="ph-rank">#14</span>
+      <div class="ph-info">
+        <span class="ph-name">13\. Redactify</span>
+        <span class="ph-tagline">视频和音频的自动脏话审查</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/wolfram-mathematica" target="_blank" rel="noopener">
+      <span class="ph-rank">#15</span>
+      <div class="ph-info">
+        <span class="ph-name">14\. Wolfram Language 15</span>
+        <span class="ph-tagline">为人类和人工智能代理构建的计算语言</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/tyto" target="_blank" rel="noopener">
+      <span class="ph-rank">#16</span>
+      <div class="ph-info">
+        <span class="ph-name">15\. Tyto by ai-coustics</span>
+        <span class="ph-tagline">预测语音 AI 性能的音频洞察</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/locus-founder" target="_blank" rel="noopener">
+      <span class="ph-rank">#17</span>
+      <div class="ph-info">
+        <span class="ph-name">16\. Locus Founder</span>
+        <span class="ph-tagline">给人工智能代理发短信，它会构建+运营您的业务</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/clipdone" target="_blank" rel="noopener">
+      <span class="ph-rank">#18</span>
+      <div class="ph-info">
+        <span class="ph-name">17\. ClipDone</span>
+        <span class="ph-tagline">自动短视频编辑</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/cilantro" target="_blank" rel="noopener">
+      <span class="ph-rank">#19</span>
+      <div class="ph-info">
+        <span class="ph-name">18\. Cilantro</span>
+        <span class="ph-tagline">监视您的帐户并告诉您发生了什么变化</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/snapchat" target="_blank" rel="noopener">
+      <span class="ph-rank">#20</span>
+      <div class="ph-info">
+        <span class="ph-name">19\. Snapchat SPECS</span>
+        <span class="ph-tagline">轻巧的透视眼镜内置强大的计算机</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a></div>
   </section>
 
   <section class="section" id="sec-gh">
@@ -338,17 +530,17 @@ a{color:inherit;text-decoration:none}
     <a class="gh-card" href="https://github.com/vercel/eve" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">vercel/eve</span><span class="gh-lang">TypeScript</span></div>
       <p class="gh-desc">建筑代理框架</p>
-      <div class="gh-stats"><span>⭐ 754</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 879</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/Plaer1/junction" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">Plaer1/junction</span><span class="gh-lang">TypeScript</span></div>
       <p class="gh-desc">用于本地 AI 编码代理的 VS Code 聊天侧边栏</p>
-      <div class="gh-stats"><span>⭐ 500</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 503</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/rebel0789/codexpro" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">rebel0789/codexpro</span><span class="gh-lang">JavaScript</span></div>
       <p class="gh-desc">通过 MCP 使用 ChatGPT 开发人员模式作为存储库的本地编码代理。</p>
-      <div class="gh-stats"><span>⭐ 272</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 304</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/ApothecarySeize/Maya-2026-Animation-Workflow" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">ApothecarySeize/Maya-2026-Animation-Workflow</span></div>
@@ -358,82 +550,82 @@ a{color:inherit;text-decoration:none}
     <a class="gh-card" href="https://github.com/Tyxy-R/codex-referral-risk-research" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">Tyxy-R/codex-referral-risk-research</span><span class="gh-lang">Python</span></div>
       <p class="gh-desc"></p>
-      <div class="gh-stats"><span>⭐ 184</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 201</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/Liunian06/ko-lesson" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">Liunian06/ko-lesson</span></div>
       <p class="gh-desc">一个期末赶制的一个屎山skill，将清朝老PPT复活为能看的资料</p>
-      <div class="gh-stats"><span>⭐ 173</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 176</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/boogu-project/Boogu-Image" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">boogu-project/Boogu-Image</span><span class="gh-lang">Python</span></div>
       <p class="gh-desc">Boogu-Image-0.1 是 Apache-2.0 开源图像生成和编辑模型系列，可提供近乎闭源的性能，且数据量要少一个数量级。</p>
-      <div class="gh-stats"><span>⭐ 143</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/cryingcheems/codex-team-oauth" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">cryingcheems/codex-team-oauth</span><span class="gh-lang">Python</span></div>
-      <p class="gh-desc">利用Team 空间域名free 账号跳过手机号登录 codex的研究脚本</p>
-      <div class="gh-stats"><span>⭐ 113</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 158</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/aresyn/codex-control-plane-mcp" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">aresyn/codex-control-plane-mcp</span><span class="gh-lang">Python</span></div>
       <p class="gh-desc">适用于长时间运行的 Codex Desktop 任务的耐用 MCP 控制平面</p>
+      <div class="gh-stats"><span>⭐ 130</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/cryingcheems/codex-team-oauth" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">cryingcheems/codex-team-oauth</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">利用Team 空间域名free 账号跳过手机号登录 codex的研究脚本</p>
+      <div class="gh-stats"><span>⭐ 117</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/agentcodee/cursorultra" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">agentcodee/cursorultra</span></div>
+      <p class="gh-desc">Cursor助手 高级模型版</p>
       <div class="gh-stats"><span>⭐ 111</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/halfof8/patterngen-oss" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">halfof8/patterngen-oss</span><span class="gh-lang">TypeScript</span></div>
       <p class="gh-desc"></p>
-      <div class="gh-stats"><span>⭐ 99</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 103</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/MichalZaniewicz/esphome-guition-jc3636k718c-va" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">MichalZaniewicz/esphome-guition-jc3636k718c-va</span><span class="gh-lang">Python</span></div>
       <p class="gh-desc">Guition JC3636K718C 圆形旋钮显示屏上的完整 Home Assistant 语音助手，采用纯 ESPHome：设备上唤醒词、音乐播放器、定时器、可寻址 LED 环、设备控制和两个内置游戏。</p>
-      <div class="gh-stats"><span>⭐ 95</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/dososo/chinese-traditional-patterns" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">dososo/chinese-traditional-patterns</span></div>
-      <p class="gh-desc">开源的中国传统纹样图录项目 · 100 高清纹样(规划 800) · 中英日韩双语 · CC BY-NC 4.0 · https://wenyang.net</p>
-      <div class="gh-stats"><span>⭐ 94</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/macton/differentiable-collisions-optc" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">macton/differentiable-collisions-optc</span><span class="gh-lang">C</span></div>
-      <p class="gh-desc"></p>
-      <div class="gh-stats"><span>⭐ 91</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 100</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/yolfinance/yolfi-agent" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">yolfinance/yolfi-agent</span><span class="gh-lang">JavaScript</span></div>
       <p class="gh-desc">用于 AI 编码代理的 Yolfi Agent Kit SDK、CLI 和 MCP 服务器。</p>
-      <div class="gh-stats"><span>⭐ 91</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 99</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/r3xmax/PhantomCtx" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">r3xmax/PhantomCtx</span><span class="gh-lang">C</span></div>
       <p class="gh-desc">激活上下文劫持规避工具</p>
-      <div class="gh-stats"><span>⭐ 88</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 97</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/dososo/chinese-traditional-patterns" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">dososo/chinese-traditional-patterns</span></div>
+      <p class="gh-desc">开源的中国传统纹样图录项目 · 100 高清纹样(规划 800) · 中英日韩双语 · CC BY-NC 4.0 · https://wenyang.net</p>
+      <div class="gh-stats"><span>⭐ 96</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/macton/differentiable-collisions-optc" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">macton/differentiable-collisions-optc</span><span class="gh-lang">C</span></div>
+      <p class="gh-desc"></p>
+      <div class="gh-stats"><span>⭐ 93</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/world-action-models/awesome-world-action-models" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">world-action-models/awesome-world-action-models</span></div>
       <p class="gh-desc"></p>
-      <div class="gh-stats"><span>⭐ 86</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/agentcodee/cursorultra" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">agentcodee/cursorultra</span></div>
-      <p class="gh-desc">Cursor助手 高级模型版</p>
-      <div class="gh-stats"><span>⭐ 74</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 88</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/JassiSingh08/react-native-collapsible-tab" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">JassiSingh08/react-native-collapsible-tab</span><span class="gh-lang">TypeScript</span></div>
       <p class="gh-desc"></p>
-      <div class="gh-stats"><span>⭐ 74</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 76</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/gakiyukr/Codex_team_auto" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">gakiyukr/Codex_team_auto</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc"></p>
+      <div class="gh-stats"><span>⭐ 75</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/Noumena-Network/code" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">Noumena-Network/code</span><span class="gh-lang">TypeScript</span></div>
       <p class="gh-desc">Noumena 的内部版本是您最喜欢的编码 tui，但针对我们的推理堆栈进行了改进和优化</p>
-      <div class="gh-stats"><span>⭐ 71</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/sneakers-the-rat/ImportantCode" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">sneakers-the-rat/ImportantCode</span><span class="gh-lang">Python</span></div>
-      <p class="gh-desc">这是一个存储库，其中包含许多引人注目的、高威望的代码，新程序员可以向其发出拉取请求并建立自己的声誉</p>
-      <div class="gh-stats"><span>⭐ 71</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 73</span><span class="gh-today">+0 today</span></div>
     </a></div>
   </section>
 
@@ -828,17 +1020,227 @@ Two flavors of the same disease:</p>
   <section class="section" id="sec-hn">
     <div class="section-header">
       <span class="section-label">Hacker News</span>
-      <span class="section-sub">Top 0</span>
+      <span class="section-sub">Top 20</span>
     </div>
-    <div class="hn-list"></div>
+    <div class="hn-list">
+    <a class="hn-row" href="https://www.midjourney.com/medical/blogpost" target="_blank" rel="noopener">
+      <span class="hn-num">01</span>
+      <span class="hn-title">Midjourney Medical</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://xeiaso.net/notes/2026/anubis-wasm-vendor-binary/" target="_blank" rel="noopener">
+      <span class="hn-num">02</span>
+      <span class="hn-title">I Hate Compilers</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://lore.org/" target="_blank" rel="noopener">
+      <span class="hn-num">03</span>
+      <span class="hn-title">Lore – Open source version control system designed for scalability</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://blog.alexellis.io/local-ai-is-not-opus/" target="_blank" rel="noopener">
+      <span class="hn-num">04</span>
+      <span class="hn-title">Local Qwen isn't a worse Opus, it's a different tool</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.reuters.com/world/china/us-holds-off-blacklisting-chinas-deepseek-more-than-100-firms-deemed-security-2026-06-17/" target="_blank" rel="noopener">
+      <span class="hn-num">05</span>
+      <span class="hn-title">US holds off blacklisting DeepSeek, more than 100 firms deemed security risks</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.horg.com/horg/?page_id=921" target="_blank" rel="noopener">
+      <span class="hn-num">06</span>
+      <span class="hn-title">Taxonomy of the Occlupanida (parasitoids on bread bag tags)</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://conf.nim-lang.org/" target="_blank" rel="noopener">
+      <span class="hn-num">07</span>
+      <span class="hn-title">Nim Conf 2026 (Online, Sat June 20)</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://storiedcolors.com/" target="_blank" rel="noopener">
+      <span class="hn-num">08</span>
+      <span class="hn-title">Storied Colors – a catalogue of named colors</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://x86ecosystem.org/resource/ai-compute-extensions-ace-specification/" target="_blank" rel="noopener">
+      <span class="hn-num">09</span>
+      <span class="hn-title">[x86] AI Compute Extensions (ACE) Specification</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://github.com/glojurelang/glojure" target="_blank" rel="noopener">
+      <span class="hn-num">10</span>
+      <span class="hn-title">Clojure Hosted on Go</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://loreline.app/en/" target="_blank" rel="noopener">
+      <span class="hn-num">11</span>
+      <span class="hn-title">Loreline – Tools for writing interactive fiction</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://browser-use.com/posts/firecracker-browser-infra" target="_blank" rel="noopener">
+      <span class="hn-num">12</span>
+      <span class="hn-title">How we run Firecracker VMs inside EC2 and start browsers in less than 1s</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://github.com/Adam-CAD/CADAM" target="_blank" rel="noopener">
+      <span class="hn-num">13</span>
+      <span class="hn-title">Launch HN: Adam (YC W25) – Open-Source AI CAD</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://github.com/c0rRupT9/STEPLA-1" target="_blank" rel="noopener">
+      <span class="hn-num">14</span>
+      <span class="hn-title">Show HN: We built an 8-bit CPU as 2nd year EE students</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://worksinprogress.co/issue/how-madrid-built-its-metro-cheaply/" target="_blank" rel="noopener">
+      <span class="hn-num">15</span>
+      <span class="hn-title">How Madrid built its metro cheaply (2024)</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.mindfruit.co.uk/posts/2025/10/magic-buffers-and-io-uring-write-fixed/" target="_blank" rel="noopener">
+      <span class="hn-num">16</span>
+      <span class="hn-title">Magic Buffers and io_uring Registered Buffers</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://store.steampowered.com/news/app/1675200/view/697641379212298072" target="_blank" rel="noopener">
+      <span class="hn-num">17</span>
+      <span class="hn-title">SteamOS Linux 3.8 released as stable</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.construction-physics.com/p/biological-evolution-and-information" target="_blank" rel="noopener">
+      <span class="hn-num">18</span>
+      <span class="hn-title">Biological evolution and information acquisition</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://ribbie.tv/watch" target="_blank" rel="noopener">
+      <span class="hn-num">19</span>
+      <span class="hn-title">Show HN: An 8-bit live gamecast for baseball</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://srijanshukla.com/artifacts/spin-lab/" target="_blank" rel="noopener">
+      <span class="hn-num">20</span>
+      <span class="hn-title">Show HN: Spin Lab</span>
+      <span class="hn-arrow">→</span>
+    </a></div>
   </section>
 
   <section class="section" id="sec-or">
     <div class="section-header">
       <span class="section-label">OpenRouter 排行</span>
-      <span class="section-sub">本周 LLM 使用量排行 · 0 个模型</span>
+      <span class="section-sub">本周 LLM 使用量排行 · 10 个模型</span>
     </div>
-    <div class="or-list"></div>
+    <div class="or-list">
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#1</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#e040fb">minimax</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">4.63T tokens</span>
+        <span class="or-up">↑37%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#2</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">4.53T tokens</span>
+        <span class="or-up">↑4%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#3</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">tencent</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">3.71T tokens</span>
+        <span class="or-up">↑2%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#4</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#ff6900">xiaomi</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">3.71T tokens</span>
+        <span class="or-up">↑29%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#5</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#c96442">anthropic</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">2.86T tokens</span>
+        <span class="or-up">↑67%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#6</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">openrouter</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">2.45T tokens</span>
+        <span class="or-up">↑22%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#7</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">2.19T tokens</span>
+        <span class="or-up">↑6%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#8</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#c96442">anthropic</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">1.79T tokens</span>
+        <span class="or-up">↑12%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#9</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#c96442">anthropic</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">1.36T tokens</span>
+        <span class="or-up">↑3%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#10</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">1.12T tokens</span>
+        <span class="or-up">↑5%</span>
+      </div>
+    </a></div>
   </section>
 
 </main>
