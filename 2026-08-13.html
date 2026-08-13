@@ -220,10 +220,10 @@ a{color:inherit;text-decoration:none}
 
 <nav class="source-tabs">
   <div class="tab active" data-sec="digest" style="--tab-color:var(--gold)">导读</div>
-  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">21</span></div>
+  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">20</span></div>
   <div class="tab" data-sec="gh" style="--tab-color:var(--gh)">✦ GitHub <span class="cnt">20</span></div>
   <div class="tab" data-sec="tw" style="--tab-color:var(--tw)">𝕏 Twitter <span class="cnt">30</span></div>
-  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">30</span></div>
+  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">34</span></div>
   <div class="tab" data-sec="or" style="--tab-color:var(--or)">⟳ OpenRouter <span class="cnt">10</span></div>
 </nav>
 
@@ -237,13 +237,28 @@ a{color:inherit;text-decoration:none}
   <ul class="digest-list"><li><strong>Product Hunt #1</strong> · <a href="https://www.producthunt.com/products/dograh" target="_blank" class="digest-link">1\. Dograh</a> — The open source VAPI alternative</li>
 <li><strong>GitHub Trending</strong> · 今日 20 个项目上榜，<a href="https://github.com/guillaumemeyer/watermarks-remover" target="_blank" class="digest-link">guillaumemeyer/watermarks-remover</a> 领跑 +0 星</li>
 <li><strong>X / Twitter</strong> · 共 35 条精选，来自 ai-sweep 与 Zara Builder 精选；karpathy：We did it, finally... Codex &amp;amp; ChatGP…</li>
-<li><strong>Hacker News</strong> · 今日 30 条技术讨论</li>
+<li><strong>Hacker News</strong> · 今日 34 条技术讨论</li>
 <li><strong>OpenRouter 周冠军</strong> · （deepseek）10.5T tokens，123%</li></ul>
 </div>
 
 <div class="insight-section">
   <div class="insight-section-title">今日洞察</div>
   
+<div class="insight-card">
+  <div class="insight-title">AI Coding Agent 进入工具链爆发期</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body">GitHub Trending 出现 <a href='https://github.com/block/goose' target='_blank' class='digest-link'>block/goose</a>（+0）；PH 上线 Handle Extension（Agent 与浏览器 UI 联动）；HN 热帖「Components of a Coding Agent」引发深度讨论</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">结构性加速趋势，处于<strong>工具链分化期</strong>：从「AI 写代码」演进到「Agent 操控整个开发环境」，下一步是 Agent 之间的协作编排</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">PM 现在应重点关注：① 你的产品有没有暴露足够的 API/MCP 接口供 Agent 调用？② 用户的「任务上下文」能否被 Agent 无缝继承？优先做 Agent 入口而非 AI 功能集成</span>
+  </div>
+</div>
 <div class="insight-card">
   <div class="insight-title">端侧 AI 从 Demo 走向实用，Google AI Edge 是关键信号</div>
   <div class="insight-row">
@@ -272,21 +287,6 @@ a{color:inherit;text-decoration:none}
   <div class="insight-row">
     <span class="insight-label action">PM 行动</span>
     <span class="insight-body">如果你的产品依赖 OpenAI/Anthropic API，现在是建立<strong>模型路由层</strong>的最佳时机——按任务类型（创意/代码/摘要）分配最优价格比的模型，而非绑定单一供应商</span>
-  </div>
-</div>
-<div class="insight-card">
-  <div class="insight-title">开发者工具与 AI 的融合正在加速，「可观测性」成为新刚需</div>
-  <div class="insight-row">
-    <span class="insight-label signal">信号</span>
-    <span class="insight-body">PH 出现 Panorama（AI 发现团队工作流）、Straude（Claude Code 使用量排行）；HN 出现「Components of a Coding Agent」深度文章</span>
-  </div>
-  <div class="insight-row">
-    <span class="insight-label trend">趋势</span>
-    <span class="insight-body">早期趋势，处于<strong>问题定义期</strong>：随着 AI Agent 在生产环境落地，「我的团队到底在用什么工具做什么」变成一个真实的管理痛点</span>
-  </div>
-  <div class="insight-row">
-    <span class="insight-label action">PM 行动</span>
-    <span class="insight-body">PM 应开始为 AI 使用行为建立度量体系：用了哪些 Agent、花了多少 token、哪些任务真正被 AI 加速——没有数据就没有迭代方向</span>
   </div>
 </div>
 </div>
@@ -341,7 +341,7 @@ a{color:inherit;text-decoration:none}
   <section class="section" id="sec-ph">
     <div class="section-header">
       <span class="section-label">Product Hunt</span>
-      <span class="section-sub">今日热榜 21 款</span>
+      <span class="section-sub">今日热榜 20 款</span>
     </div>
     <div class="ph-list">
     <a class="ph-row" href="https://www.producthunt.com/products/dograh" target="_blank" rel="noopener">
@@ -416,11 +416,11 @@ a{color:inherit;text-decoration:none}
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/wisprflow" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/framer" target="_blank" rel="noopener">
       <span class="ph-rank">#10</span>
       <div class="ph-info">
-        <span class="ph-name">Wispr Flow: Dictation That Works Everywhere</span>
-        <span class="ph-tagline">停止打字。开始说话。速度提高 4 倍。</span>
+        <span class="ph-name">Framer AI Agents</span>
+        <span class="ph-tagline">利用人工智能设计和发布专业网站</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
@@ -464,16 +464,8 @@ a{color:inherit;text-decoration:none}
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/lightfield" target="_blank" rel="noopener">
-      <span class="ph-rank">#16</span>
-      <div class="ph-info">
-        <span class="ph-name">Lightfield</span>
-        <span class="ph-tagline">人工智能原生 CRM 可自行构建并为您服务</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
     <a class="ph-row" href="https://www.producthunt.com/products/ballet" target="_blank" rel="noopener">
-      <span class="ph-rank">#17</span>
+      <span class="ph-rank">#16</span>
       <div class="ph-info">
         <span class="ph-name">15\. Ballet</span>
         <span class="ph-tagline">每次都能提供相同结果的代理工作流程</span>
@@ -481,31 +473,31 @@ a{color:inherit;text-decoration:none}
       <span class="ph-arrow">→</span>
     </a>
     <a class="ph-row" href="https://www.producthunt.com/products/sidekick-16" target="_blank" rel="noopener">
-      <span class="ph-rank">#18</span>
+      <span class="ph-rank">#17</span>
       <div class="ph-info">
         <span class="ph-name">16\. Sidekick™</span>
         <span class="ph-tagline">代理界面</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/cohesor" target="_blank" rel="noopener">
-      <span class="ph-rank">#19</span>
-      <div class="ph-info">
-        <span class="ph-name">17\. Cohesor</span>
-        <span class="ph-tagline">企业人工智能代理的中立控制平面</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
     <a class="ph-row" href="https://www.producthunt.com/products/linforge" target="_blank" rel="noopener">
-      <span class="ph-rank">#20</span>
+      <span class="ph-rank">#18</span>
       <div class="ph-info">
-        <span class="ph-name">18\. Linforge</span>
+        <span class="ph-name">17\. Linforge</span>
         <span class="ph-tagline">将 Anki 抽认卡变成真正的英语对话</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/cohesor" target="_blank" rel="noopener">
+      <span class="ph-rank">#19</span>
+      <div class="ph-info">
+        <span class="ph-name">18\. Cohesor</span>
+        <span class="ph-tagline">企业人工智能代理的中立控制平面</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
     <a class="ph-row" href="https://www.producthunt.com/products/nearfield" target="_blank" rel="noopener">
-      <span class="ph-rank">#21</span>
+      <span class="ph-rank">#20</span>
       <div class="ph-info">
         <span class="ph-name">19\. Nearfield</span>
         <span class="ph-tagline">将两个或更多工作室显示器变成立体声扬声器</span>
@@ -523,7 +515,7 @@ a{color:inherit;text-decoration:none}
     <a class="gh-card" href="https://github.com/guillaumemeyer/watermarks-remover" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">guillaumemeyer/watermarks-remover</span><span class="gh-lang">Python</span></div>
       <p class="gh-desc">剥离多供应商 AI 出处标记：Unicode 文本卫生、统计重写挂钩以及 PNG/JPEG/SVG/PDF/DOCX/HTML/MD 中的 C2PA/元数据</p>
-      <div class="gh-stats"><span>⭐ 2,612</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 2,983</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/sohaibdevv/youtube-music" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">sohaibdevv/youtube-music</span><span class="gh-lang">TypeScript</span></div>
@@ -533,52 +525,52 @@ a{color:inherit;text-decoration:none}
     <a class="gh-card" href="https://github.com/milind-soni/OpenMausBot" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">milind-soni/OpenMausBot</span><span class="gh-lang">TypeScript</span></div>
       <p class="gh-desc"></p>
-      <div class="gh-stats"><span>⭐ 610</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 664</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/shadcn-ui/chatbot-template" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">shadcn-ui/chatbot-template</span><span class="gh-lang">TypeScript</span></div>
       <p class="gh-desc">使用 Next.js、AI SDK、shadcn/ui、shadcn/react、shadcn/typeset 构建的最小聊天机器人模板。它在 Vercel AI 网关上运行。</p>
-      <div class="gh-stats"><span>⭐ 593</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 603</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/MSNightmare/ShieldBreak" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">MSNightmare/ShieldBreak</span><span class="gh-lang">C++</span></div>
       <p class="gh-desc">Windows Defender 0day 漏洞</p>
-      <div class="gh-stats"><span>⭐ 419</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 436</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/dmmulroy/anti-slop" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">dmmulroy/anti-slop</span><span class="gh-lang">TypeScript</span></div>
       <p class="gh-desc">用于拒绝低证据 TypeScript 和 JavaScript 模式的固定 Oxlint 规则</p>
-      <div class="gh-stats"><span>⭐ 361</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 415</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/Hisn00w/ASu-skills" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">Hisn00w/ASu-skills</span><span class="gh-lang">HTML</span></div>
       <p class="gh-desc">简历包装</p>
-      <div class="gh-stats"><span>⭐ 227</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/0xjohnnydev/FilzaSlop" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">0xjohnnydev/FilzaSlop</span><span class="gh-lang">Objective-C</span></div>
-      <p class="gh-desc">FilzaJailedDS 分叉，支持 iOS 18、iOS 26 和 iOS 27 beta 1-4 的容器访问。请参阅自述文件了解每个错误的状态。</p>
-      <div class="gh-stats"><span>⭐ 217</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/frs0n/GestaltEdit" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">frs0n/GestaltEdit</span><span class="gh-lang">Swift</span></div>
-      <p class="gh-desc">iOS 27 移动格式塔编辑器</p>
-      <div class="gh-stats"><span>⭐ 215</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 300</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/RadishXN/run-abroad" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">RadishXN/run-abroad</span><span class="gh-lang">JavaScript</span></div>
       <p class="gh-desc">填 10 项基本信息，从 71 条签证 / 移民路径里筛出适合你的，并告诉你还差什么。纯静态、零依赖、无后端。</p>
-      <div class="gh-stats"><span>⭐ 213</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 242</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/frs0n/GestaltEdit" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">frs0n/GestaltEdit</span><span class="gh-lang">Swift</span></div>
+      <p class="gh-desc">iOS 27 移动格式塔编辑器</p>
+      <div class="gh-stats"><span>⭐ 239</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/0xjohnnydev/FilzaSlop" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">0xjohnnydev/FilzaSlop</span><span class="gh-lang">Objective-C</span></div>
+      <p class="gh-desc">FilzaJailedDS 分叉，支持 iOS 18、iOS 26 和 iOS 27 beta 1-4 的容器访问。请参阅自述文件了解每个错误的状态。</p>
+      <div class="gh-stats"><span>⭐ 221</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/sgnihttcejbo/chainlink-example" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">sgnihttcejbo/chainlink-example</span><span class="gh-lang">Solidity</span></div>
       <p class="gh-desc"></p>
-      <div class="gh-stats"><span>⭐ 188</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 198</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/elonbiz/hackoctoberfest" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">elonbiz/hackoctoberfest</span><span class="gh-lang">HTML</span></div>
       <p class="gh-desc">黑客十月节</p>
-      <div class="gh-stats"><span>⭐ 186</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 196</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/zhangzf1119/financial_intelligence_system_web" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">zhangzf1119/financial_intelligence_system_web</span><span class="gh-lang">Vue</span></div>
@@ -593,32 +585,32 @@ a{color:inherit;text-decoration:none}
     <a class="gh-card" href="https://github.com/forcequitOS/bad_query" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">forcequitOS/bad_query</span><span class="gh-lang">C</span></div>
       <p class="gh-desc">适用于 iOS 26 和 27 的沙箱逃逸 PoC。</p>
-      <div class="gh-stats"><span>⭐ 141</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/Xie0s/Xie0s-Code" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">Xie0s/Xie0s-Code</span><span class="gh-lang">TypeScript</span></div>
-      <p class="gh-desc">谢0代码</p>
-      <div class="gh-stats"><span>⭐ 121</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 146</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/wbh604/fund-guy-skill" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">wbh604/fund-guy-skill</span><span class="gh-lang">HTML</span></div>
       <p class="gh-desc">糟糕，我被基佬包围了！那么这个时候就有人要问了，主播主播，有没有什么简单好用的基佬筛选办法？有的兄弟，有的，快来看看jilaoskill吧！</p>
-      <div class="gh-stats"><span>⭐ 120</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 136</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/Xie0s/Xie0s-Code" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Xie0s/Xie0s-Code</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">谢0代码</p>
+      <div class="gh-stats"><span>⭐ 124</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/dengzi008/DramaLens" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">dengzi008/DramaLens</span><span class="gh-lang">JavaScript</span></div>
+      <p class="gh-desc">本地优先的 Chrome 扩展，用于带时间戳的转录和人工审核的短片戏剧分析。</p>
+      <div class="gh-stats"><span>⭐ 122</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/wanshuiyin/HERO-Anti-OverDefense" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">wanshuiyin/HERO-Anti-OverDefense</span><span class="gh-lang">Markdown</span></div>
       <p class="gh-desc">HERO = 散列·边缘案例·Rubrics·过度构建——编码代理过度防御的四种形状。阻止它们的粘贴合同。适用于 Claude Code、Codex、Antigravity、Cursor、Copilot、Windsurf、Gemini CLI。</p>
-      <div class="gh-stats"><span>⭐ 119</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 122</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/simo4kawave1337/CS2-Universal-Macros-v1.0.0" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">simo4kawave1337/CS2-Universal-Macros-v1.0.0</span></div>
-      <p class="gh-desc">⚙️ CS2 宏包：所有武器的反冲脚本、按键绑定、bunnyhop 和实用程序自动化</p>
-      <div class="gh-stats"><span>⭐ 107</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/Yixuan-Wu39/bandminton" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">Yixuan-Wu39/bandminton</span><span class="gh-lang">JavaScript</span></div>
-      <p class="gh-desc">具有轻量级设备端机器学习功能的开源可穿戴羽毛球运动分析。</p>
-      <div class="gh-stats"><span>⭐ 103</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/shadcn-labs/pdfcn" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">shadcn-labs/pdfcn</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">漂亮的 pdf 组件，基于 Takumi 和 Forme 构建。 100% 免费，零配置，一命令设置。</p>
+      <div class="gh-stats"><span>⭐ 114</span><span class="gh-today">+0 today</span></div>
     </a></div>
   </section>
 
