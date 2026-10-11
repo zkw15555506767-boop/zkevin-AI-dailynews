@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Daily News · 2026-10-09</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07070f;--surface:#0f0f1c;--card:#131320;--card-h:#1a1a2c;
+  --border:rgba(255,255,255,0.07);--border-h:rgba(255,255,255,0.14);
+  --text:#e2e2ee;--muted:#6868a0;--hint:#323252;
+  --gold:#c8a96e;--gold-dim:#8a7040;--gold-faint:rgba(200,169,110,0.08);
+  --ph:#da552f;--gh:#7c3aed;--tw:#1d9bf0;--hn:#ff6600;--or:#10b981;
+  --radius:10px;--radius-lg:16px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+/* HEADER */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(7,7,15,0.9);backdrop-filter:blur(20px) saturate(160%);
+  border-bottom:1px solid var(--border);
+  padding:0 1.5rem;height:56px;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.masthead{font-family:'Instrument Serif',serif;font-size:1.4rem;color:var(--gold);letter-spacing:0.01em;white-space:nowrap}
+.masthead em{font-style:italic;color:var(--text)}
+.header-right{display:flex;align-items:center;gap:10px}
+.date-select{
+  background:var(--card);border:1px solid var(--border);
+  color:var(--muted);font-size:13px;font-family:inherit;
+  padding:5px 10px;border-radius:6px;cursor:pointer;
+  appearance:none;-webkit-appearance:none;outline:none;
+}
+.date-select:focus{border-color:var(--border-h)}
+.total-badge{font-size:12px;color:var(--muted);background:var(--card);border:1px solid var(--border);padding:4px 10px;border-radius:20px;white-space:nowrap}
+
+/* SOURCE TABS */
+.source-tabs{
+  display:flex;gap:2px;padding:0 1.5rem;
+  background:var(--surface);border-bottom:1px solid var(--border);
+  overflow-x:auto;scrollbar-width:none;position:sticky;top:56px;z-index:99;
+}
+.source-tabs::-webkit-scrollbar{display:none}
+.tab{
+  display:flex;align-items:center;gap:6px;
+  padding:11px 15px;font-size:13px;font-weight:500;color:var(--muted);
+  border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;
+  transition:color .15s,border-color .15s;
+}
+.tab:hover{color:var(--text)}
+.tab.active{color:var(--text);border-color:var(--tab-color,var(--gold))}
+.tab .cnt{font-size:11px;background:var(--hint);border-radius:9px;padding:1px 6px;color:var(--muted)}
+
+/* MAIN */
+.main{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+.section{display:none}
+.section.active{display:block}
+
+/* DIGEST */
+.digest-card{
+  background:var(--gold-faint);border:1px solid rgba(200,169,110,0.15);
+  border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:2rem;
+}
+.digest-date{font-size:12px;color:var(--gold-dim);margin-bottom:4px;font-family:'IBM Plex Mono',monospace}
+.digest-headline{font-family:'Instrument Serif',serif;font-size:1.5rem;color:var(--gold);margin-bottom:1rem}
+.digest-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.digest-list li{font-size:14px;color:var(--muted);padding-left:1.1rem;position:relative;line-height:1.6}
+.digest-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--gold-dim)}
+.digest-list strong{color:var(--text);font-weight:500}
+.digest-link{color:var(--gold);text-decoration:underline;text-decoration-color:rgba(200,169,110,0.3)}
+.digest-link:hover{text-decoration-color:var(--gold)}
+
+/* SECTION HEADER */
+.section-header{display:flex;align-items:baseline;gap:12px;margin-bottom:1.25rem}
+.section-label{font-family:'Instrument Serif',serif;font-size:1.3rem;color:var(--text)}
+.section-sub{font-size:13px;color:var(--hint)}
+
+/* PRODUCT HUNT */
+.ph-list{display:flex;flex-direction:column;gap:2px}
+.ph-row{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.2rem;transition:background .15s,border-color .15s}
+.ph-row:hover{background:var(--card-h);border-color:var(--ph)}
+.ph-rank{font-size:1.2rem;min-width:2rem;text-align:center}
+.ph-info{flex:1;min-width:0}
+.ph-name{font-weight:500;font-size:15px;display:block}
+.ph-tagline{font-size:13px;color:var(--muted);display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ph-arrow{color:var(--hint);font-size:18px;transition:transform .15s,color .15s}
+.ph-row:hover .ph-arrow{transform:translateX(3px);color:var(--ph)}
+
+/* GITHUB */
+.gh-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+.gh-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;display:flex;flex-direction:column;gap:8px;transition:background .15s,border-color .15s}
+.gh-card:hover{background:var(--card-h);border-color:var(--gh)}
+.gh-header{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.gh-title{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;color:var(--text);word-break:break-all}
+.gh-lang{font-size:11px;padding:2px 7px;border-radius:4px;background:rgba(124,58,237,.12);color:#a78bfa;border:1px solid rgba(124,58,237,.25);white-space:nowrap}
+.gh-desc{font-size:13px;color:var(--muted);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.gh-stats{display:flex;gap:1rem;font-size:12px;color:var(--hint);margin-top:auto}
+.gh-today{color:#a78bfa}
+
+/* TWITTER */
+.tw-feed{display:flex;flex-direction:column;gap:2px}
+.tw-card{display:flex;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.2rem;transition:background .15s,border-color .15s}
+.tw-card:hover{background:var(--card-h);border-color:var(--tw)}
+.tw-avatar{width:38px;height:38px;border-radius:50%;flex-shrink:0;background:rgba(29,155,240,.1);border:1px solid rgba(29,155,240,.25);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#60b4f8}
+.tw-body{flex:1;min-width:0}
+.tw-meta{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.tw-author{font-size:13px;font-weight:500;color:var(--tw)}
+.tw-tag{font-size:10px;padding:2px 6px;border-radius:4px;font-weight:500}
+.tag-builder{background:rgba(200,169,110,.12);color:var(--gold);border:1px solid rgba(200,169,110,.2)}
+.tag-hot{background:rgba(29,155,240,.1);color:#60b4f8;border:1px solid rgba(29,155,240,.2)}
+.tw-text{font-size:14px;color:var(--text);line-height:1.55;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.tw-stats{display:flex;gap:1rem;font-size:12px;color:var(--hint);margin-top:6px}
+
+/* HACKER NEWS */
+.hn-list{display:flex;flex-direction:column;gap:2px}
+.hn-row{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.8rem 1.2rem;transition:background .15s,border-color .15s}
+.hn-row:hover{background:var(--card-h);border-color:var(--hn)}
+.hn-num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--hn);min-width:2rem}
+.hn-title{flex:1;font-size:14px}
+.hn-arrow{color:var(--hint);transition:transform .15s,color .15s}
+.hn-row:hover .hn-arrow{transform:translateX(3px);color:var(--hn)}
+
+/* OPENROUTER */
+.or-list{display:flex;flex-direction:column;gap:2px}
+.or-row{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.2rem;transition:background .15s,border-color .15s}
+.or-row:hover{background:var(--card-h);border-color:var(--or)}
+.or-rank{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--or);min-width:2.5rem;font-weight:500}
+.or-info{flex:1;min-width:0}
+.or-name{font-size:14px;font-weight:500;display:block}
+.or-provider{font-size:12px;display:block;margin-top:1px}
+.or-right{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.or-tokens{font-size:13px;color:var(--muted);font-family:'IBM Plex Mono',monospace}
+.or-new{font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(16,185,129,.12);color:var(--or);border:1px solid rgba(16,185,129,.25)}
+.or-up{font-size:11px;color:#34d399}.or-down{font-size:11px;color:#f87171}.or-flat{font-size:11px;color:var(--hint)}
+
+/* RESPONSIVE */
+@media(max-width:640px){
+  .masthead{font-size:1.15rem}
+  .total-badge{display:none}
+  .main{padding:1.5rem 1rem}
+  .gh-grid{grid-template-columns:1fr}
+}
+
+/* INSIGHTS */
+.insight-section{margin-top:2rem}
+.insight-section-title{font-family:'Instrument Serif',serif;font-size:1.15rem;color:var(--gold);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid rgba(200,169,110,.15)}
+.insight-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.25rem;margin-bottom:10px;display:flex;flex-direction:column;gap:8px}
+.insight-card:hover{border-color:var(--border-h)}
+.insight-title{font-size:14.5px;font-weight:500;color:var(--text);margin-bottom:2px}
+.insight-row{display:flex;gap:10px;align-items:flex-start}
+.insight-label{flex-shrink:0;font-size:11px;font-weight:500;padding:2px 7px;border-radius:4px;margin-top:2px;white-space:nowrap}
+.insight-label.signal{background:rgba(29,155,240,.1);color:#60b4f8;border:1px solid rgba(29,155,240,.2)}
+.insight-label.trend{background:rgba(200,169,110,.1);color:var(--gold);border:1px solid rgba(200,169,110,.2)}
+.insight-label.action{background:rgba(16,185,129,.1);color:#34d399;border:1px solid rgba(16,185,129,.2)}
+.insight-body{font-size:13px;color:var(--muted);line-height:1.6}
+.insight-body a{color:var(--gold);text-decoration:underline;text-decoration-color:rgba(200,169,110,.3)}
+.insight-body strong{color:var(--text);font-weight:500}
+
+/* OUTLOOK */
+.outlook-section{margin-top:1.5rem;display:flex;flex-direction:column;gap:1rem}
+.outlook-block{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.25rem}
+.outlook-label{font-size:11px;font-weight:500;color:var(--hint);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem}
+.outlook-summary{font-family:'Instrument Serif',serif;font-size:1.1rem;color:var(--text);line-height:1.7;font-style:italic}
+.narrative-item{margin-bottom:.9rem;padding-bottom:.9rem;border-bottom:1px solid var(--hint)}
+.narrative-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.narrative-title{font-size:13.5px;font-weight:500;color:var(--text);margin-bottom:4px}
+.narrative-body{font-size:13px;color:var(--muted);line-height:1.65}
+.pred-item{margin-bottom:.85rem;padding-bottom:.85rem;border-bottom:1px solid var(--hint)}
+.pred-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.pred-tag{font-size:12px;font-weight:500;color:var(--gold);margin-right:4px}
+.pred-content{font-size:13.5px;font-weight:500;color:var(--text)}
+.pred-evidence{font-size:12px;color:var(--hint);margin-top:4px;line-height:1.5}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="masthead">Daily <em>News</em></div>
+  <div class="header-right">
+    <select class="date-select" onchange="location.href=this.value+'.html'"><option value="2026-10-09" selected>2026-10-09</option>
+<option value="2026-10-08" >2026-10-08</option>
+<option value="2026-10-01" >2026-10-01</option>
+<option value="2026-09-30" >2026-09-30</option>
+<option value="2026-09-29" >2026-09-29</option>
+<option value="2026-09-28" >2026-09-28</option>
+<option value="2026-09-27" >2026-09-27</option>
+<option value="2026-09-22" >2026-09-22</option>
+<option value="2026-09-21" >2026-09-21</option>
+<option value="2026-09-20" >2026-09-20</option>
+<option value="2026-09-18" >2026-09-18</option>
+<option value="2026-09-17" >2026-09-17</option>
+<option value="2026-09-16" >2026-09-16</option>
+<option value="2026-09-15" >2026-09-15</option>
+<option value="2026-09-14" >2026-09-14</option>
+<option value="2026-09-11" >2026-09-11</option>
+<option value="2026-09-10" >2026-09-10</option>
+<option value="2026-09-09" >2026-09-09</option>
+<option value="2026-09-08" >2026-09-08</option>
+<option value="2026-09-07" >2026-09-07</option>
+<option value="2026-09-06" >2026-09-06</option>
+<option value="2026-09-03" >2026-09-03</option>
+<option value="2026-09-02" >2026-09-02</option>
+<option value="2026-09-01" >2026-09-01</option>
+<option value="2026-08-31" >2026-08-31</option>
+<option value="2026-08-30" >2026-08-30</option>
+<option value="2026-08-29" >2026-08-29</option>
+<option value="2026-08-28" >2026-08-28</option>
+<option value="2026-08-27" >2026-08-27</option>
+<option value="2026-08-26" >2026-08-26</option></select>
+    <span class="total-badge">10月9日 周五</span>
+  </div>
+</header>
+
+<nav class="source-tabs">
+  <div class="tab active" data-sec="digest" style="--tab-color:var(--gold)">导读</div>
+  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">42</span></div>
+  <div class="tab" data-sec="gh" style="--tab-color:var(--gh)">✦ GitHub <span class="cnt">20</span></div>
+  <div class="tab" data-sec="tw" style="--tab-color:var(--tw)">𝕏 Twitter <span class="cnt">0</span></div>
+  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">27</span></div>
+  <div class="tab" data-sec="or" style="--tab-color:var(--or)">⟳ OpenRouter <span class="cnt">10</span></div>
+</nav>
+
+<main class="main">
+
+  <section class="section active" id="sec-digest">
+    
+<div class="digest-card">
+  <div class="digest-date">10月9日 周五</div>
+  <div class="digest-headline">今日速览</div>
+  <ul class="digest-list"><li><strong>Product Hunt #1</strong> · <a href="https://www.producthunt.com/products/openswarm-3" target="_blank" class="digest-link">1\. OpenSwarm</a> — A swarm of agents, in the same place you work</li>
+<li><strong>GitHub Trending</strong> · 今日 20 个项目上榜，<a href="https://github.com/nullmoth/nvidia-macos-driver" target="_blank" class="digest-link">nullmoth/nvidia-macos-driver</a> 领跑 +0 星</li>
+<li><strong>X / Twitter</strong> · 共 0 条精选，来自 ai-sweep 与 Zara Builder 精选</li>
+<li><strong>Hacker News</strong> · 今日 27 条技术讨论</li>
+<li><strong>OpenRouter 周冠军</strong> · （deepseek）35.6T tokens，51%</li></ul>
+</div>
+
+<div class="insight-section">
+  <div class="insight-section-title">今日洞察</div>
+  
+<div class="insight-card">
+  <div class="insight-title">中国模型在 OpenRouter 使用量全面超越西方，免费策略奏效</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body">OpenRouter 本周 Top3 全为中国模型：（deepseek）、（stealth）、（z-ai）；Qwen3.6 Plus 和 Step 3.5 Flash 标注 free，小米 MiMo-V2-Pro 以 3.73T tokens 占据第一</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">加速中的趋势，处于<strong>份额重分配阶段</strong>：「免费+高质量」组合正在快速抢占开发者心智，一旦建立习惯将产生路径依赖</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">如果你的产品依赖 OpenAI/Anthropic API，现在是建立<strong>模型路由层</strong>的最佳时机——按任务类型（创意/代码/摘要）分配最优价格比的模型，而非绑定单一供应商</span>
+  </div>
+</div>
+<div class="insight-card">
+  <div class="insight-title">开发者工具与 AI 的融合正在加速，「可观测性」成为新刚需</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body">PH 出现 Panorama（AI 发现团队工作流）、Straude（Claude Code 使用量排行）；HN 出现「Components of a Coding Agent」深度文章</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">早期趋势，处于<strong>问题定义期</strong>：随着 AI Agent 在生产环境落地，「我的团队到底在用什么工具做什么」变成一个真实的管理痛点</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">PM 应开始为 AI 使用行为建立度量体系：用了哪些 Agent、花了多少 token、哪些任务真正被 AI 加速——没有数据就没有迭代方向</span>
+  </div>
+</div>
+</div>
+<div class="outlook-section">
+  <div class="outlook-block">
+    <div class="outlook-label">今日一句话</div>
+    <div class="outlook-summary">端侧跑模型、Agent 控工具链、中国免费模型横扫排行榜——AI 的重力中心正从「会不会」转向「谁的成本最低、离用户最近」。</div>
+  </div>
+  <div class="outlook-block">
+    <div class="outlook-label">行业主线脉络</div>
+    
+<div class="narrative-item">
+  <div class="narrative-title">主线 1：Agent 工具链的基础设施化</div>
+  <div class="narrative-body">起点：ChatGPT 插件（2023）→ 当前：MCP 协议普及 + Coding Agent 工具爆发（Goose、Handle、oh-my-codex 等）→ 下一步：Agent 编排框架成为新的「操作系统」争夺点，各大平台将争相成为 Agent 的默认宿主</div>
+</div>
+<div class="narrative-item">
+  <div class="narrative-title">主线 2：端侧 AI 的「iPhone 时刻」临近</div>
+  <div class="narrative-body">起点：Apple Silicon 支持神经网络加速（2020）→ 当前：MLX、LiteRT、Google AI Edge Gallery 工具链成熟，Tiny Aya 等本地模型出现在 PH → 下一步：2026 下半年将出现第一批「离线原生」AI App 爆款，隐私与低延迟是核心卖点</div>
+</div>
+<div class="narrative-item">
+  <div class="narrative-title">主线 3：中国模型的免费化攻势</div>
+  <div class="narrative-body">起点：DeepSeek R1 开源震惊硅谷（2025 初）→ 当前：OpenRouter Top10 中中国模型占 6 席，且主力均标注 free → 下一步：免费策略将倒逼 OpenAI/Anthropic 调整定价，中小团队的模型选择逻辑将从「最强」变为「够用且免费」</div>
+</div>
+  </div>
+  <div class="outlook-block">
+    <div class="outlook-label">产品与商业预判</div>
+    
+<div class="pred-item">
+  <span class="pred-tag">【预判1】</span>
+  <span class="pred-content">Cursor 将在 1 个月内推出 Agent 并行协作功能</span>
+  <div class="pred-evidence">依据：PH 出现 Cursor 3（「并行本地/云端 Agent 工作空间」）；oh-my-codex GitHub Trending 第一；Coding Agent 工具链密集上线</div>
+</div>
+<div class="pred-item">
+  <span class="pred-tag">【预判2】</span>
+  <span class="pred-content">Google 将在 I/O 2026 宣布 Gemini Nano 全系 Pixel 原生集成，并开放 API</span>
+  <div class="pred-evidence">依据：google-ai-edge/gallery 和 LiteRT-LM 同日冲上 GitHub Trending，Google 端侧布局节奏明显加速</div>
+</div>
+<div class="pred-item">
+  <span class="pred-tag">【预判3】</span>
+  <span class="pred-content">OpenRouter 免费模型将催生一批「AI 功能免费、增值服务收费」的 2B SaaS 产品</span>
+  <div class="pred-evidence">依据：OpenRouter Top3 均为中国免费模型；Qwen/Step/MiniMax 可为开发者提供近乎零成本的后端；商业模式空间从模型层转移到应用层</div>
+</div>
+<div class="pred-item">
+  <span class="pred-tag">【预判4】</span>
+  <span class="pred-content">「AI 可观测性」（AI Observability）将在 6 个月内成为独立赛道</span>
+  <div class="pred-evidence">依据：Straude（Claude Code 使用量排行）出现在 PH；Panorama（AI 发现工作流）上线；随着 Agent 进入生产，监控 AI 行为将成为刚需</div>
+</div>
+  </div>
+</div>
+  </section>
+
+  <section class="section" id="sec-ph">
+    <div class="section-header">
+      <span class="section-label">Product Hunt</span>
+      <span class="section-sub">今日热榜 42 款</span>
+    </div>
+    <div class="ph-list">
+    <a class="ph-row" href="https://www.producthunt.com/products/openswarm-3" target="_blank" rel="noopener">
+      <span class="ph-rank">🥇</span>
+      <div class="ph-info">
+        <span class="ph-name">1\. OpenSwarm</span>
+        <span class="ph-tagline">A swarm of agents, in the same place you work</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/openseo" target="_blank" rel="noopener">
+      <span class="ph-rank">🥈</span>
+      <div class="ph-info">
+        <span class="ph-name">2\. OpenSEO</span>
+        <span class="ph-tagline">The open source Semrush alternative</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/claude-haiku-5-5" target="_blank" rel="noopener">
+      <span class="ph-rank">🥉</span>
+      <div class="ph-info">
+        <span class="ph-name">3\. Claude Haiku 5.5</span>
+        <span class="ph-tagline">Anthropic's fastest and most capable Haiku yet</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/vocera" target="_blank" rel="noopener">
+      <span class="ph-rank">#4</span>
+      <div class="ph-info">
+        <span class="ph-name">4\. Cekura Bench</span>
+        <span class="ph-tagline">Speech-to-speech model benchmarks on live phone calls</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/chickytutor" target="_blank" rel="noopener">
+      <span class="ph-rank">#5</span>
+      <div class="ph-info">
+        <span class="ph-name">5\. ChickyTutor</span>
+        <span class="ph-tagline">A private language tutor that knows you better every day.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/claude-for-google-workspace" target="_blank" rel="noopener">
+      <span class="ph-rank">#6</span>
+      <div class="ph-info">
+        <span class="ph-name">6\. Claude for Google Workspace</span>
+        <span class="ph-tagline">Bring Claude directly into Google Docs, Sheets &amp; Slides</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/kloudmate" target="_blank" rel="noopener">
+      <span class="ph-rank">#7</span>
+      <div class="ph-info">
+        <span class="ph-name">7\. KloudMate 2.0</span>
+        <span class="ph-tagline">AI-powered Full-Stack Observability &amp; Agentic SRE-Ops</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/polylane" target="_blank" rel="noopener">
+      <span class="ph-rank">#8</span>
+      <div class="ph-info">
+        <span class="ph-name">8\. Polylane for Vercel</span>
+        <span class="ph-tagline">An AI on-call engineer for your Vercel apps</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/nova-18" target="_blank" rel="noopener">
+      <span class="ph-rank">#9</span>
+      <div class="ph-info">
+        <span class="ph-name">9\. NOVA CLI v1.0</span>
+        <span class="ph-tagline">AI developer in your terminal</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/customer-io" target="_blank" rel="noopener">
+      <span class="ph-rank">#10</span>
+      <div class="ph-info">
+        <span class="ph-name">Customer.io</span>
+        <span class="ph-tagline">无处不在的自动化消息传递 — 初创公司免费 12 个月</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/paw-paw" target="_blank" rel="noopener">
+      <span class="ph-rank">#11</span>
+      <div class="ph-info">
+        <span class="ph-name">10\. Paw-Paw</span>
+        <span class="ph-tagline">A tiny desktop pet for your Mac that types along with you</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/off-the-record-2" target="_blank" rel="noopener">
+      <span class="ph-rank">#12</span>
+      <div class="ph-info">
+        <span class="ph-name">11\. Off the Record</span>
+        <span class="ph-tagline">Block AI from transcribing your meetings.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/liquid-inference" target="_blank" rel="noopener">
+      <span class="ph-rank">#13</span>
+      <div class="ph-info">
+        <span class="ph-name">12\. Liquid Inference</span>
+        <span class="ph-tagline">LLM router where providers compete for every prompt</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/tide-simple-self-hostable-video-calls" target="_blank" rel="noopener">
+      <span class="ph-rank">#14</span>
+      <div class="ph-info">
+        <span class="ph-name">13\. tide</span>
+        <span class="ph-tagline">A Jitsi alternative that does a few things really well</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/botbus" target="_blank" rel="noopener">
+      <span class="ph-rank">#15</span>
+      <div class="ph-info">
+        <span class="ph-name">14\. BotBus</span>
+        <span class="ph-tagline">Manage your local coding agents from your phone</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/hark-3" target="_blank" rel="noopener">
+      <span class="ph-rank">#16</span>
+      <div class="ph-info">
+        <span class="ph-name">15\. Hark</span>
+        <span class="ph-tagline">The personal AI that handles life before you have to</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/markdoc-3" target="_blank" rel="noopener">
+      <span class="ph-rank">#17</span>
+      <div class="ph-info">
+        <span class="ph-name">16\. Markdoc</span>
+        <span class="ph-tagline">A shared Markdown editor for people and their agents</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/udon" target="_blank" rel="noopener">
+      <span class="ph-rank">#18</span>
+      <div class="ph-info">
+        <span class="ph-name">17\. Udon</span>
+        <span class="ph-tagline">Control deck for your Mac home server with AI sysadmin.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/offstage" target="_blank" rel="noopener">
+      <span class="ph-rank">#19</span>
+      <div class="ph-info">
+        <span class="ph-name">18\. offstage</span>
+        <span class="ph-tagline">Your computer-use agent gets a Mac account, not your screen</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/clippo-2" target="_blank" rel="noopener">
+      <span class="ph-rank">#20</span>
+      <div class="ph-info">
+        <span class="ph-name">19\. Clippo</span>
+        <span class="ph-tagline">Orchestrate AI agent teams on a visual canvas</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/tractionwave" target="_blank" rel="noopener">
+      <span class="ph-rank">#21</span>
+      <div class="ph-info">
+        <span class="ph-name">20\. Tractionwave</span>
+        <span class="ph-tagline">AI attention heatmaps for ads to check before you spend</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/mailwell-2" target="_blank" rel="noopener">
+      <span class="ph-rank">#22</span>
+      <div class="ph-info">
+        <span class="ph-name">21\. Mailwell</span>
+        <span class="ph-tagline">Native Mac mail for IMAP, JMAP and Microsoft 365</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/side" target="_blank" rel="noopener">
+      <span class="ph-rank">#23</span>
+      <div class="ph-info">
+        <span class="ph-name">22\. Side</span>
+        <span class="ph-tagline">A little AI chat panel that lives beside your Mac's Dock</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/clawcall" target="_blank" rel="noopener">
+      <span class="ph-rank">#24</span>
+      <div class="ph-info">
+        <span class="ph-name">23\. ClawCall</span>
+        <span class="ph-tagline">Your AI agent's phone to dial, hold, and reports back</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/judged-systems" target="_blank" rel="noopener">
+      <span class="ph-rank">#25</span>
+      <div class="ph-info">
+        <span class="ph-name">24\. judged.systems</span>
+        <span class="ph-tagline">The judgment API platform for support systems.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/tonefold" target="_blank" rel="noopener">
+      <span class="ph-rank">#26</span>
+      <div class="ph-info">
+        <span class="ph-name">25\. Tonefold</span>
+        <span class="ph-tagline">Describe a song, get every part as editable MIDI</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/termaxa" target="_blank" rel="noopener">
+      <span class="ph-rank">#27</span>
+      <div class="ph-info">
+        <span class="ph-name">26\. Termaxa</span>
+        <span class="ph-tagline">See what an AI agent's command would destroy before it runs</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/isle-notch" target="_blank" rel="noopener">
+      <span class="ph-rank">#28</span>
+      <div class="ph-info">
+        <span class="ph-name">27\. Isle Notch</span>
+        <span class="ph-tagline">Lowweight minimal dynamic island for Windows</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/agentguard-5" target="_blank" rel="noopener">
+      <span class="ph-rank">#29</span>
+      <div class="ph-info">
+        <span class="ph-name">28\. AgentGuard</span>
+        <span class="ph-tagline">Scan AI agent Skills for risks before you install them</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/semwright" target="_blank" rel="noopener">
+      <span class="ph-rank">#30</span>
+      <div class="ph-info">
+        <span class="ph-name">29\. Semwright</span>
+        <span class="ph-tagline">Give AI agents structured access to real software</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/tines" target="_blank" rel="noopener">
+      <span class="ph-rank">#31</span>
+      <div class="ph-info">
+        <span class="ph-name">Tines</span>
+        <span class="ph-tagline">适用于代理、应用程序和自动化的单一、安全的环境。</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/typeling" target="_blank" rel="noopener">
+      <span class="ph-rank">#32</span>
+      <div class="ph-info">
+        <span class="ph-name">30\. Typeling</span>
+        <span class="ph-tagline">Translate in your iPhone keyboard. Keep your tone.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/strac-comply" target="_blank" rel="noopener">
+      <span class="ph-rank">#33</span>
+      <div class="ph-info">
+        <span class="ph-name">31\. Strac Comply</span>
+        <span class="ph-tagline">Get SOC 2 without the sales call</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/epilude" target="_blank" rel="noopener">
+      <span class="ph-rank">#34</span>
+      <div class="ph-info">
+        <span class="ph-name">32\. Epilude Narrator</span>
+        <span class="ph-tagline">Listen to any article, doc or text on your Mac</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/hallmonitor" target="_blank" rel="noopener">
+      <span class="ph-rank">#35</span>
+      <div class="ph-info">
+        <span class="ph-name">33\. Hallmonitor</span>
+        <span class="ph-tagline">See and answer every coding agent from your notch</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/chime-sms-categorized-on-device" target="_blank" rel="noopener">
+      <span class="ph-rank">#36</span>
+      <div class="ph-info">
+        <span class="ph-name">34\. Chime</span>
+        <span class="ph-tagline">Private SMS categorization that never leaves your device</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/framer" target="_blank" rel="noopener">
+      <span class="ph-rank">#37</span>
+      <div class="ph-info">
+        <span class="ph-name">Framer AI Agents</span>
+        <span class="ph-tagline">利用人工智能设计和发布专业网站</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/drunken-penguins" target="_blank" rel="noopener">
+      <span class="ph-rank">#38</span>
+      <div class="ph-info">
+        <span class="ph-name">35\. Drunken Penguins</span>
+        <span class="ph-tagline">Party card games on everyone's phone. No app.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/simo-3" target="_blank" rel="noopener">
+      <span class="ph-rank">#39</span>
+      <div class="ph-info">
+        <span class="ph-name">36\. Simo</span>
+        <span class="ph-tagline">The judgment layer for software that acts</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/ahem-calendar-overlay" target="_blank" rel="noopener">
+      <span class="ph-rank">#40</span>
+      <div class="ph-info">
+        <span class="ph-name">37\. Ahem! Unmissable Meeting Reminders</span>
+        <span class="ph-tagline">Full screen reminders for ADHD, time-blind &amp; focused brains</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/moonwalkers-dusk" target="_blank" rel="noopener">
+      <span class="ph-rank">#41</span>
+      <div class="ph-info">
+        <span class="ph-name">38\. Moonwalkers Dusk</span>
+        <span class="ph-tagline">Strap-on motorized wheels that let you walk twice as fast</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/simple-workout-log" target="_blank" rel="noopener">
+      <span class="ph-rank">#42</span>
+      <div class="ph-info">
+        <span class="ph-name">39\. Simple Workout Log</span>
+        <span class="ph-tagline">The best minimalist workout tracker available</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a></div>
+  </section>
+
+  <section class="section" id="sec-gh">
+    <div class="section-header">
+      <span class="section-label">GitHub Trending</span>
+      <span class="section-sub">2026-10-09 · 20 个项目</span>
+    </div>
+    <div class="gh-grid">
+    <a class="gh-card" href="https://github.com/nullmoth/nvidia-macos-driver" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">nullmoth/nvidia-macos-driver</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">Metal driver for NVIDIA GeForce RTX cards on macOS 15 Sequoia (Intel / OpenCore). Free, source included.</p>
+      <div class="gh-stats"><span>⭐ 1,192</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/alejandrobujan/tendedero" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">alejandrobujan/tendedero</span><span class="gh-lang">Swift</span></div>
+      <p class="gh-desc">Screenshots, hung out to dry. A tiny native macOS app that hangs every screenshot on a line at the top of your screen.</p>
+      <div class="gh-stats"><span>⭐ 1,038</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/LoreanXavier/pt-pc" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">LoreanXavier/pt-pc</span><span class="gh-lang">C++</span></div>
+      <p class="gh-desc">Native PC port of P.T. (runs from your own PS4 game files)</p>
+      <div class="gh-stats"><span>⭐ 1,021</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/mhtsec/ARTEX" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">mhtsec/ARTEX</span><span class="gh-lang">Go</span></div>
+      <p class="gh-desc">AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目</p>
+      <div class="gh-stats"><span>⭐ 913</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/storytold/wordcraft" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">storytold/wordcraft</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">An open-source, clean-room reimplementation of Microsoft Word in pure Rust</p>
+      <div class="gh-stats"><span>⭐ 874</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/storytold/cadcraft" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">storytold/cadcraft</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">CADCraft: computer-aided design and drafting — an open-source, clean-room AutoCAD-style app in pure Rust</p>
+      <div class="gh-stats"><span>⭐ 821</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/shadany7824/playgta5" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">shadany7824/playgta5</span><span class="gh-lang">JavaScript</span></div>
+      <p class="gh-desc">A source code for playgta5.com.</p>
+      <div class="gh-stats"><span>⭐ 758</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/pingdotgg/ts-rust" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">pingdotgg/ts-rust</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">An experimental Rust port of the TypeScript 7 compiler (tsc)</p>
+      <div class="gh-stats"><span>⭐ 708</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/bas3line/ascii" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">bas3line/ascii</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">Animated ascii art for web pages, in TypeScript: React, Next.js, Astro, or one HTML tag</p>
+      <div class="gh-stats"><span>⭐ 610</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/storytold/gridcraft" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">storytold/gridcraft</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">GridCraft: an open-source, clean-room spreadsheet (Microsoft Excel-style) in pure Rust. By ArtCraft.</p>
+      <div class="gh-stats"><span>⭐ 600</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/storytold/soundcraft" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">storytold/soundcraft</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">An open-source, clean-room reimplementation of Avid Pro Tools in pure Rust</p>
+      <div class="gh-stats"><span>⭐ 573</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/noahdunnagan/fsearch" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">noahdunnagan/fsearch</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">Whole-disk file search for macOS: fuzzy names, typo tolerance, indexed content grep. ~1 ms over 8M files.</p>
+      <div class="gh-stats"><span>⭐ 545</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/storytold/deckcraft" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">storytold/deckcraft</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">Presentations and slide shows: an open-source, clean-room reimplementation of Microsoft PowerPoint in pure Rust. Part of the ArtCraft Crafting Apps.</p>
+      <div class="gh-stats"><span>⭐ 501</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/gr8rstudio/gr8r-studio" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">gr8rstudio/gr8r-studio</span><span class="gh-lang">JavaScript</span></div>
+      <p class="gh-desc">Gr8r Studio: a calm, structured project management workspace. Vite + plain ES modules.</p>
+      <div class="gh-stats"><span>⭐ 338</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/droogie/bbhost" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">droogie/bbhost</span><span class="gh-lang">C++</span></div>
+      <p class="gh-desc">Definitive Bloodborne PC Experience</p>
+      <div class="gh-stats"><span>⭐ 297</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/ThariqS/ai-newtab" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">ThariqS/ai-newtab</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">Claude generates a daily new tab page based on your browser history.</p>
+      <div class="gh-stats"><span>⭐ 239</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/Nonco-Organization/multicoin-address-validator" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Nonco-Organization/multicoin-address-validator</span><span class="gh-lang">JavaScript</span></div>
+      <p class="gh-desc">Useful library for validation of Bitcoin, Litecoin, Ethereum and other cryptocoin addresses</p>
+      <div class="gh-stats"><span>⭐ 231</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/snuri00/psp-web-recomp" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">snuri00/psp-web-recomp</span><span class="gh-lang">C++</span></div>
+      <p class="gh-desc">PSP games in the browser without an emulator: static recompilation to WebAssembly, an HLE kernel and a WebGL2 renderer</p>
+      <div class="gh-stats"><span>⭐ 187</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/nullmoth/1401" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">nullmoth/1401</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">1401: macOS on the PC you already own. Free, never for sale.</p>
+      <div class="gh-stats"><span>⭐ 157</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/Jakeschincariol/founder-skill" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Jakeschincariol/founder-skill</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">Eleven free Claude skills that test a business before you launch it: a board trained on Hormozi, Thiel and Jobs, a marketing director, a CFO, and a consumer panel of 100 buyer agents. Free, MIT.</p>
+      <div class="gh-stats"><span>⭐ 150</span><span class="gh-today">+0 today</span></div>
+    </a></div>
+  </section>
+
+  <section class="section" id="sec-tw">
+    <div class="section-header">
+      <span class="section-label">X / Twitter</span>
+      <span class="section-sub">AI 热帖 + Builder 精选 · Top 0</span>
+    </div>
+    <div class="tw-feed"></div>
+  </section>
+
+  <section class="section" id="sec-hn">
+    <div class="section-header">
+      <span class="section-label">Hacker News</span>
+      <span class="section-sub">Top 20</span>
+    </div>
+    <div class="hn-list">
+    <a class="hn-row" href="https://cactuscompute.com/blog/whistle" target="_blank" rel="noopener">
+      <span class="hn-num">01</span>
+      <span class="hn-title">Whistle: Speech to Text in 16.9 MB</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://terrytao.wordpress.com/2026/10/08/what-should-we-tell-our-students/" target="_blank" rel="noopener">
+      <span class="hn-num">02</span>
+      <span class="hn-title">What should we tell our students?</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.theranos.world/" target="_blank" rel="noopener">
+      <span class="hn-num">03</span>
+      <span class="hn-title">Theranos.world</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.dexerto.com/entertainment/man-discovers-his-parents-coffee-machine-used-1tb-of-data-in-10-days-3416399/" target="_blank" rel="noopener">
+      <span class="hn-num">04</span>
+      <span class="hn-title">Man discovers his parents' coffee machine used 1TB of data in 10 days</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://lwn.net/Articles/1095811/" target="_blank" rel="noopener">
+      <span class="hn-num">05</span>
+      <span class="hn-title">Reducing undefined behavior in the C language</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://antonfrolov.substack.com/p/i-hired-an-illustrator-to-draw-my" target="_blank" rel="noopener">
+      <span class="hn-num">06</span>
+      <span class="hn-title">I hired an illustrator to draw my house. Now it's my Home Assistant dashboard</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/" target="_blank" rel="noopener">
+      <span class="hn-num">07</span>
+      <span class="hn-title">Why isn't the industry freaking out about DeepSeek 4.1 Flash?</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://bevy.org/news/bevy-0-20/" target="_blank" rel="noopener">
+      <span class="hn-num">08</span>
+      <span class="hn-title">Bevy 0.20</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://ken.arneson.name/2015/11/the-value-of-not-getting-to-the-point/" target="_blank" rel="noopener">
+      <span class="hn-num">09</span>
+      <span class="hn-title">The value of not getting to the point (2015)</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://htmx.org/essays/yes-and/" target="_blank" rel="noopener">
+      <span class="hn-num">10</span>
+      <span class="hn-title">Yes, and</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://biohub.org/news/virtual-biology-initiative-expansion/" target="_blank" rel="noopener">
+      <span class="hn-num">11</span>
+      <span class="hn-title">AI-ready biological data: $1.8B global commitment</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://svg-spark.vercel.app/" target="_blank" rel="noopener">
+      <span class="hn-num">12</span>
+      <span class="hn-title">Show HN: SVG Spark – 10 client-side SVG design and dev tools</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://naturalsystems.io/eth68" target="_blank" rel="noopener">
+      <span class="hn-num">13</span>
+      <span class="hn-title">ETH-68: Ethernet Audio Interface for Linux</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1697900/full" target="_blank" rel="noopener">
+      <span class="hn-num">14</span>
+      <span class="hn-title">ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy (2025)</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://vale.rocks/posts/dvd-menus" target="_blank" rel="noopener">
+      <span class="hn-num">15</span>
+      <span class="hn-title">Beauty in DVD Menus</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://mitchellh.com/writing/program-status-osc7501" target="_blank" rel="noopener">
+      <span class="hn-num">16</span>
+      <span class="hn-title">A Terminal Protocol for Program Status (OSC 7501)</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://github.com/edrisranjbar/lifeos" target="_blank" rel="noopener">
+      <span class="hn-num">17</span>
+      <span class="hn-title">Show HN: Edi Life OS – self-hosted life dashboard with an MCP server for AI</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://openrouter.ai/stepfun/step-5-preview" target="_blank" rel="noopener">
+      <span class="hn-num">18</span>
+      <span class="hn-title">Step 5 Preview, a 1M-context MoE from StepFun, shows up on OpenRouter</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.nature.com/articles/s41586-026-10546-z" target="_blank" rel="noopener">
+      <span class="hn-num">19</span>
+      <span class="hn-title">A 5.3M-year-old deep-sea whale necropolis in the Diamantina Zone</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://github.com/duckdb/ducklake" target="_blank" rel="noopener">
+      <span class="hn-num">20</span>
+      <span class="hn-title">DuckDB Ducklake</span>
+      <span class="hn-arrow">→</span>
+    </a></div>
+  </section>
+
+  <section class="section" id="sec-or">
+    <div class="section-header">
+      <span class="section-label">OpenRouter 排行</span>
+      <span class="section-sub">本周 LLM 使用量排行 · 10 个模型</span>
+    </div>
+    <div class="or-list">
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#1</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">35.6T tokens</span>
+        <span class="or-up">↑51%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#2</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">stealth</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">22.8T tokens</span>
+        <span class="or-up">↑26%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#3</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">z-ai</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">10.8T tokens</span>
+        <span class="or-up">↑7%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#4</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#ff6900">xiaomi</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">10.5T tokens</span>
+        <span class="or-up">↑13%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#5</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">tencent</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">7.36T tokens</span>
+        <span class="or-up">↑8%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#6</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#10a37f">openai</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">6.57T tokens</span>
+        <span class="or-up">↑16%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#7</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">nvidia</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">6.16T tokens</span>
+        <span class="or-flat">−0%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#8</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">5.28T tokens</span>
+        <span class="or-up">↑23%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#9</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#c96442">anthropic</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">3.83T tokens</span>
+        <span class="or-up">↑85%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#10</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">typesafe</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">3.31T tokens</span>
+        <span class="or-up">↑10%</span>
+      </div>
+    </a></div>
+  </section>
+
+</main>
+
+<footer style="text-align:center;padding:2.5rem 1rem;font-size:12px;color:var(--hint);border-top:1px solid var(--border);margin-top:3rem">
+  daily-news v2 · 2026-10-09 · <a href="https://github.com/zkw15555506767-boop/zkevin-AI-dailynews" style="color:var(--gold-dim)">zkevin-AI-dailynews</a>
+</footer>
+
+<script>
+const tabs = document.querySelectorAll('.tab');
+const secs = document.querySelectorAll('.section');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    secs.forEach(s => s.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('sec-' + tab.dataset.sec).classList.add('active');
+    window.scrollTo({top:107,behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>

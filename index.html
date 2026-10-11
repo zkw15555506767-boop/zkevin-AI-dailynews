@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Daily News · 2026-10-08</title>
+<title>Daily News · 2026-10-09</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -184,7 +184,8 @@ a{color:inherit;text-decoration:none}
 <header class="site-header">
   <div class="masthead">Daily <em>News</em></div>
   <div class="header-right">
-    <select class="date-select" onchange="location.href=this.value+'.html'"><option value="2026-10-08" selected>2026-10-08</option>
+    <select class="date-select" onchange="location.href=this.value+'.html'"><option value="2026-10-09" selected>2026-10-09</option>
+<option value="2026-10-08" >2026-10-08</option>
 <option value="2026-10-01" >2026-10-01</option>
 <option value="2026-09-30" >2026-09-30</option>
 <option value="2026-09-29" >2026-09-29</option>
@@ -212,19 +213,18 @@ a{color:inherit;text-decoration:none}
 <option value="2026-08-29" >2026-08-29</option>
 <option value="2026-08-28" >2026-08-28</option>
 <option value="2026-08-27" >2026-08-27</option>
-<option value="2026-08-26" >2026-08-26</option>
-<option value="2026-08-25" >2026-08-25</option></select>
-    <span class="total-badge">10月8日 周四</span>
+<option value="2026-08-26" >2026-08-26</option></select>
+    <span class="total-badge">10月9日 周五</span>
   </div>
 </header>
 
 <nav class="source-tabs">
   <div class="tab active" data-sec="digest" style="--tab-color:var(--gold)">导读</div>
-  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">43</span></div>
+  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">42</span></div>
   <div class="tab" data-sec="gh" style="--tab-color:var(--gh)">✦ GitHub <span class="cnt">20</span></div>
   <div class="tab" data-sec="tw" style="--tab-color:var(--tw)">𝕏 Twitter <span class="cnt">0</span></div>
-  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">29</span></div>
-  <div class="tab" data-sec="or" style="--tab-color:var(--or)">⟳ OpenRouter <span class="cnt">0</span></div>
+  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">27</span></div>
+  <div class="tab" data-sec="or" style="--tab-color:var(--or)">⟳ OpenRouter <span class="cnt">10</span></div>
 </nav>
 
 <main class="main">
@@ -232,17 +232,33 @@ a{color:inherit;text-decoration:none}
   <section class="section active" id="sec-digest">
     
 <div class="digest-card">
-  <div class="digest-date">10月8日 周四</div>
+  <div class="digest-date">10月9日 周五</div>
   <div class="digest-headline">今日速览</div>
   <ul class="digest-list"><li><strong>Product Hunt #1</strong> · <a href="https://www.producthunt.com/products/openswarm-3" target="_blank" class="digest-link">1\. OpenSwarm</a> — A swarm of agents, in the same place you work</li>
-<li><strong>GitHub Trending</strong> · 今日 20 个项目上榜，<a href="https://github.com/openai/math" target="_blank" class="digest-link">openai/math</a> 领跑 +0 星</li>
+<li><strong>GitHub Trending</strong> · 今日 20 个项目上榜，<a href="https://github.com/nullmoth/nvidia-macos-driver" target="_blank" class="digest-link">nullmoth/nvidia-macos-driver</a> 领跑 +0 星</li>
 <li><strong>X / Twitter</strong> · 共 0 条精选，来自 ai-sweep 与 Zara Builder 精选</li>
-<li><strong>Hacker News</strong> · 今日 29 条技术讨论</li></ul>
+<li><strong>Hacker News</strong> · 今日 27 条技术讨论</li>
+<li><strong>OpenRouter 周冠军</strong> · （deepseek）35.6T tokens，51%</li></ul>
 </div>
 
 <div class="insight-section">
   <div class="insight-section-title">今日洞察</div>
   
+<div class="insight-card">
+  <div class="insight-title">中国模型在 OpenRouter 使用量全面超越西方，免费策略奏效</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body">OpenRouter 本周 Top3 全为中国模型：（deepseek）、（stealth）、（z-ai）；Qwen3.6 Plus 和 Step 3.5 Flash 标注 free，小米 MiMo-V2-Pro 以 3.73T tokens 占据第一</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">加速中的趋势，处于<strong>份额重分配阶段</strong>：「免费+高质量」组合正在快速抢占开发者心智，一旦建立习惯将产生路径依赖</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">如果你的产品依赖 OpenAI/Anthropic API，现在是建立<strong>模型路由层</strong>的最佳时机——按任务类型（创意/代码/摘要）分配最优价格比的模型，而非绑定单一供应商</span>
+  </div>
+</div>
 <div class="insight-card">
   <div class="insight-title">开发者工具与 AI 的融合正在加速，「可观测性」成为新刚需</div>
   <div class="insight-row">
@@ -310,7 +326,7 @@ a{color:inherit;text-decoration:none}
   <section class="section" id="sec-ph">
     <div class="section-header">
       <span class="section-label">Product Hunt</span>
-      <span class="section-sub">今日热榜 43 款</span>
+      <span class="section-sub">今日热榜 42 款</span>
     </div>
     <div class="ph-list">
     <a class="ph-row" href="https://www.producthunt.com/products/openswarm-3" target="_blank" rel="noopener">
@@ -321,27 +337,27 @@ a{color:inherit;text-decoration:none}
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/claude-haiku-5-5" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/openseo" target="_blank" rel="noopener">
       <span class="ph-rank">🥈</span>
       <div class="ph-info">
-        <span class="ph-name">2\. Claude Haiku 5.5</span>
-        <span class="ph-tagline">Anthropic's fastest and most capable Haiku yet</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/openseo" target="_blank" rel="noopener">
-      <span class="ph-rank">🥉</span>
-      <div class="ph-info">
-        <span class="ph-name">3\. OpenSEO - AI Visibility</span>
+        <span class="ph-name">2\. OpenSEO</span>
         <span class="ph-tagline">The open source Semrush alternative</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/griffin-by-tavus" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/claude-haiku-5-5" target="_blank" rel="noopener">
+      <span class="ph-rank">🥉</span>
+      <div class="ph-info">
+        <span class="ph-name">3\. Claude Haiku 5.5</span>
+        <span class="ph-tagline">Anthropic's fastest and most capable Haiku yet</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/vocera" target="_blank" rel="noopener">
       <span class="ph-rank">#4</span>
       <div class="ph-info">
-        <span class="ph-name">4\. Griffin by Tavus</span>
-        <span class="ph-tagline">World's First Human Interaction Model</span>
+        <span class="ph-name">4\. Cekura Bench</span>
+        <span class="ph-tagline">Speech-to-speech model benchmarks on live phone calls</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
@@ -353,91 +369,91 @@ a{color:inherit;text-decoration:none}
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/vocera" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/claude-for-google-workspace" target="_blank" rel="noopener">
       <span class="ph-rank">#6</span>
       <div class="ph-info">
-        <span class="ph-name">6\. Cekura Bench</span>
-        <span class="ph-tagline">Speech-to-speech model benchmarks on live phone calls</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/nova-18" target="_blank" rel="noopener">
-      <span class="ph-rank">#7</span>
-      <div class="ph-info">
-        <span class="ph-name">7\. NOVA CLI v1.0</span>
-        <span class="ph-tagline">AI developer in your terminal</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/claude-for-google-workspace" target="_blank" rel="noopener">
-      <span class="ph-rank">#8</span>
-      <div class="ph-info">
-        <span class="ph-name">8\. Claude for Google Workspace</span>
+        <span class="ph-name">6\. Claude for Google Workspace</span>
         <span class="ph-tagline">Bring Claude directly into Google Docs, Sheets &amp; Slides</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
     <a class="ph-row" href="https://www.producthunt.com/products/kloudmate" target="_blank" rel="noopener">
-      <span class="ph-rank">#9</span>
+      <span class="ph-rank">#7</span>
       <div class="ph-info">
-        <span class="ph-name">9\. KloudMate 2.0</span>
+        <span class="ph-name">7\. KloudMate 2.0</span>
         <span class="ph-tagline">AI-powered Full-Stack Observability &amp; Agentic SRE-Ops</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/hark-3" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/polylane" target="_blank" rel="noopener">
+      <span class="ph-rank">#8</span>
+      <div class="ph-info">
+        <span class="ph-name">8\. Polylane for Vercel</span>
+        <span class="ph-tagline">An AI on-call engineer for your Vercel apps</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/nova-18" target="_blank" rel="noopener">
+      <span class="ph-rank">#9</span>
+      <div class="ph-info">
+        <span class="ph-name">9\. NOVA CLI v1.0</span>
+        <span class="ph-tagline">AI developer in your terminal</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/customer-io" target="_blank" rel="noopener">
       <span class="ph-rank">#10</span>
       <div class="ph-info">
-        <span class="ph-name">10\. Hark</span>
-        <span class="ph-tagline">The personal AI that handles life before you have to</span>
+        <span class="ph-name">Customer.io</span>
+        <span class="ph-tagline">无处不在的自动化消息传递 — 初创公司免费 12 个月</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/paw-paw" target="_blank" rel="noopener">
+      <span class="ph-rank">#11</span>
+      <div class="ph-info">
+        <span class="ph-name">10\. Paw-Paw</span>
+        <span class="ph-tagline">A tiny desktop pet for your Mac that types along with you</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
     <a class="ph-row" href="https://www.producthunt.com/products/off-the-record-2" target="_blank" rel="noopener">
-      <span class="ph-rank">#11</span>
+      <span class="ph-rank">#12</span>
       <div class="ph-info">
         <span class="ph-name">11\. Off the Record</span>
         <span class="ph-tagline">Block AI from transcribing your meetings.</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/tide-simple-self-hostable-video-calls" target="_blank" rel="noopener">
-      <span class="ph-rank">#12</span>
-      <div class="ph-info">
-        <span class="ph-name">12\. tide</span>
-        <span class="ph-tagline">A Jitsi alternative that does a few things really well</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/paw-paw" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/liquid-inference" target="_blank" rel="noopener">
       <span class="ph-rank">#13</span>
       <div class="ph-info">
-        <span class="ph-name">13\. Paw-Paw</span>
-        <span class="ph-tagline">A tiny desktop pet for your Mac that types along with you</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/liquid-inference" target="_blank" rel="noopener">
-      <span class="ph-rank">#14</span>
-      <div class="ph-info">
-        <span class="ph-name">14\. Liquid Inference</span>
+        <span class="ph-name">12\. Liquid Inference</span>
         <span class="ph-tagline">LLM router where providers compete for every prompt</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/clarify-6" target="_blank" rel="noopener">
-      <span class="ph-rank">#15</span>
+    <a class="ph-row" href="https://www.producthunt.com/products/tide-simple-self-hostable-video-calls" target="_blank" rel="noopener">
+      <span class="ph-rank">#14</span>
       <div class="ph-info">
-        <span class="ph-name">Clarify</span>
-        <span class="ph-tagline">The full-stack AI CRM for modern GTM teams</span>
+        <span class="ph-name">13\. tide</span>
+        <span class="ph-tagline">A Jitsi alternative that does a few things really well</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/tractionwave" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/botbus" target="_blank" rel="noopener">
+      <span class="ph-rank">#15</span>
+      <div class="ph-info">
+        <span class="ph-name">14\. BotBus</span>
+        <span class="ph-tagline">Manage your local coding agents from your phone</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/hark-3" target="_blank" rel="noopener">
       <span class="ph-rank">#16</span>
       <div class="ph-info">
-        <span class="ph-name">15\. Tractionwave</span>
-        <span class="ph-tagline">AI attention heatmaps for ads to check before you spend</span>
+        <span class="ph-name">15\. Hark</span>
+        <span class="ph-tagline">The personal AI that handles life before you have to</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
@@ -449,66 +465,66 @@ a{color:inherit;text-decoration:none}
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/botbus" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/udon" target="_blank" rel="noopener">
       <span class="ph-rank">#18</span>
       <div class="ph-info">
-        <span class="ph-name">17\. BotBus</span>
-        <span class="ph-tagline">Manage your local coding agents from your phone</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/clippo-2" target="_blank" rel="noopener">
-      <span class="ph-rank">#19</span>
-      <div class="ph-info">
-        <span class="ph-name">18\. Clippo</span>
-        <span class="ph-tagline">Orchestrate AI agent teams on a visual canvas</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/offstage" target="_blank" rel="noopener">
-      <span class="ph-rank">#20</span>
-      <div class="ph-info">
-        <span class="ph-name">19\. offstage</span>
-        <span class="ph-tagline">Your computer-use agent gets a Mac account, not your screen</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/floot" target="_blank" rel="noopener">
-      <span class="ph-rank">#21</span>
-      <div class="ph-info">
-        <span class="ph-name">Floot MCP</span>
-        <span class="ph-tagline">Build and ship web and mobile apps inside Claude or ChatGPT</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/side" target="_blank" rel="noopener">
-      <span class="ph-rank">#22</span>
-      <div class="ph-info">
-        <span class="ph-name">20\. Side</span>
-        <span class="ph-tagline">A little AI chat panel that lives beside your Mac's Dock</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/udon" target="_blank" rel="noopener">
-      <span class="ph-rank">#23</span>
-      <div class="ph-info">
-        <span class="ph-name">21\. Udon</span>
+        <span class="ph-name">17\. Udon</span>
         <span class="ph-tagline">Control deck for your Mac home server with AI sysadmin.</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/polylane" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/offstage" target="_blank" rel="noopener">
+      <span class="ph-rank">#19</span>
+      <div class="ph-info">
+        <span class="ph-name">18\. offstage</span>
+        <span class="ph-tagline">Your computer-use agent gets a Mac account, not your screen</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/clippo-2" target="_blank" rel="noopener">
+      <span class="ph-rank">#20</span>
+      <div class="ph-info">
+        <span class="ph-name">19\. Clippo</span>
+        <span class="ph-tagline">Orchestrate AI agent teams on a visual canvas</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/tractionwave" target="_blank" rel="noopener">
+      <span class="ph-rank">#21</span>
+      <div class="ph-info">
+        <span class="ph-name">20\. Tractionwave</span>
+        <span class="ph-tagline">AI attention heatmaps for ads to check before you spend</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/mailwell-2" target="_blank" rel="noopener">
+      <span class="ph-rank">#22</span>
+      <div class="ph-info">
+        <span class="ph-name">21\. Mailwell</span>
+        <span class="ph-tagline">Native Mac mail for IMAP, JMAP and Microsoft 365</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/side" target="_blank" rel="noopener">
+      <span class="ph-rank">#23</span>
+      <div class="ph-info">
+        <span class="ph-name">22\. Side</span>
+        <span class="ph-tagline">A little AI chat panel that lives beside your Mac's Dock</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/clawcall" target="_blank" rel="noopener">
       <span class="ph-rank">#24</span>
       <div class="ph-info">
-        <span class="ph-name">22\. Polylane for Vercel</span>
-        <span class="ph-tagline">Wake up to fixes for your Vercel apps</span>
+        <span class="ph-name">23\. ClawCall</span>
+        <span class="ph-tagline">Your AI agent's phone to dial, hold, and reports back</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
     <a class="ph-row" href="https://www.producthunt.com/products/judged-systems" target="_blank" rel="noopener">
       <span class="ph-rank">#25</span>
       <div class="ph-info">
-        <span class="ph-name">23\. judged.systems</span>
+        <span class="ph-name">24\. judged.systems</span>
         <span class="ph-tagline">The judgment API platform for support systems.</span>
       </div>
       <span class="ph-arrow">→</span>
@@ -516,112 +532,112 @@ a{color:inherit;text-decoration:none}
     <a class="ph-row" href="https://www.producthunt.com/products/tonefold" target="_blank" rel="noopener">
       <span class="ph-rank">#26</span>
       <div class="ph-info">
-        <span class="ph-name">24\. Tonefold</span>
+        <span class="ph-name">25\. Tonefold</span>
         <span class="ph-tagline">Describe a song, get every part as editable MIDI</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/mailwell-2" target="_blank" rel="noopener">
-      <span class="ph-rank">#27</span>
-      <div class="ph-info">
-        <span class="ph-name">25\. Mailwell</span>
-        <span class="ph-tagline">Native Mac mail for IMAP, JMAP and Microsoft 365</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
     <a class="ph-row" href="https://www.producthunt.com/products/termaxa" target="_blank" rel="noopener">
-      <span class="ph-rank">#28</span>
+      <span class="ph-rank">#27</span>
       <div class="ph-info">
         <span class="ph-name">26\. Termaxa</span>
         <span class="ph-tagline">See what an AI agent's command would destroy before it runs</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/typeling" target="_blank" rel="noopener">
-      <span class="ph-rank">#29</span>
+    <a class="ph-row" href="https://www.producthunt.com/products/isle-notch" target="_blank" rel="noopener">
+      <span class="ph-rank">#28</span>
       <div class="ph-info">
-        <span class="ph-name">27\. Typeling</span>
-        <span class="ph-tagline">Translate in your iPhone keyboard. Keep your tone.</span>
+        <span class="ph-name">27\. Isle Notch</span>
+        <span class="ph-tagline">Lowweight minimal dynamic island for Windows</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/epilude" target="_blank" rel="noopener">
-      <span class="ph-rank">#30</span>
+    <a class="ph-row" href="https://www.producthunt.com/products/agentguard-5" target="_blank" rel="noopener">
+      <span class="ph-rank">#29</span>
       <div class="ph-info">
-        <span class="ph-name">28\. Epilude Narrator</span>
-        <span class="ph-tagline">Listen to any article, doc or text on your Mac</span>
+        <span class="ph-name">28\. AgentGuard</span>
+        <span class="ph-tagline">Scan AI agent Skills for risks before you install them</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
     <a class="ph-row" href="https://www.producthunt.com/products/semwright" target="_blank" rel="noopener">
-      <span class="ph-rank">#31</span>
+      <span class="ph-rank">#30</span>
       <div class="ph-info">
         <span class="ph-name">29\. Semwright</span>
         <span class="ph-tagline">Give AI agents structured access to real software</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/simo-3" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/tines" target="_blank" rel="noopener">
+      <span class="ph-rank">#31</span>
+      <div class="ph-info">
+        <span class="ph-name">Tines</span>
+        <span class="ph-tagline">适用于代理、应用程序和自动化的单一、安全的环境。</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/typeling" target="_blank" rel="noopener">
       <span class="ph-rank">#32</span>
       <div class="ph-info">
-        <span class="ph-name">30\. Simo</span>
-        <span class="ph-tagline">The judgment layer for software that acts</span>
+        <span class="ph-name">30\. Typeling</span>
+        <span class="ph-tagline">Translate in your iPhone keyboard. Keep your tone.</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/moonwalkers-dusk" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/strac-comply" target="_blank" rel="noopener">
       <span class="ph-rank">#33</span>
       <div class="ph-info">
-        <span class="ph-name">31\. Moonwalkers Dusk</span>
-        <span class="ph-tagline">Strap-on motorized wheels that let you walk twice as fast</span>
+        <span class="ph-name">31\. Strac Comply</span>
+        <span class="ph-tagline">Get SOC 2 without the sales call</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/isle-notch" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/epilude" target="_blank" rel="noopener">
       <span class="ph-rank">#34</span>
       <div class="ph-info">
-        <span class="ph-name">32\. Isle Notch</span>
-        <span class="ph-tagline">Lowweight minimal dynamic island for Windows</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/clawcall" target="_blank" rel="noopener">
-      <span class="ph-rank">#35</span>
-      <div class="ph-info">
-        <span class="ph-name">33\. ClawCall</span>
-        <span class="ph-tagline">Your AI agent's phone to dial, hold, and reports back</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/drunken-penguins" target="_blank" rel="noopener">
-      <span class="ph-rank">#36</span>
-      <div class="ph-info">
-        <span class="ph-name">34\. Drunken Penguins</span>
-        <span class="ph-tagline">Party card games on everyone's phone. No app.</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/customer-io" target="_blank" rel="noopener">
-      <span class="ph-rank">#37</span>
-      <div class="ph-info">
-        <span class="ph-name">Customer.io</span>
-        <span class="ph-tagline">无处不在的自动化消息传递 — 初创公司免费 12 个月</span>
+        <span class="ph-name">32\. Epilude Narrator</span>
+        <span class="ph-tagline">Listen to any article, doc or text on your Mac</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
     <a class="ph-row" href="https://www.producthunt.com/products/hallmonitor" target="_blank" rel="noopener">
-      <span class="ph-rank">#38</span>
+      <span class="ph-rank">#35</span>
       <div class="ph-info">
-        <span class="ph-name">35\. Hallmonitor</span>
+        <span class="ph-name">33\. Hallmonitor</span>
         <span class="ph-tagline">See and answer every coding agent from your notch</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/agentguard-5" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/chime-sms-categorized-on-device" target="_blank" rel="noopener">
+      <span class="ph-rank">#36</span>
+      <div class="ph-info">
+        <span class="ph-name">34\. Chime</span>
+        <span class="ph-tagline">Private SMS categorization that never leaves your device</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/framer" target="_blank" rel="noopener">
+      <span class="ph-rank">#37</span>
+      <div class="ph-info">
+        <span class="ph-name">Framer AI Agents</span>
+        <span class="ph-tagline">利用人工智能设计和发布专业网站</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/drunken-penguins" target="_blank" rel="noopener">
+      <span class="ph-rank">#38</span>
+      <div class="ph-info">
+        <span class="ph-name">35\. Drunken Penguins</span>
+        <span class="ph-tagline">Party card games on everyone's phone. No app.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/simo-3" target="_blank" rel="noopener">
       <span class="ph-rank">#39</span>
       <div class="ph-info">
-        <span class="ph-name">36\. AgentGuard</span>
-        <span class="ph-tagline">Scan AI agent Skills for risks before you install them</span>
+        <span class="ph-name">36\. Simo</span>
+        <span class="ph-tagline">The judgment layer for software that acts</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
@@ -633,27 +649,19 @@ a{color:inherit;text-decoration:none}
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/chime-sms-categorized-on-device" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/moonwalkers-dusk" target="_blank" rel="noopener">
       <span class="ph-rank">#41</span>
       <div class="ph-info">
-        <span class="ph-name">38\. Chime</span>
-        <span class="ph-tagline">Private SMS categorization that never leaves your device</span>
+        <span class="ph-name">38\. Moonwalkers Dusk</span>
+        <span class="ph-tagline">Strap-on motorized wheels that let you walk twice as fast</span>
       </div>
       <span class="ph-arrow">→</span>
     </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/tunnl-gg" target="_blank" rel="noopener">
+    <a class="ph-row" href="https://www.producthunt.com/products/simple-workout-log" target="_blank" rel="noopener">
       <span class="ph-rank">#42</span>
       <div class="ph-info">
-        <span class="ph-name">39\. tunnl.gg</span>
-        <span class="ph-tagline">Stable localhost URLs over SSH with no installs</span>
-      </div>
-      <span class="ph-arrow">→</span>
-    </a>
-    <a class="ph-row" href="https://www.producthunt.com/products/framer" target="_blank" rel="noopener">
-      <span class="ph-rank">#43</span>
-      <div class="ph-info">
-        <span class="ph-name">Framer AI Agents</span>
-        <span class="ph-tagline">利用人工智能设计和发布专业网站</span>
+        <span class="ph-name">39\. Simple Workout Log</span>
+        <span class="ph-tagline">The best minimalist workout tracker available</span>
       </div>
       <span class="ph-arrow">→</span>
     </a></div>
@@ -662,108 +670,108 @@ a{color:inherit;text-decoration:none}
   <section class="section" id="sec-gh">
     <div class="section-header">
       <span class="section-label">GitHub Trending</span>
-      <span class="section-sub">2026-10-08 · 20 个项目</span>
+      <span class="section-sub">2026-10-09 · 20 个项目</span>
     </div>
     <div class="gh-grid">
-    <a class="gh-card" href="https://github.com/openai/math" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">openai/math</span><span class="gh-lang">Lean</span></div>
-      <p class="gh-desc"></p>
-      <div class="gh-stats"><span>⭐ 11,357</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/alchaincyf/huashu-art-motion" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">alchaincyf/huashu-art-motion</span><span class="gh-lang">JavaScript</span></div>
-      <p class="gh-desc">艺术动画skill：35种艺术风格、9种解说语法，用代码让画动起来。</p>
-      <div class="gh-stats"><span>⭐ 2,253</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/nullmoth/nvidia-macos-driver" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">nullmoth/nvidia-macos-driver</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">Metal driver for NVIDIA GeForce RTX cards on macOS 15 Sequoia (Intel / OpenCore). Free, source included.</p>
+      <div class="gh-stats"><span>⭐ 1,192</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/alejandrobujan/tendedero" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">alejandrobujan/tendedero</span><span class="gh-lang">Swift</span></div>
       <p class="gh-desc">Screenshots, hung out to dry. A tiny native macOS app that hangs every screenshot on a line at the top of your screen.</p>
-      <div class="gh-stats"><span>⭐ 845</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 1,038</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/LoreanXavier/pt-pc" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">LoreanXavier/pt-pc</span><span class="gh-lang">C++</span></div>
       <p class="gh-desc">Native PC port of P.T. (runs from your own PS4 game files)</p>
-      <div class="gh-stats"><span>⭐ 765</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/nullmoth/nvidia-macos-driver" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">nullmoth/nvidia-macos-driver</span><span class="gh-lang">Rust</span></div>
-      <p class="gh-desc">Metal driver for NVIDIA GeForce RTX cards on macOS 15 Sequoia (Intel / OpenCore). Free, source included.</p>
-      <div class="gh-stats"><span>⭐ 711</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/pingdotgg/ts-rust" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">pingdotgg/ts-rust</span><span class="gh-lang">Rust</span></div>
-      <p class="gh-desc">An experimental Rust port of the TypeScript 7 compiler (tsc)</p>
-      <div class="gh-stats"><span>⭐ 610</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/storytold/wordcraft" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">storytold/wordcraft</span><span class="gh-lang">Rust</span></div>
-      <p class="gh-desc">An open-source, clean-room reimplementation of Microsoft Word in pure Rust</p>
-      <div class="gh-stats"><span>⭐ 511</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/bas3line/ascii" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">bas3line/ascii</span><span class="gh-lang">TypeScript</span></div>
-      <p class="gh-desc">Animated ascii art for web pages, in TypeScript: React, Next.js, Astro, or one HTML tag</p>
-      <div class="gh-stats"><span>⭐ 474</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/storytold/cadcraft" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">storytold/cadcraft</span><span class="gh-lang">Rust</span></div>
-      <p class="gh-desc">CADCraft: computer-aided design and drafting — an open-source, clean-room AutoCAD-style app in pure Rust</p>
-      <div class="gh-stats"><span>⭐ 455</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/LosaLosSantos/aurelio-finance" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">LosaLosSantos/aurelio-finance</span><span class="gh-lang">Python</span></div>
-      <p class="gh-desc">Self-hosted personal wealth analysis: portfolio &amp; net-worth tracking with AI insights. FastAPI + React.</p>
-      <div class="gh-stats"><span>⭐ 351</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/storytold/soundcraft" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">storytold/soundcraft</span><span class="gh-lang">Rust</span></div>
-      <p class="gh-desc">An open-source, clean-room reimplementation of Avid Pro Tools in pure Rust</p>
-      <div class="gh-stats"><span>⭐ 327</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 1,021</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/mhtsec/ARTEX" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">mhtsec/ARTEX</span><span class="gh-lang">Go</span></div>
       <p class="gh-desc">AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目</p>
-      <div class="gh-stats"><span>⭐ 323</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 913</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/storytold/gridcraft" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">storytold/gridcraft</span><span class="gh-lang">Rust</span></div>
-      <p class="gh-desc">GridCraft: an open-source, clean-room spreadsheet (Microsoft Excel-style) in pure Rust. By ArtCraft.</p>
-      <div class="gh-stats"><span>⭐ 317</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/storytold/wordcraft" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">storytold/wordcraft</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">An open-source, clean-room reimplementation of Microsoft Word in pure Rust</p>
+      <div class="gh-stats"><span>⭐ 874</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/storytold/deckcraft" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">storytold/deckcraft</span><span class="gh-lang">Rust</span></div>
-      <p class="gh-desc">Presentations and slide shows: an open-source, clean-room reimplementation of Microsoft PowerPoint in pure Rust. Part of the ArtCraft Crafting Apps.</p>
-      <div class="gh-stats"><span>⭐ 278</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/gr8rstudio/gr8r-studio" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">gr8rstudio/gr8r-studio</span><span class="gh-lang">JavaScript</span></div>
-      <p class="gh-desc">Gr8r Studio: a calm, structured project management workspace. Vite + plain ES modules.</p>
-      <div class="gh-stats"><span>⭐ 276</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/nanocle/Charakuru" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">nanocle/Charakuru</span></div>
-      <p class="gh-desc"></p>
-      <div class="gh-stats"><span>⭐ 270</span><span class="gh-today">+0 today</span></div>
-    </a>
-    <a class="gh-card" href="https://github.com/opencoredev/convt" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">opencoredev/convt</span><span class="gh-lang">Rust</span></div>
-      <p class="gh-desc">Convert any file with a right-click.</p>
-      <div class="gh-stats"><span>⭐ 229</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/storytold/cadcraft" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">storytold/cadcraft</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">CADCraft: computer-aided design and drafting — an open-source, clean-room AutoCAD-style app in pure Rust</p>
+      <div class="gh-stats"><span>⭐ 821</span><span class="gh-today">+0 today</span></div>
     </a>
     <a class="gh-card" href="https://github.com/shadany7824/playgta5" target="_blank" rel="noopener">
       <div class="gh-header"><span class="gh-title">shadany7824/playgta5</span><span class="gh-lang">JavaScript</span></div>
       <p class="gh-desc">A source code for playgta5.com.</p>
-      <div class="gh-stats"><span>⭐ 226</span><span class="gh-today">+0 today</span></div>
+      <div class="gh-stats"><span>⭐ 758</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/Henryfud/werm" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">Henryfud/werm</span><span class="gh-lang">HTML</span></div>
-      <p class="gh-desc">A 302 neuron network on the real C. elegans wiring diagram, with a steering layer for local language models.</p>
-      <div class="gh-stats"><span>⭐ 198</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/pingdotgg/ts-rust" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">pingdotgg/ts-rust</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">An experimental Rust port of the TypeScript 7 compiler (tsc)</p>
+      <div class="gh-stats"><span>⭐ 708</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/D3ATHLY/blackbox" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">D3ATHLY/blackbox</span></div>
-      <p class="gh-desc">BB</p>
-      <div class="gh-stats"><span>⭐ 193</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/bas3line/ascii" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">bas3line/ascii</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">Animated ascii art for web pages, in TypeScript: React, Next.js, Astro, or one HTML tag</p>
+      <div class="gh-stats"><span>⭐ 610</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/storytold/gridcraft" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">storytold/gridcraft</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">GridCraft: an open-source, clean-room spreadsheet (Microsoft Excel-style) in pure Rust. By ArtCraft.</p>
+      <div class="gh-stats"><span>⭐ 600</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/storytold/soundcraft" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">storytold/soundcraft</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">An open-source, clean-room reimplementation of Avid Pro Tools in pure Rust</p>
+      <div class="gh-stats"><span>⭐ 573</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/noahdunnagan/fsearch" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">noahdunnagan/fsearch</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">Whole-disk file search for macOS: fuzzy names, typo tolerance, indexed content grep. ~1 ms over 8M files.</p>
+      <div class="gh-stats"><span>⭐ 545</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/storytold/deckcraft" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">storytold/deckcraft</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">Presentations and slide shows: an open-source, clean-room reimplementation of Microsoft PowerPoint in pure Rust. Part of the ArtCraft Crafting Apps.</p>
+      <div class="gh-stats"><span>⭐ 501</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/gr8rstudio/gr8r-studio" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">gr8rstudio/gr8r-studio</span><span class="gh-lang">JavaScript</span></div>
+      <p class="gh-desc">Gr8r Studio: a calm, structured project management workspace. Vite + plain ES modules.</p>
+      <div class="gh-stats"><span>⭐ 338</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/droogie/bbhost" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">droogie/bbhost</span><span class="gh-lang">C++</span></div>
+      <p class="gh-desc">Definitive Bloodborne PC Experience</p>
+      <div class="gh-stats"><span>⭐ 297</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/ThariqS/ai-newtab" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">ThariqS/ai-newtab</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">Claude generates a daily new tab page based on your browser history.</p>
+      <div class="gh-stats"><span>⭐ 239</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/Nonco-Organization/multicoin-address-validator" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Nonco-Organization/multicoin-address-validator</span><span class="gh-lang">JavaScript</span></div>
+      <p class="gh-desc">Useful library for validation of Bitcoin, Litecoin, Ethereum and other cryptocoin addresses</p>
+      <div class="gh-stats"><span>⭐ 231</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/snuri00/psp-web-recomp" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">snuri00/psp-web-recomp</span><span class="gh-lang">C++</span></div>
+      <p class="gh-desc">PSP games in the browser without an emulator: static recompilation to WebAssembly, an HLE kernel and a WebGL2 renderer</p>
+      <div class="gh-stats"><span>⭐ 187</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/nullmoth/1401" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">nullmoth/1401</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">1401: macOS on the PC you already own. Free, never for sale.</p>
+      <div class="gh-stats"><span>⭐ 157</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/Jakeschincariol/founder-skill" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Jakeschincariol/founder-skill</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">Eleven free Claude skills that test a business before you launch it: a board trained on Hormozi, Thiel and Jobs, a marketing director, a CFO, and a consumer panel of 100 buyer agents. Free, MIT.</p>
+      <div class="gh-stats"><span>⭐ 150</span><span class="gh-today">+0 today</span></div>
     </a></div>
   </section>
 
@@ -781,104 +789,104 @@ a{color:inherit;text-decoration:none}
       <span class="section-sub">Top 20</span>
     </div>
     <div class="hn-list">
-    <a class="hn-row" href="https://mathstodon.xyz/@tao/117395269325940185" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://cactuscompute.com/blog/whistle" target="_blank" rel="noopener">
       <span class="hn-num">01</span>
-      <span class="hn-title">“Math 2.0” will need to value mathematical progress more holistically</span>
+      <span class="hn-title">Whistle: Speech to Text in 16.9 MB</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://newsletter.dancohen.org/archive/the-slow-formation-of-durable-software/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://terrytao.wordpress.com/2026/10/08/what-should-we-tell-our-students/" target="_blank" rel="noopener">
       <span class="hn-num">02</span>
-      <span class="hn-title">The Slow Formation of Durable Software</span>
+      <span class="hn-title">What should we tell our students?</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://quesma.com/blog/invisible-cities-one-shot/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://www.theranos.world/" target="_blank" rel="noopener">
       <span class="hn-num">03</span>
-      <span class="hn-title">I gave Opus 5.5 one prompt and six hours to visualize Invisible Cities</span>
+      <span class="hn-title">Theranos.world</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://www.dexerto.com/entertainment/man-discovers-his-parents-coffee-machine-used-1tb-of-data-in-10-days-3416399/" target="_blank" rel="noopener">
       <span class="hn-num">04</span>
-      <span class="hn-title">Claude Haiku 5.5</span>
+      <span class="hn-title">Man discovers his parents' coffee machine used 1TB of data in 10 days</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://www.telnetbbsguide.com/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://lwn.net/Articles/1095811/" target="_blank" rel="noopener">
       <span class="hn-num">05</span>
-      <span class="hn-title">Telnet BBS Guide</span>
+      <span class="hn-title">Reducing undefined behavior in the C language</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://shahidhussain.com/writing/search-for-salvage/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://antonfrolov.substack.com/p/i-hired-an-illustrator-to-draw-my" target="_blank" rel="noopener">
       <span class="hn-num">06</span>
-      <span class="hn-title">The 15-year search for a band that charted once and vanished</span>
+      <span class="hn-title">I hired an illustrator to draw my house. Now it's my Home Assistant dashboard</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://github.com/openai/math/blob/main/history.md" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/" target="_blank" rel="noopener">
       <span class="hn-num">07</span>
-      <span class="hn-title">OpenAI Withdraws 3 Math Papers</span>
+      <span class="hn-title">Why isn't the industry freaking out about DeepSeek 4.1 Flash?</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://100r.ca/site/home.html" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://bevy.org/news/bevy-0-20/" target="_blank" rel="noopener">
       <span class="hn-num">08</span>
-      <span class="hn-title">Living off-grid: Hundred Rabbits</span>
+      <span class="hn-title">Bevy 0.20</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://ken.arneson.name/2015/11/the-value-of-not-getting-to-the-point/" target="_blank" rel="noopener">
       <span class="hn-num">09</span>
-      <span class="hn-title">Margaret Hamilton has died</span>
+      <span class="hn-title">The value of not getting to the point (2015)</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://openai.com/index/gpt-6-for-everyone/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://htmx.org/essays/yes-and/" target="_blank" rel="noopener">
       <span class="hn-num">10</span>
-      <span class="hn-title">GPT‑6 and Intelligent UI for everyone</span>
+      <span class="hn-title">Yes, and</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://www.science.org/content/article/how-did-rosalind-franklin-miss-helix-her-iconic-dna-image-she-didn-t" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://biohub.org/news/virtual-biology-initiative-expansion/" target="_blank" rel="noopener">
       <span class="hn-num">11</span>
-      <span class="hn-title">How did Rosalind Franklin miss the helix in her iconic DNA image? She didn't</span>
+      <span class="hn-title">AI-ready biological data: $1.8B global commitment</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://www.404media.co/oldest-living-land-animal-jonathan-the-tortoise/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://svg-spark.vercel.app/" target="_blank" rel="noopener">
       <span class="hn-num">12</span>
-      <span class="hn-title">'Jonathan' is the oldest land animal on Earth</span>
+      <span class="hn-title">Show HN: SVG Spark – 10 client-side SVG design and dev tools</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://scottaaronson.blog/?p=10169" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://naturalsystems.io/eth68" target="_blank" rel="noopener">
       <span class="hn-num">13</span>
-      <span class="hn-title">The Mathocalypse</span>
+      <span class="hn-title">ETH-68: Ethernet Audio Interface for Linux</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://bigwords.page/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1697900/full" target="_blank" rel="noopener">
       <span class="hn-num">14</span>
-      <span class="hn-title">Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app</span>
+      <span class="hn-title">ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy (2025)</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://en.wikipedia.org/wiki/Cleo_(mathematician)" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://vale.rocks/posts/dvd-menus" target="_blank" rel="noopener">
       <span class="hn-num">15</span>
-      <span class="hn-title">Cleo (Mathematician)</span>
+      <span class="hn-title">Beauty in DVD Menus</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://www.theguardian.com/books/2026/oct/08/wins-the-nobel-prize-in-literature-2026" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://mitchellh.com/writing/program-status-osc7501" target="_blank" rel="noopener">
       <span class="hn-num">16</span>
-      <span class="hn-title">Anne Carson wins Nobel Prize in literature 2026</span>
+      <span class="hn-title">A Terminal Protocol for Program Status (OSC 7501)</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://www.ahmath.org/statements" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://github.com/edrisranjbar/lifeos" target="_blank" rel="noopener">
       <span class="hn-num">17</span>
-      <span class="hn-title">AHM Statement on OpenAI's October 6 Release of Mathematical Documents</span>
+      <span class="hn-title">Show HN: Edi Life OS – self-hosted life dashboard with an MCP server for AI</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://dat-ecosystem.org/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://openrouter.ai/stepfun/step-5-preview" target="_blank" rel="noopener">
       <span class="hn-num">18</span>
-      <span class="hn-title">Dat-ecosystem: high level applications built on top of P2P protocols</span>
+      <span class="hn-title">Step 5 Preview, a 1M-context MoE from StepFun, shows up on OpenRouter</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://treylorswift.github.io/demoscene-recomp/web/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://www.nature.com/articles/s41586-026-10546-z" target="_blank" rel="noopener">
       <span class="hn-num">19</span>
-      <span class="hn-title">Classic PC demoscene productions running natively in the browser</span>
+      <span class="hn-title">A 5.3M-year-old deep-sea whale necropolis in the Diamantina Zone</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://www.nytimes.com/2026/10/07/science/first-nuclear-clocks-thorium-229.html" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://github.com/duckdb/ducklake" target="_blank" rel="noopener">
       <span class="hn-num">20</span>
-      <span class="hn-title">In Vienna and Beijing, the first (thorium) nuclear clocks begin to tick</span>
+      <span class="hn-title">DuckDB Ducklake</span>
       <span class="hn-arrow">→</span>
     </a></div>
   </section>
@@ -886,15 +894,125 @@ a{color:inherit;text-decoration:none}
   <section class="section" id="sec-or">
     <div class="section-header">
       <span class="section-label">OpenRouter 排行</span>
-      <span class="section-sub">本周 LLM 使用量排行 · 0 个模型</span>
+      <span class="section-sub">本周 LLM 使用量排行 · 10 个模型</span>
     </div>
-    <div class="or-list"></div>
+    <div class="or-list">
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#1</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">35.6T tokens</span>
+        <span class="or-up">↑51%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#2</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">stealth</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">22.8T tokens</span>
+        <span class="or-up">↑26%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#3</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">z-ai</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">10.8T tokens</span>
+        <span class="or-up">↑7%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#4</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#ff6900">xiaomi</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">10.5T tokens</span>
+        <span class="or-up">↑13%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#5</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">tencent</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">7.36T tokens</span>
+        <span class="or-up">↑8%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#6</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#10a37f">openai</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">6.57T tokens</span>
+        <span class="or-up">↑16%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#7</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">nvidia</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">6.16T tokens</span>
+        <span class="or-flat">−0%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#8</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">5.28T tokens</span>
+        <span class="or-up">↑23%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#9</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#c96442">anthropic</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">3.83T tokens</span>
+        <span class="or-up">↑85%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#10</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">typesafe</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">3.31T tokens</span>
+        <span class="or-up">↑10%</span>
+      </div>
+    </a></div>
   </section>
 
 </main>
 
 <footer style="text-align:center;padding:2.5rem 1rem;font-size:12px;color:var(--hint);border-top:1px solid var(--border);margin-top:3rem">
-  daily-news v2 · 2026-10-08 · <a href="https://github.com/zkw15555506767-boop/zkevin-AI-dailynews" style="color:var(--gold-dim)">zkevin-AI-dailynews</a>
+  daily-news v2 · 2026-10-09 · <a href="https://github.com/zkw15555506767-boop/zkevin-AI-dailynews" style="color:var(--gold-dim)">zkevin-AI-dailynews</a>
 </footer>
 
 <script>
