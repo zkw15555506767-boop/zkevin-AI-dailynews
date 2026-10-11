@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Daily News · 2026-10-11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07070f;--surface:#0f0f1c;--card:#131320;--card-h:#1a1a2c;
+  --border:rgba(255,255,255,0.07);--border-h:rgba(255,255,255,0.14);
+  --text:#e2e2ee;--muted:#6868a0;--hint:#323252;
+  --gold:#c8a96e;--gold-dim:#8a7040;--gold-faint:rgba(200,169,110,0.08);
+  --ph:#da552f;--gh:#7c3aed;--tw:#1d9bf0;--hn:#ff6600;--or:#10b981;
+  --radius:10px;--radius-lg:16px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+/* HEADER */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(7,7,15,0.9);backdrop-filter:blur(20px) saturate(160%);
+  border-bottom:1px solid var(--border);
+  padding:0 1.5rem;height:56px;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.masthead{font-family:'Instrument Serif',serif;font-size:1.4rem;color:var(--gold);letter-spacing:0.01em;white-space:nowrap}
+.masthead em{font-style:italic;color:var(--text)}
+.header-right{display:flex;align-items:center;gap:10px}
+.date-select{
+  background:var(--card);border:1px solid var(--border);
+  color:var(--muted);font-size:13px;font-family:inherit;
+  padding:5px 10px;border-radius:6px;cursor:pointer;
+  appearance:none;-webkit-appearance:none;outline:none;
+}
+.date-select:focus{border-color:var(--border-h)}
+.total-badge{font-size:12px;color:var(--muted);background:var(--card);border:1px solid var(--border);padding:4px 10px;border-radius:20px;white-space:nowrap}
+
+/* SOURCE TABS */
+.source-tabs{
+  display:flex;gap:2px;padding:0 1.5rem;
+  background:var(--surface);border-bottom:1px solid var(--border);
+  overflow-x:auto;scrollbar-width:none;position:sticky;top:56px;z-index:99;
+}
+.source-tabs::-webkit-scrollbar{display:none}
+.tab{
+  display:flex;align-items:center;gap:6px;
+  padding:11px 15px;font-size:13px;font-weight:500;color:var(--muted);
+  border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;
+  transition:color .15s,border-color .15s;
+}
+.tab:hover{color:var(--text)}
+.tab.active{color:var(--text);border-color:var(--tab-color,var(--gold))}
+.tab .cnt{font-size:11px;background:var(--hint);border-radius:9px;padding:1px 6px;color:var(--muted)}
+
+/* MAIN */
+.main{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+.section{display:none}
+.section.active{display:block}
+
+/* DIGEST */
+.digest-card{
+  background:var(--gold-faint);border:1px solid rgba(200,169,110,0.15);
+  border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:2rem;
+}
+.digest-date{font-size:12px;color:var(--gold-dim);margin-bottom:4px;font-family:'IBM Plex Mono',monospace}
+.digest-headline{font-family:'Instrument Serif',serif;font-size:1.5rem;color:var(--gold);margin-bottom:1rem}
+.digest-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.digest-list li{font-size:14px;color:var(--muted);padding-left:1.1rem;position:relative;line-height:1.6}
+.digest-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--gold-dim)}
+.digest-list strong{color:var(--text);font-weight:500}
+.digest-link{color:var(--gold);text-decoration:underline;text-decoration-color:rgba(200,169,110,0.3)}
+.digest-link:hover{text-decoration-color:var(--gold)}
+
+/* SECTION HEADER */
+.section-header{display:flex;align-items:baseline;gap:12px;margin-bottom:1.25rem}
+.section-label{font-family:'Instrument Serif',serif;font-size:1.3rem;color:var(--text)}
+.section-sub{font-size:13px;color:var(--hint)}
+
+/* PRODUCT HUNT */
+.ph-list{display:flex;flex-direction:column;gap:2px}
+.ph-row{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.2rem;transition:background .15s,border-color .15s}
+.ph-row:hover{background:var(--card-h);border-color:var(--ph)}
+.ph-rank{font-size:1.2rem;min-width:2rem;text-align:center}
+.ph-info{flex:1;min-width:0}
+.ph-name{font-weight:500;font-size:15px;display:block}
+.ph-tagline{font-size:13px;color:var(--muted);display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ph-arrow{color:var(--hint);font-size:18px;transition:transform .15s,color .15s}
+.ph-row:hover .ph-arrow{transform:translateX(3px);color:var(--ph)}
+
+/* GITHUB */
+.gh-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+.gh-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;display:flex;flex-direction:column;gap:8px;transition:background .15s,border-color .15s}
+.gh-card:hover{background:var(--card-h);border-color:var(--gh)}
+.gh-header{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.gh-title{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;color:var(--text);word-break:break-all}
+.gh-lang{font-size:11px;padding:2px 7px;border-radius:4px;background:rgba(124,58,237,.12);color:#a78bfa;border:1px solid rgba(124,58,237,.25);white-space:nowrap}
+.gh-desc{font-size:13px;color:var(--muted);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.gh-stats{display:flex;gap:1rem;font-size:12px;color:var(--hint);margin-top:auto}
+.gh-today{color:#a78bfa}
+
+/* TWITTER */
+.tw-feed{display:flex;flex-direction:column;gap:2px}
+.tw-card{display:flex;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.2rem;transition:background .15s,border-color .15s}
+.tw-card:hover{background:var(--card-h);border-color:var(--tw)}
+.tw-avatar{width:38px;height:38px;border-radius:50%;flex-shrink:0;background:rgba(29,155,240,.1);border:1px solid rgba(29,155,240,.25);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#60b4f8}
+.tw-body{flex:1;min-width:0}
+.tw-meta{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.tw-author{font-size:13px;font-weight:500;color:var(--tw)}
+.tw-tag{font-size:10px;padding:2px 6px;border-radius:4px;font-weight:500}
+.tag-builder{background:rgba(200,169,110,.12);color:var(--gold);border:1px solid rgba(200,169,110,.2)}
+.tag-hot{background:rgba(29,155,240,.1);color:#60b4f8;border:1px solid rgba(29,155,240,.2)}
+.tw-text{font-size:14px;color:var(--text);line-height:1.55;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.tw-stats{display:flex;gap:1rem;font-size:12px;color:var(--hint);margin-top:6px}
+
+/* HACKER NEWS */
+.hn-list{display:flex;flex-direction:column;gap:2px}
+.hn-row{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.8rem 1.2rem;transition:background .15s,border-color .15s}
+.hn-row:hover{background:var(--card-h);border-color:var(--hn)}
+.hn-num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--hn);min-width:2rem}
+.hn-title{flex:1;font-size:14px}
+.hn-arrow{color:var(--hint);transition:transform .15s,color .15s}
+.hn-row:hover .hn-arrow{transform:translateX(3px);color:var(--hn)}
+
+/* OPENROUTER */
+.or-list{display:flex;flex-direction:column;gap:2px}
+.or-row{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.2rem;transition:background .15s,border-color .15s}
+.or-row:hover{background:var(--card-h);border-color:var(--or)}
+.or-rank{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--or);min-width:2.5rem;font-weight:500}
+.or-info{flex:1;min-width:0}
+.or-name{font-size:14px;font-weight:500;display:block}
+.or-provider{font-size:12px;display:block;margin-top:1px}
+.or-right{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.or-tokens{font-size:13px;color:var(--muted);font-family:'IBM Plex Mono',monospace}
+.or-new{font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(16,185,129,.12);color:var(--or);border:1px solid rgba(16,185,129,.25)}
+.or-up{font-size:11px;color:#34d399}.or-down{font-size:11px;color:#f87171}.or-flat{font-size:11px;color:var(--hint)}
+
+/* RESPONSIVE */
+@media(max-width:640px){
+  .masthead{font-size:1.15rem}
+  .total-badge{display:none}
+  .main{padding:1.5rem 1rem}
+  .gh-grid{grid-template-columns:1fr}
+}
+
+/* INSIGHTS */
+.insight-section{margin-top:2rem}
+.insight-section-title{font-family:'Instrument Serif',serif;font-size:1.15rem;color:var(--gold);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid rgba(200,169,110,.15)}
+.insight-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.25rem;margin-bottom:10px;display:flex;flex-direction:column;gap:8px}
+.insight-card:hover{border-color:var(--border-h)}
+.insight-title{font-size:14.5px;font-weight:500;color:var(--text);margin-bottom:2px}
+.insight-row{display:flex;gap:10px;align-items:flex-start}
+.insight-label{flex-shrink:0;font-size:11px;font-weight:500;padding:2px 7px;border-radius:4px;margin-top:2px;white-space:nowrap}
+.insight-label.signal{background:rgba(29,155,240,.1);color:#60b4f8;border:1px solid rgba(29,155,240,.2)}
+.insight-label.trend{background:rgba(200,169,110,.1);color:var(--gold);border:1px solid rgba(200,169,110,.2)}
+.insight-label.action{background:rgba(16,185,129,.1);color:#34d399;border:1px solid rgba(16,185,129,.2)}
+.insight-body{font-size:13px;color:var(--muted);line-height:1.6}
+.insight-body a{color:var(--gold);text-decoration:underline;text-decoration-color:rgba(200,169,110,.3)}
+.insight-body strong{color:var(--text);font-weight:500}
+
+/* OUTLOOK */
+.outlook-section{margin-top:1.5rem;display:flex;flex-direction:column;gap:1rem}
+.outlook-block{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.25rem}
+.outlook-label{font-size:11px;font-weight:500;color:var(--hint);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem}
+.outlook-summary{font-family:'Instrument Serif',serif;font-size:1.1rem;color:var(--text);line-height:1.7;font-style:italic}
+.narrative-item{margin-bottom:.9rem;padding-bottom:.9rem;border-bottom:1px solid var(--hint)}
+.narrative-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.narrative-title{font-size:13.5px;font-weight:500;color:var(--text);margin-bottom:4px}
+.narrative-body{font-size:13px;color:var(--muted);line-height:1.65}
+.pred-item{margin-bottom:.85rem;padding-bottom:.85rem;border-bottom:1px solid var(--hint)}
+.pred-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.pred-tag{font-size:12px;font-weight:500;color:var(--gold);margin-right:4px}
+.pred-content{font-size:13.5px;font-weight:500;color:var(--text)}
+.pred-evidence{font-size:12px;color:var(--hint);margin-top:4px;line-height:1.5}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="masthead">Daily <em>News</em></div>
+  <div class="header-right">
+    <select class="date-select" onchange="location.href=this.value+'.html'"><option value="2026-10-11" selected>2026-10-11</option>
+<option value="2026-10-09" >2026-10-09</option>
+<option value="2026-10-08" >2026-10-08</option>
+<option value="2026-10-01" >2026-10-01</option>
+<option value="2026-09-30" >2026-09-30</option>
+<option value="2026-09-29" >2026-09-29</option>
+<option value="2026-09-28" >2026-09-28</option>
+<option value="2026-09-27" >2026-09-27</option>
+<option value="2026-09-22" >2026-09-22</option>
+<option value="2026-09-21" >2026-09-21</option>
+<option value="2026-09-20" >2026-09-20</option>
+<option value="2026-09-18" >2026-09-18</option>
+<option value="2026-09-17" >2026-09-17</option>
+<option value="2026-09-16" >2026-09-16</option>
+<option value="2026-09-15" >2026-09-15</option>
+<option value="2026-09-14" >2026-09-14</option>
+<option value="2026-09-11" >2026-09-11</option>
+<option value="2026-09-10" >2026-09-10</option>
+<option value="2026-09-09" >2026-09-09</option>
+<option value="2026-09-08" >2026-09-08</option>
+<option value="2026-09-07" >2026-09-07</option>
+<option value="2026-09-06" >2026-09-06</option>
+<option value="2026-09-03" >2026-09-03</option>
+<option value="2026-09-02" >2026-09-02</option>
+<option value="2026-09-01" >2026-09-01</option>
+<option value="2026-08-31" >2026-08-31</option>
+<option value="2026-08-30" >2026-08-30</option>
+<option value="2026-08-29" >2026-08-29</option>
+<option value="2026-08-28" >2026-08-28</option>
+<option value="2026-08-27" >2026-08-27</option></select>
+    <span class="total-badge">10月11日 周日</span>
+  </div>
+</header>
+
+<nav class="source-tabs">
+  <div class="tab active" data-sec="digest" style="--tab-color:var(--gold)">导读</div>
+  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">0</span></div>
+  <div class="tab" data-sec="gh" style="--tab-color:var(--gh)">✦ GitHub <span class="cnt">20</span></div>
+  <div class="tab" data-sec="tw" style="--tab-color:var(--tw)">𝕏 Twitter <span class="cnt">21</span></div>
+  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">29</span></div>
+  <div class="tab" data-sec="or" style="--tab-color:var(--or)">⟳ OpenRouter <span class="cnt">10</span></div>
+</nav>
+
+<main class="main">
+
+  <section class="section active" id="sec-digest">
+    
+<div class="digest-card">
+  <div class="digest-date">10月11日 周日</div>
+  <div class="digest-headline">今日速览</div>
+  <ul class="digest-list"><li><strong>GitHub Trending</strong> · 今日 20 个项目上榜，<a href="https://github.com/storytold/craft-launcher" target="_blank" class="digest-link">storytold/craft-launcher</a> 领跑 +0 星</li>
+<li><strong>X / Twitter</strong> · 共 21 条精选，来自 ai-sweep 与 Zara Builder 精选；karpathy：Put the reset in the bag. All propagated…</li>
+<li><strong>Hacker News</strong> · 今日 29 条技术讨论</li>
+<li><strong>OpenRouter 周冠军</strong> · （deepseek）38.7T tokens，51%</li></ul>
+</div>
+
+<div class="insight-section">
+  <div class="insight-section-title">今日洞察</div>
+  
+<div class="insight-card">
+  <div class="insight-title">中国模型在 OpenRouter 使用量全面超越西方，免费策略奏效</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body">OpenRouter 本周 Top3 全为中国模型：（deepseek）、（z-ai）、（xiaomi）；Qwen3.6 Plus 和 Step 3.5 Flash 标注 free，小米 MiMo-V2-Pro 以 3.73T tokens 占据第一</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">加速中的趋势，处于<strong>份额重分配阶段</strong>：「免费+高质量」组合正在快速抢占开发者心智，一旦建立习惯将产生路径依赖</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">如果你的产品依赖 OpenAI/Anthropic API，现在是建立<strong>模型路由层</strong>的最佳时机——按任务类型（创意/代码/摘要）分配最优价格比的模型，而非绑定单一供应商</span>
+  </div>
+</div>
+<div class="insight-card">
+  <div class="insight-title">开发者工具与 AI 的融合正在加速，「可观测性」成为新刚需</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body">PH 出现 Panorama（AI 发现团队工作流）、Straude（Claude Code 使用量排行）；HN 出现「Components of a Coding Agent」深度文章</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">早期趋势，处于<strong>问题定义期</strong>：随着 AI Agent 在生产环境落地，「我的团队到底在用什么工具做什么」变成一个真实的管理痛点</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">PM 应开始为 AI 使用行为建立度量体系：用了哪些 Agent、花了多少 token、哪些任务真正被 AI 加速——没有数据就没有迭代方向</span>
+  </div>
+</div>
+</div>
+<div class="outlook-section">
+  <div class="outlook-block">
+    <div class="outlook-label">今日一句话</div>
+    <div class="outlook-summary">端侧跑模型、Agent 控工具链、中国免费模型横扫排行榜——AI 的重力中心正从「会不会」转向「谁的成本最低、离用户最近」。</div>
+  </div>
+  <div class="outlook-block">
+    <div class="outlook-label">行业主线脉络</div>
+    
+<div class="narrative-item">
+  <div class="narrative-title">主线 1：Agent 工具链的基础设施化</div>
+  <div class="narrative-body">起点：ChatGPT 插件（2023）→ 当前：MCP 协议普及 + Coding Agent 工具爆发（Goose、Handle、oh-my-codex 等）→ 下一步：Agent 编排框架成为新的「操作系统」争夺点，各大平台将争相成为 Agent 的默认宿主</div>
+</div>
+<div class="narrative-item">
+  <div class="narrative-title">主线 2：端侧 AI 的「iPhone 时刻」临近</div>
+  <div class="narrative-body">起点：Apple Silicon 支持神经网络加速（2020）→ 当前：MLX、LiteRT、Google AI Edge Gallery 工具链成熟，Tiny Aya 等本地模型出现在 PH → 下一步：2026 下半年将出现第一批「离线原生」AI App 爆款，隐私与低延迟是核心卖点</div>
+</div>
+<div class="narrative-item">
+  <div class="narrative-title">主线 3：中国模型的免费化攻势</div>
+  <div class="narrative-body">起点：DeepSeek R1 开源震惊硅谷（2025 初）→ 当前：OpenRouter Top10 中中国模型占 6 席，且主力均标注 free → 下一步：免费策略将倒逼 OpenAI/Anthropic 调整定价，中小团队的模型选择逻辑将从「最强」变为「够用且免费」</div>
+</div>
+  </div>
+  <div class="outlook-block">
+    <div class="outlook-label">产品与商业预判</div>
+    
+<div class="pred-item">
+  <span class="pred-tag">【预判1】</span>
+  <span class="pred-content">Cursor 将在 1 个月内推出 Agent 并行协作功能</span>
+  <div class="pred-evidence">依据：PH 出现 Cursor 3（「并行本地/云端 Agent 工作空间」）；oh-my-codex GitHub Trending 第一；Coding Agent 工具链密集上线</div>
+</div>
+<div class="pred-item">
+  <span class="pred-tag">【预判2】</span>
+  <span class="pred-content">Google 将在 I/O 2026 宣布 Gemini Nano 全系 Pixel 原生集成，并开放 API</span>
+  <div class="pred-evidence">依据：google-ai-edge/gallery 和 LiteRT-LM 同日冲上 GitHub Trending，Google 端侧布局节奏明显加速</div>
+</div>
+<div class="pred-item">
+  <span class="pred-tag">【预判3】</span>
+  <span class="pred-content">OpenRouter 免费模型将催生一批「AI 功能免费、增值服务收费」的 2B SaaS 产品</span>
+  <div class="pred-evidence">依据：OpenRouter Top3 均为中国免费模型；Qwen/Step/MiniMax 可为开发者提供近乎零成本的后端；商业模式空间从模型层转移到应用层</div>
+</div>
+<div class="pred-item">
+  <span class="pred-tag">【预判4】</span>
+  <span class="pred-content">「AI 可观测性」（AI Observability）将在 6 个月内成为独立赛道</span>
+  <div class="pred-evidence">依据：Straude（Claude Code 使用量排行）出现在 PH；Panorama（AI 发现工作流）上线；随着 Agent 进入生产，监控 AI 行为将成为刚需</div>
+</div>
+  </div>
+</div>
+  </section>
+
+  <section class="section" id="sec-ph">
+    <div class="section-header">
+      <span class="section-label">Product Hunt</span>
+      <span class="section-sub">今日热榜 0 款</span>
+    </div>
+    <div class="ph-list"></div>
+  </section>
+
+  <section class="section" id="sec-gh">
+    <div class="section-header">
+      <span class="section-label">GitHub Trending</span>
+      <span class="section-sub">2026-10-11 · 20 个项目</span>
+    </div>
+    <div class="gh-grid">
+    <a class="gh-card" href="https://github.com/storytold/craft-launcher" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">storytold/craft-launcher</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">The Craft App Launcher</p>
+      <div class="gh-stats"><span>⭐ 840</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/n1tr00-10/tiktok-web-signature" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">n1tr00-10/tiktok-web-signature</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">tiktok web signature reverse engineer generates valid tiktok signatures for API requets</p>
+      <div class="gh-stats"><span>⭐ 709</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/marclou/mailcheap" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">marclou/mailcheap</span><span class="gh-lang">JavaScript</span></div>
+      <p class="gh-desc">Self-hosted newsletters on Amazon SES. About $0.10 per 1,000 emails.</p>
+      <div class="gh-stats"><span>⭐ 673</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/rociiu/talorys" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">rociiu/talorys</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">Your personal AI agent in your own Cloudflare account. Chat, memory, tasks, notes and scheduled reminders, deployed with one command: npx create-talorys@latest. Free-tier friendly, single-user, no telemetry.</p>
+      <div class="gh-stats"><span>⭐ 627</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/KindStatesman/KMS-Pico" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">KindStatesman/KMS-Pico</span></div>
+      <p class="gh-desc">Kms Pico Free optimizes your professional desktop environment by providing a tailored utility configuration that enhances workflow efficiency.' This...</p>
+      <div class="gh-stats"><span>⭐ 614</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/VarnishSerpentBurn/Discord-Quest-Completer" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">VarnishSerpentBurn/Discord-Quest-Completer</span></div>
+      <p class="gh-desc">Discord Quest Completer optimizes user experience by providing a comprehensive solution to automate and streamline repetitive tasks within popular quests...</p>
+      <div class="gh-stats"><span>⭐ 611</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/navyofficerpipe/Discord-Server-Raider" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">navyofficerpipe/Discord-Server-Raider</span></div>
+      <p class="gh-desc">Discord Server Raider&quot;, an AI-driven solution designed to streamline server management tasks on GitHub without any mention of Apple or mobile devices; it...</p>
+      <div class="gh-stats"><span>⭐ 605</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/zeusinsight/FinderSearch" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">zeusinsight/FinderSearch</span><span class="gh-lang">Swift</span></div>
+      <p class="gh-desc">A native macOS file browser with fast fuzzy filename search, powered by fsearch.</p>
+      <div class="gh-stats"><span>⭐ 598</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/passrhymegazebo/AnyUnlock" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">passrhymegazebo/AnyUnlock</span></div>
+      <p class="gh-desc">Anyunlock optimizes your workflow by providing a comprehensive desktop utility configuration that streamlines processes and boosts efficiency without...</p>
+      <div class="gh-stats"><span>⭐ 511</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/Clawfitzfilter/Display-Fusion" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Clawfitzfilter/Display-Fusion</span></div>
+      <p class="gh-desc">Display Fusion optimizes desktop software utility configurations by providing a robust and efficient management system that enhances productivity without...</p>
+      <div class="gh-stats"><span>⭐ 509</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/powderdiverpillar/Total-Commander" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">powderdiverpillar/Total-Commander</span></div>
+      <p class="gh-desc">Total Commander is an advanced utility that optimizes workflow by providing a seamless interface to manage and navigate through multiple repositories...</p>
+      <div class="gh-stats"><span>⭐ 504</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/hyperrobinclash/Better-Discord" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">hyperrobinclash/Better-Discord</span></div>
+      <p class="gh-desc">Enhances productivity by streamlining your professional desktop software utility configurations with an innovative configuration manager that provides a...</p>
+      <div class="gh-stats"><span>⭐ 503</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/CoralFireRadial/StartAll-Back" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">CoralFireRadial/StartAll-Back</span></div>
+      <p class="gh-desc">Startall Back optimizes desktop configurations by providing a comprehensive repository that streamlines your workflow and ensures an efficient computing...</p>
+      <div class="gh-stats"><span>⭐ 409</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/PatchTechnician/Ads-Blocker" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">PatchTechnician/Ads-Blocker</span></div>
+      <p class="gh-desc">Ads Blocker optimizes your browsing experience by blocking intrusive ads on GitHub repositories and other platforms, ensuring a distraction-free workspace...</p>
+      <div class="gh-stats"><span>⭐ 408</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/photonrajditch/Windows-Optimizer" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">photonrajditch/Windows-Optimizer</span></div>
+      <p class="gh-desc">Enhance your Windows performance with this professional desktop software utility configuration that meticulously optimizes system settings and streamlines...</p>
+      <div class="gh-stats"><span>⭐ 405</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/TremorBisonSurvive/Discord-Nitro-Generator" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">TremorBisonSurvive/Discord-Nitro-Generator</span></div>
+      <p class="gh-desc">Discord Nitro Generator optimizes your server's performance by providing a comprehensive suite of features and enhanced capabilities without any coding...</p>
+      <div class="gh-stats"><span>⭐ 404</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/c22dev/muguet" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">c22dev/muguet</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">A native Mach-O port for iOS/macOS of GTA V, with multiplayer</p>
+      <div class="gh-stats"><span>⭐ 375</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/attowarriorbond/SolidWorks-CAD" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">attowarriorbond/SolidWorks-CAD</span></div>
+      <p class="gh-desc">Solidworks Cad meticulously configures professional desktop software utilities to facilitate seamless task execution.</p>
+      <div class="gh-stats"><span>⭐ 310</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/ParrotStaple/Microsoft-Office" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">ParrotStaple/Microsoft-Office</span></div>
+      <p class="gh-desc">Microsoft Office optimizes professional desktop software utility configurations by providing a comprehensive suite of productivity tools that streamline...</p>
+      <div class="gh-stats"><span>⭐ 305</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/HoopoeConnector/Microsoft-Project" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">HoopoeConnector/Microsoft-Project</span></div>
+      <p class="gh-desc">Microsoft Project offers comprehensive project management solutions by providing a structured platform to efficiently plan and execute tasks.</p>
+      <div class="gh-stats"><span>⭐ 304</span><span class="gh-today">+0 today</span></div>
+    </a></div>
+  </section>
+
+  <section class="section" id="sec-tw">
+    <div class="section-header">
+      <span class="section-label">X / Twitter</span>
+      <span class="section-sub">AI 热帖 + Builder 精选 · Top 21</span>
+    </div>
+    <div class="tw-feed">
+    <a class="tw-card" href="https://x.com/thsottiaux/status/2109132167112782291" target="_blank" rel="noopener">
+      <div class="tw-avatar">TH</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@thsottiaux</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Put the reset in the bag. All propagated. https://t.co/HGxaD3Zdcj</p>
+        <div class="tw-stats"><span>❤ 4,203</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/thsottiaux/status/2109090080497508356" target="_blank" rel="noopener">
+      <div class="tw-avatar">TH</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@thsottiaux</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">The day we reach perfection it will be resets from there onwards https://t.co/I6A9WHOjXT</p>
+        <div class="tw-stats"><span>❤ 4,085</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/rauchg/status/2109038632518782989" target="_blank" rel="noopener">
+      <div class="tw-avatar">RA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@rauchg</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">All plausible science fiction will be realized within our lifetime. If you’re reading this, you’re one of the luckiest humans to have ever been born (if we play our cards right.)</p>
+        <div class="tw-stats"><span>❤ 2,007</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/thsottiaux/status/2109152716954222849" target="_blank" rel="noopener">
+      <div class="tw-avatar">TH</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@thsottiaux</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Pro users, would you rather have</p>
+        <div class="tw-stats"><span>❤ 1,235</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/danshipper/status/2108941466785439796" target="_blank" rel="noopener">
+      <div class="tw-avatar">DA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@danshipper</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">yup 
+
+if your company slack is not a constant source of wonder and inspiration right now something is wrong https://t.co/5q8OoN1nJx</p>
+        <div class="tw-stats"><span>❤ 318</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/levie/status/2109079686286565378" target="_blank" rel="noopener">
+      <div class="tw-avatar">LE</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@levie</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">If you want to know where all the tokens will get consumed in the future, here it is. Agent swarms will have massive implications in a number of enterprise domains like software development, cyber, life sciences research, AI research, finance, and more.
+
+The ability to parallelize agents against a u</p>
+        <div class="tw-stats"><span>❤ 296</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/steipete/status/2109022454224150707" target="_blank" rel="noopener">
+      <div class="tw-avatar">ST</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@steipete</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">not as clear-cut, but also yes https://t.co/MYVj0Jb29v</p>
+        <div class="tw-stats"><span>❤ 273</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/levie/status/2108952226714865966" target="_blank" rel="noopener">
+      <div class="tw-avatar">LE</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@levie</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Good post to start thinking through the long term safety approaches to managing intelligence in an enterprise. As agents begin to do vastly more task execution in the organization than humans, our need to secure, govern, control, and audit that work will become paramount. 
+
+You’ll have agents operat</p>
+        <div class="tw-stats"><span>❤ 215</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/steipete/status/2109008513855087082" target="_blank" rel="noopener">
+      <div class="tw-avatar">ST</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@steipete</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">JavaScript is not a serious language 🙃 https://t.co/7yeq9rr025</p>
+        <div class="tw-stats"><span>❤ 183</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/thenanyu/status/2108976262698115550" target="_blank" rel="noopener">
+      <div class="tw-avatar">TH</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@thenanyu</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Yeah, I’ve been feeling this too. Agents make engineers extremely powerful, but PMs are generally still bottlenecked on their bandwidth they have to talk to customers.
+
+So the ideal ratio is 1:1 https://t.co/fIWDJeHwtT</p>
+        <div class="tw-stats"><span>❤ 175</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/danshipper/status/2108893466998571442" target="_blank" rel="noopener">
+      <div class="tw-avatar">DA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@danshipper</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">incredibly interesting research exploration 👇 https://t.co/IV1qOv6zPx</p>
+        <div class="tw-stats"><span>❤ 118</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/zarazhangrui/status/2109087739287384387" target="_blank" rel="noopener">
+      <div class="tw-avatar">ZA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@zarazhangrui</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Code is the new medium for creative self-expression https://t.co/jYeBPExlMV</p>
+        <div class="tw-stats"><span>❤ 74</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/nikunj/status/2109060688446677004" target="_blank" rel="noopener">
+      <div class="tw-avatar">NI</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@nikunj</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Let’s go - only took 23 months 😂 https://t.co/xIJfCRr0hY https://t.co/bLatE5FU7H</p>
+        <div class="tw-stats"><span>❤ 64</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/nikunj/status/2109038632975876395" target="_blank" rel="noopener">
+      <div class="tw-avatar">NI</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@nikunj</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Ignoring the actors in the latest debacle of VC, “philosophically” you can’t have both.. 
+
+&gt; ask a fund to show conviction, and ask to double down especially when the chips are down. 
+
+&gt; ask them not do contracted pro rata just because it’s convenient to you from a dilution perspective or the lead f</p>
+        <div class="tw-stats"><span>❤ 47</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/realmadhuguru/status/2108982858513776899" target="_blank" rel="noopener">
+      <div class="tw-avatar">RE</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@realmadhuguru</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Agent capabilities will soon evolve at RSI pace. Agentic security (identity, permissions, observability) will need to outpace this.
+
+The evolutionary direction of the broader agents space is capability -&gt; trust -&gt; autonomy
+
+The first phase has been about capability - can the combination of model + h</p>
+        <div class="tw-stats"><span>❤ 24</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/garrytan/status/2108954738540863498" target="_blank" rel="noopener">
+      <div class="tw-avatar">GA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@garrytan</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">For retrieval/latency data tasks like what GBrain does, setting up clear evals around retrieval, latency and cost per compute is useful. That's my repo https://t.co/2rdleyR8Rl which has 40+ categories that each can be auto-researched and auto-improved</p>
+        <div class="tw-stats"><span>❤ 22</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/thenanyu/status/2109035605061693774" target="_blank" rel="noopener">
+      <div class="tw-avatar">TH</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@thenanyu</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Everything seems to be going as planned https://t.co/dU2vSvR7iu https://t.co/rYrqn0aUhv</p>
+        <div class="tw-stats"><span>❤ 20</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/garrytan/status/2108954740013043789" target="_blank" rel="noopener">
+      <div class="tw-avatar">GA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@garrytan</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">I use GStack /autoplan and ask for the agent to ELI5 the plan it comes up with, and I still approve plans to make sure it's going down paths I think are likely to work. But only rarely do I have to intervene. The frontier models are fantastic these days.</p>
+        <div class="tw-stats"><span>❤ 19</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/garrytan/status/2108954741065879945" target="_blank" rel="noopener">
+      <div class="tw-avatar">GA</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@garrytan</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">https://t.co/0wdR9PQsqC works best with experimental modes including Captain turned on. I end up using one thread that is able to coordinate and run the merge PR queue, make sure that CI works, and that only green runs with full CI make it into master.</p>
+        <div class="tw-stats"><span>❤ 12</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/petergyang/status/2109107670229930458" target="_blank" rel="noopener">
+      <div class="tw-avatar">PE</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@petergyang</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Something went wrong alright https://t.co/AMb3fqmEIL</p>
+        <div class="tw-stats"><span>❤ 6</span></div>
+      </div>
+    </a>
+    <a class="tw-card" href="https://x.com/thenanyu/status/2108948921007681902" target="_blank" rel="noopener">
+      <div class="tw-avatar">TH</div>
+      <div class="tw-body">
+        <div class="tw-meta">
+          <span class="tw-author">@thenanyu</span>
+          <span class="tw-tag tag-builder">Builder精选</span>
+        </div>
+        <p class="tw-text">Ran outta gas
+Fill issue https://t.co/8i9CRpKMQg</p>
+        <div class="tw-stats"><span>❤ 5</span></div>
+      </div>
+    </a></div>
+  </section>
+
+  <section class="section" id="sec-hn">
+    <div class="section-header">
+      <span class="section-label">Hacker News</span>
+      <span class="section-sub">Top 20</span>
+    </div>
+    <div class="hn-list">
+    <a class="hn-row" href="https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/" target="_blank" rel="noopener">
+      <span class="hn-num">01</span>
+      <span class="hn-title">I paid people to try and follow my README</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://radar.cloudflare.com/bots/as13238?dateRange=7d" target="_blank" rel="noopener">
+      <span class="hn-num">02</span>
+      <span class="hn-title">Sudden drop in Cloudflare bot traffic after strike on Yandex datacenter</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://copilot.travel/tolls/europe-2026" target="_blank" rel="noopener">
+      <span class="hn-num">03</span>
+      <span class="hn-title">What driving across Europe costs in tolls, vignettes, bridges and fuel</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://lineageos.org/Changelog-32/" target="_blank" rel="noopener">
+      <span class="hn-num">04</span>
+      <span class="hn-title">LineageOS 24.0</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://disconnect3d.pl//2026/10/02/dont-put-tilde-in-your-path/" target="_blank" rel="noopener">
+      <span class="hn-num">05</span>
+      <span class="hn-title">Don't Put Tilde In Your Path</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://nitter.net" target="_blank" rel="noopener">
+      <span class="hn-num">06</span>
+      <span class="hn-title">Nitter: Update Oct 10th seeking funding and legal help</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://ircv3.net/" target="_blank" rel="noopener">
+      <span class="hn-num">07</span>
+      <span class="hn-title">IRCv3</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://jobs.ashbyhq.com/weave-os" target="_blank" rel="noopener">
+      <span class="hn-num">08</span>
+      <span class="hn-title">Weave (YC W25) is hiring ML, AI, product, &amp; design engineers</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://verdagon.dev/blog/valen-group-borrowing" target="_blank" rel="noopener">
+      <span class="hn-num">09</span>
+      <span class="hn-title">Valen's Memory Safety: A New Kind of Borrow Checking</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://patkerr.co.uk/2d-vehicles/" target="_blank" rel="noopener">
+      <span class="hn-num">10</span>
+      <span class="hn-title">2D Vehicles</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://nishtahir.com/build-your-own-decision-model/" target="_blank" rel="noopener">
+      <span class="hn-num">11</span>
+      <span class="hn-title">Build your own decision model</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://housing.over.pizza/" target="_blank" rel="noopener">
+      <span class="hn-num">12</span>
+      <span class="hn-title">A city-building game in which the city would prefer you didn't</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://hexrat.cc/pages/blog/2026_10_07" target="_blank" rel="noopener">
+      <span class="hn-num">13</span>
+      <span class="hn-title">Rat's Register Allocator</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://theconsensus.dev/p/2026/10/04/compression-and-concatenation-on-the-web.html?focus=1" target="_blank" rel="noopener">
+      <span class="hn-num">14</span>
+      <span class="hn-title">Compression and Concatenation on the Web</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://lightbulbcomputer.com/" target="_blank" rel="noopener">
+      <span class="hn-num">15</span>
+      <span class="hn-title">The Lightbulb Computer</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://ratfactor.com/cards/git-commit-size" target="_blank" rel="noopener">
+      <span class="hn-num">16</span>
+      <span class="hn-title">How big is a Git commit?</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://joelsiks.com/posts/aarch64-exclusive-access-cacheability/" target="_blank" rel="noopener">
+      <span class="hn-num">17</span>
+      <span class="hn-title">When Ldaxr Doesn't Work: Exclusive Accesses and Cacheability on AArch64</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://github.com/othermod/PSPi-Version-6" target="_blank" rel="noopener">
+      <span class="hn-num">18</span>
+      <span class="hn-title">PSPi 6 – Raspberry Pi in a PSP</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://phys.org/news/2024-02-scandinavia-farmers-slaughtered-hunter-population.html" target="_blank" rel="noopener">
+      <span class="hn-num">19</span>
+      <span class="hn-title">Scandinavia's first farmers slaughtered hunter-gatherer population, DNA suggests</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.nature.com/articles/s41586-026-11111-4" target="_blank" rel="noopener">
+      <span class="hn-num">20</span>
+      <span class="hn-title">Retrofitting language models to operate over bytes</span>
+      <span class="hn-arrow">→</span>
+    </a></div>
+  </section>
+
+  <section class="section" id="sec-or">
+    <div class="section-header">
+      <span class="section-label">OpenRouter 排行</span>
+      <span class="section-sub">本周 LLM 使用量排行 · 10 个模型</span>
+    </div>
+    <div class="or-list">
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#1</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">38.7T tokens</span>
+        <span class="or-up">↑51%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#2</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">z-ai</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">11.6T tokens</span>
+        <span class="or-up">↑22%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#3</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#ff6900">xiaomi</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">11.3T tokens</span>
+        <span class="or-up">↑19%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#4</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">stealth</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">10.9T tokens</span>
+        <span class="or-up">↑70%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#5</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">tencent</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">8.41T tokens</span>
+        <span class="or-up">↑28%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#6</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#10a37f">openai</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">7.12T tokens</span>
+        <span class="or-up">↑19%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#7</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">nvidia</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">6.63T tokens</span>
+        <span class="or-up">↑15%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#8</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#6366f1">stepfun</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">6.37T tokens</span>
+        
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#9</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">5.04T tokens</span>
+        <span class="or-up">↑17%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#10</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#c96442">anthropic</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">4.68T tokens</span>
+        <span class="or-up">↑102%</span>
+      </div>
+    </a></div>
+  </section>
+
+</main>
+
+<footer style="text-align:center;padding:2.5rem 1rem;font-size:12px;color:var(--hint);border-top:1px solid var(--border);margin-top:3rem">
+  daily-news v2 · 2026-10-11 · <a href="https://github.com/zkw15555506767-boop/zkevin-AI-dailynews" style="color:var(--gold-dim)">zkevin-AI-dailynews</a>
+</footer>
+
+<script>
+const tabs = document.querySelectorAll('.tab');
+const secs = document.querySelectorAll('.section');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    secs.forEach(s => s.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('sec-' + tab.dataset.sec).classList.add('active');
+    window.scrollTo({top:107,behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
