@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Daily News · 2026-10-16</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07070f;--surface:#0f0f1c;--card:#131320;--card-h:#1a1a2c;
+  --border:rgba(255,255,255,0.07);--border-h:rgba(255,255,255,0.14);
+  --text:#e2e2ee;--muted:#6868a0;--hint:#323252;
+  --gold:#c8a96e;--gold-dim:#8a7040;--gold-faint:rgba(200,169,110,0.08);
+  --ph:#da552f;--gh:#7c3aed;--tw:#1d9bf0;--hn:#ff6600;--or:#10b981;
+  --radius:10px;--radius-lg:16px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+/* HEADER */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(7,7,15,0.9);backdrop-filter:blur(20px) saturate(160%);
+  border-bottom:1px solid var(--border);
+  padding:0 1.5rem;height:56px;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.masthead{font-family:'Instrument Serif',serif;font-size:1.4rem;color:var(--gold);letter-spacing:0.01em;white-space:nowrap}
+.masthead em{font-style:italic;color:var(--text)}
+.header-right{display:flex;align-items:center;gap:10px}
+.date-select{
+  background:var(--card);border:1px solid var(--border);
+  color:var(--muted);font-size:13px;font-family:inherit;
+  padding:5px 10px;border-radius:6px;cursor:pointer;
+  appearance:none;-webkit-appearance:none;outline:none;
+}
+.date-select:focus{border-color:var(--border-h)}
+.total-badge{font-size:12px;color:var(--muted);background:var(--card);border:1px solid var(--border);padding:4px 10px;border-radius:20px;white-space:nowrap}
+
+/* SOURCE TABS */
+.source-tabs{
+  display:flex;gap:2px;padding:0 1.5rem;
+  background:var(--surface);border-bottom:1px solid var(--border);
+  overflow-x:auto;scrollbar-width:none;position:sticky;top:56px;z-index:99;
+}
+.source-tabs::-webkit-scrollbar{display:none}
+.tab{
+  display:flex;align-items:center;gap:6px;
+  padding:11px 15px;font-size:13px;font-weight:500;color:var(--muted);
+  border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;
+  transition:color .15s,border-color .15s;
+}
+.tab:hover{color:var(--text)}
+.tab.active{color:var(--text);border-color:var(--tab-color,var(--gold))}
+.tab .cnt{font-size:11px;background:var(--hint);border-radius:9px;padding:1px 6px;color:var(--muted)}
+
+/* MAIN */
+.main{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+.section{display:none}
+.section.active{display:block}
+
+/* DIGEST */
+.digest-card{
+  background:var(--gold-faint);border:1px solid rgba(200,169,110,0.15);
+  border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:2rem;
+}
+.digest-date{font-size:12px;color:var(--gold-dim);margin-bottom:4px;font-family:'IBM Plex Mono',monospace}
+.digest-headline{font-family:'Instrument Serif',serif;font-size:1.5rem;color:var(--gold);margin-bottom:1rem}
+.digest-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.digest-list li{font-size:14px;color:var(--muted);padding-left:1.1rem;position:relative;line-height:1.6}
+.digest-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--gold-dim)}
+.digest-list strong{color:var(--text);font-weight:500}
+.digest-link{color:var(--gold);text-decoration:underline;text-decoration-color:rgba(200,169,110,0.3)}
+.digest-link:hover{text-decoration-color:var(--gold)}
+
+/* SECTION HEADER */
+.section-header{display:flex;align-items:baseline;gap:12px;margin-bottom:1.25rem}
+.section-label{font-family:'Instrument Serif',serif;font-size:1.3rem;color:var(--text)}
+.section-sub{font-size:13px;color:var(--hint)}
+
+/* PRODUCT HUNT */
+.ph-list{display:flex;flex-direction:column;gap:2px}
+.ph-row{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.2rem;transition:background .15s,border-color .15s}
+.ph-row:hover{background:var(--card-h);border-color:var(--ph)}
+.ph-rank{font-size:1.2rem;min-width:2rem;text-align:center}
+.ph-info{flex:1;min-width:0}
+.ph-name{font-weight:500;font-size:15px;display:block}
+.ph-tagline{font-size:13px;color:var(--muted);display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ph-arrow{color:var(--hint);font-size:18px;transition:transform .15s,color .15s}
+.ph-row:hover .ph-arrow{transform:translateX(3px);color:var(--ph)}
+
+/* GITHUB */
+.gh-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+.gh-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;display:flex;flex-direction:column;gap:8px;transition:background .15s,border-color .15s}
+.gh-card:hover{background:var(--card-h);border-color:var(--gh)}
+.gh-header{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.gh-title{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;color:var(--text);word-break:break-all}
+.gh-lang{font-size:11px;padding:2px 7px;border-radius:4px;background:rgba(124,58,237,.12);color:#a78bfa;border:1px solid rgba(124,58,237,.25);white-space:nowrap}
+.gh-desc{font-size:13px;color:var(--muted);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.gh-stats{display:flex;gap:1rem;font-size:12px;color:var(--hint);margin-top:auto}
+.gh-today{color:#a78bfa}
+
+/* TWITTER */
+.tw-feed{display:flex;flex-direction:column;gap:2px}
+.tw-card{display:flex;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.2rem;transition:background .15s,border-color .15s}
+.tw-card:hover{background:var(--card-h);border-color:var(--tw)}
+.tw-avatar{width:38px;height:38px;border-radius:50%;flex-shrink:0;background:rgba(29,155,240,.1);border:1px solid rgba(29,155,240,.25);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#60b4f8}
+.tw-body{flex:1;min-width:0}
+.tw-meta{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.tw-author{font-size:13px;font-weight:500;color:var(--tw)}
+.tw-tag{font-size:10px;padding:2px 6px;border-radius:4px;font-weight:500}
+.tag-builder{background:rgba(200,169,110,.12);color:var(--gold);border:1px solid rgba(200,169,110,.2)}
+.tag-hot{background:rgba(29,155,240,.1);color:#60b4f8;border:1px solid rgba(29,155,240,.2)}
+.tw-text{font-size:14px;color:var(--text);line-height:1.55;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.tw-stats{display:flex;gap:1rem;font-size:12px;color:var(--hint);margin-top:6px}
+
+/* HACKER NEWS */
+.hn-list{display:flex;flex-direction:column;gap:2px}
+.hn-row{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.8rem 1.2rem;transition:background .15s,border-color .15s}
+.hn-row:hover{background:var(--card-h);border-color:var(--hn)}
+.hn-num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--hn);min-width:2rem}
+.hn-title{flex:1;font-size:14px}
+.hn-arrow{color:var(--hint);transition:transform .15s,color .15s}
+.hn-row:hover .hn-arrow{transform:translateX(3px);color:var(--hn)}
+
+/* OPENROUTER */
+.or-list{display:flex;flex-direction:column;gap:2px}
+.or-row{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.2rem;transition:background .15s,border-color .15s}
+.or-row:hover{background:var(--card-h);border-color:var(--or)}
+.or-rank{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--or);min-width:2.5rem;font-weight:500}
+.or-info{flex:1;min-width:0}
+.or-name{font-size:14px;font-weight:500;display:block}
+.or-provider{font-size:12px;display:block;margin-top:1px}
+.or-right{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.or-tokens{font-size:13px;color:var(--muted);font-family:'IBM Plex Mono',monospace}
+.or-new{font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(16,185,129,.12);color:var(--or);border:1px solid rgba(16,185,129,.25)}
+.or-up{font-size:11px;color:#34d399}.or-down{font-size:11px;color:#f87171}.or-flat{font-size:11px;color:var(--hint)}
+
+/* RESPONSIVE */
+@media(max-width:640px){
+  .masthead{font-size:1.15rem}
+  .total-badge{display:none}
+  .main{padding:1.5rem 1rem}
+  .gh-grid{grid-template-columns:1fr}
+}
+
+/* INSIGHTS */
+.insight-section{margin-top:2rem}
+.insight-section-title{font-family:'Instrument Serif',serif;font-size:1.15rem;color:var(--gold);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid rgba(200,169,110,.15)}
+.insight-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.25rem;margin-bottom:10px;display:flex;flex-direction:column;gap:8px}
+.insight-card:hover{border-color:var(--border-h)}
+.insight-title{font-size:14.5px;font-weight:500;color:var(--text);margin-bottom:2px}
+.insight-row{display:flex;gap:10px;align-items:flex-start}
+.insight-label{flex-shrink:0;font-size:11px;font-weight:500;padding:2px 7px;border-radius:4px;margin-top:2px;white-space:nowrap}
+.insight-label.signal{background:rgba(29,155,240,.1);color:#60b4f8;border:1px solid rgba(29,155,240,.2)}
+.insight-label.trend{background:rgba(200,169,110,.1);color:var(--gold);border:1px solid rgba(200,169,110,.2)}
+.insight-label.action{background:rgba(16,185,129,.1);color:#34d399;border:1px solid rgba(16,185,129,.2)}
+.insight-body{font-size:13px;color:var(--muted);line-height:1.6}
+.insight-body a{color:var(--gold);text-decoration:underline;text-decoration-color:rgba(200,169,110,.3)}
+.insight-body strong{color:var(--text);font-weight:500}
+
+/* OUTLOOK */
+.outlook-section{margin-top:1.5rem;display:flex;flex-direction:column;gap:1rem}
+.outlook-block{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.25rem}
+.outlook-label{font-size:11px;font-weight:500;color:var(--hint);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem}
+.outlook-summary{font-family:'Instrument Serif',serif;font-size:1.1rem;color:var(--text);line-height:1.7;font-style:italic}
+.narrative-item{margin-bottom:.9rem;padding-bottom:.9rem;border-bottom:1px solid var(--hint)}
+.narrative-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.narrative-title{font-size:13.5px;font-weight:500;color:var(--text);margin-bottom:4px}
+.narrative-body{font-size:13px;color:var(--muted);line-height:1.65}
+.pred-item{margin-bottom:.85rem;padding-bottom:.85rem;border-bottom:1px solid var(--hint)}
+.pred-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.pred-tag{font-size:12px;font-weight:500;color:var(--gold);margin-right:4px}
+.pred-content{font-size:13.5px;font-weight:500;color:var(--text)}
+.pred-evidence{font-size:12px;color:var(--hint);margin-top:4px;line-height:1.5}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="masthead">Daily <em>News</em></div>
+  <div class="header-right">
+    <select class="date-select" onchange="location.href=this.value+'.html'"><option value="2026-10-16" selected>2026-10-16</option>
+<option value="2026-10-12" >2026-10-12</option>
+<option value="2026-10-11" >2026-10-11</option>
+<option value="2026-10-09" >2026-10-09</option>
+<option value="2026-10-08" >2026-10-08</option>
+<option value="2026-10-01" >2026-10-01</option>
+<option value="2026-09-30" >2026-09-30</option>
+<option value="2026-09-29" >2026-09-29</option>
+<option value="2026-09-28" >2026-09-28</option>
+<option value="2026-09-27" >2026-09-27</option>
+<option value="2026-09-22" >2026-09-22</option>
+<option value="2026-09-21" >2026-09-21</option>
+<option value="2026-09-20" >2026-09-20</option>
+<option value="2026-09-18" >2026-09-18</option>
+<option value="2026-09-17" >2026-09-17</option>
+<option value="2026-09-16" >2026-09-16</option>
+<option value="2026-09-15" >2026-09-15</option>
+<option value="2026-09-14" >2026-09-14</option>
+<option value="2026-09-11" >2026-09-11</option>
+<option value="2026-09-10" >2026-09-10</option>
+<option value="2026-09-09" >2026-09-09</option>
+<option value="2026-09-08" >2026-09-08</option>
+<option value="2026-09-07" >2026-09-07</option>
+<option value="2026-09-06" >2026-09-06</option>
+<option value="2026-09-03" >2026-09-03</option>
+<option value="2026-09-02" >2026-09-02</option>
+<option value="2026-09-01" >2026-09-01</option>
+<option value="2026-08-31" >2026-08-31</option>
+<option value="2026-08-30" >2026-08-30</option>
+<option value="2026-08-29" >2026-08-29</option></select>
+    <span class="total-badge">10月16日 周五</span>
+  </div>
+</header>
+
+<nav class="source-tabs">
+  <div class="tab active" data-sec="digest" style="--tab-color:var(--gold)">导读</div>
+  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">0</span></div>
+  <div class="tab" data-sec="gh" style="--tab-color:var(--gh)">✦ GitHub <span class="cnt">20</span></div>
+  <div class="tab" data-sec="tw" style="--tab-color:var(--tw)">𝕏 Twitter <span class="cnt">0</span></div>
+  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">30</span></div>
+  <div class="tab" data-sec="or" style="--tab-color:var(--or)">⟳ OpenRouter <span class="cnt">10</span></div>
+</nav>
+
+<main class="main">
+
+  <section class="section active" id="sec-digest">
+    
+<div class="digest-card">
+  <div class="digest-date">10月16日 周五</div>
+  <div class="digest-headline">今日速览</div>
+  <ul class="digest-list"><li><strong>GitHub Trending</strong> · 今日 20 个项目上榜，<a href="https://github.com/ahwootech/BRUTAL" target="_blank" class="digest-link">ahwootech/BRUTAL</a> 领跑 +0 星</li>
+<li><strong>X / Twitter</strong> · 共 0 条精选，来自 ai-sweep 与 Zara Builder 精选</li>
+<li><strong>Hacker News</strong> · 今日 30 条技术讨论</li>
+<li><strong>OpenRouter 周冠军</strong> · （deepseek）37.1T tokens，4%</li></ul>
+</div>
+
+<div class="insight-section">
+  <div class="insight-section-title">今日洞察</div>
+  
+<div class="insight-card">
+  <div class="insight-title">中国模型在 OpenRouter 使用量全面超越西方，免费策略奏效</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body">OpenRouter 本周 Top3 全为中国模型：（deepseek）、（stepfun）、（z-ai）；Qwen3.6 Plus 和 Step 3.5 Flash 标注 free，小米 MiMo-V2-Pro 以 3.73T tokens 占据第一</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">加速中的趋势，处于<strong>份额重分配阶段</strong>：「免费+高质量」组合正在快速抢占开发者心智，一旦建立习惯将产生路径依赖</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">如果你的产品依赖 OpenAI/Anthropic API，现在是建立<strong>模型路由层</strong>的最佳时机——按任务类型（创意/代码/摘要）分配最优价格比的模型，而非绑定单一供应商</span>
+  </div>
+</div>
+<div class="insight-card">
+  <div class="insight-title">开发者工具与 AI 的融合正在加速，「可观测性」成为新刚需</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body">PH 出现 Panorama（AI 发现团队工作流）、Straude（Claude Code 使用量排行）；HN 出现「Components of a Coding Agent」深度文章</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">早期趋势，处于<strong>问题定义期</strong>：随着 AI Agent 在生产环境落地，「我的团队到底在用什么工具做什么」变成一个真实的管理痛点</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">PM 应开始为 AI 使用行为建立度量体系：用了哪些 Agent、花了多少 token、哪些任务真正被 AI 加速——没有数据就没有迭代方向</span>
+  </div>
+</div>
+</div>
+<div class="outlook-section">
+  <div class="outlook-block">
+    <div class="outlook-label">今日一句话</div>
+    <div class="outlook-summary">端侧跑模型、Agent 控工具链、中国免费模型横扫排行榜——AI 的重力中心正从「会不会」转向「谁的成本最低、离用户最近」。</div>
+  </div>
+  <div class="outlook-block">
+    <div class="outlook-label">行业主线脉络</div>
+    
+<div class="narrative-item">
+  <div class="narrative-title">主线 1：Agent 工具链的基础设施化</div>
+  <div class="narrative-body">起点：ChatGPT 插件（2023）→ 当前：MCP 协议普及 + Coding Agent 工具爆发（Goose、Handle、oh-my-codex 等）→ 下一步：Agent 编排框架成为新的「操作系统」争夺点，各大平台将争相成为 Agent 的默认宿主</div>
+</div>
+<div class="narrative-item">
+  <div class="narrative-title">主线 2：端侧 AI 的「iPhone 时刻」临近</div>
+  <div class="narrative-body">起点：Apple Silicon 支持神经网络加速（2020）→ 当前：MLX、LiteRT、Google AI Edge Gallery 工具链成熟，Tiny Aya 等本地模型出现在 PH → 下一步：2026 下半年将出现第一批「离线原生」AI App 爆款，隐私与低延迟是核心卖点</div>
+</div>
+<div class="narrative-item">
+  <div class="narrative-title">主线 3：中国模型的免费化攻势</div>
+  <div class="narrative-body">起点：DeepSeek R1 开源震惊硅谷（2025 初）→ 当前：OpenRouter Top10 中中国模型占 6 席，且主力均标注 free → 下一步：免费策略将倒逼 OpenAI/Anthropic 调整定价，中小团队的模型选择逻辑将从「最强」变为「够用且免费」</div>
+</div>
+  </div>
+  <div class="outlook-block">
+    <div class="outlook-label">产品与商业预判</div>
+    
+<div class="pred-item">
+  <span class="pred-tag">【预判1】</span>
+  <span class="pred-content">Cursor 将在 1 个月内推出 Agent 并行协作功能</span>
+  <div class="pred-evidence">依据：PH 出现 Cursor 3（「并行本地/云端 Agent 工作空间」）；oh-my-codex GitHub Trending 第一；Coding Agent 工具链密集上线</div>
+</div>
+<div class="pred-item">
+  <span class="pred-tag">【预判2】</span>
+  <span class="pred-content">Google 将在 I/O 2026 宣布 Gemini Nano 全系 Pixel 原生集成，并开放 API</span>
+  <div class="pred-evidence">依据：google-ai-edge/gallery 和 LiteRT-LM 同日冲上 GitHub Trending，Google 端侧布局节奏明显加速</div>
+</div>
+<div class="pred-item">
+  <span class="pred-tag">【预判3】</span>
+  <span class="pred-content">OpenRouter 免费模型将催生一批「AI 功能免费、增值服务收费」的 2B SaaS 产品</span>
+  <div class="pred-evidence">依据：OpenRouter Top3 均为中国免费模型；Qwen/Step/MiniMax 可为开发者提供近乎零成本的后端；商业模式空间从模型层转移到应用层</div>
+</div>
+<div class="pred-item">
+  <span class="pred-tag">【预判4】</span>
+  <span class="pred-content">「AI 可观测性」（AI Observability）将在 6 个月内成为独立赛道</span>
+  <div class="pred-evidence">依据：Straude（Claude Code 使用量排行）出现在 PH；Panorama（AI 发现工作流）上线；随着 Agent 进入生产，监控 AI 行为将成为刚需</div>
+</div>
+  </div>
+</div>
+  </section>
+
+  <section class="section" id="sec-ph">
+    <div class="section-header">
+      <span class="section-label">Product Hunt</span>
+      <span class="section-sub">今日热榜 0 款</span>
+    </div>
+    <div class="ph-list"></div>
+  </section>
+
+  <section class="section" id="sec-gh">
+    <div class="section-header">
+      <span class="section-label">GitHub Trending</span>
+      <span class="section-sub">2026-10-16 · 20 个项目</span>
+    </div>
+    <div class="gh-grid">
+    <a class="gh-card" href="https://github.com/ahwootech/BRUTAL" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">ahwootech/BRUTAL</span><span class="gh-lang">C#</span></div>
+      <p class="gh-desc">A free, open source C# framework for making games, or your own game engine. Direct access to native APIs and Vulkan, with the low-level libraries around them. The foundation under Kitten Space Agency and RimWorld's Waylith engine.</p>
+      <div class="gh-stats"><span>⭐ 1,217</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/chenglou/handwired" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">chenglou/handwired</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">Turn your regular JavaScript code into a neural net.</p>
+      <div class="gh-stats"><span>⭐ 1,135</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/Caho1/open-claude-ui" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Caho1/open-claude-ui</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">基于 REA 深度拆解并高保真还原 Claude 官方桌面端 UI。纯手写 30 个独立 React 组件与 8 项硬核交互物理算法，附带 3000+ 行逆向分析手册。</p>
+      <div class="gh-stats"><span>⭐ 783</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/feder-cr/open_scion" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">feder-cr/open_scion</span><span class="gh-lang">Go</span></div>
+      <p class="gh-desc">Open-source version of Scion: version control built for coding agents.</p>
+      <div class="gh-stats"><span>⭐ 724</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/Supermedo/uncharted_pc" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Supermedo/uncharted_pc</span><span class="gh-lang">C++</span></div>
+      <p class="gh-desc">Uncharted: The Nathan Drake Collection running natively on Windows - by SuperMedo</p>
+      <div class="gh-stats"><span>⭐ 708</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/StoopwenpueNq/jackie-fmri-sim" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">StoopwenpueNq/jackie-fmri-sim</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">jackie-fmri-sim</p>
+      <div class="gh-stats"><span>⭐ 469</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/0xProbabillity/house-control" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">0xProbabillity/house-control</span><span class="gh-lang">Swift</span></div>
+      <p class="gh-desc">Your home as a live 3D model in the Mac menu bar and on iPhone — lights and ACs via Smart Life, Home Assistant, Philips Hue and Apple Home.</p>
+      <div class="gh-stats"><span>⭐ 421</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/MyLuxy/overdrive" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">MyLuxy/overdrive</span><span class="gh-lang">C++</span></div>
+      <p class="gh-desc">Overdrive, a PS5 homebrew game store with 1,800+ games.</p>
+      <div class="gh-stats"><span>⭐ 381</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/pro-vi/cc-stretch" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">pro-vi/cc-stretch</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">Stretchtext replies for Claude Code: short by default, each phrase grows in place when you click it</p>
+      <div class="gh-stats"><span>⭐ 304</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/ctresb/leis" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">ctresb/leis</span></div>
+      <p class="gh-desc">Todas as leis do Brasil</p>
+      <div class="gh-stats"><span>⭐ 239</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/assafkip/claudemy" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">assafkip/claudemy</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">Claudemy: an open-source alternative to Udemy and Coursera. Give Claude a topic, it researches the web and builds a course of 2-minute audio lessons with cited sources. A free Claude Code skill.</p>
+      <div class="gh-stats"><span>⭐ 239</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/Entelligence-AI/agentplay" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Entelligence-AI/agentplay</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">Replay your coding agent sessions as a map and a timeline</p>
+      <div class="gh-stats"><span>⭐ 213</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/VallierDev/uu-remote-linux" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">VallierDev/uu-remote-linux</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">非官方 UU 远程 Linux 被控端 · Unofficial Linux host for NetEase UU Remote</p>
+      <div class="gh-stats"><span>⭐ 205</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/CarterT27/scion" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">CarterT27/scion</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">Implementation of Anthropic's version control system</p>
+      <div class="gh-stats"><span>⭐ 191</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/TG-Twilight/c001apk" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">TG-Twilight/c001apk</span><span class="gh-lang">Dart</span></div>
+      <p class="gh-desc">一个轻量的非官方酷安客户端</p>
+      <div class="gh-stats"><span>⭐ 176</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/Graphicle-AI/graphicle" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Graphicle-AI/graphicle</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">Code graph and memory for your coding agents, in one Rust program. For Claude Code, Codex, Cursor and any MCP client.</p>
+      <div class="gh-stats"><span>⭐ 176</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/antirez/c64-hw-simulator" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">antirez/c64-hw-simulator</span><span class="gh-lang">C</span></div>
+      <p class="gh-desc">Commodore 64 hardware simulator</p>
+      <div class="gh-stats"><span>⭐ 157</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/LSPosed/dexsql-release" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">LSPosed/dexsql-release</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">SQL for Android apk and dex files</p>
+      <div class="gh-stats"><span>⭐ 143</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/Spark198rus/black-pc" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Spark198rus/black-pc</span><span class="gh-lang">C++</span></div>
+      <p class="gh-desc">Unofficial native Windows port of BLACK (Xbox, NTSC-U). Runs your own copy of the game's code on the PC; no game data included.</p>
+      <div class="gh-stats"><span>⭐ 132</span><span class="gh-today">+0 today</span></div>
+    </a>
+    <a class="gh-card" href="https://github.com/deeeeone/gitdrive" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">deeeeone/gitdrive</span><span class="gh-lang">Swift</span></div>
+      <p class="gh-desc">Turn GitHub into an iCloud-style drive for macOS. Native Finder integration, files on demand, real git history, Git LFS, and optional ML-KEM + X25519 encryption where GitHub sees only random data.</p>
+      <div class="gh-stats"><span>⭐ 124</span><span class="gh-today">+0 today</span></div>
+    </a></div>
+  </section>
+
+  <section class="section" id="sec-tw">
+    <div class="section-header">
+      <span class="section-label">X / Twitter</span>
+      <span class="section-sub">AI 热帖 + Builder 精选 · Top 0</span>
+    </div>
+    <div class="tw-feed"></div>
+  </section>
+
+  <section class="section" id="sec-hn">
+    <div class="section-header">
+      <span class="section-label">Hacker News</span>
+      <span class="section-sub">Top 20</span>
+    </div>
+    <div class="hn-list">
+    <a class="hn-row" href="https://research.meta.ai/blog/muse-spark-open" target="_blank" rel="noopener">
+      <span class="hn-num">01</span>
+      <span class="hn-title">Muse Spark Open</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://ipinfo.io/blog/rpki-protects-70-internet-routes" target="_blank" rel="noopener">
+      <span class="hn-num">02</span>
+      <span class="hn-title">RPKI now protects 70% of internet routes</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.niemanlab.org/2026/10/metas-new-commercial-terms-will-allow-the-scraping-of-news-sites-legal-experts-say/" target="_blank" rel="noopener">
+      <span class="hn-num">03</span>
+      <span class="hn-title">Business accounts will consent to Meta scraping their websites Starting Oct. 30</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://6abc.com/post/woman-arrested-blocking-delivery-robot-center-city-philadelphia-confrontation/19941323/" target="_blank" rel="noopener">
+      <span class="hn-num">04</span>
+      <span class="hn-title">Woman arrested after blocking delivery robot in Center City Philadelphia</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://github.com/Saffsanity/sill" target="_blank" rel="noopener">
+      <span class="hn-num">05</span>
+      <span class="hn-title">Any window from your Mac, on your iPhone and iPad</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://already-clean.goodfire.com/" target="_blank" rel="noopener">
+      <span class="hn-num">06</span>
+      <span class="hn-title">Neural networks are clean</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.pcmag.com/news/apple-routed-a-graphite-pipe-through-the-iphone-duos-hinge" target="_blank" rel="noopener">
+      <span class="hn-num">07</span>
+      <span class="hn-title">Apple routed a graphite pipe through the iPhone Duo's hinge to dissipate heat</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/" target="_blank" rel="noopener">
+      <span class="hn-num">08</span>
+      <span class="hn-title">What I Self-Host</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://github.com/fyzugx/DEsk" target="_blank" rel="noopener">
+      <span class="hn-num">09</span>
+      <span class="hn-title">Wayland desktop for Linux with skeuomorphic design</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup" target="_blank" rel="noopener">
+      <span class="hn-num">10</span>
+      <span class="hn-title">Someone on Torrent Sites Kept Fucking with My Sonarr</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://sklar.rocks/non-determinism-doesnt-matter/" target="_blank" rel="noopener">
+      <span class="hn-num">11</span>
+      <span class="hn-title">Non-Determinism Doesn't Matter</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/" target="_blank" rel="noopener">
+      <span class="hn-num">12</span>
+      <span class="hn-title">AdFection: Targeted ads turned into a pipeline for zero-click mercenary spyware</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://zachlandes.com/trolley-problem/" target="_blank" rel="noopener">
+      <span class="hn-num">13</span>
+      <span class="hn-title">Jev meets the Trolley Problem</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.krea.ai/krea-3" target="_blank" rel="noopener">
+      <span class="hn-num">14</span>
+      <span class="hn-title">Krea 3 – An image model built for editing at scale</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts" target="_blank" rel="noopener">
+      <span class="hn-num">15</span>
+      <span class="hn-title">New Withings Users Must Pay $99/Year for Apple Health Syncing</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://github.com/johnrash/bebox" target="_blank" rel="noopener">
+      <span class="hn-num">16</span>
+      <span class="hn-title">BeBox is a Haiku application that emulates Be Inc.'s BeBox</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://fortran-lang.org/news/2026/09-15-Fortran-birthday/" target="_blank" rel="noopener">
+      <span class="hn-num">17</span>
+      <span class="hn-title">Celebrating 70 Years of Fortran</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://www.polygon.com/order-of-the-sinking-star-impressions/" target="_blank" rel="noopener">
+      <span class="hn-num">18</span>
+      <span class="hn-title">'500-hour' Order of the Sinking Star is as complex and exhausting as it sounds</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://opennet.ru/base/maillist/169.txt.html" target="_blank" rel="noopener">
+      <span class="hn-num">19</span>
+      <span class="hn-title">Major ICQ security hole (1998)</span>
+      <span class="hn-arrow">→</span>
+    </a>
+    <a class="hn-row" href="https://svpow.com/2026/10/02/speculative-sauropods/" target="_blank" rel="noopener">
+      <span class="hn-num">20</span>
+      <span class="hn-title">Speculative Sauropods</span>
+      <span class="hn-arrow">→</span>
+    </a></div>
+  </section>
+
+  <section class="section" id="sec-or">
+    <div class="section-header">
+      <span class="section-label">OpenRouter 排行</span>
+      <span class="section-sub">本周 LLM 使用量排行 · 10 个模型</span>
+    </div>
+    <div class="or-list">
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#1</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">37.1T tokens</span>
+        <span class="or-up">↑4%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#2</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#6366f1">stepfun</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">19.5T tokens</span>
+        
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#3</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">z-ai</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">12.9T tokens</span>
+        <span class="or-up">↑19%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#4</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#ff6900">xiaomi</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">11.2T tokens</span>
+        <span class="or-up">↑7%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#5</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">tencent</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">7.88T tokens</span>
+        <span class="or-up">↑7%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#6</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">nvidia</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">7.27T tokens</span>
+        <span class="or-up">↑18%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#7</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#10a37f">openai</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">6.77T tokens</span>
+        <span class="or-up">↑3%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#8</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#c96442">anthropic</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">5.85T tokens</span>
+        <span class="or-up">↑53%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#9</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#666">z-ai</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">4.83T tokens</span>
+        <span class="or-up">↑46%</span>
+      </div>
+    </a>
+    <a class="or-row" href="#" target="_blank" rel="noopener">
+      <span class="or-rank">#10</span>
+      <div class="or-info">
+        <span class="or-name"></span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
+      </div>
+      <div class="or-right">
+        <span class="or-tokens">4.73T tokens</span>
+        <span class="or-up">↑10%</span>
+      </div>
+    </a></div>
+  </section>
+
+</main>
+
+<footer style="text-align:center;padding:2.5rem 1rem;font-size:12px;color:var(--hint);border-top:1px solid var(--border);margin-top:3rem">
+  daily-news v2 · 2026-10-16 · <a href="https://github.com/zkw15555506767-boop/zkevin-AI-dailynews" style="color:var(--gold-dim)">zkevin-AI-dailynews</a>
+</footer>
+
+<script>
+const tabs = document.querySelectorAll('.tab');
+const secs = document.querySelectorAll('.section');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    secs.forEach(s => s.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('sec-' + tab.dataset.sec).classList.add('active');
+    window.scrollTo({top:107,behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
