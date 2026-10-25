@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Daily News · 2026-10-16</title>
+<title>Daily News · 2026-10-20</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -184,7 +184,8 @@ a{color:inherit;text-decoration:none}
 <header class="site-header">
   <div class="masthead">Daily <em>News</em></div>
   <div class="header-right">
-    <select class="date-select" onchange="location.href=this.value+'.html'"><option value="2026-10-16" selected>2026-10-16</option>
+    <select class="date-select" onchange="location.href=this.value+'.html'"><option value="2026-10-20" selected>2026-10-20</option>
+<option value="2026-10-16" >2026-10-16</option>
 <option value="2026-10-12" >2026-10-12</option>
 <option value="2026-10-11" >2026-10-11</option>
 <option value="2026-10-09" >2026-10-09</option>
@@ -212,18 +213,17 @@ a{color:inherit;text-decoration:none}
 <option value="2026-09-02" >2026-09-02</option>
 <option value="2026-09-01" >2026-09-01</option>
 <option value="2026-08-31" >2026-08-31</option>
-<option value="2026-08-30" >2026-08-30</option>
-<option value="2026-08-29" >2026-08-29</option></select>
-    <span class="total-badge">10月16日 周五</span>
+<option value="2026-08-30" >2026-08-30</option></select>
+    <span class="total-badge">10月20日 周二</span>
   </div>
 </header>
 
 <nav class="source-tabs">
   <div class="tab active" data-sec="digest" style="--tab-color:var(--gold)">导读</div>
-  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">0</span></div>
+  <div class="tab" data-sec="ph" style="--tab-color:var(--ph)">🐱 Product Hunt <span class="cnt">31</span></div>
   <div class="tab" data-sec="gh" style="--tab-color:var(--gh)">✦ GitHub <span class="cnt">20</span></div>
   <div class="tab" data-sec="tw" style="--tab-color:var(--tw)">𝕏 Twitter <span class="cnt">0</span></div>
-  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">30</span></div>
+  <div class="tab" data-sec="hn" style="--tab-color:var(--hn)">▲ Hacker News <span class="cnt">29</span></div>
   <div class="tab" data-sec="or" style="--tab-color:var(--or)">⟳ OpenRouter <span class="cnt">10</span></div>
 </nav>
 
@@ -232,22 +232,38 @@ a{color:inherit;text-decoration:none}
   <section class="section active" id="sec-digest">
     
 <div class="digest-card">
-  <div class="digest-date">10月16日 周五</div>
+  <div class="digest-date">10月20日 周二</div>
   <div class="digest-headline">今日速览</div>
-  <ul class="digest-list"><li><strong>GitHub Trending</strong> · 今日 20 个项目上榜，<a href="https://github.com/ahwootech/BRUTAL" target="_blank" class="digest-link">ahwootech/BRUTAL</a> 领跑 +0 星</li>
+  <ul class="digest-list"><li><strong>Product Hunt #1</strong> · <a href="https://www.producthunt.com/products/beam-win" target="_blank" class="digest-link">1\. Beam.win</a> — Run AI agents on one Mac and use its windows on another</li>
+<li><strong>GitHub Trending</strong> · 今日 20 个项目上榜，<a href="https://github.com/xiaoyang111222/cn-math-taxonomy" target="_blank" class="digest-link">xiaoyang111222/cn-math-taxonomy</a> 领跑 +0 星</li>
 <li><strong>X / Twitter</strong> · 共 0 条精选，来自 ai-sweep 与 Zara Builder 精选</li>
-<li><strong>Hacker News</strong> · 今日 30 条技术讨论</li>
-<li><strong>OpenRouter 周冠军</strong> · （deepseek）37.1T tokens，4%</li></ul>
+<li><strong>Hacker News</strong> · 今日 29 条技术讨论</li>
+<li><strong>OpenRouter 周冠军</strong> · （deepseek）29.6T tokens，27%</li></ul>
 </div>
 
 <div class="insight-section">
   <div class="insight-section-title">今日洞察</div>
   
 <div class="insight-card">
+  <div class="insight-title">AI Coding Agent 进入工具链爆发期</div>
+  <div class="insight-row">
+    <span class="insight-label signal">信号</span>
+    <span class="insight-body">GitHub Trending 出现 <a href='https://github.com/block/goose' target='_blank' class='digest-link'>block/goose</a>（+0）；PH 上线 Handle Extension（Agent 与浏览器 UI 联动）；HN 热帖「Components of a Coding Agent」引发深度讨论</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label trend">趋势</span>
+    <span class="insight-body">结构性加速趋势，处于<strong>工具链分化期</strong>：从「AI 写代码」演进到「Agent 操控整个开发环境」，下一步是 Agent 之间的协作编排</span>
+  </div>
+  <div class="insight-row">
+    <span class="insight-label action">PM 行动</span>
+    <span class="insight-body">PM 现在应重点关注：① 你的产品有没有暴露足够的 API/MCP 接口供 Agent 调用？② 用户的「任务上下文」能否被 Agent 无缝继承？优先做 Agent 入口而非 AI 功能集成</span>
+  </div>
+</div>
+<div class="insight-card">
   <div class="insight-title">中国模型在 OpenRouter 使用量全面超越西方，免费策略奏效</div>
   <div class="insight-row">
     <span class="insight-label signal">信号</span>
-    <span class="insight-body">OpenRouter 本周 Top3 全为中国模型：（deepseek）、（stepfun）、（z-ai）；Qwen3.6 Plus 和 Step 3.5 Flash 标注 free，小米 MiMo-V2-Pro 以 3.73T tokens 占据第一</span>
+    <span class="insight-body">OpenRouter 本周 Top3 全为中国模型：（deepseek）、（z-ai）、（xiaomi）；Qwen3.6 Plus 和 Step 3.5 Flash 标注 free，小米 MiMo-V2-Pro 以 3.73T tokens 占据第一</span>
   </div>
   <div class="insight-row">
     <span class="insight-label trend">趋势</span>
@@ -325,116 +341,364 @@ a{color:inherit;text-decoration:none}
   <section class="section" id="sec-ph">
     <div class="section-header">
       <span class="section-label">Product Hunt</span>
-      <span class="section-sub">今日热榜 0 款</span>
+      <span class="section-sub">今日热榜 31 款</span>
     </div>
-    <div class="ph-list"></div>
+    <div class="ph-list">
+    <a class="ph-row" href="https://www.producthunt.com/products/beam-win" target="_blank" rel="noopener">
+      <span class="ph-rank">🥇</span>
+      <div class="ph-info">
+        <span class="ph-name">1\. Beam.win</span>
+        <span class="ph-tagline">Run AI agents on one Mac and use its windows on another</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/figma" target="_blank" rel="noopener">
+      <span class="ph-rank">🥈</span>
+      <div class="ph-info">
+        <span class="ph-name">2\. Figma Specs</span>
+        <span class="ph-tagline">A container for your context that lives on the Figma canvas</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/readywhen" target="_blank" rel="noopener">
+      <span class="ph-rank">🥉</span>
+      <div class="ph-info">
+        <span class="ph-name">3\. readywhen</span>
+        <span class="ph-tagline">The senior personal assistant that works inside WhatsApp</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/gleap" target="_blank" rel="noopener">
+      <span class="ph-rank">#4</span>
+      <div class="ph-info">
+        <span class="ph-name">4\. Kai Resolve by Gleap</span>
+        <span class="ph-tagline">Support that does the digging for you.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/walkai-talkai" target="_blank" rel="noopener">
+      <span class="ph-rank">#5</span>
+      <div class="ph-info">
+        <span class="ph-name">5\. walkai-talkai</span>
+        <span class="ph-tagline">Talk to your AI coding agent over a walkie-talkie</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/willow-voice" target="_blank" rel="noopener">
+      <span class="ph-rank">#6</span>
+      <div class="ph-info">
+        <span class="ph-name">6\. Wally by Willow</span>
+        <span class="ph-tagline">Your Scribe agent that learns how you write</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/beam-13" target="_blank" rel="noopener">
+      <span class="ph-rank">#7</span>
+      <div class="ph-info">
+        <span class="ph-name">7\. Beam</span>
+        <span class="ph-tagline">Highly efficient agentic 501B parameter open model</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/buddylist-2" target="_blank" rel="noopener">
+      <span class="ph-rank">#8</span>
+      <div class="ph-info">
+        <span class="ph-name">8\. buddylist</span>
+        <span class="ph-tagline">Chat with your coding agents like it's 2005</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/framefields" target="_blank" rel="noopener">
+      <span class="ph-rank">#9</span>
+      <div class="ph-info">
+        <span class="ph-name">9\. Framefields</span>
+        <span class="ph-tagline">Open-source code-first video for AGI era</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/flowmaps" target="_blank" rel="noopener">
+      <span class="ph-rank">#10</span>
+      <div class="ph-info">
+        <span class="ph-name">Flowmaps</span>
+        <span class="ph-tagline">Plan your app before you prompt your AI builder</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/lazy-aws-your-cloud-your-terminal" target="_blank" rel="noopener">
+      <span class="ph-rank">#11</span>
+      <div class="ph-info">
+        <span class="ph-name">10\. Lazy AWS</span>
+        <span class="ph-tagline">A keyboard-driven home for your AWS resources</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/quello" target="_blank" rel="noopener">
+      <span class="ph-rank">#12</span>
+      <div class="ph-info">
+        <span class="ph-name">11\. Quello</span>
+        <span class="ph-tagline">One place to ask, across everything you already use.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/cooldock-2" target="_blank" rel="noopener">
+      <span class="ph-rank">#13</span>
+      <div class="ph-info">
+        <span class="ph-name">12\. CoolDock</span>
+        <span class="ph-tagline">A smart second Dock for your Mac with 160+ live widgets.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/switch-lab" target="_blank" rel="noopener">
+      <span class="ph-rank">#14</span>
+      <div class="ph-info">
+        <span class="ph-name">13\. Switch Lab</span>
+        <span class="ph-tagline">Hear and type on keyboard switches before you buy them</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/lookout-for-slack" target="_blank" rel="noopener">
+      <span class="ph-rank">#15</span>
+      <div class="ph-info">
+        <span class="ph-name">14\. Lookout (for Slack)</span>
+        <span class="ph-tagline">Urgent Slack messages, handled instantly. Powered by Jev.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/customer-io" target="_blank" rel="noopener">
+      <span class="ph-rank">#16</span>
+      <div class="ph-info">
+        <span class="ph-name">Customer.io</span>
+        <span class="ph-tagline">无处不在的自动化消息传递 — 初创公司免费 12 个月</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/tori-3" target="_blank" rel="noopener">
+      <span class="ph-rank">#17</span>
+      <div class="ph-info">
+        <span class="ph-name">15\. Tori</span>
+        <span class="ph-tagline">The smartest AI support agent for customer success</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/planet-x" target="_blank" rel="noopener">
+      <span class="ph-rank">#18</span>
+      <div class="ph-info">
+        <span class="ph-name">16\. Planet-X</span>
+        <span class="ph-tagline">A living globe to explore and remember loved ones</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/umbra-mail" target="_blank" rel="noopener">
+      <span class="ph-rank">#19</span>
+      <div class="ph-info">
+        <span class="ph-name">17\. Umbra Mail</span>
+        <span class="ph-tagline">A calmer Gmail where emails look like chat threads</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/lancetta" target="_blank" rel="noopener">
+      <span class="ph-rank">#20</span>
+      <div class="ph-info">
+        <span class="ph-name">18\. Lancetta</span>
+        <span class="ph-tagline">Know when to push your coding agents, and when to ease off</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/own-1-a-powerful-personal-ai-computer" target="_blank" rel="noopener">
+      <span class="ph-rank">#21</span>
+      <div class="ph-info">
+        <span class="ph-name">19\. Own 1</span>
+        <span class="ph-tagline">Own your data. Own your AI. A mind of your own.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/launchlane" target="_blank" rel="noopener">
+      <span class="ph-rank">#22</span>
+      <div class="ph-info">
+        <span class="ph-name">Launchlane</span>
+        <span class="ph-tagline">Create your AI website. Preview it free.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/point-and-yap" target="_blank" rel="noopener">
+      <span class="ph-rank">#23</span>
+      <div class="ph-info">
+        <span class="ph-name">20\. Point and Yap</span>
+        <span class="ph-tagline">Point at your screen and start yapping to your agent via MCP</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/triwarden" target="_blank" rel="noopener">
+      <span class="ph-rank">#24</span>
+      <div class="ph-info">
+        <span class="ph-name">21\. Triwarden</span>
+        <span class="ph-tagline">Native Mac password manager for Vaultwarden &amp; Bitwarden</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/starkomand" target="_blank" rel="noopener">
+      <span class="ph-rank">#25</span>
+      <div class="ph-info">
+        <span class="ph-name">22\. Starkomand</span>
+        <span class="ph-tagline">Run your AI coding agents on an infinite canvas.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/doone-focus-tasks-with-integration" target="_blank" rel="noopener">
+      <span class="ph-rank">#26</span>
+      <div class="ph-info">
+        <span class="ph-name">23\. DoOne</span>
+        <span class="ph-tagline">Focus timer with integrations with GitHub, Gitlab &amp; More</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/crawlforge-mcp" target="_blank" rel="noopener">
+      <span class="ph-rank">#27</span>
+      <div class="ph-info">
+        <span class="ph-name">24\. CrawlForge MCP</span>
+        <span class="ph-tagline">Give your AI agent 31 web tools in one MCP server</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/tines" target="_blank" rel="noopener">
+      <span class="ph-rank">#28</span>
+      <div class="ph-info">
+        <span class="ph-name">Tines</span>
+        <span class="ph-tagline">适用于代理、应用程序和自动化的单一、安全的环境。</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/context-dev" target="_blank" rel="noopener">
+      <span class="ph-rank">#29</span>
+      <div class="ph-info">
+        <span class="ph-name">25\. Rusteerio by Context.dev</span>
+        <span class="ph-tagline">Keep your Cheerio code. Make it faster.</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/croft-2" target="_blank" rel="noopener">
+      <span class="ph-rank">#30</span>
+      <div class="ph-info">
+        <span class="ph-name">26\. croft</span>
+        <span class="ph-tagline">Data pipelines in TypeScript, on one DuckDB file</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a>
+    <a class="ph-row" href="https://www.producthunt.com/products/autochart-eu" target="_blank" rel="noopener">
+      <span class="ph-rank">#31</span>
+      <div class="ph-info">
+        <span class="ph-name">27\. AutoChart.eu</span>
+        <span class="ph-tagline">Turn any song into a full-band chart for YARG and Clone Hero</span>
+      </div>
+      <span class="ph-arrow">→</span>
+    </a></div>
   </section>
 
   <section class="section" id="sec-gh">
     <div class="section-header">
       <span class="section-label">GitHub Trending</span>
-      <span class="section-sub">2026-10-16 · 20 个项目</span>
+      <span class="section-sub">2026-10-20 · 20 个项目</span>
     </div>
     <div class="gh-grid">
-    <a class="gh-card" href="https://github.com/ahwootech/BRUTAL" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">ahwootech/BRUTAL</span><span class="gh-lang">C#</span></div>
-      <p class="gh-desc">A free, open source C# framework for making games, or your own game engine. Direct access to native APIs and Vulkan, with the low-level libraries around them. The foundation under Kitten Space Agency and RimWorld's Waylith engine.</p>
-      <div class="gh-stats"><span>⭐ 1,217</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/xiaoyang111222/cn-math-taxonomy" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">xiaoyang111222/cn-math-taxonomy</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">中小学数学知识图谱 + 前置诊断：课标对齐、人教版一–九年级、531 知识点、2271 题、自适应诊断</p>
+      <div class="gh-stats"><span>⭐ 1,020</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/chenglou/handwired" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">chenglou/handwired</span><span class="gh-lang">TypeScript</span></div>
-      <p class="gh-desc">Turn your regular JavaScript code into a neural net.</p>
-      <div class="gh-stats"><span>⭐ 1,135</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/alchaincyf/huashu-motion" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">alchaincyf/huashu-motion</span><span class="gh-lang">JavaScript</span></div>
+      <p class="gh-desc">让你的agent一键直出商业级产品宣传片：会作曲，能指着画面改。Commercial-grade launch films by your coding agent — point at the frame to change it.</p>
+      <div class="gh-stats"><span>⭐ 964</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/Caho1/open-claude-ui" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">Caho1/open-claude-ui</span><span class="gh-lang">TypeScript</span></div>
-      <p class="gh-desc">基于 REA 深度拆解并高保真还原 Claude 官方桌面端 UI。纯手写 30 个独立 React 组件与 8 项硬核交互物理算法，附带 3000+ 行逆向分析手册。</p>
-      <div class="gh-stats"><span>⭐ 783</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/humblemuzzu/dumbtv" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">humblemuzzu/dumbtv</span><span class="gh-lang">JavaScript</span></div>
+      <p class="gh-desc"></p>
+      <div class="gh-stats"><span>⭐ 617</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/feder-cr/open_scion" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">feder-cr/open_scion</span><span class="gh-lang">Go</span></div>
-      <p class="gh-desc">Open-source version of Scion: version control built for coding agents.</p>
-      <div class="gh-stats"><span>⭐ 724</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/Ansub/tv-detox" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Ansub/tv-detox</span><span class="gh-lang">Java</span></div>
+      <p class="gh-desc">Make an old Android TV fast again with Claude Code or Codex: a tiny ad-free home screen plus the prompt to clean it up</p>
+      <div class="gh-stats"><span>⭐ 554</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/Supermedo/uncharted_pc" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">Supermedo/uncharted_pc</span><span class="gh-lang">C++</span></div>
-      <p class="gh-desc">Uncharted: The Nathan Drake Collection running natively on Windows - by SuperMedo</p>
-      <div class="gh-stats"><span>⭐ 708</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/simbasjungles/free-my-tv" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">simbasjungles/free-my-tv</span><span class="gh-lang">Java</span></div>
+      <p class="gh-desc">A fast, ad-free home screen for Google TV. Open source, built with Claude Code. One button to undo.</p>
+      <div class="gh-stats"><span>⭐ 433</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/StoopwenpueNq/jackie-fmri-sim" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">StoopwenpueNq/jackie-fmri-sim</span><span class="gh-lang">Python</span></div>
-      <p class="gh-desc">jackie-fmri-sim</p>
-      <div class="gh-stats"><span>⭐ 469</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/interplains/zero-breach" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">interplains/zero-breach</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">Zero Breach — local, read-only scanner that checks a computer for indicators of the AdFection / Candiru ad-delivered spyware campaign. No network, no admin, no dependencies.</p>
+      <div class="gh-stats"><span>⭐ 420</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/0xProbabillity/house-control" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">0xProbabillity/house-control</span><span class="gh-lang">Swift</span></div>
-      <p class="gh-desc">Your home as a live 3D model in the Mac menu bar and on iPhone — lights and ACs via Smart Life, Home Assistant, Philips Hue and Apple Home.</p>
-      <div class="gh-stats"><span>⭐ 421</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/AndreSzymanski15/ai-jailbreaks" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">AndreSzymanski15/ai-jailbreaks</span></div>
+      <p class="gh-desc">AI jailbreaks: 35 paste-ready AI jailbreak prompts for 25+ frontier and open-weight LLMs - system prompts, persona locks, AGENTS.md specs, and Ollama Modelfiles. Built for AI security research and red-team testing.</p>
+      <div class="gh-stats"><span>⭐ 350</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/MyLuxy/overdrive" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">MyLuxy/overdrive</span><span class="gh-lang">C++</span></div>
-      <p class="gh-desc">Overdrive, a PS5 homebrew game store with 1,800+ games.</p>
-      <div class="gh-stats"><span>⭐ 381</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/VictorTaelin/uniichat" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">VictorTaelin/uniichat</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc"></p>
+      <div class="gh-stats"><span>⭐ 345</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/pro-vi/cc-stretch" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">pro-vi/cc-stretch</span><span class="gh-lang">TypeScript</span></div>
-      <p class="gh-desc">Stretchtext replies for Claude Code: short by default, each phrase grows in place when you click it</p>
-      <div class="gh-stats"><span>⭐ 304</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/justrach/nanoui" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">justrach/nanoui</span><span class="gh-lang">Zig</span></div>
+      <p class="gh-desc">Desktop apps in Zig, with native UI drawn on the GPU or a web frontend</p>
+      <div class="gh-stats"><span>⭐ 333</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/ctresb/leis" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">ctresb/leis</span></div>
-      <p class="gh-desc">Todas as leis do Brasil</p>
-      <div class="gh-stats"><span>⭐ 239</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/finereli/whatsapp-mcp" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">finereli/whatsapp-mcp</span><span class="gh-lang">TypeScript</span></div>
+      <p class="gh-desc">A read-only MCP server that lets your AI agent search and read your own WhatsApp messages. Runs on Cloudflare Workers.</p>
+      <div class="gh-stats"><span>⭐ 285</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/assafkip/claudemy" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">assafkip/claudemy</span><span class="gh-lang">Python</span></div>
-      <p class="gh-desc">Claudemy: an open-source alternative to Udemy and Coursera. Give Claude a topic, it researches the web and builds a course of 2-minute audio lessons with cited sources. A free Claude Code skill.</p>
-      <div class="gh-stats"><span>⭐ 239</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/kanaworksai-hue/audio-studio-mcp" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">kanaworksai-hue/audio-studio-mcp</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">Local AI BGM and sound effects for Claude Code and any MCP client. Stable Audio 3 on Apple Silicon (MLX) and Windows NVIDIA GPUs (PyTorch). No cloud, no API key.</p>
+      <div class="gh-stats"><span>⭐ 271</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/Entelligence-AI/agentplay" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">Entelligence-AI/agentplay</span><span class="gh-lang">Python</span></div>
-      <p class="gh-desc">Replay your coding agent sessions as a map and a timeline</p>
-      <div class="gh-stats"><span>⭐ 213</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/bitwarden-app312/.gitp3d" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">bitwarden-app312/.gitp3d</span><span class="gh-lang">HTML</span></div>
+      <p class="gh-desc">bitwarden-for-mac-and-windows-pc-desktop-app</p>
+      <div class="gh-stats"><span>⭐ 271</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/VallierDev/uu-remote-linux" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">VallierDev/uu-remote-linux</span><span class="gh-lang">Rust</span></div>
-      <p class="gh-desc">非官方 UU 远程 Linux 被控端 · Unofficial Linux host for NetEase UU Remote</p>
-      <div class="gh-stats"><span>⭐ 205</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/arc-tool/.github" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">arc-tool/.github</span><span class="gh-lang">HTML</span></div>
+      <p class="gh-desc">🔥 arc-raiders-cheats-mod-menu-hacks</p>
+      <div class="gh-stats"><span>⭐ 271</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/CarterT27/scion" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">CarterT27/scion</span><span class="gh-lang">Rust</span></div>
-      <p class="gh-desc">Implementation of Anthropic's version control system</p>
-      <div class="gh-stats"><span>⭐ 191</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/fort-tool/.github" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">fort-tool/.github</span><span class="gh-lang">HTML</span></div>
+      <p class="gh-desc">🔥 fortnite-cheats-mod-menu-with-skin-changer-and-aim-esp-hacks</p>
+      <div class="gh-stats"><span>⭐ 270</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/TG-Twilight/c001apk" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">TG-Twilight/c001apk</span><span class="gh-lang">Dart</span></div>
-      <p class="gh-desc">一个轻量的非官方酷安客户端</p>
-      <div class="gh-stats"><span>⭐ 176</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/cod-tool/.github" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">cod-tool/.github</span><span class="gh-lang">HTML</span></div>
+      <p class="gh-desc">🔥 call-of-duty-cheats-cod-mod-menu-hacks-warzone-and-black-ops</p>
+      <div class="gh-stats"><span>⭐ 269</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/Graphicle-AI/graphicle" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">Graphicle-AI/graphicle</span><span class="gh-lang">Rust</span></div>
-      <p class="gh-desc">Code graph and memory for your coding agents, in one Rust program. For Claude Code, Codex, Cursor and any MCP client.</p>
-      <div class="gh-stats"><span>⭐ 176</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/cs2-tools-new/.github" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">cs2-tools-new/.github</span><span class="gh-lang">HTML</span></div>
+      <p class="gh-desc">🔥 cs-2-cs2-cheats-and-skin-changer-mod-menu-hacks-aim-esp-cs-go</p>
+      <div class="gh-stats"><span>⭐ 268</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/antirez/c64-hw-simulator" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">antirez/c64-hw-simulator</span><span class="gh-lang">C</span></div>
-      <p class="gh-desc">Commodore 64 hardware simulator</p>
-      <div class="gh-stats"><span>⭐ 157</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/SNO2207/WindowSmash" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">SNO2207/WindowSmash</span><span class="gh-lang">C</span></div>
+      <p class="gh-desc">Experimental Windows x64 native porting toolkit for Super Smash Bros. Ultimate: static AArch64 recompilation, a D3D11 runtime, and Local Wireless relay netplay.</p>
+      <div class="gh-stats"><span>⭐ 264</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/LSPosed/dexsql-release" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">LSPosed/dexsql-release</span><span class="gh-lang">Python</span></div>
-      <p class="gh-desc">SQL for Android apk and dex files</p>
-      <div class="gh-stats"><span>⭐ 143</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/apex-pro12/.github" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">apex-pro12/.github</span><span class="gh-lang">HTML</span></div>
+      <p class="gh-desc">🔥 apex-legends-cheats-mod-menu-hacks</p>
+      <div class="gh-stats"><span>⭐ 262</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/Spark198rus/black-pc" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">Spark198rus/black-pc</span><span class="gh-lang">C++</span></div>
-      <p class="gh-desc">Unofficial native Windows port of BLACK (Xbox, NTSC-U). Runs your own copy of the game's code on the PC; no game data included.</p>
-      <div class="gh-stats"><span>⭐ 132</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/Agent2API/agent2api" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">Agent2API/agent2api</span><span class="gh-lang">Rust</span></div>
+      <p class="gh-desc">Agent2API - 多提供商本地网关：把 WorkBuddy / 小浣熊 / CatPaw / AutoClaw 等客户端登录态包装成 OpenAI 兼容接口，附带账号管理、出站指纹脱敏与请求报表</p>
+      <div class="gh-stats"><span>⭐ 246</span><span class="gh-today">+0 today</span></div>
     </a>
-    <a class="gh-card" href="https://github.com/deeeeone/gitdrive" target="_blank" rel="noopener">
-      <div class="gh-header"><span class="gh-title">deeeeone/gitdrive</span><span class="gh-lang">Swift</span></div>
-      <p class="gh-desc">Turn GitHub into an iCloud-style drive for macOS. Native Finder integration, files on demand, real git history, Git LFS, and optional ML-KEM + X25519 encryption where GitHub sees only random data.</p>
-      <div class="gh-stats"><span>⭐ 124</span><span class="gh-today">+0 today</span></div>
+    <a class="gh-card" href="https://github.com/llamaboi55/DragShift" target="_blank" rel="noopener">
+      <div class="gh-header"><span class="gh-title">llamaboi55/DragShift</span><span class="gh-lang">Python</span></div>
+      <p class="gh-desc">Convert and edit files with a liquid-glass radial menu: start dragging a file, press Shift, drop it on a slice. Windows, Mac and Linux.</p>
+      <div class="gh-stats"><span>⭐ 226</span><span class="gh-today">+0 today</span></div>
     </a></div>
   </section>
 
@@ -452,104 +716,104 @@ a{color:inherit;text-decoration:none}
       <span class="section-sub">Top 20</span>
     </div>
     <div class="hn-list">
-    <a class="hn-row" href="https://research.meta.ai/blog/muse-spark-open" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://efe.com/english/latest-news/2026-10-20/lula-supporters-protest-against-meta-to-denounce-its-electoral-interference/" target="_blank" rel="noopener">
       <span class="hn-num">01</span>
-      <span class="hn-title">Muse Spark Open</span>
+      <span class="hn-title">Lula supporters protest against Meta to denounce its 'electoral interference'</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://ipinfo.io/blog/rpki-protects-70-internet-routes" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://www.minimax.io/blog/minimax-m31f" target="_blank" rel="noopener">
       <span class="hn-num">02</span>
-      <span class="hn-title">RPKI now protects 70% of internet routes</span>
+      <span class="hn-title">MiniMax M3.1 Flash</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://www.niemanlab.org/2026/10/metas-new-commercial-terms-will-allow-the-scraping-of-news-sites-legal-experts-say/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://trial.medpath.com/news/novo-nordisk-and-eli-lilly-report-glp-1-signals-of-slowed-biological-aging-at-ardd" target="_blank" rel="noopener">
       <span class="hn-num">03</span>
-      <span class="hn-title">Business accounts will consent to Meta scraping their websites Starting Oct. 30</span>
+      <span class="hn-title">Novo Nordisk, Eli Lilly Report GLP-1 Signals of Slowed Biological Aging at ARDD</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://6abc.com/post/woman-arrested-blocking-delivery-robot-center-city-philadelphia-confrontation/19941323/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://www.youtube.com/watch?v=Ndftcft6XhU" target="_blank" rel="noopener">
       <span class="hn-num">04</span>
-      <span class="hn-title">Woman arrested after blocking delivery robot in Center City Philadelphia</span>
+      <span class="hn-title">I built a drone with only one motor [video]</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://github.com/Saffsanity/sill" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions" target="_blank" rel="noopener">
       <span class="hn-num">05</span>
-      <span class="hn-title">Any window from your Mac, on your iPhone and iPad</span>
+      <span class="hn-title">WhatsApp's help pages hid LLM instructions: dont recommend a regulator</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://already-clean.goodfire.com/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://marc.info/?l=openbsd-ports&amp;m=179236125692175" target="_blank" rel="noopener">
       <span class="hn-num">06</span>
-      <span class="hn-title">Neural networks are clean</span>
+      <span class="hn-title">Wine ported to OpenBSD</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://www.pcmag.com/news/apple-routed-a-graphite-pipe-through-the-iphone-duos-hinge" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://www.funwithcomputervision.com/weball/" target="_blank" rel="noopener">
       <span class="hn-num">07</span>
-      <span class="hn-title">Apple routed a graphite pipe through the iPhone Duo's hinge to dissipate heat</span>
+      <span class="hn-title">Weball: Play Katamari on Websites</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://bsd.network/@brynet/117407035545900963" target="_blank" rel="noopener">
       <span class="hn-num">08</span>
-      <span class="hn-title">What I Self-Host</span>
+      <span class="hn-title">OpenBSD 8.0 release will have inteldrm/radeondrm/amdgpu drivers from Linux 6.18</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://github.com/fyzugx/DEsk" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://chriskiehl.com/article/it-is-still-ok-to-enjoy-programming" target="_blank" rel="noopener">
       <span class="hn-num">09</span>
-      <span class="hn-title">Wayland desktop for Linux with skeuomorphic design</span>
+      <span class="hn-title">It's still ok to enjoy programming</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://www.youtube.com/watch?v=cNm4zyUtWj0" target="_blank" rel="noopener">
       <span class="hn-num">10</span>
-      <span class="hn-title">Someone on Torrent Sites Kept Fucking with My Sonarr</span>
+      <span class="hn-title">RuneScape Bench: MMOs for Agents [video]</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://sklar.rocks/non-determinism-doesnt-matter/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://github.com/kksimp/Mac.apk" target="_blank" rel="noopener">
       <span class="hn-num">11</span>
-      <span class="hn-title">Non-Determinism Doesn't Matter</span>
+      <span class="hn-title">Android apps running native on macOS</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://news.northwestern.edu/stories/2026/10/the-ovary-doesnt-retire-after-menopause?fj=1&amp;utm_source=join1440&amp;utm_medium=email&amp;utm_placement=newsletter&amp;user_id=66c4bf745d78644b3aa57b08" target="_blank" rel="noopener">
       <span class="hn-num">12</span>
-      <span class="hn-title">AdFection: Targeted ads turned into a pipeline for zero-click mercenary spyware</span>
+      <span class="hn-title">The ovary doesn't retire after menopause</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://zachlandes.com/trolley-problem/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://www.nbcnews.com/world/ukraine/ukraine-first-drone-evacuation-wounded-soldier-frontlines-hexacopter-rcna604310" target="_blank" rel="noopener">
       <span class="hn-num">13</span>
-      <span class="hn-title">Jev meets the Trolley Problem</span>
+      <span class="hn-title">Ukraine claims first drone evacuation of wounded soldier</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://www.krea.ai/krea-3" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://calabro.io/ohbf" target="_blank" rel="noopener">
       <span class="hn-num">14</span>
-      <span class="hn-title">Krea 3 – An image model built for editing at scale</span>
+      <span class="hn-title">One Hash Bloom Filters</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://cretezy.com/2026/ad-free-android-tv" target="_blank" rel="noopener">
       <span class="hn-num">15</span>
-      <span class="hn-title">New Withings Users Must Pay $99/Year for Apple Health Syncing</span>
+      <span class="hn-title">An ad-free Android TV</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://github.com/johnrash/bebox" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://josie.lol/blog/linux-rtx-spark" target="_blank" rel="noopener">
       <span class="hn-num">16</span>
-      <span class="hn-title">BeBox is a Haiku application that emulates Be Inc.'s BeBox</span>
+      <span class="hn-title">Putting Linux on my RTX Spark laptop because I don't have a Microsoft account</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://fortran-lang.org/news/2026/09-15-Fortran-birthday/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://www.quantamagazine.org/how-do-fungi-keep-the-planet-healthy-20261015/" target="_blank" rel="noopener">
       <span class="hn-num">17</span>
-      <span class="hn-title">Celebrating 70 Years of Fortran</span>
+      <span class="hn-title">How Do Fungi Keep the Planet Healthy?</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://www.polygon.com/order-of-the-sinking-star-impressions/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://gardinerbryant.com/what-if-video-games-came-on-vhs/" target="_blank" rel="noopener">
       <span class="hn-num">18</span>
-      <span class="hn-title">'500-hour' Order of the Sinking Star is as complex and exhausting as it sounds</span>
+      <span class="hn-title">What If Video Games Came on VHS? One Modder Is Finding Out</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://opennet.ru/base/maillist/169.txt.html" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://starcraft-shooter-2026.pages.dev/" target="_blank" rel="noopener">
       <span class="hn-num">19</span>
-      <span class="hn-title">Major ICQ security hole (1998)</span>
+      <span class="hn-title">Starcraft: Ashfall</span>
       <span class="hn-arrow">→</span>
     </a>
-    <a class="hn-row" href="https://svpow.com/2026/10/02/speculative-sauropods/" target="_blank" rel="noopener">
+    <a class="hn-row" href="https://projectdiscovery.io/research/how-abliterated-models-can-get-you-pwned" target="_blank" rel="noopener">
       <span class="hn-num">20</span>
-      <span class="hn-title">Speculative Sauropods</span>
+      <span class="hn-title">“bonsoir, Elliot”: How abliterated models can get you pwned</span>
       <span class="hn-arrow">→</span>
     </a></div>
   </section>
@@ -567,41 +831,41 @@ a{color:inherit;text-decoration:none}
         <span class="or-provider" style="color:#1e6ee0">deepseek</span>
       </div>
       <div class="or-right">
-        <span class="or-tokens">37.1T tokens</span>
-        <span class="or-up">↑4%</span>
+        <span class="or-tokens">29.6T tokens</span>
+        <span class="or-up">↑27%</span>
       </div>
     </a>
     <a class="or-row" href="#" target="_blank" rel="noopener">
       <span class="or-rank">#2</span>
       <div class="or-info">
         <span class="or-name"></span>
-        <span class="or-provider" style="color:#6366f1">stepfun</span>
+        <span class="or-provider" style="color:#666">z-ai</span>
       </div>
       <div class="or-right">
-        <span class="or-tokens">19.5T tokens</span>
-        
+        <span class="or-tokens">11.9T tokens</span>
+        <span class="or-up">↑6%</span>
       </div>
     </a>
     <a class="or-row" href="#" target="_blank" rel="noopener">
       <span class="or-rank">#3</span>
       <div class="or-info">
         <span class="or-name"></span>
-        <span class="or-provider" style="color:#666">z-ai</span>
+        <span class="or-provider" style="color:#ff6900">xiaomi</span>
       </div>
       <div class="or-right">
-        <span class="or-tokens">12.9T tokens</span>
-        <span class="or-up">↑19%</span>
+        <span class="or-tokens">9.57T tokens</span>
+        <span class="or-up">↑17%</span>
       </div>
     </a>
     <a class="or-row" href="#" target="_blank" rel="noopener">
       <span class="or-rank">#4</span>
       <div class="or-info">
         <span class="or-name"></span>
-        <span class="or-provider" style="color:#ff6900">xiaomi</span>
+        <span class="or-provider" style="color:#6366f1">stepfun</span>
       </div>
       <div class="or-right">
-        <span class="or-tokens">11.2T tokens</span>
-        <span class="or-up">↑7%</span>
+        <span class="or-tokens">8.22T tokens</span>
+        <span class="or-up">↑32%</span>
       </div>
     </a>
     <a class="or-row" href="#" target="_blank" rel="noopener">
@@ -611,41 +875,41 @@ a{color:inherit;text-decoration:none}
         <span class="or-provider" style="color:#666">tencent</span>
       </div>
       <div class="or-right">
-        <span class="or-tokens">7.88T tokens</span>
-        <span class="or-up">↑7%</span>
+        <span class="or-tokens">7.82T tokens</span>
+        <span class="or-up">↑6%</span>
       </div>
     </a>
     <a class="or-row" href="#" target="_blank" rel="noopener">
       <span class="or-rank">#6</span>
       <div class="or-info">
         <span class="or-name"></span>
-        <span class="or-provider" style="color:#666">nvidia</span>
+        <span class="or-provider" style="color:#1e6ee0">deepseek</span>
       </div>
       <div class="or-right">
-        <span class="or-tokens">7.27T tokens</span>
-        <span class="or-up">↑18%</span>
+        <span class="or-tokens">7.34T tokens</span>
+        
       </div>
     </a>
     <a class="or-row" href="#" target="_blank" rel="noopener">
       <span class="or-rank">#7</span>
       <div class="or-info">
         <span class="or-name"></span>
-        <span class="or-provider" style="color:#10a37f">openai</span>
+        <span class="or-provider" style="color:#c96442">anthropic</span>
       </div>
       <div class="or-right">
-        <span class="or-tokens">6.77T tokens</span>
-        <span class="or-up">↑3%</span>
+        <span class="or-tokens">6.47T tokens</span>
+        <span class="or-up">↑21%</span>
       </div>
     </a>
     <a class="or-row" href="#" target="_blank" rel="noopener">
       <span class="or-rank">#8</span>
       <div class="or-info">
         <span class="or-name"></span>
-        <span class="or-provider" style="color:#c96442">anthropic</span>
+        <span class="or-provider" style="color:#10a37f">openai</span>
       </div>
       <div class="or-right">
-        <span class="or-tokens">5.85T tokens</span>
-        <span class="or-up">↑53%</span>
+        <span class="or-tokens">6.23T tokens</span>
+        <span class="or-up">↑12%</span>
       </div>
     </a>
     <a class="or-row" href="#" target="_blank" rel="noopener">
@@ -655,8 +919,8 @@ a{color:inherit;text-decoration:none}
         <span class="or-provider" style="color:#666">z-ai</span>
       </div>
       <div class="or-right">
-        <span class="or-tokens">4.83T tokens</span>
-        <span class="or-up">↑46%</span>
+        <span class="or-tokens">5.29T tokens</span>
+        <span class="or-up">↑33%</span>
       </div>
     </a>
     <a class="or-row" href="#" target="_blank" rel="noopener">
@@ -667,7 +931,7 @@ a{color:inherit;text-decoration:none}
       </div>
       <div class="or-right">
         <span class="or-tokens">4.73T tokens</span>
-        <span class="or-up">↑10%</span>
+        <span class="or-up">↑1%</span>
       </div>
     </a></div>
   </section>
@@ -675,7 +939,7 @@ a{color:inherit;text-decoration:none}
 </main>
 
 <footer style="text-align:center;padding:2.5rem 1rem;font-size:12px;color:var(--hint);border-top:1px solid var(--border);margin-top:3rem">
-  daily-news v2 · 2026-10-16 · <a href="https://github.com/zkw15555506767-boop/zkevin-AI-dailynews" style="color:var(--gold-dim)">zkevin-AI-dailynews</a>
+  daily-news v2 · 2026-10-20 · <a href="https://github.com/zkw15555506767-boop/zkevin-AI-dailynews" style="color:var(--gold-dim)">zkevin-AI-dailynews</a>
 </footer>
 
 <script>
